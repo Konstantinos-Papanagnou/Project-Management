@@ -1,24 +1,19 @@
-package loginFunctionality;
+package businessLogic.loginFunctionality;
 
 public class AuthenticationHandler {
 
 	private int attemptCounter;
 
 	/*Authentication handler's constructor*/
-	public AuthenticationHandler(int attemptCounter) {
-		//this.attemptCounter = attemptCounter;
+	public AuthenticationHandler() {
+		attemptCounter = 0;
 	}
 
 	/*Creating setters n getters*/
 	public int getAttemptCounter() {
 		return attemptCounter;
 	}
-
-	public void setAttemptCounter(int attemptCounter) {
-		this.attemptCounter = attemptCounter;
-	}
 	
 	/*Creating methods*/
-	
-	
+
 }
