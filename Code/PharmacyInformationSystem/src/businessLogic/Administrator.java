@@ -10,4 +10,6 @@ public class Administrator extends User{
 		super(firstName, lastName, idCard, employeeID, username, password,phoneNumbers);
 	}
 
+	
+	
 }
