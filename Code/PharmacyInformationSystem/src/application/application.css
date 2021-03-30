@@ -1,1 +1,71 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.button 
+{
+        -fx-background-color: #C6C6C6;
+        -fx-font-size: 20px;
+        -fx-text-fill: #8D8D8D;  
+        -fx-background-radius: 0;
+        -fx-alignment: center ;
+}
+
+.letters
+{
+	-fx-text-fill: #fff;
+	-fx-font-size: 20px;
+	-fx-font-family: Calibri;
+	
+}
+
+.smallletter
+{
+	-fx-text-fill: #EA1D23;
+	-fx-font-size: 14px;
+	-fx-font-family: 'Calibri';
+}
+
+.background
+{
+	-fx-background-color: #272B30;
+}
+
+.login-box
+{
+	-fx-background-color: #2E3338;
+	-fx-border-color: #707070;
+	-fx-border-width: 2px;
+}
+
+.login-box-lable
+{
+	-fx-text-fill: #9AF995;
+	-fx-background-color: #242424;
+	-fx-border-color: #707070 #707070 transparent #707070;
+	-fx-border-width: 2px;
+	-fx-font:normal 20px 'Calibri';
+	-fx-padding: 0 0 0 10;
+}
+
+.textField
+{
+
+	-fx-border-style: solid;    
+    -fx-background-radius: 0;
+	-fx-background-color: #F3F3F3;
+	-fx-border-width: 4px;
+	-fx-border-color: transparent transparent #8D8D8D transparent;
+	
+}
+
+.welcome-msg
+{
+	-fx-text-fill: #9AF995;
+	-fx-font: normal bold 20px 'Calibri';
+}
+
+.welcome-msg-small
+{
+	-fx-text-fill: #F2F2F2;
+	-fx-font: normal 14px 'Calibri';
+}
+
+
