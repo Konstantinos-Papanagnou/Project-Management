@@ -10,18 +10,20 @@ public class User {
 	private int employeeID;
 	private String username;
 	private String password;
+	private int roleID;
 	private ArrayList<String> phoneNumbers = new ArrayList<String>();
 	
 	/*User's constructor*/
 	
 	public User(String firstName, String lastName, String idCard, int employeeID, String username, String password,
-			ArrayList<String> phoneNumbers) {
+			int roleID, ArrayList<String> phoneNumbers) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.idCard = idCard;
 		this.employeeID = employeeID;
 		this.username = username;
 		this.password = password;
+		this.roleID = roleID;
 		this.phoneNumbers = phoneNumbers;
 	}
 	
@@ -66,6 +68,13 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public int getRoleID() {
+		return roleID;
+	}
+	public void setRoleID(int roleID) {
+		this.roleID = roleID;
 	}
 	
 	public ArrayList<String> getPhoneNumbers() {
