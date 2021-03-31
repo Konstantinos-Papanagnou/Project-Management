@@ -6,14 +6,11 @@ import java.security.SecureRandom;
 
 public class Hashing {
 
-	 public static String hashing(String password) throws NoSuchAlgorithmException {
+	 public static String hashing(String password) {
 		 String hashed = null;
-		 SecureRandom sr = SecureRandom.getInstance("SHA256PRNG"); 
-		 byte [] salt = new byte[16];
-		 sr.nextBytes(salt);
 	        try {
 	        	MessageDigest md = MessageDigest.getInstance("SHA-256");
-	            md.update(salt);
+	            md.update(new byte[] {50,10,20,30,60,50,40,80,90});
 	            byte[] bytes = md.digest(password.getBytes());
 	            StringBuilder sb = new StringBuilder();
 	            for(int i=0; i< bytes.length ;i++)

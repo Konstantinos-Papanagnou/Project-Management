@@ -1,61 +1,43 @@
 package businessLogic.loginFunctionality;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.SQLException;
 
-import  businessLogic.*;
-
+import businessLogic.User;
 
 public class AuthenticationHandler {
 
 	private int attemptCounter;
+	private DatabaseHandler handler;
 
 	/*Authentication handler's constructor*/
 	public AuthenticationHandler() {
 		attemptCounter = 0;
+		handler = new DatabaseHandler();
 	}
 
-	/*Creating setters n getters*/
+	/*Creating n getters*/
 	public int getAttemptCounter() {
 		return attemptCounter;
 	}
 	
-	/*Gets user data from database
-	private User getUserData(String username) {
-		username = Sanitizer.sanitize(username);
-		Statement searchUser;
-		ResultSet rs;
-		Connection con;
-		searchUser = con.createStatement();
-		String q = "SELECT * FROM personnel WHERE username=" + username + ";";
-		rs = searchUser.executeQuery(q);
-		//User user = new User();
-		return user;
-	}*/
-	
 	/*Authenticates user*/
-	public User authenticateUser(String username, String password){
-		  username = Sanitizer.sanitize(username);
+	public User authenticateUser(String username, String password) throws AuthenticationFailure{
+		  username = Sanitizer.sanitizeInput(username);
 		  String hash = Hashing.hashing(password);
-		  DatabaseHandler handler = new DatabaseHandler();
-		  if(!handler.credentialCheck(username, password))
-		    throw new AuthenticationFailure("Username or password is not correct");
-		  User user = handler.getUserData(username);
-		  switch(user.getRoleID()){
-		    case 0:
-		      return (Administrator)user;
-		      break;
-		    case 1:
-		    	return (Storekeeper)user;
-		    case 2:
-		    	return (Seller)user;
-		    	break;
-		    case 3:
-		    	return (MarketingTeam)user;
-		    	break;
-		    
-		    }
-		} 
+		  try {
+			if(!handler.credentialCheck(username, hash))
+			    throw new AuthenticationFailure("Username or password is not correct");
+		} catch (SQLException e) {
+			throw new AuthenticationFailure("Your database is corrupted or offline");
+		}
+		return handler.getUserData(username);
+	}
+	
+    protected void finalize(){
+    	try {
+			handler.doDisconnect();
+		} catch (SQLException e) {
+		}
+    }
 	
 }

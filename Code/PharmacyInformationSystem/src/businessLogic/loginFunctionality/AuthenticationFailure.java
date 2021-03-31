@@ -1,23 +1,10 @@
 package businessLogic.loginFunctionality;
 
-public class AuthenticationFailure extends Throwable{
+public class AuthenticationFailure extends Exception{
 
-	private String message;
-	
 	/*Constructor*/
-	public AuthenticationFailure(String message) throws Exception {
-		super();
-		this.message = message;
-		throw new Exception(message);
-	}
-	
-	/*Setter n Getters*/
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
+	public AuthenticationFailure(String message) {
+		super(message);
 	}
 	
 }
