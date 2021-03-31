@@ -1,4 +1,8 @@
 
+#wrongCredsLbl{
+	-fx-font-weight:bold;
+}
+
 .button 
 {
         -fx-background-color: #C6C6C6;
