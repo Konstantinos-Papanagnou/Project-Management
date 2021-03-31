@@ -73,7 +73,7 @@
                   <TextField alignment="TOP_LEFT" styleClass="textField" />
                   <Label styleClass="letters" text="Κωδικός πρόσβασης" />
                   <PasswordField alignment="TOP_LEFT" styleClass="textField" />
-                  <Label opacity="0.53" styleClass="smallletter" text="Λανθασμένα στοιχεία σύνδεσης" textFill="RED" />
+                  <Label fx:id="wrongCredsLbl" styleClass="smallletter" text="Λανθασμένα στοιχεία σύνδεσης" textFill="RED" />
                   <VBox alignment="CENTER" VBox.vgrow="NEVER">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
