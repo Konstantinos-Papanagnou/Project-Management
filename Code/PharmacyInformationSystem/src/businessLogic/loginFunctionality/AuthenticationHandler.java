@@ -21,7 +21,7 @@ public class AuthenticationHandler {
 		return attemptCounter;
 	}
 	
-	/*Gets user data from database*/
+	/*Gets user data from database
 	private User getUserData(String username) {
 		username = Sanitizer.sanitize(username);
 		Statement searchUser;
@@ -32,7 +32,7 @@ public class AuthenticationHandler {
 		rs = searchUser.executeQuery(q);
 		//User user = new User();
 		return user;
-	}
+	}*/
 	
 	/*Authenticates user*/
 	public User authenticateUser(String username, String password){

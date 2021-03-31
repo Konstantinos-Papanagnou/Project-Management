@@ -34,7 +34,7 @@ public class Administrator extends User{
 		return addResult.rowInserted();
 	}
 
-	/*Add new user*/
+	/*Modify user*/
 	public boolean modifyUser(User user) throws SQLException {
 		Connection con;
 		Statement modUser;
@@ -46,7 +46,7 @@ public class Administrator extends User{
 		return modResult.rowUpdated();
 	}
 	
-	/*Add new user*/
+	/*Remove user*/
 	public boolean deleteUser(int employeeID) throws SQLException {
 		Connection con;
 		Statement deleteUser;

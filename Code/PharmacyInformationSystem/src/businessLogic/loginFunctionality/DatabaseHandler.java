@@ -51,15 +51,15 @@ public class DatabaseHandler {
     }
 	
     /*Get user
-    private User getUserData(String username) {
-		username = Sanitizer.sanitize(username);
+    public User getUserData(String username) {
+    	User user;
+    	username = Sanitizer.sanitize(username);
 		Statement searchUser;
 		ResultSet rs;
 		Connection con;
 		searchUser = con.createStatement();
 		String q = "SELECT * FROM personnel WHERE username=" + username + ";";
-		rs = searchUser.executeQuery(q);
-		//User user = new User();
+		rs = searchUser.executeQuery(q);		
 		return user;
 	}*/
     
