@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Random;
 
 import businessLogic.loginFunctionality.DatabaseHandler;
 import businessLogic.loginFunctionality.Sanitizer;
@@ -90,6 +91,30 @@ public class Administrator extends User{
 		} catch (SQLException e) {
 			return null;
 		}
+	}
+	
+	public String generateUsername(String firstname, String lastname) throws SQLException {
+		if(database == null)
+			database = new DatabaseHandler();
+		String generated = Sanitizer.sanitizeInput(firstname.substring(0,2) + lastname.substring(0,4));
+		Statement deleteUser;
+    	ResultSet Result;
+    	deleteUser = database.getConnection().createStatement();
+    	while(true) {
+        String query = "SELECT username FROM personnel WHERE username= " + generated + ";";
+    	Result = deleteUser.executeQuery(query);
+    	if(Result.wasNull())
+    		return generated;
+    	else
+    	{
+    		Random rand = new Random();
+    		int position = rand.nextInt(6);
+    		char c = (char)(rand.nextInt(26) + 'a');
+    		char[] cs = generated.toCharArray();
+    		cs[position] = c;
+    		generated = new String(cs);
+    	}
+    	}
 	}
 	
     protected void finalize(){

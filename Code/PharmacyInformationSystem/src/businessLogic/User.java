@@ -14,7 +14,6 @@ public class User {
 	private ArrayList<String> phoneNumbers = new ArrayList<String>();
 	
 	/*User's constructor*/
-	
 	public User(String firstName, String lastName, String idCard, int employeeID, String username, String password,
 			int roleID, ArrayList<String> phoneNumbers) {
 		this.firstName = firstName;
