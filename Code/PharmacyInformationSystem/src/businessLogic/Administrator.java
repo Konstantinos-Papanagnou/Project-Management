@@ -1,5 +1,9 @@
 package businessLogic;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import businessLogic.loginFunctionality.*;
 
@@ -17,11 +21,18 @@ public class Administrator extends User{
 	public DatabaseHandler getDatabase() {
 		return database;
 	}
-
-	/*public void setDatabase(DatabaseHandler database) {
-		this.database = database;
-	}*/
 	
-	
+	/*Add new user*/
+	public boolean insertUser(User user) throws SQLException {
+		Connection con;
+		Statement addUser;
+    	ResultSet addResult;
+    	
+    	
+    	addUser = con.createStatement();
+    	String query = "INSERT INTO personnel " + user + ";";
+    	addResult = addUser.executeQuery(query);
+		return false;
+	}
 	
 }

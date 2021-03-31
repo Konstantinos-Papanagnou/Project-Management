@@ -55,7 +55,7 @@ public class DatabaseHandler {
     	
     	
     	searchUser = connection.createStatement();
-    	String query = "SELECT username, passphrase FROM personnel WHERE usrname=" + username + 
+    	String query = "SELECT username, passphrase FROM personnel WHERE username=" + username + 
         		"AND passphrase=" + password + ";";
     	searchUserResult = searchUser.executeQuery(query);
     	

@@ -1,5 +1,9 @@
 package businessLogic.loginFunctionality;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import  businessLogic.*;
 
 
@@ -17,13 +21,20 @@ public class AuthenticationHandler {
 		return attemptCounter;
 	}
 	
-	/*Creating methods
-	public User getUserData(String username) {
-		User ur;
-		return ur;
-		
+	/*Gets user data from database*/
+	private User getUserData(String username) {
+		username = Sanitizer.sanitize(username);
+		Statement searchUser;
+		ResultSet rs;
+		Connection con;
+		searchUser = con.createStatement();
+		String q = "SELECT * FROM personnel WHERE username=" + username + ";";
+		rs = searchUser.executeQuery(q);
+		//User user = new User();
+		return user;
 	}
-	*/
+	
+	/*Authenticates user*/
 	public User authenticateUser(String username, String password){
 		  username = Sanitizer.sanitize(username);
 		  String hash = Hashing.hashing(password);
@@ -36,8 +47,7 @@ public class AuthenticationHandler {
 		      return (Administrator)user;
 		      break;
 		    case 1:
-		    	return (Shopkeeper)user;
-		    	break;
+		    	return (Storekeeper)user;
 		    case 2:
 		    	return (Seller)user;
 		    	break;
