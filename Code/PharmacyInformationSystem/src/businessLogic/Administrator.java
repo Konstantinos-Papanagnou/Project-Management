@@ -28,11 +28,33 @@ public class Administrator extends User{
 		Statement addUser;
     	ResultSet addResult;
     	
-    	
     	addUser = con.createStatement();
     	String query = "INSERT INTO personnel " + user + ";";
     	addResult = addUser.executeQuery(query);
-		return false;
+		return addResult.rowInserted();
+	}
+
+	/*Add new user*/
+	public boolean modifyUser(User user) throws SQLException {
+		Connection con;
+		Statement modUser;
+    	ResultSet modResult;
+    	
+    	modUser = con.createStatement();
+    	String query = "UPDATE personnel SET " + user + "WHERE employeeID=" + user.getEmployeeID() + ";";
+    	modResult = modUser.executeQuery(query);
+		return modResult.rowUpdated();
 	}
 	
+	/*Add new user*/
+	public boolean deleteUser(int employeeID) throws SQLException {
+		Connection con;
+		Statement deleteUser;
+    	ResultSet deleteResult;
+    	//prepei na elexei ti einai o user oste na svinei oles tis eggrafes sxetika me ayton apo olous touw pinakes
+    	deleteUser = con.createStatement();
+    	String query = "DELETE FROM personnel WHERE employeeID=" + employeeID + ";";
+    	deleteResult = deleteUser.executeQuery(query);
+		return deleteResult.rowDeleted();
+	}
 }
