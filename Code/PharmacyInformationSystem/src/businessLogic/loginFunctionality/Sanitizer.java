@@ -3,13 +3,13 @@ package businessLogic.loginFunctionality;
 public abstract class Sanitizer {
 
 	public static boolean checkFirstName(String firstName) {
-		if (firstName.equals("") || firstName == null || firstName.replaceAll(" ","").equals(""))
+		if (firstName.equals("") || firstName == null || firstName.replaceAll(" ","").equals("") || firstName.length() < 2 || firstName.length() >= 30)
 			return false;
 		return true;
 	}
 	
 	public static boolean checkLastName(String lastName) {
-		if (lastName.equals("") || lastName == null || lastName.replaceAll(" ","").equals(""))
+		if (lastName.equals("") || lastName == null || lastName.replaceAll(" ","").equals("") || lastName.length() < 2 || lastName.length() >= 30)
 			return false;
 		return true;
 	}
