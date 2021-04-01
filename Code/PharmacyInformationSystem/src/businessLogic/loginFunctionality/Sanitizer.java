@@ -9,7 +9,7 @@ public abstract class Sanitizer {
 	}
 	
 	public static boolean checkLastName(String lastName) {
-		if (lastName.equals("") || lastName == null || lastName.replaceAll(" ","").equals("") || lastName.length() < 2 || lastName.length() >= 30)
+		if (lastName.equals("") || lastName == null || lastName.replaceAll(" ","").equals("") || lastName.length() < 4 || lastName.length() >= 30)
 			return false;
 		return true;
 	}
