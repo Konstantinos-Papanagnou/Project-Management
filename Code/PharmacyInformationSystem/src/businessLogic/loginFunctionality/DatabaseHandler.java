@@ -49,7 +49,7 @@ public class DatabaseHandler {
         connection.close();
     }
 	
-    //Get user
+    /*Get user*/
 	public User getUserData(String username) {
     	User user = null;
     	username = Sanitizer.sanitizeInput(username);
