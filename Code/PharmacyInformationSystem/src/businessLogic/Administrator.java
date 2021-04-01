@@ -33,7 +33,9 @@ public class Administrator extends User{
     	ResultSet addResult;
     
     	addUser = database.getConnection().createStatement();
-    	String query = "INSERT INTO personnel " + user + ";";
+    	String query = "INSERT INTO personnel VALUES(" + user.getEmployeeID() + "," + user.getFirstName() + ","
+    		+ user.getLastName() + "," + user.getIdCard() + "," + user.getUsername() + "," + user.getPassword() +
+    		"," + user.getRoleID() + ");";
     	addResult = addUser.executeQuery(query);
 		return addResult.rowInserted();
 	}
@@ -46,7 +48,10 @@ public class Administrator extends User{
     	ResultSet modResult;
     	
     	modUser = database.getConnection().createStatement();
-    	String query = "UPDATE personnel() SET " + user + "WHERE employeeID=" + user.getEmployeeID() + ";";
+    	String query = "UPDATE personnel SET firstName=" + user.getFirstName() + ",lastName=" + user.getLastName() +
+    		",idCard=" + user.getIdCard() + ",username=" + user.getUsername() +
+    		",passphrase=" + user.getPassword() + ",roleID" + user.getRoleID() + 
+    		"WHERE employeeID=" + user.getEmployeeID() + ";";
     	modResult = modUser.executeQuery(query);
 		return modResult.rowUpdated();
 	}
@@ -77,7 +82,7 @@ public class Administrator extends User{
 				
 				ArrayList<String> phoneNumbers = new ArrayList<String>();
 				String q2 = "SELECT * FROM phone WHERE username=" + rs.getString(4) + ";";
-				ResultSet rs2 = searchUser.executeQuery(q);
+				ResultSet rs2 = searchUser.executeQuery(q2);
 				while (rs2.next()) {
 					phoneNumbers.add(rs.getString(1));
 				}
@@ -93,6 +98,7 @@ public class Administrator extends User{
 		}
 	}
 	
+	/*Generate username*/
 	public String generateUsername(String firstname, String lastname) throws SQLException {
 		if(database == null)
 			database = new DatabaseHandler();
@@ -104,7 +110,7 @@ public class Administrator extends User{
         String query = "SELECT username FROM personnel WHERE username= " + generated + ";";
     	Result = deleteUser.executeQuery(query);
     	if(Result.wasNull())
-    		return generated;
+    		return generated.toLowerCase();
     	else
     	{
     		Random rand = new Random();
