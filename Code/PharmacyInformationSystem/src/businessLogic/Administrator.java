@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import businessLogic.loginFunctionality.DatabaseHandler;
+import businessLogic.loginFunctionality.Hashing;
 import businessLogic.loginFunctionality.Sanitizer;
 
 public class Administrator extends User{
@@ -54,14 +55,14 @@ public class Administrator extends User{
     	String query;
     	//If there's no password supplied don't update the password to nothing.
     	if(user.getPassword() == null || user.getPassword() == "")
-    		query = "UPDATE personnel SET firstName=" + user.getFirstName() + ",lastName=" + user.getLastName() +
+    		query = "UPDATE personnel SET firstName=" + Sanitizer.sanitizeInput(user.getFirstName()) + ",lastName=" + Sanitizer.sanitizeInput(user.getLastName()) +
     		",idCard=" + user.getIdCard() + ",username=" + user.getUsername() +
     		",roleID" + user.getRoleID() + 
     		"WHERE employeeID=" + user.getEmployeeID() + ";";
     	else
     		query = "UPDATE personnel SET firstName=" + user.getFirstName() + ",lastName=" + user.getLastName() +
     		",idCard=" + user.getIdCard() + ",username=" + user.getUsername() +
-    		",passphrase=" + user.getPassword() + ",roleID" + user.getRoleID() + 
+    		",passphrase=" + Hashing.hashing(user.getPassword()) + ",roleID" + user.getRoleID() + 
     		"WHERE employeeID=" + user.getEmployeeID() + ";";
     	//update the password and report back with the result
     	modResult = modUser.executeQuery(query);
