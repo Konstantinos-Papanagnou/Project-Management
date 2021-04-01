@@ -15,7 +15,9 @@ public class AuthenticationHandler {
 
 	/*Authenticates user*/
 	public User authenticateUser(String username, String password) throws AuthenticationFailure{
+		// sanitize the username
 		username = Sanitizer.sanitizeInput(username);
+		// no need to sanitize the password, we just hash it.
 		String hash = Hashing.hashing(password);
 		try {
 			if(!handler.credentialCheck(username, hash))

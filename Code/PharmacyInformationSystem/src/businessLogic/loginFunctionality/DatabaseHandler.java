@@ -18,6 +18,7 @@ public class DatabaseHandler {
 	private String port="1521";//port
 	private String databaseName="xe";//database name
 	
+	//Constructor that makes a connection to the database on the fly
 	public DatabaseHandler() {
 		try {
 			doConnect();
@@ -38,22 +39,20 @@ public class DatabaseHandler {
 	void doConnect() throws ClassNotFoundException, SQLException {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             String url = "jdbc:oracle:thin:@" + host + ":" + port + ":" + databaseName;
-            connection = DriverManager.getConnection(url, username, password);
-           // System.out.println("Connection");
-        
+            connection = DriverManager.getConnection(url, username, password);        
     }
 	
 	/*Try to disconnect from DB*/
 	public void doDisconnect() throws SQLException {
-		System.out.println("I'm disconnecting");
         connection.close();
     }
 	
-    /*Get user*/
+    /*Returns the user data of a specified user to the front end*/
 	public User getUserData(String username) {
     	User user = null;
     	username = Sanitizer.sanitizeInput(username);
 		try {
+			// fetch user data from the database.
 			Statement searchUser = connection.createStatement();
 			String q = "SELECT * FROM personnel WHERE username=" + username + ";";
 			ResultSet rs = searchUser.executeQuery(q);		
@@ -63,6 +62,7 @@ public class DatabaseHandler {
 					rs.getInt(0), rs.getString(4),
 					null, rs.getInt(6), null);
             }
+			// fetch user registered phone numbers from the database
 			q = "SELECT * FROM phone WHERE username=" + username + ";";
 			rs = searchUser.executeQuery(q);
 			ArrayList<String> phones = new ArrayList<String>();
@@ -70,6 +70,7 @@ public class DatabaseHandler {
 				phones.add(rs.getString(1));
 			}
 			user.setPhoneNumbers(phones);
+			//and return the user data
 			return user;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -78,7 +79,7 @@ public class DatabaseHandler {
 
 	}
     
-    /*Check user's credentials*/
+    /*Returns true if the authentication succeeded and false if the authentication failed*/
 	boolean credentialCheck(String username, String password) throws SQLException {
     	Statement searchUser;
     	ResultSet searchUserResult;
@@ -88,7 +89,7 @@ public class DatabaseHandler {
     	String query = "SELECT username, passphrase FROM personnel WHERE username=" + username + 
         		"AND passphrase=" + password + ";";
     	searchUserResult = searchUser.executeQuery(query);
-    	
+    	// we need to invert the boolean since it returns true if the authentication failed
     	return !searchUserResult.wasNull();
     }
 
