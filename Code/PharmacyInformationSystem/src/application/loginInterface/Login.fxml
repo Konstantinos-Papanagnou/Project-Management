@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="717.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="877.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginInterface.LoginController">
    <children>
-      <HBox alignment="CENTER" prefHeight="76.0" prefWidth="552.0">
+      <HBox alignment="CENTER" prefHeight="97.0" prefWidth="612.0">
          <children>
             <ImageView fitHeight="62.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -60,26 +60,23 @@
          <VBox.margin>
             <Insets left="85.0" right="80.0" />
          </VBox.margin>
-         <padding>
-            <Insets left="50.0" right="50.0" />
-         </padding>
       </HBox>
-      <VBox alignment="CENTER" maxHeight="400.0" maxWidth="520.0" minHeight="292.0" minWidth="520.0" prefHeight="292.0" prefWidth="520.0" VBox.vgrow="NEVER">
+      <VBox alignment="CENTER" maxHeight="400.0" maxWidth="687.0" minHeight="292.0" minWidth="520.0" prefHeight="292.0" prefWidth="687.0" VBox.vgrow="NEVER">
          <children>
-            <Label alignment="TOP_LEFT" prefHeight="27.0" prefWidth="480.0" styleClass="login-box-lable" stylesheets="@application/application.css" text="Είσοδος Χρήστη" />
-            <VBox prefHeight="207.0" prefWidth="327.0" spacing="3.0" styleClass="login-box" VBox.vgrow="NEVER">
+            <Label alignment="TOP_LEFT" prefHeight="27.0" prefWidth="591.0" styleClass="login-box-lable" stylesheets="@application/application.css" text="Είσοδος Χρήστη" />
+            <VBox prefHeight="230.0" prefWidth="562.0" spacing="3.0" styleClass="login-box" VBox.vgrow="NEVER">
                <children>
                   <Label alignment="CENTER" styleClass="letters" text="Όνομα χρήστη" />
-                  <TextField alignment="TOP_LEFT" styleClass="textField" />
+                  <TextField fx:id="usernameBox" alignment="TOP_LEFT" styleClass="textField" />
                   <Label styleClass="letters" text="Κωδικός πρόσβασης" />
-                  <PasswordField alignment="TOP_LEFT" styleClass="textField" />
-                  <Label fx:id="wrongCredsLbl" styleClass="smallletter" text="Λανθασμένα στοιχεία σύνδεσης" textFill="RED" />
+                  <PasswordField fx:id="passwordBox" alignment="TOP_LEFT" styleClass="textField" />
+                  <Label fx:id="wrongCredsLbl" styleClass="smallletter" text="Λανθασμένα στοιχεία σύνδεσης" textFill="RED" visible="false" />
                   <VBox alignment="CENTER" VBox.vgrow="NEVER">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Σύνδεση" textAlignment="CENTER">
+                        <Button fx:id="loginBtn" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#loginClicked" text="Σύνδεση" textAlignment="CENTER">
                            <padding>
                               <Insets bottom="5.0" left="25.0" right="25.0" top="5.0" />
                            </padding>
