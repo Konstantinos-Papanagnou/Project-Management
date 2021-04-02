@@ -28,7 +28,7 @@ public class DatabaseHandler {
 	}
 	
 	/*Try to connect to DB*/
-	void doConnect() throws ClassNotFoundException, SQLException {
+	public void doConnect() throws ClassNotFoundException, SQLException {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             String url = "jdbc:oracle:thin:@" + host + ":" + port + ":" + databaseName;
             connection = DriverManager.getConnection(url, username, password);        
@@ -46,7 +46,7 @@ public class DatabaseHandler {
 		try {
 			// fetch user data from the database.
 			Statement searchUser = connection.createStatement();
-			String q = "SELECT * FROM personnel WHERE username=" + username + ";";
+			String q = "SELECT * FROM personnel WHERE username='" + username + "';";
 			ResultSet rs = searchUser.executeQuery(q);		
 			while (rs.next()) {
 				user = new User(rs.getString(1),
@@ -55,7 +55,7 @@ public class DatabaseHandler {
 					null, rs.getInt(6), null);
             }
 			// fetch user registered phone numbers from the database
-			q = "SELECT * FROM phone WHERE username=" + username + ";";
+			q = "SELECT * FROM phone WHERE username='" + username + "';";
 			rs = searchUser.executeQuery(q);
 			ArrayList<String> phones = new ArrayList<String>();
 			while (rs.next()) {
@@ -70,19 +70,39 @@ public class DatabaseHandler {
 		}
 
 	}
+	
+    public void showCustomers() {
+        Statement searchStatement;
+        ResultSet searchResultSet;
+        try {
+            searchStatement = connection.createStatement();
+            String query = "SELECT * FROM userRole";
+            searchResultSet = searchStatement.executeQuery(query);
+            while (searchResultSet.next()) {
+                String role = searchResultSet.getString("roleID");
+                String description = searchResultSet.getString("roleDescription");
+
+                System.out.println("ID: " + role + " DESCRIPTION: " + description);
+            }
+            searchResultSet.close();
+            searchStatement.close();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
     
     /*Returns true if the authentication succeeded and false if the authentication failed*/
 	boolean credentialCheck(String username, String password) throws SQLException {
-    	Statement searchUser;
+    	
+		Statement searchUser;
     	ResultSet searchUserResult;
     	
     	
     	searchUser = connection.createStatement();
-    	String query = "SELECT username, passphrase FROM personnel WHERE username=" + username + 
-        		"AND passphrase=" + password + ";";
-    	searchUserResult = searchUser.executeQuery(query);
-    	// we need to invert the boolean since it returns true if the authentication failed
-    	return !searchUserResult.wasNull();
+    	String q = "SELECT * FROM personnel WHERE username = '" + username+"' "
+    			+ " AND passphrase = '" + password + "'" ;
+    	searchUserResult = searchUser.executeQuery(q);
+    	return searchUserResult.next();
     }
 
     

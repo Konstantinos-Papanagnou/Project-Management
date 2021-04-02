@@ -7,6 +7,7 @@ import application.loginInterface.LoginController;
 
 
 public class Main extends Application {
+	
 	public static Stage window;
 	public static final double WIDTH = 1000;
 	public static final double HEIGHT = 800;
@@ -21,7 +22,7 @@ public class Main extends Application {
 		window.show();
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException {
 		launch(args);
 	}
 }
