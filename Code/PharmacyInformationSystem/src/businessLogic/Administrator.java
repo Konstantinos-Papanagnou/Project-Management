@@ -16,7 +16,7 @@ public class Administrator extends User{
 	
 	/*Admin's constructor*/
 	public Administrator(String firstName, String lastName, String idCard, int employeeID, String username,
-			String password, int roleID, ArrayList<String> phoneNumbers) {
+			String password, int roleID, ArrayList<String> phoneNumbers) throws ClassNotFoundException, SQLException {
 		super(firstName, lastName, idCard, employeeID, username, password, roleID, phoneNumbers);
 		database = new DatabaseHandler();
 	}
@@ -27,7 +27,7 @@ public class Administrator extends User{
 	}
 	
 	/*Add new user*/
-	public boolean insertUser(User user) throws SQLException {
+	public boolean insertUser(User user) throws SQLException, ClassNotFoundException {
 		//Setup the connection if it does not already exist
 		if(database == null)
 			database = new DatabaseHandler();
@@ -44,7 +44,7 @@ public class Administrator extends User{
 	}
 
 	/*Modify user*/
-	public boolean modifyUser(User user) throws SQLException {
+	public boolean modifyUser(User user) throws SQLException, ClassNotFoundException {
 		//Setup the connection if it does not already exist
 		if(database == null)
 			database = new DatabaseHandler();
@@ -70,7 +70,7 @@ public class Administrator extends User{
 	}
 	
 	/*Remove user*/
-	public boolean deleteUser(int employeeID) throws SQLException {
+	public boolean deleteUser(int employeeID) throws SQLException, ClassNotFoundException {
 		//Setup the connection if it does not already exist
 		if(database == null)
 			database = new DatabaseHandler();
@@ -85,7 +85,7 @@ public class Administrator extends User{
 	}
 	
 	/*Get all users*/
-	public ArrayList<User> getAllUsers(){
+	public ArrayList<User> getAllUsers() throws ClassNotFoundException, SQLException{
 		//Setup the connection if it does not already exist
 		if(database == null)
 			database = new DatabaseHandler();
@@ -120,7 +120,7 @@ public class Administrator extends User{
 	}
 	
 	/*Creates a unique username for a user*/
-	public String generateUsername(String firstname, String lastname) throws SQLException {
+	public String generateUsername(String firstname, String lastname) throws SQLException, ClassNotFoundException {
 		//Setup the connection if it does not already exist
 		if(database == null)
 			database = new DatabaseHandler();
