@@ -30,12 +30,13 @@ public class LoginController {
 			try {
 				handler = new AuthenticationHandler();
 			} catch (AuthenticationFailure e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			//wrongCredsLbl.setText("Could not connect to the database. Your database is either Corrupted or Offline.");
-			//wrongCredsLbl.setVisible(true);
-			//return;
+			if(handler == null) {
+				wrongCredsLbl.setText("Could not connect to the database. Your database is either Corrupted or Offline.");
+				wrongCredsLbl.setVisible(true);
+				return;
+			}
 		}
 		try {
 			handler.authenticateUser(usernameBox.getText(), passwordBox.getText());
