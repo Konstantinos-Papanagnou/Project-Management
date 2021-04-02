@@ -19,16 +19,8 @@ public class DatabaseHandler {
 	private String databaseName="xe";//database name
 	
 	//Constructor that makes a connection to the database on the fly
-	public DatabaseHandler() {
-		try {
-			doConnect();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public DatabaseHandler() throws ClassNotFoundException, SQLException {
+		doConnect();
 	}
 	
 	public Connection getConnection() {
