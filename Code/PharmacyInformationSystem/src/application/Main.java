@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import application.loginInterface.LoginController;
+import businessLogic.User;
 
 
 public class Main extends Application {
@@ -17,7 +18,8 @@ public class Main extends Application {
 		window.setTitle("Pharmacy Information System");
 		window.setMinHeight(HEIGHT);
 		window.setMinWidth(WIDTH);
-		window.setScene(new LoginController().getScene());
+		window.setScene(new application.mainInterface.MainController(new User("", "", "", 0, "kopapa", null, 0, null )).getScene());
+		//window.setScene(new LoginController().getScene());
 		window.getIcons().add(new Image(getClass().getResourceAsStream("loginInterface/WelcomeImage.png")));
 		window.show();
 	}

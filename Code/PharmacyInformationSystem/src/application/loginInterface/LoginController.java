@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import businessLogic.User;
 import businessLogic.loginFunctionality.AuthenticationFailure;
 import businessLogic.loginFunctionality.AuthenticationHandler;
 
@@ -39,8 +40,8 @@ public class LoginController {
 			}
 		}
 		try {
-			handler.authenticateUser(usernameBox.getText(), passwordBox.getText());
-			application.Main.window.setScene(new application.MasterInterface.MasterController().getScene());
+			User user = handler.authenticateUser(usernameBox.getText(), passwordBox.getText());
+			application.Main.window.setScene(new application.mainInterface.MainController(user).getScene());
 		} catch (AuthenticationFailure e1) {
 			wrongCredsLbl.setText(e1.getMessage());
 			wrongCredsLbl.setVisible(true);
@@ -55,7 +56,7 @@ public class LoginController {
 		try {
 			VBox root = (VBox)FXMLLoader.load(getClass().getResource("Login.fxml"));
 			scene = new Scene(root);
-			root.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			root.getStylesheets().add(getClass().getResource("../application.css").toExternalForm());
 			handler = new AuthenticationHandler();
 		} catch (IOException e) {
 			
