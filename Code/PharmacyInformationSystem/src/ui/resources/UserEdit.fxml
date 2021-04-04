@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.UserEditController">
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="1000.0" minWidth="400.0">
+         <content>
+            <BorderPane styleClass="background">
+               <center>
+                  <VBox alignment="CENTER" maxWidth="300.0" spacing="20.0" styleClass="background">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="100.0" spacing="5.0" styleClass="background">
+                           <children>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="lable-green" text="Label" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox styleClass="background">
+                           <children>
+                              <Label styleClass="letters" text="Όνομα" />
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label styleClass="letters" text="Επώνυμο" />
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label styleClass="letters" text="Αριθμός Ταυτότητας" />
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label styleClass="letters" text="Αριθμός Υπαλλήλου" />
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <VBox spacing="10.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label styleClass="letters" text="Κωδικό Πρόσβασης" />
+                                    <PasswordField styleClass="text-field" />
+                                 </children>
+                              </VBox>
+                              <CheckBox alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Εμφάνισε κρυμμένους χαρακτήρες" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label styleClass="letters" text="Όνομα Χρήστη" />
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label styleClass="letters" text="Ρόλος" />
+                              <ComboBox fx:id="roles" prefHeight="35.0" prefWidth="300.0" promptText="Επιλέξτε ένα ρόλο" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label styleClass="letters" text="Τηλέφωνο επικοινωνίας" />
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" text="Αποθήκευση" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </content>
+         <padding>
+            <Insets bottom="50.0" top="30.0" />
+         </padding>
+      </ScrollPane>
+   </center>
+   <top>
+      <SplitPane dividerPositions="0.1978021978021978" maxWidth="1000.0" minWidth="400.0" prefHeight="0.0" prefWidth="1000.0" styleClass="navigation-bar" BorderPane.alignment="CENTER">
+         <items>
+            <HBox maxHeight="50.0">
+               <children>
+                  <Button fx:id="self" mnemonicParsing="false" styleClass="user-box" text="Χρήστης: " />
+                  <Button fx:id="exit" mnemonicParsing="false" styleClass="user-box-exit" text="Έξοδος">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_RIGHT">
+               <children>
+                  <ImageView fx:id="toMainMenu" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" styleClass="image-main-menu">
+                     <image>
+                        <Image url="@images/cross-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </items>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </SplitPane>
+   </top>
+</BorderPane>

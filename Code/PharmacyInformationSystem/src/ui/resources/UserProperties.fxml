@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <BorderPane styleClass="background" BorderPane.alignment="CENTER">
+         <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="background" BorderPane.alignment="CENTER">
+              <content>
+                  <VBox spacing="25.0" styleClass="background">
+                     <children>
+                        <HBox alignment="CENTER" spacing="20.0" styleClass="background">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/user.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <TableView>
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1">
+                                       <graphic>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" />
+                                       </graphic>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="C1">
+                                       <graphic>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" />
+                                       </graphic>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="C1">
+                                       <graphic>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" />
+                                       </graphic>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="C1">
+                                       <graphic>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" />
+                                       </graphic>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="C1">
+                                       <graphic>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" />
+                                       </graphic>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" text="C1">
+                                       <graphic>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" />
+                                       </graphic>
+                                    </TableColumn>
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="20.0" styleClass="background">
+                           <children>
+                              <Button mnemonicParsing="false" text="Επεξεργασία" />
+                              <Button mnemonicParsing="false" styleClass="button-delete" text="Διαγραφή" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+              </content>
+            </ScrollPane>
+         </center>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="40.0" top="25.0" />
+         </padding>
+      </BorderPane>
+   </center>
+   <top>
+      <SplitPane dividerPositions="0.1978021978021978, 0.9134615384615384" maxWidth="1000.0" prefWidth="1000.0" styleClass="navigation-bar">
+         <items>
+            <HBox maxHeight="50.0">
+               <children>
+                  <Button fx:id="self" mnemonicParsing="false" styleClass="user-box" text="Χρήστης: " />
+                  <Button fx:id="exit" mnemonicParsing="false" styleClass="user-box-exit" text="Έξοδος">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </HBox>
+            <MenuBar maxWidth="1000.0" minHeight="0.0" translateY="-15.0">
+               <menus>
+                  <Menu fx:id="toUserList" mnemonicParsing="false" text="Διαχείριση χρηστών">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="aboutaboutaboutaboutaboutaboutaboutaboutabout" />
+                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="toWarehouse" mnemonicParsing="false" text="Αποθήκη">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Label">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Label">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <VBox alignment="CENTER_RIGHT">
+               <children>
+                  <ImageView fx:id="toMainMenu" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" styleClass="image-main-menu">
+                     <image>
+                        <Image url="@images/cross-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </items>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </SplitPane>
+   </top>
+</BorderPane>
