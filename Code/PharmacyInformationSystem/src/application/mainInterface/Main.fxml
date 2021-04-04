@@ -15,246 +15,251 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane minHeight="500.0" minWidth="1000.0" prefHeight="800.0" prefWidth="1000.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainInterface.MainController">
-   <center>
-      <BorderPane styleClass="background" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane minHeight="500.0" minWidth="1000.0" prefHeight="800.0" prefWidth="1000.0" styleClass="background">
          <center>
-            <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
-               <content>
-                  <BorderPane styleClass="background">
-                     <center>
-                        <VBox alignment="CENTER" spacing="20.0">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="117.0" prefWidth="101.0" spacing="70.0">
+            <BorderPane styleClass="background" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <center>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+                     <content>
+                        <BorderPane styleClass="background">
+                           <center>
+                              <VBox alignment="CENTER" spacing="20.0">
                                  <children>
-                                    <VBox alignment="CENTER" layoutX="279.0" layoutY="30.0" maxWidth="115.0" minHeight="120.0" styleClass="menu-icon">
+                                    <HBox alignment="CENTER" prefHeight="117.0" prefWidth="101.0" spacing="70.0">
                                        <children>
-                                          <VBox styleClass="my-icon">
+                                          <VBox alignment="CENTER" layoutX="279.0" layoutY="30.0" maxWidth="115.0" minHeight="120.0" styleClass="menu-icon">
                                              <children>
-                                                <Pane fx:id="manageWarehouseView" prefHeight="110.0" prefWidth="110.0">
+                                                <VBox styleClass="my-icon">
                                                    <children>
-                                                      <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@images/warehouse.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                      <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@../../ui/resources/images/cross-icon.png" />
-                                                         </image>
-                                                      </ImageView>
+                                                      <Pane fx:id="manageWarehouseView" prefHeight="110.0" prefWidth="110.0">
+                                                         <children>
+                                                            <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@images/warehouse.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@../../ui/resources/images/cross-icon.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </Pane>
+                                                      <Label alignment="CENTER" prefHeight="17.0" prefWidth="109.0" styleClass="my-label" text="Αποθήκη" />
                                                    </children>
-                                                </Pane>
-                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="109.0" styleClass="my-label" text="Αποθήκη" />
+                                                </VBox>
                                              </children>
                                           </VBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox alignment="CENTER" layoutX="279.0" layoutY="20.0" maxWidth="120.0" minHeight="120.0" styleClass="menu-icon">
-                                       <children>
-                                          <VBox maxWidth="115.0" minHeight="115.0" styleClass="my-icon">
+                                          <VBox alignment="CENTER" layoutX="279.0" layoutY="20.0" maxWidth="120.0" minHeight="120.0" styleClass="menu-icon">
                                              <children>
-                                                <Pane fx:id="viewStatisticsView" prefHeight="110.0" prefWidth="110.0">
+                                                <VBox maxWidth="115.0" minHeight="115.0" styleClass="my-icon">
                                                    <children>
-                                                      <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@images/line-chart.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                      <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@../../ui/resources/images/cross-icon.png" />
-                                                         </image>
-                                                      </ImageView>
+                                                      <Pane fx:id="viewStatisticsView" prefHeight="110.0" prefWidth="110.0">
+                                                         <children>
+                                                            <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@images/line-chart.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@../../ui/resources/images/cross-icon.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </Pane>
+                                                      <Label alignment="CENTER" prefHeight="17.0" prefWidth="109.0" styleClass="my-label" text="Μαρκετίνγκ" />
                                                    </children>
-                                                </Pane>
-                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="109.0" styleClass="my-label" text="Μαρκετίνγκ" />
+                                                </VBox>
                                              </children>
                                           </VBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox alignment="CENTER" layoutX="359.0" layoutY="20.0" maxHeight="153.0" maxWidth="120.0" prefHeight="153.0" prefWidth="110.0" styleClass="menu-icon">
-                                       <children>
-                                          <VBox minHeight="115.0" prefWidth="110.0" styleClass="my-icon">
+                                          <VBox alignment="CENTER" layoutX="359.0" layoutY="20.0" maxHeight="153.0" maxWidth="120.0" prefHeight="153.0" prefWidth="110.0" styleClass="menu-icon">
                                              <children>
-                                                <Pane fx:id="manageUsersView" prefHeight="110.0" prefWidth="110.0">
+                                                <VBox minHeight="115.0" prefWidth="110.0" styleClass="my-icon">
                                                    <children>
-                                                      <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@images/group.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                      <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@../../ui/resources/images/cross-icon.png" />
-                                                         </image>
-                                                      </ImageView>
+                                                      <Pane fx:id="manageUsersView" prefHeight="110.0" prefWidth="110.0">
+                                                         <children>
+                                                            <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@images/group.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@../../ui/resources/images/cross-icon.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </Pane>
+                                                      <Label alignment="CENTER" prefHeight="25.0" prefWidth="109.0" styleClass="my-label" text="Χρήστες">
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </Label>
                                                    </children>
-                                                </Pane>
-                                                <Label alignment="CENTER" prefHeight="25.0" prefWidth="109.0" styleClass="my-label" text="Χρήστες">
                                                    <VBox.margin>
                                                       <Insets />
                                                    </VBox.margin>
-                                                </Label>
+                                                </VBox>
                                              </children>
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
                                           </VBox>
                                        </children>
-                                    </VBox>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="178.0" prefWidth="600.0" spacing="70.0">
+                                       <children>
+                                          <VBox alignment="CENTER" maxHeight="120.0" styleClass="menu-icon">
+                                             <children>
+                                                <VBox maxWidth="115.0" minHeight="115.0" prefWidth="110.0" styleClass="my-icon">
+                                                   <children>
+                                                      <Pane fx:id="manageSalesView" prefHeight="110.0" prefWidth="110.0">
+                                                         <children>
+                                                            <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@images/medicine.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@../../ui/resources/images/cross-icon.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </Pane>
+                                                      <Label alignment="CENTER" prefHeight="17.0" prefWidth="109.0" styleClass="my-label" text="Πωλήσεις">
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" layoutX="279.0" layoutY="10.0" maxWidth="120.0" styleClass="menu-icon">
+                                             <children>
+                                                <VBox maxHeight="120.0" minHeight="115.0" prefWidth="110.0" styleClass="my-icon">
+                                                   <children>
+                                                      <Pane fx:id="userInformationView" prefHeight="110.0" prefWidth="110.0">
+                                                         <children>
+                                                            <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@images/user-icon.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
+                                                               <image>
+                                                                  <Image url="@../../ui/resources/images/cross-icon.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </Pane>
+                                                      <Label alignment="CENTER" prefHeight="17.0" prefWidth="109.0" styleClass="my-label" text="Στοιχεία Χρήστη">
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="50.0" top="10.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
                                  </children>
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </HBox>
-                              <HBox alignment="CENTER" prefHeight="178.0" prefWidth="600.0" spacing="70.0">
-                                 <children>
-                                    <VBox alignment="CENTER" maxHeight="120.0" styleClass="menu-icon">
-                                       <children>
-                                          <VBox maxWidth="115.0" minHeight="115.0" prefWidth="110.0" styleClass="my-icon">
-                                             <children>
-                                                <Pane fx:id="manageSalesView" prefHeight="110.0" prefWidth="110.0">
-                                                   <children>
-                                                      <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@images/medicine.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                      <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@../../ui/resources/images/cross-icon.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </children>
-                                                </Pane>
-                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="109.0" styleClass="my-label" text="Πωλήσεις">
-                                                   <VBox.margin>
-                                                      <Insets />
-                                                   </VBox.margin>
-                                                </Label>
-                                             </children>
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox alignment="CENTER" layoutX="279.0" layoutY="10.0" maxWidth="120.0" styleClass="menu-icon">
-                                       <children>
-                                          <VBox maxHeight="120.0" minHeight="115.0" prefWidth="110.0" styleClass="my-icon">
-                                             <children>
-                                                <Pane fx:id="userInformationView" prefHeight="110.0" prefWidth="110.0">
-                                                   <children>
-                                                      <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true" styleClass="my-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@images/user-icon.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                      <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="my-second-icon" x="8.0" y="3.0">
-                                                         <image>
-                                                            <Image url="@../../ui/resources/images/cross-icon.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </children>
-                                                </Pane>
-                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="109.0" styleClass="my-label" text="Στοιχεία Χρήστη">
-                                                   <VBox.margin>
-                                                      <Insets />
-                                                   </VBox.margin>
-                                                </Label>
-                                             </children>
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                          </VBox>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets left="50.0" top="10.0" />
-                                 </padding>
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                        </VBox>
-                     </center>
-                     <padding>
-                        <Insets top="30.0" />
-                     </padding>
-                  </BorderPane>
-               </content>
-            </ScrollPane>
+                              </VBox>
+                           </center>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </BorderPane>
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
          </center>
-      </BorderPane>
-   </center>
-   <top>
-      <SplitPane dividerPositions="0.1978021978021978, 0.9134615384615384" styleClass="navigation-bar" BorderPane.alignment="CENTER">
-         <items>
-            <HBox maxHeight="50.0">
-               <children>
-                  <Label fx:id="usernameLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="185.0" text="Χρήστης:" textFill="WHITE" />
-                  <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutClick" styleClass="user-box-exit" text="Έξοδος">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </Button>
-               </children>
-            </HBox>
-            <MenuBar translateY="-15.0">
-               <menus>
-                  <Menu fx:id="toUserList" mnemonicParsing="false" text="Διαχείριση χρηστών">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                        <MenuItem mnemonicParsing="false" text="aboutaboutaboutaboutaboutaboutaboutaboutabout" />
-                        <MenuItem mnemonicParsing="false" text="About" />
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu fx:id="toWarehouse" mnemonicParsing="false" text="Αποθήκη">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Label">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Label">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-               </menus>
-            </MenuBar>
-            <VBox alignment="CENTER_RIGHT">
-               <children>
-                  <ImageView fx:id="toMainMenuView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" styleClass="image-main-menu">
-                     <image>
-                        <Image url="@../../ui/resources/images/cross-icon.png" />
-                     </image>
-                  </ImageView>
-               </children>
+         <top>
+            <SplitPane dividerPositions="0.1978021978021978, 0.9134615384615384" styleClass="navigation-bar" BorderPane.alignment="CENTER">
+               <items>
+                  <HBox maxHeight="50.0">
+                     <children>
+                        <Label fx:id="usernameLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="185.0" text="Χρήστης:" textFill="WHITE" />
+                        <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutClick" styleClass="user-box-exit" text="Έξοδος">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <MenuBar translateY="-15.0">
+                     <menus>
+                        <Menu fx:id="toUserList" mnemonicParsing="false" text="Διαχείριση χρηστών">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="About" />
+                              <MenuItem mnemonicParsing="false" text="aboutaboutaboutaboutaboutaboutaboutaboutabout" />
+                              <MenuItem mnemonicParsing="false" text="About" />
+                              <MenuItem mnemonicParsing="false" text="About" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="toWarehouse" mnemonicParsing="false" text="Αποθήκη">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="About" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Label">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="About" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Label">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="About" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <VBox alignment="CENTER_RIGHT">
+                     <children>
+                        <ImageView fx:id="toMainMenuView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" styleClass="image-main-menu">
+                           <image>
+                              <Image url="@../../ui/resources/images/cross-icon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" />
+                     </padding>
+                  </VBox>
+               </items>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
                <padding>
-                  <Insets bottom="5.0" left="20.0" right="20.0" />
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
-            </VBox>
-         </items>
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
-         <padding>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-         </padding>
-      </SplitPane>
-   </top>
-</BorderPane>
+            </SplitPane>
+         </top>
+      </BorderPane>
+   </children>
+</VBox>

@@ -37,6 +37,7 @@ public class MainController {
 	Pane manageSalesView;
 	@FXML
 	Pane userInformationView;
+
 	
 	@FXML
 	private void logoutClick(ActionEvent e) {
