@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PharmacyInformationSystem.BusinessLogic;
+using PharmacyInformationSystem.BusinessLogic.LoginFunctionality;
 
 namespace PharmacyInformationSystem.UnitTesting
 {
@@ -11,6 +12,13 @@ namespace PharmacyInformationSystem.UnitTesting
     {
         public bool Test()
         {
+            string hash = Hashing.ComputeHash("password123");
+            string hash2 = Hashing.ComputeHash("password123");
+            if (hash == hash2)
+                Console.WriteLine("They are the same");
+            Console.WriteLine(hash);
+            Console.WriteLine(hash2);
+            Console.WriteLine(hash.Length);
             //Console.WriteLine(Administrator.GenerateUsername("ΘΑΝΑΣΗΣ", "ΜΕΛΙΣΣΟΣ"));
             bool first = Sanitizer.CheckFirstName("Κωνσταντίνος");
             bool second = Sanitizer.CheckLastName("Παπανάγνου");

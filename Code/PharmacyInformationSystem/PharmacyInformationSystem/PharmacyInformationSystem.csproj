@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\DatabaseHandler.cs" />
+    <Compile Include="BusinessLogic\LoginFunctionality\Hashing.cs" />
     <Compile Include="BusinessLogic\Sanitizer.cs" />
     <Compile Include="BusinessLogic\Users.cs" />
     <Compile Include="Form1.cs">
@@ -107,7 +108,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BusinessLogic\LoginFunctionality\" />
     <Folder Include="UIComponents\" />
   </ItemGroup>
   <ItemGroup>
