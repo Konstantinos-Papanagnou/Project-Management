@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.IO;
 
 namespace PharmacyInformationSystem.BusinessLogic
 {
@@ -35,6 +36,8 @@ namespace PharmacyInformationSystem.BusinessLogic
 
         public DatabaseHandler()
         {
+            if (File.Exists(DatabaseName))
+                return;
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
@@ -50,11 +53,12 @@ namespace PharmacyInformationSystem.BusinessLogic
             new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {UsersTableName}({EmployeeIDField} INTEGER PRIMARY KEY AUTOINCREMENT," +
                 $" {FirstNameField} STRING NOT NULL, {LastNameField} STRING NOT NULL, {IdCardField} CHAR(8) UNIQUE NOT NULL, " +
                 $"{UsernameField} CHAR(6) NOT NULL, {PasswordField} CHAR(64) NOT NULL, {RoleIDField} INT NOT NULL," +
-                $", FOREIGN KEY({RoleIDField}) REFERENCES {RolesTableName}({RoleIDField}))", conn).ExecuteNonQuery();
+                $" FOREIGN KEY({RoleIDField}) REFERENCES {RolesTableName}({RoleIDField}))", conn).ExecuteNonQuery();
 
             new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {PhoneNumberTableName}({EmployeeIDField} INTEGER," +
                 $" {PhoneNumberField} CHAR(10) NOT NULL, PRIMARY KEY({EmployeeIDField}, {PhoneNumberField}), FOREIGN KEY({EmployeeIDField}) REFERENCES {UsersTableName}({EmployeeIDField}))", conn).ExecuteNonQuery();
 
+            //To-Do insert default role id values and default administator data
         }
 
         internal bool DoesUsernameExists(string username)
@@ -62,7 +66,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
-                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM USER WHERE {UsernameField} = {username}", conn);
+                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM USER WHERE {UsernameField} = '{username}'", conn);
                 var reader = command.ExecuteReader();
                 return reader.Read();
             }
@@ -73,7 +77,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
-                SQLiteCommand command = new SQLiteCommand($"SELECT {EmployeeIDField} FROM {UsersTableName} WHERE {UsernameField} = {Sanitizer.SanitizeInput(username)} AND {PasswordField} = {LoginFunctionality.Hashing.ComputeHash(password)}", conn);
+                SQLiteCommand command = new SQLiteCommand($"SELECT {EmployeeIDField} FROM {UsersTableName} WHERE {UsernameField} = '{Sanitizer.SanitizeInput(username)}' AND {PasswordField} = '{LoginFunctionality.Hashing.ComputeHash(password)}'", conn);
                 var reader = command.ExecuteReader();
                 return reader.Read();
             }
@@ -85,7 +89,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             {
                 conn.Open();
 
-                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM {UsersTableName} WHERE {UsernameField} = {username}", conn);
+                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM {UsersTableName} WHERE {UsernameField} = '{username}'", conn);
                 var reader = command.ExecuteReader();
                 User user = null;
                 while (reader.Read())
@@ -100,7 +104,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                             RoleID:int.Parse(reader[6].ToString()),
                             null
                         );
-                    SQLiteCommand grabPhones = new SQLiteCommand($"SELECT * FROM {PhoneNumberTableName} WHERE {EmployeeIDField} = ");
+                    SQLiteCommand grabPhones = new SQLiteCommand($"SELECT * FROM {PhoneNumberTableName} WHERE {EmployeeIDField} = '{user.EmployeeID}'", conn);
                     var phoneReader = grabPhones.ExecuteReader();
                     List<string> phoneNumbers = new List<string>();
                     while (phoneReader.Read())

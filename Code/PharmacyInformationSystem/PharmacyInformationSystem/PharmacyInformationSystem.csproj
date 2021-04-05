@@ -74,23 +74,29 @@
     <Compile Include="BusinessLogic\LoginFunctionality\Hashing.cs" />
     <Compile Include="BusinessLogic\Sanitizer.cs" />
     <Compile Include="BusinessLogic\Users.cs" />
-    <Compile Include="UIComponents\Form1.cs">
+    <Compile Include="UIComponents\MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIComponents\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UIComponents\MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIComponents\Navigator.cs">
+    <Compile Include="UIComponents\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\Navigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIComponents\Navigator.Designer.cs">
+    <Compile Include="UIComponents\MainUserControls\Navigator.Designer.cs">
       <DependentUpon>Navigator.cs</DependentUpon>
     </Compile>
     <Compile Include="UnitTesting\SanitizerUnitTesting.cs" />
-    <EmbeddedResource Include="UIComponents\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="UIComponents\MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,8 +106,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UIComponents\Navigator.resx">
+    <EmbeddedResource Include="UIComponents\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\Navigator.resx">
       <DependentUpon>Navigator.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -121,6 +131,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="cross-icon.ico" />
+    <None Include="Resources\cross-icon.png" />
+    <Content Include="UIComponents\Login\cross-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
