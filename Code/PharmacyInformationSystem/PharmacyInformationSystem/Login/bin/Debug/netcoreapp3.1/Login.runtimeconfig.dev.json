@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Eleni\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Eleni\\.nuget\\packages"
+    ]
+  }
+}
