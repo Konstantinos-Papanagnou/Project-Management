@@ -1,7 +1,7 @@
 ﻿
 namespace PharmacyInformationSystem
 {
-    partial class Form1
+    partial class MainScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace PharmacyInformationSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,20 +64,21 @@ namespace PharmacyInformationSystem
             // panel1
             // 
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(0, 99);
+            this.panel1.Location = new System.Drawing.Point(0, 106);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1115, 486);
+            this.panel1.Size = new System.Drawing.Size(1115, 479);
             this.panel1.TabIndex = 2;
             // 
-            // Form1
+            // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 588);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainScreen";
+            this.Text = "Pharmacy Information System";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
