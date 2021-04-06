@@ -7,40 +7,62 @@ using System.Threading.Tasks;
 
 namespace PharmacyInformationSystem.BusinessLogic
 {
+	/// <summary>
+	/// Wrapper class that handles application policy and Sanitization techniques
+	/// </summary>
     public abstract class Sanitizer
     {
-
-		/* Returns true if the firstname is not null or empty or whitespace, or has a length of at least 2 characters and is not longer than 30 characters. */
+		/// <summary>
+		/// Runs a check against the firstname
+		/// </summary>
+		/// <param name="firstName">The firstname to check</param>
+		/// <returns>True if the supplied argument does not violate the application policy</returns>
 		public static bool CheckFirstName(string firstName)
 		{
 			if (string.IsNullOrEmpty(firstName) || string.IsNullOrWhiteSpace(firstName) || firstName.Length < 2 || firstName.Length >= 30)
 				return false;
+			if (Regex.IsMatch(firstName, "[a-zA-Z]")) return false;
 			return true;
 		}
-
-		/* Returns true if the surname is not null or empty or whitespace, or has a length of at least 4 characters and is not longer than 30 characters*/
+		/// <summary>
+		/// Runs a check against the lastname
+		/// </summary>
+		/// <param name="lastName">The lastname to check</param>
+		/// <returns>True if the supplied argument does not violate the application policy</returns>
 		public static bool CheckLastName(string lastName)
 		{
 			if (string.IsNullOrEmpty(lastName) || string.IsNullOrWhiteSpace(lastName) || lastName.Length < 4 || lastName.Length >= 30)
 				return false;
+			if (Regex.IsMatch(lastName, "[a-zA-Z]")) return false;
 			return true;
 		}
 
-		/* Returns true if the id card matches a regex of 2 characters followed by 6 numbers */
+		/// <summary>
+		/// Runs a check against the IDCard
+		/// </summary>
+		/// <param name="IDCard">The IDCard to check</param>
+		/// <returns>True if the supplied argument does not violate the application policy</returns>
 		public static bool CheckIDCard(string IDCard)
 		{
 			//if (IDCard.Length != 8) return false;
 			return Regex.IsMatch(IDCard, "^[A-Z]{2}\\d{6}$");
 		}
 
-		/* returns true if the employeeID is valid (>0) */
+		/// <summary>
+		/// Runs a check against the employeeID
+		/// </summary>
+		/// <param name="employeeID">The employeeID to check</param>
+		/// <returns>True if the supplied argument does not violate the application policy</returns>
 		public static bool CheckEmployeeID(int employeeID)
 		{
 			return employeeID >= 0;
 		}
 
-		/* Returns true if the password is at least 10 characters long, contains at least one digit and has at least one Uppercase character */
-		/* Basically it enforces password policy*/
+		/// <summary>
+		/// Runs a check against the password
+		/// </summary>
+		/// <param name="password">The password to check</param>
+		/// <returns>True if the supplied argument does not violate the application policy</returns>
 		public static bool CheckPassword(string password)
 		{
 			if (!Regex.IsMatch(password, ".{10,}")) return false;
@@ -49,19 +71,31 @@ namespace PharmacyInformationSystem.BusinessLogic
 			return true;
 		}
 
-		/* Returns true if the number specified is within a range of 0-3*/
+		/// <summary>
+		/// Runs a check against the RoleID
+		/// </summary>
+		/// <param name="roleID">The roleID to check</param>
+		/// <returns>True if the supplied argument does not violate the application policy</returns>
 		public static bool CheckRoleID(int roleID)
 		{
-			return roleID >= 0 && roleID < 4;
+			return roleID > 0 && roleID < 4; //We do not allow other administrators
 		}
 
-		/* Returns true if the phone number matches a regex with 10 digits */
+		/// <summary>
+		/// Runs a check against the phone number
+		/// </summary>
+		/// <param name="phoneNumber">The phone number to check</param>
+		/// <returns>True if the supplied argument does not violate the application policy</returns>
 		public static bool CheckPhoneNumber(string phoneNumber)
 		{
 			return Regex.IsMatch(phoneNumber, "^\\d{10}$");
 		}
 
-		/* Remove all the ' symbols from the input to avoid sql injections */
+		/// <summary>
+		/// Sanitizes the supplied argument for bad sql characters
+		/// </summary>
+		/// <param name="input">The input to check</param>
+		/// <returns>The sanitized string</returns>
 		public static string SanitizeInput(string input)
 		{
 			return input.Replace("'", "''");

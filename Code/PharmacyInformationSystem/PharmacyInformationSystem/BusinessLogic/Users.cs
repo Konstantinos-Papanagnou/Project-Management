@@ -41,26 +41,52 @@ namespace PharmacyInformationSystem.BusinessLogic
         public Administrator(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) {
             Database = new DatabaseHandler();
         }
+
+        /// <summary>
+        /// Wrapper function for the DatabaseHandler
+        /// </summary>
+        /// <returns>The list with all the users from the database</returns>
         public List<User> GetAllUsers()
         {
             return Database.RetrieveUsers();
         }
 
+        /// <summary>
+        /// Wrapper function for the DatabaseHandler
+        /// </summary>
+        /// <param name="user">The user to be modified</param>
+        /// <returns>True if the user was updated successfully</returns>
         public bool ModifyUser(User user)
         {
             return Database.ModifyUser(user);
         }
 
+        /// <summary>
+        /// Wrapper function for the DatabaseHandler
+        /// </summary>
+        /// <param name="user">The user to be added</param>
+        /// <returns>True if the user was inserted successfully</returns>
         public bool InsertUser(User user)
         {
             return Database.InsertUser(user);
         }
 
+        /// <summary>
+        /// Wrapper function for the DatabaseHandler
+        /// </summary>
+        /// <param name="user">The user selected to be processed</param>
+        /// <returns>True if the user was successfully removed from the database</returns>
         public bool DeleteUser(User user)
         {
             return Database.DeleteUser(user.EmployeeID, user.RoleID);
         }
 
+        /// <summary>
+        /// Generates a custom username based on the user's first and last name
+        /// </summary>
+        /// <param name="firstname">The user's first name</param>
+        /// <param name="lastname">The user's last name</param>
+        /// <returns>The auto generated username</returns>
         public string GenerateUsername(string firstname, string lastname)
         {
             string Generated = Sanitizer.SanitizeInput(Substitute(firstname.Substring(0, 2).ToLower()) + Substitute(lastname.Substring(0, 4).ToLower()));
@@ -79,6 +105,11 @@ namespace PharmacyInformationSystem.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Helper function to substitute the greek alphabet with our custom alphabet
+        /// </summary>
+        /// <param name="toSubstitute">The input to substitute</param>
+        /// <returns>The substituted letters.</returns>
         private string Substitute(string toSubstitute)
         {
             string greekAlphabet = "αβγδεζηθικλμνξοπρστυφχψω";
@@ -87,6 +118,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             foreach (char c in toSubstitute)
             {
                 int pos = greekAlphabet.IndexOf(c);
+                if (pos < 0) continue; //Invalid character, keep it we don't care. Maybe it's already english
                 substituded += ourAlphabet[pos];
             }
             return substituded;
@@ -95,31 +127,34 @@ namespace PharmacyInformationSystem.BusinessLogic
 
     public class MarketingTeam : User
     {
+        DatabaseHandler Database;
         public MarketingTeam(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers)
         {
-
+            Database = new DatabaseHandler();
         }
-        public MarketingTeam(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { }
+        public MarketingTeam(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { Database = new DatabaseHandler(); }
 
     }
 
     public class StoreKeeper : User
     {
+        DatabaseHandler Database;
         public StoreKeeper(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers)
         {
-
+            Database = new DatabaseHandler();
         }
-        public StoreKeeper(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { }
+        public StoreKeeper(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { Database = new DatabaseHandler(); }
 
     }
 
     public class Seller : User
     {
+        DatabaseHandler Database;
         public Seller(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers)
         {
-
+            Database = new DatabaseHandler();
         }
-        public Seller(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { }
+        public Seller(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { Database = new DatabaseHandler(); }
 
     }
 }

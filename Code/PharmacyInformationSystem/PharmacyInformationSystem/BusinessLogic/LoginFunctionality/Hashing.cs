@@ -7,8 +7,16 @@ using System.Security.Cryptography;
 
 namespace PharmacyInformationSystem.BusinessLogic.LoginFunctionality
 {
+    /// <summary>
+    /// Wrapper class for the hashing functionality
+    /// </summary>
     public abstract class Hashing
     {
+        /// <summary>
+        /// Computes the hash of the supplied password with SHA256 algorithm
+        /// </summary>
+        /// <param name="password">The password to hash</param>
+        /// <returns>The SHA256 hash of the supplied password</returns>
         public static string ComputeHash(string password)
         {
             // Create a SHA256   
