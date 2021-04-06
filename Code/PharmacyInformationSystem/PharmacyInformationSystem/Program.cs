@@ -9,7 +9,7 @@ namespace PharmacyInformationSystem
 {
     static class Program
     {
-        static bool UnitTesting = false;
+        static bool UnitTesting = true;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

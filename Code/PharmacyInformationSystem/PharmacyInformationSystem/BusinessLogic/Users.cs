@@ -38,6 +38,29 @@ namespace PharmacyInformationSystem.BusinessLogic
             Database = new DatabaseHandler();
         }
 
+        public Administrator(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) {
+            Database = new DatabaseHandler();
+        }
+        public List<User> GetAllUsers()
+        {
+            return Database.RetrieveUsers();
+        }
+
+        public bool ModifyUser(User user)
+        {
+            return Database.ModifyUser(user);
+        }
+
+        public bool InsertUser(User user)
+        {
+            return Database.InsertUser(user);
+        }
+
+        public bool DeleteUser(User user)
+        {
+            return Database.DeleteUser(user.EmployeeID, user.RoleID);
+        }
+
         public string GenerateUsername(string firstname, string lastname)
         {
             string Generated = Sanitizer.SanitizeInput(Substitute(firstname.Substring(0, 2).ToLower()) + Substitute(lastname.Substring(0, 4).ToLower()));
@@ -76,6 +99,8 @@ namespace PharmacyInformationSystem.BusinessLogic
         {
 
         }
+        public MarketingTeam(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { }
+
     }
 
     public class StoreKeeper : User
@@ -84,6 +109,8 @@ namespace PharmacyInformationSystem.BusinessLogic
         {
 
         }
+        public StoreKeeper(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { }
+
     }
 
     public class Seller : User
@@ -92,5 +119,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         {
 
         }
+        public Seller(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { }
+
     }
 }
