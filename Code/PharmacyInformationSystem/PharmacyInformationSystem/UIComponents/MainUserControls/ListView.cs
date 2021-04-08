@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace test1
+namespace PharmacyInformationSystem.UIComponents
 {
     public partial class ListView : UserControl
     {

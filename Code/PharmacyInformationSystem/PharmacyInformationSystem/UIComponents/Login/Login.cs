@@ -29,7 +29,7 @@ namespace PharmacyInformationSystem.UIComponents.Login
                 this.ShowInTaskbar = false;
                 this.Hide();
                 new MainScreen(user).ShowDialog();
-                this.Close();
+                //this.Close();
             }
             catch (AuthenticationFailure ex) {
                 UsernamePanelError.BackColor = Color.Red;

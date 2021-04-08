@@ -1,5 +1,5 @@
 ﻿
-namespace test1
+namespace PharmacyInformationSystem.UIComponents
 {
     partial class ListView
     {

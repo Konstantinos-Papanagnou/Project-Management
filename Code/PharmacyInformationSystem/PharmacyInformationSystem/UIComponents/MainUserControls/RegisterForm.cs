@@ -7,7 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
 
-namespace test1
+namespace PharmacyInformationSystem.UIComponents
 {
     public partial class RegisterForm : UserControl
     {
@@ -16,6 +16,9 @@ namespace test1
             InitializeComponent();
         }
 
-        
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

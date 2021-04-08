@@ -29,7 +29,7 @@ namespace PharmacyInformationSystem.UIComponents
 
         private void customizeDesign()
         {
-            panelWarehouseSubMenu.Visible = false;
+            //panelWarehouseSubMenu.Visible = false;
         }
     }
 }

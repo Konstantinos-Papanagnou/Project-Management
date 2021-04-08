@@ -112,11 +112,23 @@
     <Compile Include="UIComponents\MainUserControls\RegisterForm.designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\SideBarItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\SideBarItem.Designer.cs">
+      <DependentUpon>SideBarItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\SideMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\SideMenu.Designer.cs">
       <DependentUpon>SideMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\ViewUserData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\ViewUserData.Designer.cs">
+      <DependentUpon>ViewUserData.cs</DependentUpon>
     </Compile>
     <Compile Include="UnitTesting\SanitizerUnitTesting.cs" />
     <EmbeddedResource Include="UIComponents\MainScreen.resx">
@@ -147,8 +159,14 @@
     <EmbeddedResource Include="UIComponents\MainUserControls\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\SideBarItem.resx">
+      <DependentUpon>SideBarItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\SideMenu.resx">
       <DependentUpon>SideMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\ViewUserData.resx">
+      <DependentUpon>ViewUserData.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -168,6 +186,8 @@
   <ItemGroup>
     <Content Include="cross-icon.ico" />
     <None Include="Resources\cross-icon.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\add-user.png" />
     <Content Include="Resources\crate.png" />
     <Content Include="Resources\icons8-exit-26.png" />
     <Content Include="Resources\icons8-gear-24.png" />
@@ -175,6 +195,8 @@
     <Content Include="Resources\icons8-marketing-24.png" />
     <Content Include="Resources\icons8-plus-math-24.png" />
     <Content Include="Resources\icons8-warehouse-24.png" />
+    <None Include="Resources\loupe-grey.png" />
+    <None Include="Resources\user.png" />
     <Content Include="UIComponents\Login\cross-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
