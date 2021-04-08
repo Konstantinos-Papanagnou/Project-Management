@@ -23,12 +23,19 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         private bool AdminBypass = false;
 
         private bool EditMode = false;
+        /// <summary>
+        /// Call this Constructor if you want to insert user information
+        /// </summary>
         public RegisterView()
         {
             InitializeComponent();
             ViewPasswordsCheckBox.CheckedChanged += ViewPasswordsCheckBox_CheckedChanged;
         }
 
+        /// <summary>
+        /// Call this Constructor if you want to modify user information
+        /// </summary>
+        /// <param name="User"></param>
         public RegisterView(User User)
         {
             InitializeComponent();
@@ -53,6 +60,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             ViewPasswordsCheckBox.CheckedChanged += ViewPasswordsCheckBox_CheckedChanged;
         }
 
+        /// <summary>
+        /// Listens for the check changed event and switches on off the password cover
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ViewPasswordsCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (ViewPasswordsCheckBox.Checked)
@@ -183,6 +195,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
 
         }
 
+        /// <summary>
+        /// Returns the modifications to the calling class
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             bool AllGood = firstnameGood && lastnameGood && idcardGood && passwordGood && verifypasswordGood && phonenumbersGood;

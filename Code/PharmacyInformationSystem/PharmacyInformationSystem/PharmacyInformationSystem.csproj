@@ -102,12 +102,6 @@
     <Compile Include="UIComponents\MainUserControls\UserViewList\ListNavigator.designer.cs">
       <DependentUpon>ListNavigator.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\Navigator.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\Navigator.Designer.cs">
-      <DependentUpon>Navigator.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIComponents\MainUserControls\SideBarItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,9 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\UserViewList\ListNavigator.resx">
       <DependentUpon>ListNavigator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\Navigator.resx">
-      <DependentUpon>Navigator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\SideBarItem.resx">
       <DependentUpon>SideBarItem.cs</DependentUpon>

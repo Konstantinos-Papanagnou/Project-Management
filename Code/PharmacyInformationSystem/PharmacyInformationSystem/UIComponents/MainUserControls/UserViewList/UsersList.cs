@@ -20,6 +20,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             listNavigator1.Search.KeyUp += Search_KeyUp; ;
         }
 
+        /// <summary>
+        /// KeyUp provides real time search and isolation of the matching results
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Search_KeyUp(object sender, KeyEventArgs e)
         {
             List.Controls.Clear();
@@ -32,6 +37,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             }
         }
 
+        /// <summary>
+        /// Helper function to check inside all of the phone numbers for a pattern
+        /// </summary>
+        /// <param name="numbers">The phone numbers to check in</param>
+        /// <param name="pattern">The pattern you are looking for</param>
+        /// <returns>True if the pattern was found</returns>
         private bool PhoneCheck(List<string> numbers, string pattern)
         {
             foreach (var number in numbers)
@@ -40,6 +51,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             return false;
         }
 
+        /// <summary>
+        /// Calls the Register user on Add Mode to get user information and add it to the database
+        /// and refreshes the ui list.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddNew_Click(object sender, EventArgs e)
         {
             RegisterView form = new RegisterView();
@@ -54,6 +71,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             }
         }
 
+        /// <summary>
+        /// Implementation of the Derived interface to update the ui list
+        /// </summary>
         public void RefreshList()
         {
             List.Controls.Clear();
@@ -67,6 +87,13 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             }
         }
 
+        /// <summary>
+        /// Implementation of the Derived interface to update the ui list based with less overhead
+        /// This method does not require to retrieve all the users from the database
+        /// Instead we are updating the existing users. We are though saving to the database our results
+        /// </summary>
+        /// <param name="user">new User Information</param>
+        /// <param name="op">Operation. Remove User or Modify User</param>
         public void RefreshList(User user, Operation op)
         {
             int index = -1;

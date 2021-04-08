@@ -16,6 +16,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
         bool Expanded = false;
         public readonly User User;
         private readonly IUpdatable UpdatableForm;
+        /// <summary>
+        /// Initialize the inteface with personalized settings.
+        /// </summary>
+        /// <param name="form">Requires a form contract to update the List</param>
+        /// <param name="user">Requires user information to display</param>
         public UserListViewItem(IUpdatable form, User user)
         {
             InitializeComponent();
@@ -50,6 +55,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
                 PhoneNumbersLbl.Text += number + " ";
         }
 
+        /// <summary>
+        /// Listens for expand requests to expand the list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExpandBtn_Click(object sender, EventArgs e)
         {
             Expanded = !Expanded;
@@ -58,6 +68,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             else this.Size = new Size(909, 69);
         }
 
+        /// <summary>
+        /// Listens for a modification Request and it deletes the user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ModifyBtn_Click(object sender, EventArgs e)
         {
             RegisterView editForm = new RegisterView(User);
@@ -67,7 +82,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
                 UpdatableForm.RefreshList(userdata, Operation.Update);           
             }
         }
-
+        /// <summary>
+        /// Listens for a Delete Request and it Deletes the user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Είστε σίγουρος πως θέλετε να διαγράψετε τον χρήστη: " + User.FirstName + "; \nΑυτή η διαδικασία είναι μη αναστρέψιμη!", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

@@ -13,6 +13,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
 {
     public partial class ViewUserData : Form
     {
+        /// <summary>
+        /// Configures the screen to the user information provided
+        /// </summary>
+        /// <param name="User">User information to display</param>
         public ViewUserData(User User)
         {
             InitializeComponent();
@@ -46,7 +50,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             }
             PhoneNumbers.Text.Remove(PhoneNumbers.Text.Length - 2);
         }
-
+        /// <summary>
+        /// Listens for exiting events
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
