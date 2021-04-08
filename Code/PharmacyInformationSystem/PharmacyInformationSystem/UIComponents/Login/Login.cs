@@ -49,6 +49,7 @@ namespace PharmacyInformationSystem.UIComponents.Login
             this.Show();
             UsernameBox.Text = "";
             PasswordBox.Text = "";
+            Handler.AttemptCount = 0;
         }
 
     }
