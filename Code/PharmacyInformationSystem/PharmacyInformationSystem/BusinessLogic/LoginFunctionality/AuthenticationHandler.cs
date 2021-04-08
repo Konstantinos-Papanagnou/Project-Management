@@ -26,7 +26,7 @@ namespace PharmacyInformationSystem.BusinessLogic.LoginFunctionality
         /// </summary>
         private void Block(object o)
         {
-            Thread.Sleep(5 * 1000);
+            Thread.Sleep(30 * 1000);
             AttemptCount = 0;
             ThreadWorking = false;
         }
