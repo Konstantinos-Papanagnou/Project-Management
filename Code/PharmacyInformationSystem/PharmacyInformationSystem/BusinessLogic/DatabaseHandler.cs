@@ -73,9 +73,25 @@ namespace PharmacyInformationSystem.BusinessLogic
 
             new SQLiteCommand($"INSERT INTO {UsersTableName}({FirstNameField},{LastNameField}," +
                 $"{IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}) VALUES " +
-                $"('Admin', 'Admin', 'Dummy', 'admini', '{Hashing.ComputeHash("Password123")}', '0')", conn).ExecuteNonQuery();
+                $"('Admin', 'Admin', 'AT879515', 'admini', '{Hashing.ComputeHash("Password123")}', '0')", conn).ExecuteNonQuery();
+            new SQLiteCommand($"INSERT INTO {UsersTableName}({FirstNameField},{LastNameField}," +
+                $"{IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}) VALUES " +
+                $"('John', 'Black', 'AK875267', 'joblac', '{Hashing.ComputeHash("Password456")}', '1')", conn).ExecuteNonQuery();
+            new SQLiteCommand($"INSERT INTO {UsersTableName}({FirstNameField},{LastNameField}," +
+                $"{IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}) VALUES " +
+                $"('Paul', 'Allan', 'AH871594', 'paalla', '{Hashing.ComputeHash("Password789")}', '2')", conn).ExecuteNonQuery();
+            new SQLiteCommand($"INSERT INTO {UsersTableName}({FirstNameField},{LastNameField}," +
+                $"{IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}) VALUES " +
+                $"('Isaac', 'Newton', 'AK978789', 'isnewt', '{Hashing.ComputeHash("Password012")}', '3')", conn).ExecuteNonQuery();
 
-
+            new SQLiteCommand($"INSERT INTO {PhoneNumberTableName}({EmployeeIDField},{PhoneNumberField}) VALUES " +
+                $"('{EmployeeIDField}','2578587964')", conn).ExecuteNonQuery();
+            new SQLiteCommand($"INSERT INTO {PhoneNumberTableName}({EmployeeIDField},{PhoneNumberField}) VALUES " +
+                $"('{EmployeeIDField}','2578587469')", conn).ExecuteNonQuery();
+            new SQLiteCommand($"INSERT INTO {PhoneNumberTableName}({EmployeeIDField},{PhoneNumberField}) VALUES " +
+                $"('{EmployeeIDField}','2578689752')", conn).ExecuteNonQuery();
+            new SQLiteCommand($"INSERT INTO {PhoneNumberTableName}({EmployeeIDField},{PhoneNumberField}) VALUES " +
+                $"('{EmployeeIDField}','2578987123')", conn).ExecuteNonQuery();
         }
         /// <summary>
         /// Checks to see in the database if the username is already occupied
