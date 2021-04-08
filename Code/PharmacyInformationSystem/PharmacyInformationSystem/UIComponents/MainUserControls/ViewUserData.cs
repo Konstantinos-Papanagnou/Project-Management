@@ -16,7 +16,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         public ViewUserData(User User)
         {
             InitializeComponent();
-            FirstNameLbl.Text += User.Username;
+            FirstNameLbl.Text += User.FirstName;
             LastNameLbl.Text += User.LastName;
             IDCardLbl.Text += User.IdCard;
             UsernameLbl.Text += User.Username;

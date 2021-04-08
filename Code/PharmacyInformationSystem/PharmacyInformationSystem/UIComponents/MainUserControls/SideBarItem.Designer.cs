@@ -53,6 +53,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.MasterMenu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.MasterMenu.Size = new System.Drawing.Size(228, 43);
             this.MasterMenu.TabIndex = 2;
+            this.MasterMenu.Tag = "Master";
             this.MasterMenu.Text = " Αποθήκη";
             this.MasterMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MasterMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -138,6 +139,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.Controls.Add(this.SubOperation4);
             this.Controls.Add(this.SubOperation3);
             this.Controls.Add(this.SubOperation2);

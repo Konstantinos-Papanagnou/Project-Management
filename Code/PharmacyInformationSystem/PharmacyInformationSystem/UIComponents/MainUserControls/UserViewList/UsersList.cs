@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PharmacyInformationSystem.UIComponents
+namespace PharmacyInformationSystem.UIComponents.MainUserControls
 {
-    public partial class ListView : UserControl
+    public partial class UsersList : UserControl
     {
-        public ListView()
+        public UsersList()
         {
             InitializeComponent();
         }

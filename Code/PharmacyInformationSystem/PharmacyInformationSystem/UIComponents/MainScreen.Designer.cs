@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.SideMenu = new PharmacyInformationSystem.UIComponents.SideMenu();
+            this.OperationsPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,12 +53,21 @@
             this.SideMenu.Size = new System.Drawing.Size(228, 610);
             this.SideMenu.TabIndex = 0;
             // 
+            // OperationsPanel
+            // 
+            this.OperationsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OperationsPanel.Location = new System.Drawing.Point(228, 0);
+            this.OperationsPanel.Name = "OperationsPanel";
+            this.OperationsPanel.Size = new System.Drawing.Size(909, 610);
+            this.OperationsPanel.TabIndex = 1;
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1137, 610);
+            this.Controls.Add(this.OperationsPanel);
             this.Controls.Add(this.SideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainScreen";
@@ -73,6 +83,7 @@
         private UIComponents.SideBar navigator1;
         private System.Windows.Forms.Panel panel1;
         private UIComponents.SideMenu SideMenu;
+        private System.Windows.Forms.Panel OperationsPanel;
     }
 }
 
