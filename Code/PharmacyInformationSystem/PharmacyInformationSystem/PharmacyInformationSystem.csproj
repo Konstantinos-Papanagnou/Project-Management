@@ -88,29 +88,23 @@
     <Compile Include="UIComponents\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\ListNavigator.cs">
+    <Compile Include="UIComponents\MainUserControls\RegisterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\RegisterView.Designer.cs">
+      <DependentUpon>RegisterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\UserViewList\ListNavigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\ListNavigator.designer.cs">
+    <Compile Include="UIComponents\MainUserControls\UserViewList\ListNavigator.designer.cs">
       <DependentUpon>ListNavigator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\ListView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\ListView.Designer.cs">
-      <DependentUpon>ListView.cs</DependentUpon>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\Navigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\Navigator.Designer.cs">
       <DependentUpon>Navigator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\RegisterForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\RegisterForm.designer.cs">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\SideBarItem.cs">
       <SubType>UserControl</SubType>
@@ -123,6 +117,18 @@
     </Compile>
     <Compile Include="UIComponents\MainUserControls\SideMenu.Designer.cs">
       <DependentUpon>SideMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\UserViewList\UserListViewItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\UserViewList\UserListViewItem.Designer.cs">
+      <DependentUpon>UserListViewItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\UserViewList\UsersList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\UserViewList\UsersList.Designer.cs">
+      <DependentUpon>UsersList.cs</DependentUpon>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\ViewUserData.cs">
       <SubType>Form</SubType>
@@ -147,23 +153,26 @@
     <EmbeddedResource Include="UIComponents\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\ListNavigator.resx">
-      <DependentUpon>ListNavigator.cs</DependentUpon>
+    <EmbeddedResource Include="UIComponents\MainUserControls\RegisterView.resx">
+      <DependentUpon>RegisterView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\ListView.resx">
-      <DependentUpon>ListView.cs</DependentUpon>
+    <EmbeddedResource Include="UIComponents\MainUserControls\UserViewList\ListNavigator.resx">
+      <DependentUpon>ListNavigator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\Navigator.resx">
       <DependentUpon>Navigator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\RegisterForm.resx">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\SideBarItem.resx">
       <DependentUpon>SideBarItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\SideMenu.resx">
       <DependentUpon>SideMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\UserViewList\UserListViewItem.resx">
+      <DependentUpon>UserListViewItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\UserViewList\UsersList.resx">
+      <DependentUpon>UsersList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\ViewUserData.resx">
       <DependentUpon>ViewUserData.cs</DependentUpon>

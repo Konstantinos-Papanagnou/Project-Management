@@ -19,7 +19,16 @@ namespace PharmacyInformationSystem.UIComponents
             InitializeComponent();
             User = user;
             SideMenu.ViewUserInfoBtn.Click += ViewUserInfoBtn_Click;
-            //panel1.Controls.Add();
+            if (User is Administrator)
+            {
+                SideMenu.SetAdminView();
+                OperationsPanel.Controls.Add(new MainUserControls.UsersList((Administrator)User));
+            }
+            else if (User is MarketingTeam)
+                SideMenu.SetMarketingView();
+            else if (User is StoreKeeper)
+                SideMenu.SetStoreKeeperView();
+            else SideMenu.SetSellerView();
         }
 
         private void ViewUserInfoBtn_Click(object sender, EventArgs e)
@@ -27,17 +36,6 @@ namespace PharmacyInformationSystem.UIComponents
             MainUserControls.ViewUserData info = new MainUserControls.ViewUserData(User);
             info.ShowDialog();
 
-        }
-
-        private void MainScreen_Load(object sender, EventArgs e)
-        {
-            if (User is Administrator)
-                SideMenu.SetAdminView();
-            else if (User is MarketingTeam)
-                SideMenu.SetMarketingView();
-            else if (User is StoreKeeper)
-                SideMenu.SetStoreKeeperView();
-            else SideMenu.SetSellerView();
         }
 
         private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
