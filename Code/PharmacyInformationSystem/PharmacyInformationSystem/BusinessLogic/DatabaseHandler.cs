@@ -73,7 +73,7 @@ namespace PharmacyInformationSystem.BusinessLogic
 
             new SQLiteCommand($"INSERT INTO {UsersTableName}({FirstNameField},{LastNameField}," +
                 $"{IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}) VALUES " +
-                $"('Admin', 'Admin', 'Dummy', 'admini', '{Hashing.ComputeHash("Password123")}', '0')", conn).ExecuteNonQuery();
+                $"('Admin', 'Admin', 'Dummy', 'admin', '{Hashing.ComputeHash("Password123")}', '0')", conn).ExecuteNonQuery();
 
 
         }
@@ -218,7 +218,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"{LastNameField}, {IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}) VALUES (" +
                     $"'{user.FirstName}','{user.LastName}','{user.IdCard}','{user.Username}" +
                     $"','{Hashing.ComputeHash(user.Password)}','{user.RoleID}')", conn);
-                if (insertUserData.ExecuteNonQuery() < 0) return false;
+                try { if (insertUserData.ExecuteNonQuery() < 0) return false; } catch { return false; }
                 //Get the new EmployeeId of the user
                 insertUserData.CommandText = $"SELECT {EmployeeIDField} FROM {UsersTableName} WHERE {UsernameField} = '{user.Username}'";
                 using (var reader = insertUserData.ExecuteReader())
@@ -293,9 +293,13 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <returns></returns>
         private bool InsertPhoneNumber(SQLiteConnection conn, int employeeId, string phoneNumber)
         {
-            SQLiteCommand insertPhoneNumber = new SQLiteCommand($"INSERT INTO {PhoneNumberTableName}({EmployeeIDField}," +
-                $"{PhoneNumberField}) VALUES ('{employeeId}','{phoneNumber}')", conn);
-            return insertPhoneNumber.ExecuteNonQuery() > 0;
+            try
+            {
+                SQLiteCommand insertPhoneNumber = new SQLiteCommand($"INSERT INTO {PhoneNumberTableName}({EmployeeIDField}," +
+                    $"{PhoneNumberField}) VALUES ('{employeeId}','{phoneNumber}')", conn);
+                return insertPhoneNumber.ExecuteNonQuery() > 0;
+            }
+            catch { return false; }
         }
 
         /// <summary>
@@ -325,7 +329,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                         $"{IdCardField}='{user.IdCard}'," +
                         $"{PasswordField}='{Hashing.ComputeHash(user.Password)}'" +
                         $" WHERE {EmployeeIDField} = '{user.EmployeeID}'";
-                if (!(modifyUser.ExecuteNonQuery() > 0)) return false;
+                try { if (!(modifyUser.ExecuteNonQuery() > 0)) return false; } catch { return false; }
 
                 DeletePhoneNumbers(conn, user.EmployeeID);
                 foreach(string number in user.PhoneNumbers)
