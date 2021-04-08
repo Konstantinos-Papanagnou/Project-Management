@@ -88,11 +88,35 @@
     <Compile Include="UIComponents\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\ListNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\ListNavigator.designer.cs">
+      <DependentUpon>ListNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\ListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\ListView.Designer.cs">
+      <DependentUpon>ListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\Navigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\Navigator.Designer.cs">
       <DependentUpon>Navigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\RegisterForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\RegisterForm.designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\SideMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\SideMenu.Designer.cs">
+      <DependentUpon>SideMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="UnitTesting\SanitizerUnitTesting.cs" />
     <EmbeddedResource Include="UIComponents\MainScreen.resx">
@@ -111,8 +135,20 @@
     <EmbeddedResource Include="UIComponents\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\ListNavigator.resx">
+      <DependentUpon>ListNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\ListView.resx">
+      <DependentUpon>ListView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\Navigator.resx">
       <DependentUpon>Navigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\SideMenu.resx">
+      <DependentUpon>SideMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -132,6 +168,13 @@
   <ItemGroup>
     <Content Include="cross-icon.ico" />
     <None Include="Resources\cross-icon.png" />
+    <Content Include="Resources\crate.png" />
+    <Content Include="Resources\icons8-exit-26.png" />
+    <Content Include="Resources\icons8-gear-24.png" />
+    <Content Include="Resources\icons8-group-24.png" />
+    <Content Include="Resources\icons8-marketing-24.png" />
+    <Content Include="Resources\icons8-plus-math-24.png" />
+    <Content Include="Resources\icons8-warehouse-24.png" />
     <Content Include="UIComponents\Login\cross-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

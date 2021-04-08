@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PharmacyInformationSystem.UIComponents
 {
-    public partial class Navigator : UserControl
+    public partial class SideBar : UserControl
     {
-        public Navigator()
+        public SideBar()
         {
             InitializeComponent();
         }
@@ -25,6 +25,11 @@ namespace PharmacyInformationSystem.UIComponents
         private void Logout_MouseLeave(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = Color.Transparent;
+        }
+
+        private void customizeDesign()
+        {
+            panelWarehouseSubMenu.Visible = false;
         }
     }
 }

@@ -67,7 +67,7 @@ namespace PharmacyInformationSystem
 
         #endregion
 
-        private UIComponents.Navigator navigator1;
+        private UIComponents.SideBar navigator1;
         private System.Windows.Forms.Panel panel1;
     }
 }

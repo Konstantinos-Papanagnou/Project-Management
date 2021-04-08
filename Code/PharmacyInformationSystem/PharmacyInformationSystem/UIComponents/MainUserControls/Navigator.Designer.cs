@@ -1,7 +1,7 @@
 ﻿
 namespace PharmacyInformationSystem.UIComponents
 {
-    partial class Navigator
+    partial class SideBar
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,60 +29,94 @@ namespace PharmacyInformationSystem.UIComponents
         /// </summary>
         private void InitializeComponent()
         {
-            this.ConnectedUser = new System.Windows.Forms.Label();
-            this.Logout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ConnectedUser
-            // 
-            this.ConnectedUser.AutoSize = true;
-            this.ConnectedUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ConnectedUser.Location = new System.Drawing.Point(17, 32);
-            this.ConnectedUser.Name = "ConnectedUser";
-            this.ConnectedUser.Size = new System.Drawing.Size(68, 17);
-            this.ConnectedUser.TabIndex = 0;
-            this.ConnectedUser.Text = "Χρήστης:";
-            // 
-            // Logout
-            // 
-            this.Logout.FlatAppearance.BorderSize = 0;
-            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout.Location = new System.Drawing.Point(106, 26);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(91, 29);
-            this.Logout.TabIndex = 1;
-            this.Logout.Text = "Logout";
-            this.Logout.UseVisualStyleBackColor = true;
-            this.Logout.MouseEnter += new System.EventHandler(this.Logout_MouseEnter);
-            this.Logout.MouseLeave += new System.EventHandler(this.Logout_MouseLeave);
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(203, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2, 86);
-            this.panel1.TabIndex = 2;
+            this.panel1.Size = new System.Drawing.Size(184, 50);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(184, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(619, 50);
+            this.panel2.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Location = new System.Drawing.Point(809, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 50);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(150, 205);
+            this.panel3.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 39);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Location = new System.Drawing.Point(0, 39);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 39);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Navigator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Logout);
-            this.Controls.Add(this.ConnectedUser);
             this.Name = "Navigator";
-            this.Size = new System.Drawing.Size(800, 86);
+            this.Size = new System.Drawing.Size(884, 50);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label ConnectedUser;
-        private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
