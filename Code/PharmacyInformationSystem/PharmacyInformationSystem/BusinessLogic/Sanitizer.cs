@@ -21,8 +21,8 @@ namespace PharmacyInformationSystem.BusinessLogic
 		{
 			if (string.IsNullOrEmpty(firstName) || string.IsNullOrWhiteSpace(firstName) || firstName.Length < 2 || firstName.Length >= 30)
 				return false;
-			if (Regex.IsMatch(firstName, "[a-zA-Z]")) return false;
-			return true;
+			if (Regex.IsMatch(firstName, "[α-ωΑ-Ω]")) return true;
+			return false;
 		}
 		/// <summary>
 		/// Runs a check against the lastname
@@ -33,8 +33,8 @@ namespace PharmacyInformationSystem.BusinessLogic
 		{
 			if (string.IsNullOrEmpty(lastName) || string.IsNullOrWhiteSpace(lastName) || lastName.Length < 4 || lastName.Length >= 30)
 				return false;
-			if (Regex.IsMatch(lastName, "[a-zA-Z]")) return false;
-			return true;
+			if (Regex.IsMatch(lastName, "[α-ωΑ-Ω]")) return true;
+			return false;
 		}
 
 		/// <summary>
@@ -45,7 +45,7 @@ namespace PharmacyInformationSystem.BusinessLogic
 		public static bool CheckIDCard(string IDCard)
 		{
 			//if (IDCard.Length != 8) return false;
-			return Regex.IsMatch(IDCard, "^[A-Z]{2}\\d{6}$");
+			return Regex.IsMatch(IDCard, "^[Α-Ω]{2}\\d{6}$");
 		}
 
 		/// <summary>
