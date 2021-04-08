@@ -94,7 +94,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.RoleBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RoleBox.FormattingEnabled = true;
             this.RoleBox.Items.AddRange(new object[] {
-            "Διαχειριστής",
             "Αποθηκάριος",
             "Πωλητής",
             "Ομάδα Marketing"});

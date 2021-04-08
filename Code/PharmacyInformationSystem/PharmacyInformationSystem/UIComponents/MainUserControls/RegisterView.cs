@@ -13,7 +13,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
 {
     public partial class RegisterView : Form
     {
-        private Administrator admin;
         public User User { get; private set; }
         private bool firstnameGood = false;
         private bool lastnameGood = false;
@@ -21,10 +20,36 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         private bool passwordGood = false;
         private bool verifypasswordGood = false;
         private bool phonenumbersGood = false;
-        public RegisterView(Administrator admin)
+        private bool AdminBypass = false;
+
+        private bool EditMode = false;
+        public RegisterView()
         {
             InitializeComponent();
-            this.admin = admin;
+            ViewPasswordsCheckBox.CheckedChanged += ViewPasswordsCheckBox_CheckedChanged;
+        }
+
+        public RegisterView(User User)
+        {
+            InitializeComponent();
+            this.User = User;
+            FirstNameBox.Text = User.FirstName;
+            LastNameBox.Text = User.LastName;
+            IdCardBox.Text = User.IdCard;
+            if (User.RoleID == 0) { RoleBox.Enabled = false; AdminBypass = true; }
+            
+            RoleBox.SelectedIndex = User.RoleID -1;
+            foreach (var item in User.PhoneNumbers)
+                PhoneNumberBox.Text += item + ", ";
+            if(PhoneNumberBox.Text.Length > 0) PhoneNumberBox.Text.Remove(PhoneNumberBox.Text.Length - 2);
+            firstnameGood = true;
+            lastnameGood = true;
+            idcardGood = true;
+            passwordGood = true;
+            verifypasswordGood = true;
+            phonenumbersGood = true;
+            EditMode = true;
+            this.Text = "Update User Information";
             ViewPasswordsCheckBox.CheckedChanged += ViewPasswordsCheckBox_CheckedChanged;
         }
 
@@ -92,6 +117,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             }
             else if (tag == "password")
             {
+                if (string.IsNullOrWhiteSpace(PasswordBox.Text) && EditMode)
+                {
+                    passwordGood = true;
+                    verifypasswordGood = true;
+                    return;
+                }
                 if (!Sanitizer.CheckPassword(box.Text))
                 {
                     PasswordError.Visible = true;
@@ -161,11 +192,13 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
                 if (PhoneNumberBox.Text.Contains(','))
                     phones = PhoneNumberBox.Text.Replace(" ", "").Split(',').ToList<string>();
                 else phones = new List<string>() { PhoneNumberBox.Text };
-                User = new User(FirstNameBox.Text, LastNameBox.Text, IdCardBox.Text, -1, admin.GenerateUsername(FirstNameBox.Text, LastNameBox.Text), PasswordBox.Text, RoleBox.SelectedIndex, phones);
+                if (!EditMode)
+                    User = new User(FirstNameBox.Text, LastNameBox.Text, IdCardBox.Text, -1, null, PasswordBox.Text, RoleBox.SelectedIndex + 1, phones);
+                else User = new User(FirstNameBox.Text, LastNameBox.Text, IdCardBox.Text, User.EmployeeID, User.Username, PasswordBox.Text, AdminBypass ? User.RoleID : RoleBox.SelectedIndex + 1 , phones);
                 DialogResult = DialogResult.OK;
-                admin.InsertUser(User);
                 this.Close();
-            }
+            }else
+                MessageBox.Show("Fill All the fields with correct values first!", "Can't Continue Operation!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

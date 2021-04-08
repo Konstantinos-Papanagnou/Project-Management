@@ -13,10 +13,12 @@ namespace PharmacyInformationSystem.UIComponents
     {
         public Button ViewUserInfoBtn { get { return UserBtn; } }
         public SideBarItem Bar { get; private set; }
+        public Button Logout { get { return logOut; } }
 
         public SideMenu()
         {
             InitializeComponent();
+            
         }
 
         public void SetAdminView()

@@ -44,55 +44,55 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // FirstNameLbl
             // 
             this.FirstNameLbl.AutoSize = true;
-            this.FirstNameLbl.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.FirstNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.FirstNameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FirstNameLbl.Location = new System.Drawing.Point(45, 144);
             this.FirstNameLbl.Name = "FirstNameLbl";
-            this.FirstNameLbl.Size = new System.Drawing.Size(104, 37);
+            this.FirstNameLbl.Size = new System.Drawing.Size(98, 29);
             this.FirstNameLbl.TabIndex = 0;
             this.FirstNameLbl.Text = "Όνομα: ";
             // 
             // LastNameLbl
             // 
             this.LastNameLbl.AutoSize = true;
-            this.LastNameLbl.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.LastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.LastNameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LastNameLbl.Location = new System.Drawing.Point(469, 144);
             this.LastNameLbl.Name = "LastNameLbl";
-            this.LastNameLbl.Size = new System.Drawing.Size(121, 37);
+            this.LastNameLbl.Size = new System.Drawing.Size(115, 29);
             this.LastNameLbl.TabIndex = 1;
             this.LastNameLbl.Text = "Επίθετο: ";
             // 
             // IDCardLbl
             // 
             this.IDCardLbl.AutoSize = true;
-            this.IDCardLbl.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.IDCardLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.IDCardLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.IDCardLbl.Location = new System.Drawing.Point(214, 205);
             this.IDCardLbl.Name = "IDCardLbl";
-            this.IDCardLbl.Size = new System.Drawing.Size(255, 37);
+            this.IDCardLbl.Size = new System.Drawing.Size(261, 29);
             this.IDCardLbl.TabIndex = 2;
             this.IDCardLbl.Text = "Αριθμός Ταυτότητας: ";
             // 
             // RoleLbl
             // 
             this.RoleLbl.AutoSize = true;
-            this.RoleLbl.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.RoleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.RoleLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.RoleLbl.Location = new System.Drawing.Point(270, 284);
             this.RoleLbl.Name = "RoleLbl";
-            this.RoleLbl.Size = new System.Drawing.Size(97, 37);
+            this.RoleLbl.Size = new System.Drawing.Size(96, 29);
             this.RoleLbl.TabIndex = 3;
             this.RoleLbl.Text = "Ρόλος: ";
             // 
             // UsernameLbl
             // 
             this.UsernameLbl.AutoSize = true;
-            this.UsernameLbl.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.UsernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.UsernameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.UsernameLbl.Location = new System.Drawing.Point(45, 360);
             this.UsernameLbl.Name = "UsernameLbl";
-            this.UsernameLbl.Size = new System.Drawing.Size(139, 37);
+            this.UsernameLbl.Size = new System.Drawing.Size(136, 29);
             this.UsernameLbl.TabIndex = 4;
             this.UsernameLbl.Text = "Username: ";
             // 
@@ -111,10 +111,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PhoneNumbers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.PhoneNumbers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PhoneNumbers.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.PhoneNumbers.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.PhoneNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.PhoneNumbers.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PhoneNumbers.HideSelection = false;
-            this.PhoneNumbers.Location = new System.Drawing.Point(315, 360);
+            this.PhoneNumbers.Location = new System.Drawing.Point(336, 360);
             this.PhoneNumbers.Name = "PhoneNumbers";
             this.PhoneNumbers.ReadOnly = true;
             this.PhoneNumbers.Size = new System.Drawing.Size(425, 149);
@@ -125,7 +125,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             this.ExitBtn.FlatAppearance.BorderSize = 2;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitBtn.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.ExitBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ExitBtn.Location = new System.Drawing.Point(621, 515);
             this.ExitBtn.Name = "ExitBtn";

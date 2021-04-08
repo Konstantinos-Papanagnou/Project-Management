@@ -12,7 +12,7 @@ using PharmacyInformationSystem.BusinessLogic;
 
 namespace PharmacyInformationSystem.UIComponents.Login
 {
-    public partial class Login : Form
+    public partial class Login : Form, IShowable
     {
         readonly AuthenticationHandler Handler;
         public Login()
@@ -28,8 +28,7 @@ namespace PharmacyInformationSystem.UIComponents.Login
                 User user = Handler.AuthenticateUser(UsernameBox.Text, PasswordBox.Text);
                 this.ShowInTaskbar = false;
                 this.Hide();
-                new MainScreen(user).ShowDialog();
-                //this.Close();
+                new MainScreen(this,user).ShowDialog();
             }
             catch (AuthenticationFailure ex) {
                 UsernamePanelError.BackColor = Color.Red;
@@ -42,6 +41,14 @@ namespace PharmacyInformationSystem.UIComponents.Login
         {
             if(e.KeyCode == Keys.Enter)
                 LoginButton_Click(sender, e);
+        }
+
+        public void GetScreenBack()
+        {
+            this.ShowInTaskbar = true;
+            this.Show();
+            UsernameBox.Text = "";
+            PasswordBox.Text = "";
         }
 
     }

@@ -14,10 +14,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
     public partial class UserListViewItem : UserControl
     {
         bool Expanded = false;
-        readonly User User;
-        public UserListViewItem(User user)
+        public readonly User User;
+        private readonly IUpdatable UpdatableForm;
+        public UserListViewItem(IUpdatable form, User user)
         {
             InitializeComponent();
+            this.UpdatableForm = form;
             this.User = user;
             SumInfoLbl.Text = user.FirstName + " " + user.LastName;
             NameLbl.Text = user.FirstName;
@@ -28,6 +30,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             {
                 case 0:
                     RoleLbl.Text = "Διαχειριστής";
+                    DeleteBtn.Enabled = false;
                     break;
                 case 1:
                     RoleLbl.Text = "Αποθηκάριος";
@@ -57,12 +60,20 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
 
         private void ModifyBtn_Click(object sender, EventArgs e)
         {
-            // New Register Form with the already created data inserted
+            RegisterView editForm = new RegisterView(User);
+            if(editForm.ShowDialog() == DialogResult.OK)
+            {
+                User userdata = editForm.User;
+                UpdatableForm.RefreshList(userdata, Operation.Update);           
+            }
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            // Call the delete method for the current user
+            if(MessageBox.Show("Είστε σίγουρος πως θέλετε να διαγράψετε τον χρήστη: " + User.FirstName + "; \nΑυτή η διαδικασία είναι μη αναστρέψιμη!", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                UpdatableForm.RefreshList(User, Operation.Remove);
+            }
         }
     }
 }

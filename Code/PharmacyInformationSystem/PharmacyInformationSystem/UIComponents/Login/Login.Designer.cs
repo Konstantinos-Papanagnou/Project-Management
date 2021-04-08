@@ -53,10 +53,9 @@ namespace PharmacyInformationSystem.UIComponents.Login
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(213, 55);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(284, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 58);
+            this.label1.Size = new System.Drawing.Size(401, 74);
             this.label1.TabIndex = 1;
             this.label1.Text = "Καλωσορίσατε στο σύστημα \r\nδιαχείρισης φαρμακαποθήκης";
             // 
@@ -65,20 +64,19 @@ namespace PharmacyInformationSystem.UIComponents.Login
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.label2.Location = new System.Drawing.Point(215, 128);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(287, 158);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(231, 17);
+            this.label2.Size = new System.Drawing.Size(290, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Εισάγετε όνομα και κωδικό πρόσβασης ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PharmacyInformationSystem.Properties.Resources.cross_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(128, 61);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(171, 75);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(107, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -89,9 +87,9 @@ namespace PharmacyInformationSystem.UIComponents.Login
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(0, -1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(284, 37);
+            this.panel3.Size = new System.Drawing.Size(378, 45);
             this.panel3.TabIndex = 1;
             // 
             // label3
@@ -99,10 +97,9 @@ namespace PharmacyInformationSystem.UIComponents.Login
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 14F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.label3.Location = new System.Drawing.Point(5, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(7, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 23);
+            this.label3.Size = new System.Drawing.Size(169, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "Είσοδος χρήστη";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -119,10 +116,10 @@ namespace PharmacyInformationSystem.UIComponents.Login
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(218, 169);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(291, 208);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(284, 242);
+            this.panel2.Size = new System.Drawing.Size(378, 297);
             this.panel2.TabIndex = 4;
             // 
             // LoginButton
@@ -133,10 +130,10 @@ namespace PharmacyInformationSystem.UIComponents.Login
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Calibri", 12F);
             this.LoginButton.ForeColor = System.Drawing.Color.Black;
-            this.LoginButton.Location = new System.Drawing.Point(89, 194);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginButton.Location = new System.Drawing.Point(119, 239);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(90, 31);
+            this.LoginButton.Size = new System.Drawing.Size(120, 38);
             this.LoginButton.TabIndex = 6;
             this.LoginButton.Text = "Σύνδεση";
             this.LoginButton.UseVisualStyleBackColor = false;
@@ -146,44 +143,44 @@ namespace PharmacyInformationSystem.UIComponents.Login
             // 
             this.PasswordBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.PasswordBox.Font = new System.Drawing.Font("Calibri", 12F);
-            this.PasswordBox.Location = new System.Drawing.Point(23, 149);
-            this.PasswordBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.PasswordBox.MaximumSize = new System.Drawing.Size(249, 32);
-            this.PasswordBox.MinimumSize = new System.Drawing.Size(234, 32);
+            this.PasswordBox.Location = new System.Drawing.Point(31, 183);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordBox.MaximumSize = new System.Drawing.Size(331, 32);
+            this.PasswordBox.MinimumSize = new System.Drawing.Size(311, 32);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.PasswordChar = '*';
-            this.PasswordBox.Size = new System.Drawing.Size(234, 27);
+            this.PasswordBox.Size = new System.Drawing.Size(311, 32);
             this.PasswordBox.TabIndex = 11;
             this.PasswordBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnEnter);
             // 
             // UsernamePanelError
             // 
             this.UsernamePanelError.BackColor = System.Drawing.Color.Gray;
-            this.UsernamePanelError.Location = new System.Drawing.Point(23, 100);
-            this.UsernamePanelError.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UsernamePanelError.Location = new System.Drawing.Point(31, 123);
+            this.UsernamePanelError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UsernamePanelError.Name = "UsernamePanelError";
-            this.UsernamePanelError.Size = new System.Drawing.Size(233, 3);
+            this.UsernamePanelError.Size = new System.Drawing.Size(311, 4);
             this.UsernamePanelError.TabIndex = 8;
             // 
             // PasswordPanelError
             // 
             this.PasswordPanelError.BackColor = System.Drawing.Color.Gray;
-            this.PasswordPanelError.Location = new System.Drawing.Point(23, 175);
-            this.PasswordPanelError.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PasswordPanelError.Location = new System.Drawing.Point(31, 215);
+            this.PasswordPanelError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordPanelError.Name = "PasswordPanelError";
-            this.PasswordPanelError.Size = new System.Drawing.Size(233, 3);
+            this.PasswordPanelError.Size = new System.Drawing.Size(311, 4);
             this.PasswordPanelError.TabIndex = 9;
             // 
             // UsernameBox
             // 
             this.UsernameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.UsernameBox.Font = new System.Drawing.Font("Calibri", 12F);
-            this.UsernameBox.Location = new System.Drawing.Point(23, 75);
-            this.UsernameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.UsernameBox.MaximumSize = new System.Drawing.Size(249, 32);
-            this.UsernameBox.MinimumSize = new System.Drawing.Size(234, 32);
+            this.UsernameBox.Location = new System.Drawing.Point(31, 92);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UsernameBox.MaximumSize = new System.Drawing.Size(331, 32);
+            this.UsernameBox.MinimumSize = new System.Drawing.Size(311, 32);
             this.UsernameBox.Name = "UsernameBox";
-            this.UsernameBox.Size = new System.Drawing.Size(234, 27);
+            this.UsernameBox.Size = new System.Drawing.Size(311, 32);
             this.UsernameBox.TabIndex = 10;
             this.UsernameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnEnter);
             // 
@@ -192,10 +189,9 @@ namespace PharmacyInformationSystem.UIComponents.Login
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(23, 122);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(31, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 23);
+            this.label5.Size = new System.Drawing.Size(95, 29);
             this.label5.TabIndex = 5;
             this.label5.Text = "Κωδικός";
             // 
@@ -204,28 +200,28 @@ namespace PharmacyInformationSystem.UIComponents.Login
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 14.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 46);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(31, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 23);
+            this.label4.Size = new System.Drawing.Size(155, 29);
             this.label4.TabIndex = 2;
             this.label4.Text = "Όνομα χρήστη";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(726, 456);
+            this.ClientSize = new System.Drawing.Size(968, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);

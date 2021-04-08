@@ -74,6 +74,7 @@
     <Compile Include="BusinessLogic\LoginFunctionality\Hashing.cs" />
     <Compile Include="BusinessLogic\Sanitizer.cs" />
     <Compile Include="BusinessLogic\Users.cs" />
+    <Compile Include="UIComponents\Login\IShowable.cs" />
     <Compile Include="UIComponents\MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,7 @@
     <Compile Include="UIComponents\MainUserControls\RegisterView.Designer.cs">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\UserViewList\IUpdatable.cs" />
     <Compile Include="UIComponents\MainUserControls\UserViewList\ListNavigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,6 +200,7 @@
     <None Include="Resources\add.png" />
     <None Include="Resources\add-user.png" />
     <Content Include="Resources\crate.png" />
+    <None Include="Resources\icons8-drop-down-241.png" />
     <Content Include="Resources\icons8-exit-26.png" />
     <Content Include="Resources\icons8-gear-24.png" />
     <Content Include="Resources\icons8-group-24.png" />

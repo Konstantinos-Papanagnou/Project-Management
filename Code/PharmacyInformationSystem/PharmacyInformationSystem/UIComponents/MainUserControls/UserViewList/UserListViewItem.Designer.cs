@@ -55,10 +55,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // SumInfoLbl
             // 
             this.SumInfoLbl.AutoSize = true;
-            this.SumInfoLbl.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.SumInfoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.SumInfoLbl.Location = new System.Drawing.Point(16, 19);
             this.SumInfoLbl.Name = "SumInfoLbl";
-            this.SumInfoLbl.Size = new System.Drawing.Size(75, 34);
+            this.SumInfoLbl.Size = new System.Drawing.Size(79, 29);
             this.SumInfoLbl.TabIndex = 0;
             this.SumInfoLbl.Text = "label1";
             // 
@@ -80,7 +80,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // 
             // ExpandBtn
             // 
-            this.ExpandBtn.BackgroundImage = global::PharmacyInformationSystem.Properties.Resources.add;
+            this.ExpandBtn.BackgroundImage = global::PharmacyInformationSystem.Properties.Resources.icons8_drop_down_241;
             this.ExpandBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ExpandBtn.FlatAppearance.BorderSize = 0;
             this.ExpandBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -147,125 +147,125 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // PhoneNumbersLbl
             // 
             this.PhoneNumbersLbl.AutoSize = true;
-            this.PhoneNumbersLbl.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.PhoneNumbersLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.PhoneNumbersLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.PhoneNumbersLbl.Location = new System.Drawing.Point(261, 206);
             this.PhoneNumbersLbl.Name = "PhoneNumbersLbl";
-            this.PhoneNumbersLbl.Size = new System.Drawing.Size(0, 28);
+            this.PhoneNumbersLbl.Size = new System.Drawing.Size(0, 25);
             this.PhoneNumbersLbl.TabIndex = 19;
             // 
             // RoleLbl
             // 
             this.RoleLbl.AutoSize = true;
-            this.RoleLbl.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.RoleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.RoleLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.RoleLbl.Location = new System.Drawing.Point(259, 166);
             this.RoleLbl.Name = "RoleLbl";
-            this.RoleLbl.Size = new System.Drawing.Size(110, 28);
+            this.RoleLbl.Size = new System.Drawing.Size(120, 25);
             this.RoleLbl.TabIndex = 18;
             this.RoleLbl.Text = "Τεστ Ρόλος";
             // 
             // UsernameLbl
             // 
             this.UsernameLbl.AutoSize = true;
-            this.UsernameLbl.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.UsernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.UsernameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.UsernameLbl.Location = new System.Drawing.Point(259, 129);
             this.UsernameLbl.Name = "UsernameLbl";
-            this.UsernameLbl.Size = new System.Drawing.Size(186, 28);
+            this.UsernameLbl.Size = new System.Drawing.Size(199, 25);
             this.UsernameLbl.TabIndex = 17;
             this.UsernameLbl.Text = "Τεστ Όνομα Χρήστη";
             // 
             // IdCardLbl
             // 
             this.IdCardLbl.AutoSize = true;
-            this.IdCardLbl.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.IdCardLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.IdCardLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.IdCardLbl.Location = new System.Drawing.Point(259, 91);
             this.IdCardLbl.Name = "IdCardLbl";
-            this.IdCardLbl.Size = new System.Drawing.Size(118, 28);
+            this.IdCardLbl.Size = new System.Drawing.Size(114, 25);
             this.IdCardLbl.TabIndex = 16;
             this.IdCardLbl.Text = "ΑΜ 520562";
             // 
             // LastNameLbl
             // 
             this.LastNameLbl.AutoSize = true;
-            this.LastNameLbl.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.LastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.LastNameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.LastNameLbl.Location = new System.Drawing.Point(259, 51);
             this.LastNameLbl.Name = "LastNameLbl";
-            this.LastNameLbl.Size = new System.Drawing.Size(128, 28);
+            this.LastNameLbl.Size = new System.Drawing.Size(138, 25);
             this.LastNameLbl.TabIndex = 15;
             this.LastNameLbl.Text = "Τεστ Επίθετο";
             // 
             // NameLbl
             // 
             this.NameLbl.AutoSize = true;
-            this.NameLbl.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.NameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.NameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.NameLbl.Location = new System.Drawing.Point(259, 13);
             this.NameLbl.Name = "NameLbl";
-            this.NameLbl.Size = new System.Drawing.Size(115, 28);
+            this.NameLbl.Size = new System.Drawing.Size(124, 25);
             this.NameLbl.TabIndex = 14;
             this.NameLbl.Text = "Τεστ Όνομα";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label6.Location = new System.Drawing.Point(15, 206);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(240, 28);
+            this.label6.Size = new System.Drawing.Size(231, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "Τηλέφωνα Επικοινωνίας:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label5.Location = new System.Drawing.Point(15, 166);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 28);
+            this.label5.Size = new System.Drawing.Size(74, 25);
             this.label5.TabIndex = 12;
             this.label5.Text = "Ρόλος:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label4.Location = new System.Drawing.Point(15, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 28);
+            this.label4.Size = new System.Drawing.Size(153, 25);
             this.label4.TabIndex = 11;
             this.label4.Text = "Όνομα Χρήστη:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label3.Location = new System.Drawing.Point(15, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 28);
+            this.label3.Size = new System.Drawing.Size(211, 25);
             this.label3.TabIndex = 10;
             this.label3.Text = "Αριθμός Ταυτότητας:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label2.Location = new System.Drawing.Point(15, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 28);
+            this.label2.Size = new System.Drawing.Size(92, 25);
             this.label2.TabIndex = 9;
             this.label2.Text = "Επίθετο:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label1.Location = new System.Drawing.Point(15, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 28);
+            this.label1.Size = new System.Drawing.Size(78, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Όνομα:";
             // 

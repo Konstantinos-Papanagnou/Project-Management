@@ -83,7 +83,7 @@ namespace PharmacyInformationSystem.UIComponents
             this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer1.Size = new System.Drawing.Size(1259, 93);
-            this.splitContainer1.SplitterDistance = 45;
+            this.splitContainer1.SplitterDistance = 44;
             this.splitContainer1.TabIndex = 3;
             // 
             // Label1
@@ -107,7 +107,7 @@ namespace PharmacyInformationSystem.UIComponents
             this.ListAddBtn.Location = new System.Drawing.Point(988, 0);
             this.ListAddBtn.Name = "ListAddBtn";
             this.ListAddBtn.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.ListAddBtn.Size = new System.Drawing.Size(271, 45);
+            this.ListAddBtn.Size = new System.Drawing.Size(271, 44);
             this.ListAddBtn.TabIndex = 1;
             this.ListAddBtn.Text = "Προσθήκη νέου χρήστη";
             this.ListAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
