@@ -63,16 +63,6 @@ namespace PharmacyInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add {
-            get {
-                object obj = ResourceManager.GetObject("add", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap add_user {
             get {
                 object obj = ResourceManager.GetObject("add-user", resourceCulture);
@@ -123,16 +113,6 @@ namespace PharmacyInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_exit_26 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-exit-26", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_gear_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-gear-24", resourceCulture);
@@ -166,16 +146,6 @@ namespace PharmacyInformationSystem.Properties {
         internal static System.Drawing.Bitmap icons8_warehouse_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-warehouse-24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap loupe_grey {
-            get {
-                object obj = ResourceManager.GetObject("loupe-grey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

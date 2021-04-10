@@ -74,6 +74,11 @@
     <Compile Include="BusinessLogic\LoginFunctionality\Hashing.cs" />
     <Compile Include="BusinessLogic\Sanitizer.cs" />
     <Compile Include="BusinessLogic\Users.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\Login\IShowable.cs" />
     <Compile Include="UIComponents\MainScreen.cs">
       <SubType>Form</SubType>
@@ -138,14 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UIComponents\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,17 +188,14 @@
   <ItemGroup>
     <Content Include="cross-icon.ico" />
     <None Include="Resources\cross-icon.png" />
-    <None Include="Resources\add.png" />
     <None Include="Resources\add-user.png" />
     <Content Include="Resources\crate.png" />
     <None Include="Resources\icons8-drop-down-241.png" />
-    <Content Include="Resources\icons8-exit-26.png" />
     <Content Include="Resources\icons8-gear-24.png" />
     <Content Include="Resources\icons8-group-24.png" />
     <Content Include="Resources\icons8-marketing-24.png" />
     <Content Include="Resources\icons8-plus-math-24.png" />
     <Content Include="Resources\icons8-warehouse-24.png" />
-    <None Include="Resources\loupe-grey.png" />
     <None Include="Resources\user.png" />
     <Content Include="UIComponents\Login\cross-icon.png" />
   </ItemGroup>
