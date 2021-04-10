@@ -46,8 +46,9 @@ namespace PharmacyInformationSystem.UIComponents
             this.ListLbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListLbl.Font = new System.Drawing.Font("Calibri", 14.25F);
             this.ListLbl.Location = new System.Drawing.Point(0, 0);
+            this.ListLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ListLbl.Name = "ListLbl";
-            this.ListLbl.Size = new System.Drawing.Size(99, 29);
+            this.ListLbl.Size = new System.Drawing.Size(79, 23);
             this.ListLbl.TabIndex = 2;
             this.ListLbl.Text = "Χρήστες:";
             this.ListLbl.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -56,15 +57,17 @@ namespace PharmacyInformationSystem.UIComponents
             // 
             this.ListSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.ListSearchBox.Font = new System.Drawing.Font("Calibri", 12F);
-            this.ListSearchBox.Location = new System.Drawing.Point(704, 7);
+            this.ListSearchBox.Location = new System.Drawing.Point(528, 6);
+            this.ListSearchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListSearchBox.Name = "ListSearchBox";
-            this.ListSearchBox.Size = new System.Drawing.Size(260, 32);
+            this.ListSearchBox.Size = new System.Drawing.Size(196, 27);
             this.ListSearchBox.TabIndex = 0;
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -82,8 +85,9 @@ namespace PharmacyInformationSystem.UIComponents
             this.splitContainer1.Panel2.Controls.Add(this.ListLbl);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Size = new System.Drawing.Size(1259, 93);
-            this.splitContainer1.SplitterDistance = 44;
+            this.splitContainer1.Size = new System.Drawing.Size(944, 76);
+            this.splitContainer1.SplitterDistance = 35;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 3;
             // 
             // Label1
@@ -91,9 +95,10 @@ namespace PharmacyInformationSystem.UIComponents
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.Label1.Location = new System.Drawing.Point(469, 9);
+            this.Label1.Location = new System.Drawing.Point(352, 7);
+            this.Label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(194, 25);
+            this.Label1.Size = new System.Drawing.Size(154, 20);
             this.Label1.TabIndex = 4;
             this.Label1.Text = "Αναζήτηση Χρήστη:";
             // 
@@ -104,10 +109,11 @@ namespace PharmacyInformationSystem.UIComponents
             this.ListAddBtn.FlatAppearance.BorderSize = 0;
             this.ListAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ListAddBtn.Font = new System.Drawing.Font("Calibri", 12F);
-            this.ListAddBtn.Location = new System.Drawing.Point(988, 0);
+            this.ListAddBtn.Location = new System.Drawing.Point(741, 0);
+            this.ListAddBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListAddBtn.Name = "ListAddBtn";
-            this.ListAddBtn.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.ListAddBtn.Size = new System.Drawing.Size(271, 44);
+            this.ListAddBtn.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.ListAddBtn.Size = new System.Drawing.Size(203, 35);
             this.ListAddBtn.TabIndex = 1;
             this.ListAddBtn.Text = "Προσθήκη νέου χρήστη";
             this.ListAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,13 +122,14 @@ namespace PharmacyInformationSystem.UIComponents
             // 
             // ListNavigator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ListNavigator";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Size = new System.Drawing.Size(1259, 93);
+            this.Size = new System.Drawing.Size(944, 76);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -138,7 +145,7 @@ namespace PharmacyInformationSystem.UIComponents
         private System.Windows.Forms.Label ListLbl;
         private System.Windows.Forms.TextBox ListSearchBox;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.PictureBox SearchBocIcon;
+        //private System.Windows.Forms.PictureBox SearchBocIcon;
         private System.Windows.Forms.Button ListAddBtn;
         private System.Windows.Forms.Label Label1;
     }

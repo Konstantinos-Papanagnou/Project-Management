@@ -191,12 +191,17 @@
     <None Include="Resources\add-user.png" />
     <Content Include="Resources\crate.png" />
     <None Include="Resources\icons8-drop-down-241.png" />
+    <Content Include="Resources\diagram.png" />
     <Content Include="Resources\icons8-gear-24.png" />
     <Content Include="Resources\icons8-group-24.png" />
     <Content Include="Resources\icons8-marketing-24.png" />
     <Content Include="Resources\icons8-plus-math-24.png" />
+    <Content Include="Resources\icons8-search-24.png" />
     <Content Include="Resources\icons8-warehouse-24.png" />
     <None Include="Resources\user.png" />
+    <Content Include="Resources\medicine.png" />
+    <Content Include="Resources\setting.png" />
+    <Content Include="Resources\users.png" />
     <Content Include="UIComponents\Login\cross-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
