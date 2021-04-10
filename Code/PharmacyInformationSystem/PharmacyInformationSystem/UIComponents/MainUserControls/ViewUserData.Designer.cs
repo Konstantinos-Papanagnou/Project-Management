@@ -35,89 +35,85 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.IDCardLbl = new System.Windows.Forms.Label();
             this.RoleLbl = new System.Windows.Forms.Label();
             this.UsernameLbl = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PhoneNumbers = new System.Windows.Forms.RichTextBox();
             this.ExitBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // FirstNameLbl
             // 
             this.FirstNameLbl.AutoSize = true;
-            this.FirstNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.FirstNameLbl.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FirstNameLbl.Location = new System.Drawing.Point(45, 144);
+            this.FirstNameLbl.Location = new System.Drawing.Point(21, 156);
+            this.FirstNameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FirstNameLbl.Name = "FirstNameLbl";
-            this.FirstNameLbl.Size = new System.Drawing.Size(98, 29);
+            this.FirstNameLbl.Size = new System.Drawing.Size(73, 23);
             this.FirstNameLbl.TabIndex = 0;
             this.FirstNameLbl.Text = "Όνομα: ";
             // 
             // LastNameLbl
             // 
             this.LastNameLbl.AutoSize = true;
-            this.LastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.LastNameLbl.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LastNameLbl.Location = new System.Drawing.Point(469, 144);
+            this.LastNameLbl.Location = new System.Drawing.Point(298, 156);
+            this.LastNameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameLbl.Name = "LastNameLbl";
-            this.LastNameLbl.Size = new System.Drawing.Size(115, 29);
+            this.LastNameLbl.Size = new System.Drawing.Size(80, 23);
             this.LastNameLbl.TabIndex = 1;
             this.LastNameLbl.Text = "Επίθετο: ";
             // 
             // IDCardLbl
             // 
             this.IDCardLbl.AutoSize = true;
-            this.IDCardLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.IDCardLbl.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDCardLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.IDCardLbl.Location = new System.Drawing.Point(214, 205);
+            this.IDCardLbl.Location = new System.Drawing.Point(43, 214);
+            this.IDCardLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IDCardLbl.Name = "IDCardLbl";
-            this.IDCardLbl.Size = new System.Drawing.Size(261, 29);
+            this.IDCardLbl.Size = new System.Drawing.Size(179, 23);
             this.IDCardLbl.TabIndex = 2;
             this.IDCardLbl.Text = "Αριθμός Ταυτότητας: ";
             // 
             // RoleLbl
             // 
             this.RoleLbl.AutoSize = true;
-            this.RoleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.RoleLbl.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoleLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RoleLbl.Location = new System.Drawing.Point(270, 284);
+            this.RoleLbl.Location = new System.Drawing.Point(328, 255);
+            this.RoleLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RoleLbl.Name = "RoleLbl";
-            this.RoleLbl.Size = new System.Drawing.Size(96, 29);
+            this.RoleLbl.Size = new System.Drawing.Size(66, 23);
             this.RoleLbl.TabIndex = 3;
             this.RoleLbl.Text = "Ρόλος: ";
             // 
             // UsernameLbl
             // 
             this.UsernameLbl.AutoSize = true;
-            this.UsernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.UsernameLbl.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.UsernameLbl.Location = new System.Drawing.Point(45, 360);
+            this.UsernameLbl.Location = new System.Drawing.Point(162, 298);
+            this.UsernameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsernameLbl.Name = "UsernameLbl";
-            this.UsernameLbl.Size = new System.Drawing.Size(136, 29);
+            this.UsernameLbl.Size = new System.Drawing.Size(100, 23);
             this.UsernameLbl.TabIndex = 4;
             this.UsernameLbl.Text = "Username: ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::PharmacyInformationSystem.Properties.Resources.user;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(291, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 129);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // PhoneNumbers
             // 
             this.PhoneNumbers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.PhoneNumbers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PhoneNumbers.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.PhoneNumbers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.PhoneNumbers.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.PhoneNumbers.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PhoneNumbers.HideSelection = false;
-            this.PhoneNumbers.Location = new System.Drawing.Point(336, 360);
+            this.PhoneNumbers.Location = new System.Drawing.Point(11, 335);
+            this.PhoneNumbers.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneNumbers.Name = "PhoneNumbers";
             this.PhoneNumbers.ReadOnly = true;
-            this.PhoneNumbers.Size = new System.Drawing.Size(425, 149);
+            this.PhoneNumbers.Size = new System.Drawing.Size(319, 121);
             this.PhoneNumbers.TabIndex = 6;
             this.PhoneNumbers.Text = "Τηλέφωνα:";
             // 
@@ -125,23 +121,35 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             this.ExitBtn.FlatAppearance.BorderSize = 2;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ExitBtn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.ExitBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ExitBtn.Location = new System.Drawing.Point(621, 515);
+            this.ExitBtn.Location = new System.Drawing.Point(466, 418);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(156, 47);
+            this.ExitBtn.Size = new System.Drawing.Size(117, 38);
             this.ExitBtn.TabIndex = 7;
             this.ExitBtn.Text = "OK";
             this.ExitBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ExitBtn.UseVisualStyleBackColor = true;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::PharmacyInformationSystem.Properties.Resources.users1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(218, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 130);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // ViewUserData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(789, 566);
+            this.ClientSize = new System.Drawing.Size(592, 460);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.PhoneNumbers);
             this.Controls.Add(this.pictureBox1);
@@ -152,6 +160,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.Controls.Add(this.FirstNameLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ViewUserData";
