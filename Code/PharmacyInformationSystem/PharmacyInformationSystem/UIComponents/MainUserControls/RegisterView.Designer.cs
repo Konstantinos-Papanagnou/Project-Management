@@ -100,7 +100,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.RoleBox.Location = new System.Drawing.Point(81, 474);
             this.RoleBox.Name = "RoleBox";
             this.RoleBox.Size = new System.Drawing.Size(285, 24);
-            this.RoleBox.TabIndex = 2;
+            this.RoleBox.TabIndex = 7;
             // 
             // FirstNameError
             // 
@@ -221,7 +221,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.LastNameBox.Location = new System.Drawing.Point(81, 122);
             this.LastNameBox.Name = "LastNameBox";
             this.LastNameBox.Size = new System.Drawing.Size(285, 30);
-            this.LastNameBox.TabIndex = 5;
+            this.LastNameBox.TabIndex = 2;
             this.LastNameBox.Tag = "lastname";
             this.LastNameBox.Leave += new System.EventHandler(this.FirstNameBox_Leave);
             // 
@@ -253,7 +253,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.IdCardBox.Location = new System.Drawing.Point(81, 196);
             this.IdCardBox.Name = "IdCardBox";
             this.IdCardBox.Size = new System.Drawing.Size(285, 30);
-            this.IdCardBox.TabIndex = 11;
+            this.IdCardBox.TabIndex = 3;
             this.IdCardBox.Tag = "idcard";
             this.IdCardBox.Leave += new System.EventHandler(this.FirstNameBox_Leave);
             // 
@@ -286,7 +286,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.PasswordChar = '*';
             this.PasswordBox.Size = new System.Drawing.Size(285, 30);
-            this.PasswordBox.TabIndex = 17;
+            this.PasswordBox.TabIndex = 4;
             this.PasswordBox.Tag = "password";
             this.PasswordBox.Leave += new System.EventHandler(this.FirstNameBox_Leave);
             // 
@@ -318,7 +318,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PhoneNumberBox.Location = new System.Drawing.Point(81, 555);
             this.PhoneNumberBox.Name = "PhoneNumberBox";
             this.PhoneNumberBox.Size = new System.Drawing.Size(285, 30);
-            this.PhoneNumberBox.TabIndex = 23;
+            this.PhoneNumberBox.TabIndex = 8;
             this.PhoneNumberBox.Tag = "phonenumbers";
             this.PhoneNumberBox.Leave += new System.EventHandler(this.FirstNameBox_Leave);
             // 
@@ -354,7 +354,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.Save.Location = new System.Drawing.Point(229, 614);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(138, 46);
-            this.Save.TabIndex = 26;
+            this.Save.TabIndex = 9;
             this.Save.Text = "Αποθήκευση";
             this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.button1_Click);
@@ -369,7 +369,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.ViewPasswordsCheckBox.Location = new System.Drawing.Point(81, 400);
             this.ViewPasswordsCheckBox.Name = "ViewPasswordsCheckBox";
             this.ViewPasswordsCheckBox.Size = new System.Drawing.Size(269, 25);
-            this.ViewPasswordsCheckBox.TabIndex = 27;
+            this.ViewPasswordsCheckBox.TabIndex = 6;
             this.ViewPasswordsCheckBox.Text = "Προβολή κρυμμένων χαρακτήρων";
             this.ViewPasswordsCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -391,7 +391,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.VerifyPasswordBox.Name = "VerifyPasswordBox";
             this.VerifyPasswordBox.PasswordChar = '*';
             this.VerifyPasswordBox.Size = new System.Drawing.Size(285, 30);
-            this.VerifyPasswordBox.TabIndex = 29;
+            this.VerifyPasswordBox.TabIndex = 5;
             this.VerifyPasswordBox.Tag = "verifypassword";
             this.VerifyPasswordBox.Leave += new System.EventHandler(this.FirstNameBox_Leave);
             // 

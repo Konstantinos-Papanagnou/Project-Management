@@ -241,7 +241,6 @@ namespace PharmacyInformationSystem.UIComponents
 
         #endregion
         private System.Windows.Forms.Panel panelLogo;
-        //private System.Windows.Forms.Button UserButton;
         private System.Windows.Forms.PictureBox SideMenuIcon;
         private System.Windows.Forms.Button UserBtn;
         private System.Windows.Forms.Panel panel2;

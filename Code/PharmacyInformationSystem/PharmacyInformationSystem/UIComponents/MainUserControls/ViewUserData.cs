@@ -48,7 +48,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             {
                 PhoneNumbers.Text += phone + ", ";
             }
-            PhoneNumbers.Text.Remove(PhoneNumbers.Text.Length - 2);
+            PhoneNumbers.Text = PhoneNumbers.Text.Remove(PhoneNumbers.Text.Length - 2);
         }
         /// <summary>
         /// Listens for exiting events

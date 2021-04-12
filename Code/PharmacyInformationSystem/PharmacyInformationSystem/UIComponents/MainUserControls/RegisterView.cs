@@ -48,7 +48,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             RoleBox.SelectedIndex = User.RoleID -1;
             foreach (var item in User.PhoneNumbers)
                 PhoneNumberBox.Text += item + ", ";
-            if(PhoneNumberBox.Text.Length > 0) PhoneNumberBox.Text.Remove(PhoneNumberBox.Text.Length - 2);
+            if(PhoneNumberBox.Text.Length > 0) PhoneNumberBox.Text = PhoneNumberBox.Text.Remove(PhoneNumberBox.Text.Length - 2);
             firstnameGood = true;
             lastnameGood = true;
             idcardGood = true;
