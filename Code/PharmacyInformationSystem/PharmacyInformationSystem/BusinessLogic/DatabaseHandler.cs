@@ -39,7 +39,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         private const string MedicineTableName = "MedicineParaphar";
         private const string MedicineID = "ID";
         private const string MedicineName = "Name";
-        private const string MedicineProperty = "Property";
+        private const string MedicineCategory = "Category";
         private const string MedicineManufacturingCompany = "ManufacturingCompany";
         private const string MedicineStock = "Stock";
         private const string MedicineMinStock = "MinStock";
@@ -80,7 +80,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                 $" {PhoneNumberField} CHAR(10) NOT NULL, PRIMARY KEY({EmployeeIDField}, {PhoneNumberField}), FOREIGN KEY({EmployeeIDField}) REFERENCES {UsersTableName}({EmployeeIDField}))", conn).ExecuteNonQuery();
 
             new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {MedicineTableName}({MedicineID} INTEGER PRIMARY KEY AUTOINCREMENT," +
-                $"{MedicineName} STRING NOT NULL UNIQUE, {MedicineProperty} STRING NOT NULL, {MedicineManufacturingCompany} STRING NOT NULL," +
+                $"{MedicineName} STRING NOT NULL UNIQUE, {MedicineCategory} STRING NOT NULL, {MedicineManufacturingCompany} STRING NOT NULL," +
                 $"{MedicineStock} INTEGER NOT NULL, {MedicineMinStock} INTEGER NOT NULL, {MedicineDueDate} DATE NOT NULL," +
                 $"{MedicineAcquisitionValue} REAL NOT NULL, {MedicineSellingPrice} REAL NOT NULL, " +
                 $"{MedicineQuality} CHAR(1) NOT NULL)").ExecuteNonQuery();
@@ -222,7 +222,6 @@ namespace PharmacyInformationSystem.BusinessLogic
                 }
             }
         }
-
         /// <summary>
         /// Insert a user to the database along with his user data
         /// </summary>
@@ -356,6 +355,101 @@ namespace PharmacyInformationSystem.BusinessLogic
                 {
                     InsertPhoneNumber(conn, user.EmployeeID, number);
                 }
+                return true;
+            }
+        }
+
+        /// <summary>
+        /// Adds Medicine's Data 
+        /// </summary>
+        /// <param name="medicine"></param>
+        /// <returns></returns>
+        internal bool AddMedicine(Medicine medicine)
+        {
+            using(SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                //Insert Medicine Data
+                SQLiteCommand insertMedData = new SQLiteCommand($"INSERT INTO {MedicineTableName}({MedicineName}," +
+                    $"{MedicineCategory},{MedicineManufacturingCompany},{MedicineStock},{MedicineMinStock},{MedicineDueDate}," +
+                    $"{MedicineAcquisitionValue},{MedicineSellingPrice},{MedicineQuality}) VALUES ('{medicine.MedName}'," +
+                    $"{medicine.MedCategory},'{medicine.MedManfactureComp}','{medicine.MedStockCount}','{medicine.MedMinStock}','" +
+                    $"{medicine.MedDueDate}','{medicine.MedAcquisitionValue}','{medicine.MedSellingValue}','" +
+                    $"{medicine.MedQuality}')",conn);
+                try
+                {
+                    if (insertMedData.ExecuteNonQuery() < 0)
+                        return false;
+                } 
+                catch
+                {
+                    return false;
+                }
+                //Get the new MedID of the medicine
+                insertMedData.CommandText = $"SELECT {MedicineID} FROM {MedicineTableName} WHERE" +
+                    $" {MedicineName} = '{medicine.MedName}' AND {MedicineDueDate} = '{medicine.MedDueDate}'";
+                using (var reader = insertMedData.ExecuteReader())
+                {
+                    int medid = 0;
+                    while (reader.Read())
+                    {
+                        medid = int.Parse(reader[0].ToString());
+                        //Something went wrong? Who got have imagined! Good luck figuring it out!
+                        if (medid == 0) return false;
+                        /*foreach (string category in medicine.MedCategory)
+                        {
+                            InsertCategory(conn,medid,category);
+                        }*/
+                    }
+                }
+            }
+            return true;
+        }
+
+        /*private bool InsertCategory(SQLiteConnection conn, int medId, string Category)
+        {
+            try
+            {
+                SQLiteCommand insertPhoneNumber = new SQLiteCommand($"INSERT INTO {PhoneNumberTableName}({EmployeeIDField}," +
+                    $"{PhoneNumberField}) VALUES ('{employeeId}','{phoneNumber}')", conn);
+                return insertPhoneNumber.ExecuteNonQuery() > 0;
+            }
+            catch { return false; }
+        }*/
+        
+        /// <summary>
+        /// Removes a specific medicine
+        /// </summary>
+        /// <param name="medId"></param>
+        /// <returns></returns>
+        internal bool RemoveMedicine(int medId)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                SQLiteCommand deleteMedicine = new SQLiteCommand(conn);
+                //Remove the medicine from Medicines table
+                deleteMedicine.CommandText = $"DELETE FROM {MedicineTableName} WHERE {MedicineID} = '{medId}'";
+                return deleteMedicine.ExecuteNonQuery() > 0;
+            }
+        }
+
+        /// <summary>
+        /// Update medicine's info
+        /// </summary>
+        /// <param name="medicine"></param>
+        /// <returns></returns>
+        internal bool UpdateMedicine(Medicine medicine)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                SQLiteCommand updateMedicine = new SQLiteCommand(conn);
+                updateMedicine.CommandText = $"UPDATE {MedicineTableName} SET " +
+                    $"{MedicineName}='{medicine.MedName}', {MedicineCategory}='{medicine.MedCategory}'," +
+                    $"{MedicineStock}='{medicine.MedStockCount}', {MedicineMinStock}='{medicine.MedMinStock}', " +
+                    $"{MedicineAcquisitionValue}='{medicine.MedAcquisitionValue}'," +
+                    $" {MedicineSellingPrice}='{medicine.MedSellingValue}' WHERE {MedicineID}='{medicine.MedID}'";
                 return true;
             }
         }

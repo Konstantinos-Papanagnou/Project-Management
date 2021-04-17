@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\Medicine.cs" />
     <Compile Include="BusinessLogic\DatabaseHandler.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\AuthenticationFailure.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\AuthenticationHandler.cs" />

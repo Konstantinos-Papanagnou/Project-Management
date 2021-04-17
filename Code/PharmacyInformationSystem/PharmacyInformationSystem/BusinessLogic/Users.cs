@@ -143,8 +143,21 @@ namespace PharmacyInformationSystem.BusinessLogic
         {
             Database = new DatabaseHandler();
         }
-        public StoreKeeper(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { Database = new DatabaseHandler(); }
-
+        public StoreKeeper(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { 
+            Database = new DatabaseHandler(); 
+        }
+        public bool AddMedicine(Medicine medicine)
+        {
+            return Database.AddMedicine(medicine);
+        }
+        public bool RemoveMedicene(Medicine medicine)
+        {
+            return Database.RemoveMedicine(medicine.MedID);
+        }
+        public bool UpdateMedicine(Medicine medicine)
+        {
+            return Database.UpdateMedicine(medicine);
+        }
     }
 
     public class Seller : User
