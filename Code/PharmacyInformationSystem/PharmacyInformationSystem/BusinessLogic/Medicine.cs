@@ -10,7 +10,7 @@ namespace PharmacyInformationSystem.BusinessLogic
     {
         public int MedID { get; set; }
         public string MedName { get; set; }
-        public List<string> MedCategory { get; set; }
+        public string MedCategory { get; set; }
         public string MedManfactureComp { get; set; }
         public int MedStockCount { get; set; }
         public int MedMinStock { get; set; }
@@ -19,19 +19,18 @@ namespace PharmacyInformationSystem.BusinessLogic
         public double MedSellingValue { get; set; }
         public string MedQuality { get; set; }
 
-        public Medicine(int medID, string medName, List<string> medCategory, string medManfactureComp, int medStockCount, int medMinStock, string medDueDate, double medAcquisitionValue, double medSellingValue, string medQuality)
+        public Medicine(int medID, string medName, string medCategory, string medManfactureComp, int medStockCount, int medMinStock, string medDueDate, double medAcquisitionValue, double medSellingValue, string medQuality)
         {
-            MedID = medID;
-            MedName = medName;
-            MedCategory = medCategory;
-            MedManfactureComp = medManfactureComp;
-            MedStockCount = medStockCount;
-            MedMinStock = medMinStock;
-            MedDueDate = medDueDate;
-            MedAcquisitionValue = medAcquisitionValue;
-            MedSellingValue = medSellingValue;
-            MedQuality = medQuality;
+            this.MedID = medID;
+            this.MedName = medName;
+            this.MedCategory = medCategory;
+            this.MedManfactureComp = medManfactureComp;
+            this.MedStockCount = medStockCount;
+            this.MedMinStock = medMinStock;
+            this.MedDueDate = medDueDate;
+            this.MedAcquisitionValue = medAcquisitionValue;
+            this.MedSellingValue = medSellingValue;
+            this.MedQuality = medQuality;
         }
-
     }
 }
