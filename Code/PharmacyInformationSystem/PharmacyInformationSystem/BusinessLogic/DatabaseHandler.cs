@@ -396,26 +396,11 @@ namespace PharmacyInformationSystem.BusinessLogic
                         medid = int.Parse(reader[0].ToString());
                         //Something went wrong? Who got have imagined! Good luck figuring it out!
                         if (medid == 0) return false;
-                        /*foreach (string category in medicine.MedCategory)
-                        {
-                            InsertCategory(conn,medid,category);
-                        }*/
                     }
                 }
             }
             return true;
         }
-
-        /*private bool InsertCategory(SQLiteConnection conn, int medId, string Category)
-        {
-            try
-            {
-                SQLiteCommand insertPhoneNumber = new SQLiteCommand($"INSERT INTO {PhoneNumberTableName}({EmployeeIDField}," +
-                    $"{PhoneNumberField}) VALUES ('{employeeId}','{phoneNumber}')", conn);
-                return insertPhoneNumber.ExecuteNonQuery() > 0;
-            }
-            catch { return false; }
-        }*/
         
         /// <summary>
         /// Removes a specific medicine
@@ -453,5 +438,82 @@ namespace PharmacyInformationSystem.BusinessLogic
                 return true;
             }
         }
+
+        /// <summary>
+        /// Display all Medicines
+        /// </summary>
+        /// <returns></returns>
+        internal List<Medicine> DisplayMedicines()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+
+                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM {MedicineTableName}", conn);
+                using (var reader = command.ExecuteReader())
+                {
+                    List<Medicine> medicine = new List<Medicine>();
+                    //Get the Medicines
+                    while (reader.Read())
+                    {
+
+                        //add the medicine to the list
+                        medicine.Add(new Medicine(
+
+                                medID: int.Parse(reader[0].ToString()),
+                                medName: reader[1].ToString(),
+                                medCategory: reader[2].ToString(),
+                                medManfactureComp: reader[3].ToString(),
+                                medStockCount: int.Parse(reader[4].ToString()),
+                                medMinStock: int.Parse(reader[5].ToString()),
+                                medDueDate: reader[6].ToString(),
+                                medAcquisitionValue: double.Parse(reader[7].ToString()),
+                                medSellingValue: double.Parse(reader[8].ToString()),
+                                medQuality: reader[9].ToString()
+                            )) ;
+                    }
+                    return medicine;
+                }
+            }
+        }
+
+        /*
+        /// <summary>
+        /// Gets the information of a specific medicine
+        /// </summary>
+        /// <returns></returns>
+        internal Medicine GetMedData(string medicinename)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+
+                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM {MedicineTableName} WHERE {MedicineName} = '{medicinename}'", conn);
+                using (var reader = command.ExecuteReader())
+                {
+                    Medicine medicine = null;
+                    while (reader.Read())
+                    {
+                        medicine = new Medicine(
+                                medID: int.Parse(reader[0].ToString()),
+                                medName: reader[1].ToString(),
+                                medCategory: reader[2].ToString(),
+                                medManfactureComp: reader[3].ToString(),
+                                medStockCount: int.Parse(reader[4].ToString()),
+                                medMinStock: int.Parse(reader[5].ToString()),
+                                medDueDate: reader[6].ToString(),
+                                medAcquisitionValue: double.Parse(reader[7].ToString()),
+                                medSellingValue: double.Parse(reader[8].ToString()),
+                                medQuality: reader[9].ToString()
+                            );
+                        //return medicine;
+                    }
+                    return medicine;
+                }
+            }
+        }*/
+
+
     }
+    
 }

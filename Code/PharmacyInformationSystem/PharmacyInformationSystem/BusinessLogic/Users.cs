@@ -132,8 +132,81 @@ namespace PharmacyInformationSystem.BusinessLogic
         {
             Database = new DatabaseHandler();
         }
-        public MarketingTeam(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { Database = new DatabaseHandler(); }
+        public MarketingTeam(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) 
+        {
+            Database = new DatabaseHandler(); 
+        }
 
+        /// <summary>
+        /// Medicine's profit per day
+        /// </summary>
+        /// <param name="med"></param>
+        /// <param name="unitSold"></param>
+        /// <returns></returns>
+        public double ProfitPerDay(Medicine med, int unitSold)
+        {
+            return (med.MedSellingValue - med.MedSellingValue) * unitSold;
+        }
+
+        /// <summary>
+        /// Medicine's profit per month
+        /// </summary>
+        /// <param name="med"></param>
+        /// <param name="unitSold"></param>
+        /// <returns></returns>
+        public double ProfitPerMonth(Medicine med, int unitSold)
+        {
+            double ppM = 0;
+            for (int day = 0; day < 22; day++)
+            {
+                ppM += ProfitPerDay(med, unitSold);
+            }
+            return ppM;
+        }
+
+        /// <summary>
+        /// Medicine's profit per year
+        /// </summary>
+        /// <param name="med"></param>
+        /// <param name="unitSold"></param>
+        /// <returns></returns>
+        public double ProfitPerYear(Medicine med, int unitSold)
+        {
+            double ppY = 0;
+            for (int month = 0; month < 12; month++)
+            {
+                ppY += ProfitPerMonth(med, unitSold);
+            }
+            return ppY;
+        }
+
+        /// <summary>
+        /// Company's profit per month
+        /// </summary>
+        /// <param name="medCount"></param>
+        /// <param name="med"></param>
+        /// <param name="unitSold"></param>
+        /// <returns></returns>
+        public double companyPerMonth(int medCount, Medicine med, int unitSold)
+        {
+            double cpM = 0;
+            for (int count = 0; count < medCount; count++)
+            {
+                cpM += ProfitPerMonth(med, unitSold);
+            }
+            return cpM;
+        }
+
+
+        public double companyPerYear(int medCount, Medicine med, int unitSold)
+        {
+            double cpΥ = 0;
+            for (int count = 0; count < 12; count++)
+            {
+                cpΥ += companyPerYear(medCount, med, unitSold);
+            }
+            return cpΥ;
+        }
     }
 
     public class StoreKeeper : User
@@ -146,17 +219,44 @@ namespace PharmacyInformationSystem.BusinessLogic
         public StoreKeeper(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { 
             Database = new DatabaseHandler(); 
         }
+
+        /// <summary>
+        /// Adds a medicine
+        /// </summary>
+        /// <param name="medicine"></param>
+        /// <returns></returns>
         public bool AddMedicine(Medicine medicine)
         {
             return Database.AddMedicine(medicine);
         }
+
+        /// <summary>
+        /// Removes a specific medicine
+        /// </summary>
+        /// <param name="medicine"></param>
+        /// <returns></returns>
         public bool RemoveMedicene(Medicine medicine)
         {
             return Database.RemoveMedicine(medicine.MedID);
         }
+
+        /// <summary>
+        /// Update a specific medicine
+        /// </summary>
+        /// <param name="medicine"></param>
+        /// <returns></returns>
         public bool UpdateMedicine(Medicine medicine)
         {
             return Database.UpdateMedicine(medicine);
+        }
+
+        /// <summary>
+        /// Displays all medicines
+        /// </summary>
+        /// <returns></returns>
+        public List<Medicine> GetMedicines()
+        {
+            return Database.DisplayMedicines();
         }
     }
 
