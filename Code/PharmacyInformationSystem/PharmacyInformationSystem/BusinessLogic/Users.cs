@@ -145,7 +145,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <returns></returns>
         public double ProfitPerDay(Medicine med, int unitSold)
         {
-            return (med.MedSellingValue - med.MedSellingValue) * unitSold;
+            return (med.MedSellingValue - med.MedAcquisitionValue) * unitSold;
         }
 
         /// <summary>
