@@ -163,9 +163,39 @@ namespace PharmacyInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_row_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-edit-row-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_row_24_1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-edit-row-24(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_expand_arrow_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-expand-arrow-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_export_pdf_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-export-pdf-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
