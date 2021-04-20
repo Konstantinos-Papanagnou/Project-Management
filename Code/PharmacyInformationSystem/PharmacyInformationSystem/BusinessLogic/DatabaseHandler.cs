@@ -479,41 +479,24 @@ namespace PharmacyInformationSystem.BusinessLogic
 
         /*
         /// <summary>
-        /// Gets the information of a specific medicine
+        /// Category of med
         /// </summary>
+        /// <param name="conn"></param>
+        /// <param name="medId"></param>
+        /// <param name="category"></param>
         /// <returns></returns>
-        internal Medicine GetMedData(string medicinename)
+        private bool InsertCategory(SQLiteConnection conn, int medId, string category)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            try
             {
-                conn.Open();
-
-                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM {MedicineTableName} WHERE {MedicineName} = '{medicinename}'", conn);
-                using (var reader = command.ExecuteReader())
-                {
-                    Medicine medicine = null;
-                    while (reader.Read())
-                    {
-                        medicine = new Medicine(
-                                medID: int.Parse(reader[0].ToString()),
-                                medName: reader[1].ToString(),
-                                medCategory: reader[2].ToString(),
-                                medManfactureComp: reader[3].ToString(),
-                                medStockCount: int.Parse(reader[4].ToString()),
-                                medMinStock: int.Parse(reader[5].ToString()),
-                                medDueDate: reader[6].ToString(),
-                                medAcquisitionValue: double.Parse(reader[7].ToString()),
-                                medSellingValue: double.Parse(reader[8].ToString()),
-                                medQuality: reader[9].ToString()
-                            );
-                        //return medicine;
-                    }
-                    return medicine;
-                }
+                SQLiteCommand insertPhoneNumber = new SQLiteCommand($"INSERT INTO {MedicineTableName}({MedicineCategory}," +
+                    $") VALUES ('{category}') WHERE {MedicineID}='{medId}'", conn);
+                return insertPhoneNumber.ExecuteNonQuery() > 0;
             }
-        }*/
-
-
+            catch { return false; }
+        }
+        */
+        
     }
-    
+
 }
