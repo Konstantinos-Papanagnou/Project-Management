@@ -29,64 +29,137 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Όνομα"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112))))), System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48))))), new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Κατηγορία"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112))))), System.Drawing.Color.Empty, new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Εταιρία"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112))))), System.Drawing.Color.Empty, new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Ποσότητα"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112))))), System.Drawing.Color.Empty, new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            ""}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112))))), System.Drawing.Color.Empty, new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Ημερομηνία Λήξης"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112))))), System.Drawing.Color.Empty, new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Κόστος Αγοράς (€)"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112))))), System.Drawing.Color.Empty, new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Τιμή Πώλησης (€)"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112))))), System.Drawing.Color.Empty, new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Ποιότητα"}, -1, System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112))))), System.Drawing.Color.Empty, new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161))));
+            this.components = new System.ComponentModel.Container();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Company = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MinQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ExperetionDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MarketCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ProductPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Quality = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.επεξεργασίαToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.εξαγωγήToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Name,
+            this.Category,
+            this.Company,
+            this.Quantity,
+            this.MinQuantity,
+            this.ExperetionDate,
+            this.MarketCost,
+            this.ProductPrice,
+            this.Quality});
+            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.ForeColor = System.Drawing.Color.FloralWhite;
             this.listView1.HideSelection = false;
-            listViewItem4.ToolTipText = "Αριθμός Αποθέματος";
-            listViewItem5.ToolTipText = "Ελάχιστο Όριο Αποθέματος";
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8,
-            listViewItem9});
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1679, 1153);
+            this.listView1.Size = new System.Drawing.Size(1000, 600);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.SmallIcon;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // hScrollBar1
+            // 
+            this.hScrollBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.hScrollBar1.Location = new System.Drawing.Point(0, 583);
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(1000, 17);
+            this.hScrollBar1.TabIndex = 1;
+            // 
+            // Name
+            // 
+            this.Name.Text = "Όνομα";
+            // 
+            // Category
+            // 
+            this.Category.Text = "Κατηγορία";
+            // 
+            // Company
+            // 
+            this.Company.Text = "Εταιρία";
+            // 
+            // Quantity
+            // 
+            this.Quantity.Text = "Ποσότητα";
+            // 
+            // MinQuantity
+            // 
+            this.MinQuantity.Text = "Ελάχιστο Όριο Αποθέματος";
+            // 
+            // ExperetionDate
+            // 
+            this.ExperetionDate.Text = "Ημερομηνία Λήξης";
+            // 
+            // MarketCost
+            // 
+            this.MarketCost.Text = "Κόστος Αγοράς (€)";
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.Text = "Τιμής Πώλησης (€)";
+            // 
+            // Quality
+            // 
+            this.Quality.Text = "Ποιότητα";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.επεξεργασίαToolStripMenuItem,
+            this.εξαγωγήToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(160, 52);
+            // 
+            // επεξεργασίαToolStripMenuItem
+            // 
+            this.επεξεργασίαToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.επεξεργασίαToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.επεξεργασίαToolStripMenuItem.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_edit_row_24_1_;
+            this.επεξεργασίαToolStripMenuItem.Name = "επεξεργασίαToolStripMenuItem";
+            this.επεξεργασίαToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
+            this.επεξεργασίαToolStripMenuItem.Text = "Επεξεργασία";
+            this.επεξεργασίαToolStripMenuItem.Click += new System.EventHandler(this.επεξεργασίαToolStripMenuItem_Click);
+            // 
+            // εξαγωγήToolStripMenuItem
+            // 
+            this.εξαγωγήToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.εξαγωγήToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.εξαγωγήToolStripMenuItem.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_export_pdf_24;
+            this.εξαγωγήToolStripMenuItem.Name = "εξαγωγήToolStripMenuItem";
+            this.εξαγωγήToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
+            this.εξαγωγήToolStripMenuItem.Text = "Εξαγωγή";
+            this.εξαγωγήToolStripMenuItem.Click += new System.EventHandler(this.εξαγωγήToolStripMenuItem_Click);
             // 
             // StorageTableView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.listView1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FloralWhite;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StorageTableView";
-            this.Size = new System.Drawing.Size(1679, 1149);
+            this.Size = new System.Drawing.Size(1000, 600);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -94,5 +167,18 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         #endregion
 
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Name;
+        private System.Windows.Forms.ColumnHeader Category;
+        private System.Windows.Forms.ColumnHeader Company;
+        private System.Windows.Forms.ColumnHeader Quantity;
+        private System.Windows.Forms.ColumnHeader MinQuantity;
+        private System.Windows.Forms.ColumnHeader ExperetionDate;
+        private System.Windows.Forms.ColumnHeader MarketCost;
+        private System.Windows.Forms.ColumnHeader ProductPrice;
+        private System.Windows.Forms.ColumnHeader Quality;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem επεξεργασίαToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem εξαγωγήToolStripMenuItem;
+        private System.Windows.Forms.HScrollBar hScrollBar1;
     }
 }

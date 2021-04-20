@@ -16,5 +16,20 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         {
             InitializeComponent();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void εξαγωγήToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void επεξεργασίαToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
