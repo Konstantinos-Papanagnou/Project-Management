@@ -187,7 +187,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <param name="med"></param>
         /// <param name="unitSold"></param>
         /// <returns></returns>
-        public double companyPerMonth(int medCount, Medicine med, int unitSold)
+        public double CompanyPerMonth(int medCount, Medicine med, int unitSold)
         {
             double cpM = 0;
             for (int count = 0; count < medCount; count++)
@@ -197,8 +197,14 @@ namespace PharmacyInformationSystem.BusinessLogic
             return cpM;
         }
 
-
-        public double companyPerYear(int medCount, Medicine med, int unitSold)
+        /// <summary>
+        /// Company's profit per year
+        /// </summary>
+        /// <param name="medCount"></param>
+        /// <param name="med"></param>
+        /// <param name="unitSold"></param>
+        /// <returns></returns>
+        public double CompanyPerYear(int medCount, Medicine med, int unitSold)
         {
             double cpΥ = 0;
             for (int count = 0; count < 12; count++)
