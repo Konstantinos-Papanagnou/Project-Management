@@ -30,8 +30,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.StorageListView = new System.Windows.Forms.ListView();
             this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Company = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,14 +43,15 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.επεξεργασίαToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.εξαγωγήToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // StorageListView
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.StorageListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.StorageListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StorageListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Name,
             this.Category,
             this.Company,
@@ -61,26 +61,18 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.MarketCost,
             this.ProductPrice,
             this.Quality});
-            this.listView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1000, 600);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.SmallIcon;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.hScrollBar1.Location = new System.Drawing.Point(0, 583);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(1000, 17);
-            this.hScrollBar1.TabIndex = 1;
+            this.StorageListView.ContextMenuStrip = this.contextMenuStrip1;
+            this.StorageListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StorageListView.ForeColor = System.Drawing.Color.FloralWhite;
+            this.StorageListView.HideSelection = false;
+            this.StorageListView.Location = new System.Drawing.Point(0, 0);
+            this.StorageListView.Margin = new System.Windows.Forms.Padding(4);
+            this.StorageListView.Name = "StorageListView";
+            this.StorageListView.Size = new System.Drawing.Size(1000, 600);
+            this.StorageListView.TabIndex = 0;
+            this.StorageListView.UseCompatibleStateImageBehavior = false;
+            this.StorageListView.View = System.Windows.Forms.View.SmallIcon;
+            this.StorageListView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Name
             // 
@@ -147,13 +139,21 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.εξαγωγήToolStripMenuItem.Text = "Εξαγωγή";
             this.εξαγωγήToolStripMenuItem.Click += new System.EventHandler(this.εξαγωγήToolStripMenuItem_Click);
             // 
+            // hScrollBar1
+            // 
+            this.hScrollBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.hScrollBar1.Location = new System.Drawing.Point(0, 583);
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(1000, 17);
+            this.hScrollBar1.TabIndex = 1;
+            // 
             // StorageTableView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.Controls.Add(this.hScrollBar1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.StorageListView);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FloralWhite;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -166,7 +166,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView StorageListView;
         private System.Windows.Forms.ColumnHeader Name;
         private System.Windows.Forms.ColumnHeader Category;
         private System.Windows.Forms.ColumnHeader Company;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList
 {
-    public partial class StrorageListNavigator : UserControl
+    public partial class StorageList : UserControl
     {
-        public StrorageListNavigator()
+        public StorageList()
         {
             InitializeComponent();
         }

@@ -121,6 +121,12 @@
     <Compile Include="UIComponents\MainUserControls\RegisterView.Designer.cs">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageList.Designer.cs">
+      <DependentUpon>StorageList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageTableView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     <EmbeddedResource Include="UIComponents\MainUserControls\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageList.resx">
+      <DependentUpon>StorageList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageTableView.resx">
       <DependentUpon>StorageTableView.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,7 +253,10 @@
     <Content Include="Resources\icons8-drop-down-20.png" />
     <Content Include="Resources\icons8-drop-down-24%283%29.png" />
     <Content Include="Resources\icons8-drop-down-24%284%29.png" />
+    <Content Include="Resources\icons8-edit-row-24%281%29.png" />
+    <Content Include="Resources\icons8-edit-row-24.png" />
     <Content Include="Resources\icons8-expand-arrow-24.png" />
+    <Content Include="Resources\icons8-export-pdf-24.png" />
     <Content Include="Resources\icons8-gear-24.png" />
     <Content Include="Resources\icons8-group-24.png" />
     <Content Include="Resources\icons8-improvement-24.png" />

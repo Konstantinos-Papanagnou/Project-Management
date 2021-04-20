@@ -1,7 +1,7 @@
 ﻿
 namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList
 {
-    partial class StrorageListNavigator
+    partial class StorageNavigator
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,25 +29,19 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.StorageLbl = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.StorageLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pictureBox1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.StorageLbl);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1259, 45);
-            this.panel1.TabIndex = 0;
+            this.pictureBox1.BackgroundImage = global::PharmacyInformationSystem.Properties.Resources.icons8_pill_bottle_24_1_;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 26);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // StorageLbl
             // 
@@ -63,41 +57,23 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.StorageLbl.Text = "Κατάλογος Φαρμάκων";
             this.StorageLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(0, 43);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 42);
-            this.panel2.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::PharmacyInformationSystem.Properties.Resources.icons8_pill_bottle_24_1_;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 26);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // StrorageListNavigator
+            // StorageNavigator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
-            this.Name = "StrorageListNavigator";
-            this.Size = new System.Drawing.Size(1259, 45);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.StorageLbl);
+            this.Name = "StorageNavigator";
+            this.Size = new System.Drawing.Size(944, 45);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label StorageLbl;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label StorageLbl;
     }
 }

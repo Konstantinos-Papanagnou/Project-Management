@@ -12,6 +12,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
 {
     public partial class StorageTableView : UserControl
     {
+        
         public StorageTableView()
         {
             InitializeComponent();

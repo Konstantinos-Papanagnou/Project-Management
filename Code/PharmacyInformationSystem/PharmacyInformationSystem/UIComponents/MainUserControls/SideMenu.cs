@@ -44,7 +44,7 @@ namespace PharmacyInformationSystem.UIComponents
         /// </summary>
         public void SetMarketingView()
         {
-            Bar = new MainUserControls.SideBarItem("Marketing", "Λειτουργία 1", "Λειτουργία 2", "Λειτουργία 3", "Λειτουργία 4", Properties.Resources.icons8_marketing_24);
+            Bar = new MainUserControls.SideBarItem("Marketing", "Κέρδος Φαρμάκου", "Κέρδος Εταιρίας", "", "", Properties.Resources.icons8_marketing_24);
             panelSubMenu.Controls.Add(Bar);
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace PharmacyInformationSystem.UIComponents
         /// </summary>
         public void SetStoreKeeperView()
         {
-            Bar = new MainUserControls.SideBarItem("Αποθήκη", "Λειτουργία 1", "Λειτουργία 2", "Λειτουργία 3", "Λειτουργία 4", Properties.Resources.icons8_warehouse_24);
+            Bar = new MainUserControls.SideBarItem("Αποθήκη", "", "", "", "", Properties.Resources.icons8_warehouse_24);
             panelSubMenu.Controls.Add(Bar);
         }
 
