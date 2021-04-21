@@ -64,6 +64,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.StorageListView.ContextMenuStrip = this.contextMenuStrip1;
             this.StorageListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StorageListView.ForeColor = System.Drawing.Color.FloralWhite;
+            this.StorageListView.FullRowSelect = true;
             this.StorageListView.HideSelection = false;
             this.StorageListView.Location = new System.Drawing.Point(0, 0);
             this.StorageListView.Margin = new System.Windows.Forms.Padding(4);
@@ -71,44 +72,53 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.StorageListView.Size = new System.Drawing.Size(1000, 600);
             this.StorageListView.TabIndex = 0;
             this.StorageListView.UseCompatibleStateImageBehavior = false;
-            this.StorageListView.View = System.Windows.Forms.View.SmallIcon;
+            this.StorageListView.View = System.Windows.Forms.View.Details;
             this.StorageListView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Name
             // 
             this.Name.Text = "Όνομα";
+            this.Name.Width = 150;
             // 
             // Category
             // 
             this.Category.Text = "Κατηγορία";
+            this.Category.Width = 150;
             // 
             // Company
             // 
             this.Company.Text = "Εταιρία";
+            this.Company.Width = 150;
             // 
             // Quantity
             // 
             this.Quantity.Text = "Ποσότητα";
+            this.Quantity.Width = 90;
             // 
             // MinQuantity
             // 
             this.MinQuantity.Text = "Ελάχιστο Όριο Αποθέματος";
+            this.MinQuantity.Width = 112;
             // 
             // ExperetionDate
             // 
             this.ExperetionDate.Text = "Ημερομηνία Λήξης";
+            this.ExperetionDate.Width = 97;
             // 
             // MarketCost
             // 
             this.MarketCost.Text = "Κόστος Αγοράς (€)";
+            this.MarketCost.Width = 80;
             // 
             // ProductPrice
             // 
             this.ProductPrice.Text = "Τιμής Πώλησης (€)";
+            this.ProductPrice.Width = 83;
             // 
             // Quality
             // 
             this.Quality.Text = "Ποιότητα";
+            this.Quality.Width = 76;
             // 
             // contextMenuStrip1
             // 

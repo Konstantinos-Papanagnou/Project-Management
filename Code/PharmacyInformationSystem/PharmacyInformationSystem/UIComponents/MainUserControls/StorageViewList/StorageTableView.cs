@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PharmacyInformationSystem.BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,18 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
 {
     public partial class StorageTableView : UserControl
     {
-        
-        public StorageTableView()
+        public StorageTableView(Medicine medicine)
         {
             InitializeComponent();
+            //ListView.ColumnHeaderCollection StorageListView;
+            List<Medicine> medicines = new List<Medicine>();
+
+            medicines.Add(new Medicine());
+        }
+
+        public void fillList()
+        {
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

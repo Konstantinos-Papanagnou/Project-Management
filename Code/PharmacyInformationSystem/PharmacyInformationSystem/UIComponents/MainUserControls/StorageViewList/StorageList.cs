@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PharmacyInformationSystem.BusinessLogic;
+using System;
+using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,20 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
 {
     public partial class StorageList : UserControl
     {
-        public StorageList()
+        private readonly StoreKeeper Keeper;
+        private readonly Medicine Medicine;
+
+        public StorageList(StoreKeeper Keeper)
         {
+            this.Keeper = Keeper;
             InitializeComponent();
+            fillList();
+        }
+
+        private void fillList()
+        {
+            
+            
         }
     }
 }

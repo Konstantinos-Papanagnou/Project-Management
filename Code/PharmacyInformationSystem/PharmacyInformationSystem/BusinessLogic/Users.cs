@@ -209,7 +209,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             double cpΥ = 0;
             for (int count = 0; count < 12; count++)
             {
-                cpΥ += companyPerYear(medCount, med, unitSold);
+                //cpΥ += companyPerYear(medCount, med, unitSold);
             }
             return cpΥ;
         }

@@ -19,6 +19,11 @@ namespace PharmacyInformationSystem.BusinessLogic
         public double MedSellingValue { get; set; }
         public string MedQuality { get; set; }
 
+        public Medicine()
+        {
+
+        }
+
         public Medicine(int medID, string medName, string medCategory, string medManfactureComp, int medStockCount, int medMinStock, string medDueDate, double medAcquisitionValue, double medSellingValue, string medQuality)
         {
             this.MedID = medID;
