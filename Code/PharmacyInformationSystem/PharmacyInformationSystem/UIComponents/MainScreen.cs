@@ -29,7 +29,7 @@ namespace PharmacyInformationSystem.UIComponents
             User = user;
             SideMenu.ViewUserInfoBtn.Click += ViewUserInfoBtn_Click;
             SideMenu.Logout.Click += Logout_Click;
-            
+
             if (User is Administrator)
             {
                 SideMenu.SetAdminView();
@@ -38,7 +38,10 @@ namespace PharmacyInformationSystem.UIComponents
             else if (User is MarketingTeam)
                 SideMenu.SetMarketingView();
             else if (User is StoreKeeper)
+            {
                 SideMenu.SetStoreKeeperView();
+                OperationsPanel.Controls.Add(new MainUserControls.StorageViewList.StorageListView((StoreKeeper) User));
+            }
             else SideMenu.SetSellerView();
         }
         /// <summary>
