@@ -32,7 +32,6 @@
             this.OperationsPanel = new System.Windows.Forms.Panel();
             this.SideMenu = new PharmacyInformationSystem.UIComponents.SideMenu();
             this.SuspendLayout();
-
             // 
             // OperationsPanel
             // 
@@ -66,6 +65,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainScreen";
+            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pharmacy Information System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);

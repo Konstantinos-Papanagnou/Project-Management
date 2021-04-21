@@ -40,6 +40,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quality = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DrugType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.storageNavigator1 = new PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.StorageNavigator();
             this.SuspendLayout();
             // 
             // List
@@ -57,13 +58,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.Price,
             this.Quality,
             this.DrugType});
-            this.List.Dock = System.Windows.Forms.DockStyle.Fill;
             this.List.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.List.HideSelection = false;
-            this.List.Location = new System.Drawing.Point(0, 0);
+            this.List.Location = new System.Drawing.Point(0, 54);
             this.List.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.List.Name = "List";
-            this.List.Size = new System.Drawing.Size(1259, 786);
+            this.List.Size = new System.Drawing.Size(1259, 732);
             this.List.TabIndex = 0;
             this.List.UseCompatibleStateImageBehavior = false;
             this.List.View = System.Windows.Forms.View.Details;
@@ -117,11 +117,21 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // 
             this.DrugType.Text = "Είδος";
             // 
+            // storageNavigator1
+            // 
+            this.storageNavigator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.storageNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.storageNavigator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.storageNavigator1.Name = "storageNavigator1";
+            this.storageNavigator1.Size = new System.Drawing.Size(1259, 55);
+            this.storageNavigator1.TabIndex = 1;
+            // 
             // StorageListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.Controls.Add(this.storageNavigator1);
             this.Controls.Add(this.List);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StorageListView";
@@ -143,5 +153,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         private System.Windows.Forms.ColumnHeader Price;
         private System.Windows.Forms.ColumnHeader Quality;
         private System.Windows.Forms.ColumnHeader DrugType;
+        private StorageNavigator storageNavigator1;
     }
 }

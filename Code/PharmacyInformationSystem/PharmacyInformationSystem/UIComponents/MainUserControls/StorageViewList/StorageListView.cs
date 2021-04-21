@@ -19,15 +19,15 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.User = User;
             InitializeComponent();
 
-            var meds = User.GetMedicines();
-            foreach (var med in meds) {
-                var lvi = new ListViewItem(med.MedName);
-                lvi.SubItems.Add(med.MedCategory);
-                lvi.SubItems.Add(med.MedManfactureComp);
-                lvi.SubItems.Add(med.MedDueDate);
-                lvi.SubItems.Add(med.MedMinStock.ToString());
-
-            }
+            //var meds = User.GetMedicines();
+           // foreach (var med in meds) {
+            ///    var lvi = new ListViewItem(med.MedName);
+            //    lvi.SubItems.Add(med.MedCategory);
+            //    lvi.SubItems.Add(med.MedManfactureComp);
+            //    lvi.SubItems.Add(med.MedDueDate);
+           //     lvi.SubItems.Add(med.MedMinStock.ToString());
+//
+           // }
         }
     }
 }

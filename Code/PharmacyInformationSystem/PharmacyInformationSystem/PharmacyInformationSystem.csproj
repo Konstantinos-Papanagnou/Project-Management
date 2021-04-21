@@ -146,16 +146,6 @@
     <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageNavigator.Designer.cs">
       <DependentUpon>StorageNavigator.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageTableView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageTableView.Designer.cs">
-      <DependentUpon>StorageTableView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\StorageViewList\StrorageList.cs" />
-    <Compile Include="UIComponents\MainUserControls\StorageViewList\StrorageList.Designer.cs">
-      <DependentUpon>StrorageList.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIComponents\MainUserControls\UserViewList\IUpdatable.cs" />
     <Compile Include="UIComponents\MainUserControls\UserViewList\ListNavigator.cs">
       <SubType>UserControl</SubType>
@@ -228,12 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageNavigator.resx">
       <DependentUpon>StorageNavigator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageTableView.resx">
-      <DependentUpon>StorageTableView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StrorageList.resx">
-      <DependentUpon>StrorageList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\UserViewList\ListNavigator.resx">
       <DependentUpon>ListNavigator.cs</DependentUpon>
