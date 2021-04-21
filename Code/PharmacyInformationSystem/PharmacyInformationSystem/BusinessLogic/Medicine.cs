@@ -18,24 +18,26 @@ namespace PharmacyInformationSystem.BusinessLogic
         public double MedAcquisitionValue { get; set; }
         public double MedSellingValue { get; set; }
         public string MedQuality { get; set; }
+        public string MedType { get; set; }
 
         public Medicine()
         {
 
         }
 
-        public Medicine(int medID, string medName, string medCategory, string medManfactureComp, int medStockCount, int medMinStock, string medDueDate, double medAcquisitionValue, double medSellingValue, string medQuality)
+        public Medicine(int medID, string medName, string medCategory, string medManfactureComp, int medStockCount, int medMinStock, string medDueDate, double medAcquisitionValue, double medSellingValue, string medQuality, string medType)
         {
-            this.MedID = medID;
-            this.MedName = medName;
-            this.MedCategory = medCategory;
-            this.MedManfactureComp = medManfactureComp;
-            this.MedStockCount = medStockCount;
-            this.MedMinStock = medMinStock;
-            this.MedDueDate = medDueDate;
-            this.MedAcquisitionValue = medAcquisitionValue;
-            this.MedSellingValue = medSellingValue;
-            this.MedQuality = medQuality;
+            MedID = medID;
+            MedName = medName ?? throw new ArgumentNullException(nameof(medName));
+            MedCategory = medCategory ?? throw new ArgumentNullException(nameof(medCategory));
+            MedManfactureComp = medManfactureComp ?? throw new ArgumentNullException(nameof(medManfactureComp));
+            MedStockCount = medStockCount;
+            MedMinStock = medMinStock;
+            MedDueDate = medDueDate ?? throw new ArgumentNullException(nameof(medDueDate));
+            MedAcquisitionValue = medAcquisitionValue;
+            MedSellingValue = medSellingValue;
+            MedQuality = medQuality ?? throw new ArgumentNullException(nameof(medQuality));
+            MedType = medType ?? throw new ArgumentNullException(nameof(medType));
         }
     }
 }
