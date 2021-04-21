@@ -134,6 +134,12 @@
     <Compile Include="UIComponents\MainUserControls\RegisterView.Designer.cs">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageListView.Designer.cs">
+      <DependentUpon>StorageListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageNavigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageListView.resx">
+      <DependentUpon>StorageListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageNavigator.resx">
       <DependentUpon>StorageNavigator.cs</DependentUpon>

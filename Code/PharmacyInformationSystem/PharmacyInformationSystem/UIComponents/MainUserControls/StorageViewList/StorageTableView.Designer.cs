@@ -44,6 +44,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.επεξεργασίαToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.εξαγωγήToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.DrugType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.ExperetionDate,
             this.MarketCost,
             this.ProductPrice,
-            this.Quality});
+            this.Quality,
+            this.DrugType});
             this.StorageListView.ContextMenuStrip = this.contextMenuStrip1;
             this.StorageListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StorageListView.ForeColor = System.Drawing.Color.FloralWhite;
@@ -75,7 +77,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.StorageListView.View = System.Windows.Forms.View.Details;
             this.StorageListView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // Name
+            // DrugName
             // 
             this.DrugName.Text = "Όνομα";
             this.DrugName.Width = 150;
@@ -157,6 +159,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.hScrollBar1.Size = new System.Drawing.Size(1000, 17);
             this.hScrollBar1.TabIndex = 1;
             // 
+            // DrugType
+            // 
+            this.DrugType.Text = "Είδος";
+            // 
             // StorageTableView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -190,5 +196,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         private System.Windows.Forms.ToolStripMenuItem επεξεργασίαToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem εξαγωγήToolStripMenuItem;
         private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.ColumnHeader DrugType;
     }
 }
