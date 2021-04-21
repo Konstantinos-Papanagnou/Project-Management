@@ -31,7 +31,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         {
             this.components = new System.ComponentModel.Container();
             this.StorageListView = new System.Windows.Forms.ListView();
-            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DrugName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Company = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,7 +52,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.StorageListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.StorageListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.StorageListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Name,
+            this.DrugName,
             this.Category,
             this.Company,
             this.Quantity,
@@ -77,8 +77,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // 
             // Name
             // 
-            this.Name.Text = "Όνομα";
-            this.Name.Width = 150;
+            this.DrugName.Text = "Όνομα";
+            this.DrugName.Width = 150;
             // 
             // Category
             // 
@@ -177,7 +177,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         #endregion
 
         private System.Windows.Forms.ListView StorageListView;
-        private System.Windows.Forms.ColumnHeader Name;
+        private System.Windows.Forms.ColumnHeader DrugName;
         private System.Windows.Forms.ColumnHeader Category;
         private System.Windows.Forms.ColumnHeader Company;
         private System.Windows.Forms.ColumnHeader Quantity;

@@ -30,7 +30,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
-            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DrugName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GainPerDay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MonthlyGain = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.YearlyGain = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,7 +41,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Name,
+            this.DrugName,
             this.GainPerDay,
             this.MonthlyGain,
             this.YearlyGain});
@@ -57,7 +57,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             // 
             // Name
             // 
-            this.Name.Text = "Όνομα";
+            this.DrugName.Text = "Όνομα";
             // 
             // GainPerDay
             // 
@@ -85,7 +85,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
         #endregion
 
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader Name;
+        private System.Windows.Forms.ColumnHeader DrugName;
         private System.Windows.Forms.ColumnHeader GainPerDay;
         private System.Windows.Forms.ColumnHeader MonthlyGain;
         private System.Windows.Forms.ColumnHeader YearlyGain;
