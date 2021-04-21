@@ -72,5 +72,17 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
                         slave.BackColor = Color.FromArgb(68, 71, 74);
             ((Button)sender).BackColor = Color.YellowGreen;
         }
+
+        private void SubOperation1_Click(object sender, EventArgs e)
+        {
+            //Console.WriteLine("Add is tabed");
+
+        }
+
+        private void SubOperation2_Click(object sender, EventArgs e)
+        {
+            //Console.WriteLine("Remove is tabed");
+
+        }
     }
 }

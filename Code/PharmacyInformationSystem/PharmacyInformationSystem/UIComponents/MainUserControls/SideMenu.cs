@@ -52,7 +52,7 @@ namespace PharmacyInformationSystem.UIComponents
         /// </summary>
         public void SetStoreKeeperView()
         {
-            Bar = new MainUserControls.SideBarItem("Αποθήκη", "", "", "", "", Properties.Resources.icons8_warehouse_24);
+            Bar = new MainUserControls.SideBarItem("Αποθήκη", "Προσθήκη", "Διαγραφή", "", "", Properties.Resources.icons8_warehouse_24);
             panelSubMenu.Controls.Add(Bar);
         }
 

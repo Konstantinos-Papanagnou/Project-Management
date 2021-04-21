@@ -61,7 +61,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.List.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.List.HideSelection = false;
             this.List.Location = new System.Drawing.Point(0, 54);
-            this.List.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.List.Margin = new System.Windows.Forms.Padding(4);
             this.List.Name = "List";
             this.List.Size = new System.Drawing.Size(1259, 732);
             this.List.TabIndex = 0;
@@ -133,7 +133,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.Controls.Add(this.storageNavigator1);
             this.Controls.Add(this.List);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StorageListView";
             this.Size = new System.Drawing.Size(1259, 786);
             this.ResumeLayout(false);
