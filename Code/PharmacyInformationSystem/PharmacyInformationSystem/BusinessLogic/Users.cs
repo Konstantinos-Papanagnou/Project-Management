@@ -112,8 +112,8 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <returns>The substituted letters.</returns>
         private string Substitute(string toSubstitute)
         {
-            string greekAlphabet = "αβγδεζηθικλμνξοπρστυφχψω";
-            string ourAlphabet = "abgdezh8iklmn3oprstufxyw";
+            string greekAlphabet = "αάβγδεέζηήθιίκλμνξοόπρστυύφχψωώ";
+            string ourAlphabet = "aabgdeezhh8iiklmn3ooprstuufxyww";
             string substituded = "";
             foreach (char c in toSubstitute)
             {
