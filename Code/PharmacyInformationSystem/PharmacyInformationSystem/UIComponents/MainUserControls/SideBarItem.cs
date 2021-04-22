@@ -81,6 +81,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
 
         private void SubOperation2_Click(object sender, EventArgs e)
         {
+            //Console.WriteLine("Update is tabed");
+
+        }
+
+        private void SubOperation3_Click(object sender, EventArgs e)
+        {
             //Console.WriteLine("Remove is tabed");
 
         }

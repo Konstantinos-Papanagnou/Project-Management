@@ -35,7 +35,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         private const string PhoneNumberField = "PhoneNumber";
         #endregion
 
-        #region MedicineParaphar Table
+        #region Medicine Table
         private const string MedicineTableName = "MedicineParaphar";
         private const string MedicineID = "ID";
         private const string MedicineName = "Name";
@@ -84,7 +84,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                 $"{MedicineName} STRING NOT NULL UNIQUE, {MedicineCategory} STRING NOT NULL, {MedicineManufacturingCompany} STRING NOT NULL," +
                 $"{MedicineStock} INTEGER NOT NULL, {MedicineMinStock} INTEGER NOT NULL, {MedicineDueDate} DATE NOT NULL," +
                 $"{MedicineAcquisitionValue} REAL NOT NULL, {MedicineSellingPrice} REAL NOT NULL, " +
-                $"{MedicineQuality} CHAR(1) NOT NULL, {MedicineType} STRING(16) NOT NULL)").ExecuteNonQuery();
+                $"{MedicineQuality} CHAR(1) NOT NULL, {MedicineType} STRING(16) NOT NULL)",conn).ExecuteNonQuery();
 
             //To-Do insert default role id values and default administator data
             new SQLiteCommand($"INSERT INTO {RolesTableName}({RoleIDField},{DescriptionField}) VALUES ('0', 'Administrator')", conn).ExecuteNonQuery();
