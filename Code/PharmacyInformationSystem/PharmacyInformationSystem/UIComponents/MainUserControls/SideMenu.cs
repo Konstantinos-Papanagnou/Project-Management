@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using PharmacyInformationSystem.BusinessLogic;
 
 namespace PharmacyInformationSystem.UIComponents
 {
@@ -50,12 +51,12 @@ namespace PharmacyInformationSystem.UIComponents
         /// <summary>
         /// Configures to the Storekeeper's view
         /// </summary>
-        public void SetStoreKeeperView()
+        public void SetStoreKeeperView(IUpdatable<Medicine> Form)
         {
             Bar = new MainUserControls.SideBarItem("Αποθήκη", "Προσθήκη", "Επεξεργασία", "Διαγραφή", "", Properties.Resources.icons8_warehouse_24);
             Bar.Slave1.Click += (object sender, EventArgs e)=>
             { 
-                MedicineViewAdd medicineViewAdd = new MedicineViewAdd();
+                MedicineViewAdd medicineViewAdd = new MedicineViewAdd(Form);
                 medicineViewAdd.ShowDialog();
             };
             panelSubMenu.Controls.Add(Bar);

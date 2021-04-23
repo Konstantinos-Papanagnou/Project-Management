@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using PharmacyInformationSystem.BusinessLogic;
 
-namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
+namespace PharmacyInformationSystem.UIComponents
 {
     public enum Operation
     {
         Remove,
         Update
     }
-    public interface IUpdatable
+    public interface IUpdatable<T>
     {
         void RefreshList();
-        void RefreshList(User user, Operation op);
+        void RefreshList(T user, Operation op);
     }
 }

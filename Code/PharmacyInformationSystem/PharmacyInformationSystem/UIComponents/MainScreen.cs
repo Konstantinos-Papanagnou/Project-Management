@@ -30,17 +30,18 @@ namespace PharmacyInformationSystem.UIComponents
             SideMenu.ViewUserInfoBtn.Click += ViewUserInfoBtn_Click;
             SideMenu.Logout.Click += Logout_Click;
 
-            if (User is Administrator)
+            if (User is Administrator administrator)
             {
                 SideMenu.SetAdminView();
-                OperationsPanel.Controls.Add(new MainUserControls.UsersList((Administrator)User));
+                OperationsPanel.Controls.Add(new MainUserControls.UsersList(administrator));
             }
             else if (User is MarketingTeam)
                 SideMenu.SetMarketingView();
-            else if (User is StoreKeeper)
+            else if (User is StoreKeeper keeper)
             {
-                SideMenu.SetStoreKeeperView();
-                OperationsPanel.Controls.Add(new MainUserControls.StorageViewList.StorageListView((StoreKeeper) User));
+                var View = new MainUserControls.StorageViewList.StorageListView(keeper);
+                SideMenu.SetStoreKeeperView(View);
+                OperationsPanel.Controls.Add(View);
             }
             else SideMenu.SetSellerView();
         }

@@ -7,50 +7,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PharmacyInformationSystem.BusinessLogic;
 
 namespace PharmacyInformationSystem.UIComponents.MainUserControls
 {
     public partial class MedicineViewAdd : Form
     {
-        public MedicineViewAdd()
+        readonly IUpdatable<Medicine> Form;
+        public Medicine Medicine;
+        public MedicineViewAdd(IUpdatable<Medicine> Form)
         {
+            this.Form = Form;
             InitializeComponent();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
 
+
+            Form.RefreshList();
+            DialogResult = DialogResult.OK;   
         }
 
+        private bool ValidateInputs()
+        {
+            if (!Sanitizer.CheckString(NameBox.Text))
+            {
+                NameError.Visible = true;
+                return false;
+            }
+            else NameError.Visible = false;
+            if (!Sanitizer.CheckString(CategoryBox.Text))
+            {
+                CategoryError.Visible = true;
+                return false;
+            }
+            else CategoryError.Visible = false;
+            if (!Sanitizer.CheckString(ManifacturerBox.Text))
+            {
+                ManifacturerError.Visible = true;
+                return false;
+            }
+            else ManifacturerError.Visible = false;
+
+            
+
+            return true;
+        }
     }
 }

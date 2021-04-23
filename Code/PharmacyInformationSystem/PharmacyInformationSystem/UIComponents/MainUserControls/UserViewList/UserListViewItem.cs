@@ -15,13 +15,13 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
     {
         bool Expanded = false;
         public readonly User User;
-        private readonly IUpdatable UpdatableForm;
+        private readonly IUpdatable<User> UpdatableForm;
         /// <summary>
         /// Initialize the inteface with personalized settings.
         /// </summary>
         /// <param name="form">Requires a form contract to update the List</param>
         /// <param name="user">Requires user information to display</param>
-        public UserListViewItem(IUpdatable form, User user)
+        public UserListViewItem(IUpdatable<User> form, User user)
         {
             InitializeComponent();
             this.UpdatableForm = form;

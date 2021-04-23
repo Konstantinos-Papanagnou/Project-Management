@@ -10,7 +10,7 @@ namespace PharmacyInformationSystem.BusinessLogic
 	/// <summary>
 	/// Wrapper class that handles application policy and Sanitization techniques
 	/// </summary>
-    public abstract class Sanitizer
+    public abstract partial class Sanitizer
     {
 		/// <summary>
 		/// Runs a check against the firstname

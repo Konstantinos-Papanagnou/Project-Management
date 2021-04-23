@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PharmacyInformationSystem.UIComponents.MainUserControls
 {
-    public partial class UsersList : UserControl, IUpdatable
+    public partial class UsersList : UserControl, IUpdatable<User>
     {
         private readonly Administrator Admin;
         private readonly List<UserListViewItem> Items;

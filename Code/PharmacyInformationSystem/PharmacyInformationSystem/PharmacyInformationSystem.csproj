@@ -76,7 +76,8 @@
     <Compile Include="BusinessLogic\LoginFunctionality\AuthenticationFailure.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\AuthenticationHandler.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\Hashing.cs" />
-    <Compile Include="BusinessLogic\Sanitizer.cs" />
+    <Compile Include="BusinessLogic\MedicineSanitizer.cs" />
+    <Compile Include="BusinessLogic\UserSanitizer.cs" />
     <Compile Include="BusinessLogic\Users.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -140,10 +141,10 @@
     <Compile Include="UIComponents\MainUserControls\MedicineViewData.Designer.cs">
       <DependentUpon>MedicineViewData.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\RegisterView.cs">
+    <Compile Include="UIComponents\Login\RegisterView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\RegisterView.Designer.cs">
+    <Compile Include="UIComponents\Login\RegisterView.Designer.cs">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageListView.cs">
@@ -158,7 +159,7 @@
     <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageNavigator.Designer.cs">
       <DependentUpon>StorageNavigator.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\UserViewList\IUpdatable.cs" />
+    <Compile Include="UIComponents\IUpdatable.cs" />
     <Compile Include="UIComponents\MainUserControls\UserViewList\ListNavigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,7 +229,7 @@
     <EmbeddedResource Include="UIComponents\MainUserControls\MedicineViewData.resx">
       <DependentUpon>MedicineViewData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\RegisterView.resx">
+    <EmbeddedResource Include="UIComponents\Login\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageListView.resx">
