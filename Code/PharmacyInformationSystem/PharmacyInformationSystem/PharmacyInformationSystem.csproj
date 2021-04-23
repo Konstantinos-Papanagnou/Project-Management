@@ -128,6 +128,12 @@
     <Compile Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.Designer.cs">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\MedicineViewAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\MedicineViewAdd.Designer.cs">
+      <DependentUpon>MedicineViewAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\MedicineViewData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.resx">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\MedicineViewAdd.resx">
+      <DependentUpon>MedicineViewAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\MedicineViewData.resx">
       <DependentUpon>MedicineViewData.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,12 +277,16 @@
     <Content Include="Resources\crate.png" />
     <None Include="Resources\icons8-drop-down-241.png" />
     <Content Include="Resources\diagram.png" />
+    <Content Include="Resources\icons8-caduceus-24.png" />
     <Content Include="Resources\icons8-combo-chart-24.png" />
     <Content Include="Resources\icons8-drop-down-20.png" />
     <Content Include="Resources\icons8-drop-down-24%283%29.png" />
     <Content Include="Resources\icons8-drop-down-24%284%29.png" />
     <Content Include="Resources\icons8-edit-row-24%281%29.png" />
     <Content Include="Resources\icons8-edit-row-24.png" />
+    <Content Include="Resources\icons8-euro-18.png" />
+    <Content Include="Resources\icons8-euro-20.png" />
+    <Content Include="Resources\icons8-euro-24.png" />
     <Content Include="Resources\icons8-expand-arrow-24.png" />
     <Content Include="Resources\icons8-export-pdf-24.png" />
     <Content Include="Resources\icons8-gear-24.png" />
@@ -290,6 +303,7 @@
     <Content Include="Resources\icons8-search-24.png" />
     <Content Include="Resources\icons8-search-client-24.png" />
     <Content Include="Resources\icons8-total-sales-24.png" />
+    <Content Include="Resources\icons8-trolley-24.png" />
     <Content Include="Resources\icons8-warehouse-24.png" />
     <None Include="Resources\user.png" />
     <Content Include="Resources\medicine.png" />
