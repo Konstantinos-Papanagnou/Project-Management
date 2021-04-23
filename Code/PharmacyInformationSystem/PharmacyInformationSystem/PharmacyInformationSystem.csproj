@@ -128,6 +128,12 @@
     <Compile Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.Designer.cs">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\MedicineViewData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\MedicineViewData.Designer.cs">
+      <DependentUpon>MedicineViewData.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\RegisterView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.resx">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\MedicineViewData.resx">
+      <DependentUpon>MedicineViewData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>
