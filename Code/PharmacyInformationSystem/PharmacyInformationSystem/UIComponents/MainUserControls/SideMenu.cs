@@ -53,7 +53,13 @@ namespace PharmacyInformationSystem.UIComponents
         public void SetStoreKeeperView()
         {
             Bar = new MainUserControls.SideBarItem("Αποθήκη", "Προσθήκη", "Επεξεργασία", "Διαγραφή", "", Properties.Resources.icons8_warehouse_24);
+            Bar.Slave1.Click += (object sender, EventArgs e)=>
+            { 
+                MedicineViewAdd medicineViewAdd = new MedicineViewAdd();
+                medicineViewAdd.ShowDialog();
+            };
             panelSubMenu.Controls.Add(Bar);
+            
         }
 
         /// <summary>

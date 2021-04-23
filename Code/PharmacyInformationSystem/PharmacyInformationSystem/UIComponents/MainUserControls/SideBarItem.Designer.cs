@@ -92,11 +92,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.SubOperation3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.SubOperation3.Size = new System.Drawing.Size(228, 43);
             this.SubOperation3.TabIndex = 6;
-            this.SubOperation3.Text = "Διαγραφή";
+            this.SubOperation3.Text = "button3";
             this.SubOperation3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubOperation3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SubOperation3.UseVisualStyleBackColor = false;
-            this.SubOperation3.Click += new System.EventHandler(this.SubOperation3_Click);
             // 
             // SubOperation2
             // 
@@ -112,11 +111,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.SubOperation2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.SubOperation2.Size = new System.Drawing.Size(228, 43);
             this.SubOperation2.TabIndex = 5;
-            this.SubOperation2.Text = "Επεξεργασία";
+            this.SubOperation2.Text = "button2";
             this.SubOperation2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubOperation2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SubOperation2.UseVisualStyleBackColor = false;
-            this.SubOperation2.Click += new System.EventHandler(this.SubOperation2_Click);
             // 
             // SubOperation1
             // 
@@ -132,11 +130,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.SubOperation1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.SubOperation1.Size = new System.Drawing.Size(228, 43);
             this.SubOperation1.TabIndex = 4;
-            this.SubOperation1.Text = "Προσθήκη";
+            this.SubOperation1.Text = "button1";
             this.SubOperation1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubOperation1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SubOperation1.UseVisualStyleBackColor = false;
-            this.SubOperation1.Click += new System.EventHandler(this.SubOperation1_Click);
             // 
             // SideBarItem
             // 
