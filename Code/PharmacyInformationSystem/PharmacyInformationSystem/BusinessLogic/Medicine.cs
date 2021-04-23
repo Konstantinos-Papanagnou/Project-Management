@@ -17,15 +17,24 @@ namespace PharmacyInformationSystem.BusinessLogic
         public string MedDueDate { get; set; }
         public double MedAcquisitionValue { get; set; }
         public double MedSellingValue { get; set; }
-        public string MedQuality { get; set; }
-        public string MedType { get; set; }
+        public char MedQuality { get; set; }
+        public char MedType { get; set; }
 
-        public Medicine()
+        public Medicine(string medName, string medCategory, string medManfactureComp, int medStockCount, int medMinStock, string medDueDate, double medAcquisitionValue, double medSellingValue, char medQuality, char medType)
         {
-
+            MedName = medName ?? throw new ArgumentNullException(nameof(medName));
+            MedCategory = medCategory ?? throw new ArgumentNullException(nameof(medCategory));
+            MedManfactureComp = medManfactureComp ?? throw new ArgumentNullException(nameof(medManfactureComp));
+            MedStockCount = medStockCount;
+            MedMinStock = medMinStock;
+            MedDueDate = medDueDate ?? throw new ArgumentNullException(nameof(medDueDate));
+            MedAcquisitionValue = medAcquisitionValue;
+            MedSellingValue = medSellingValue;
+            MedQuality = medQuality;
+            MedType = medType;
         }
 
-        public Medicine(int medID, string medName, string medCategory, string medManfactureComp, int medStockCount, int medMinStock, string medDueDate, double medAcquisitionValue, double medSellingValue, string medQuality, string medType)
+        public Medicine(int medID, string medName, string medCategory, string medManfactureComp, int medStockCount, int medMinStock, string medDueDate, double medAcquisitionValue, double medSellingValue, char medQuality, char medType)
         {
             MedID = medID;
             MedName = medName ?? throw new ArgumentNullException(nameof(medName));
@@ -36,8 +45,8 @@ namespace PharmacyInformationSystem.BusinessLogic
             MedDueDate = medDueDate ?? throw new ArgumentNullException(nameof(medDueDate));
             MedAcquisitionValue = medAcquisitionValue;
             MedSellingValue = medSellingValue;
-            MedQuality = medQuality ?? throw new ArgumentNullException(nameof(medQuality));
-            MedType = medType ?? throw new ArgumentNullException(nameof(medType));
+            MedQuality = medQuality;
+            MedType = medType;
         }
     }
 }

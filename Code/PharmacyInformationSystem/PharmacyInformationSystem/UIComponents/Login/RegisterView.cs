@@ -29,6 +29,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         public RegisterView()
         {
             InitializeComponent();
+            RoleBox.SelectedIndex = 0;
             ViewPasswordsCheckBox.CheckedChanged += ViewPasswordsCheckBox_CheckedChanged;
         }
 

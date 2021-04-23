@@ -92,6 +92,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             this.RoleBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.RoleBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RoleBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RoleBox.FormattingEnabled = true;
             this.RoleBox.Items.AddRange(new object[] {
             "Αποθηκάριος",

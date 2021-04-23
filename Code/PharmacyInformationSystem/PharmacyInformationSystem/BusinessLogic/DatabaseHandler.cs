@@ -82,9 +82,9 @@ namespace PharmacyInformationSystem.BusinessLogic
 
             new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {MedicineTableName}({MedicineID} INTEGER PRIMARY KEY AUTOINCREMENT," +
                 $"{MedicineName} STRING NOT NULL UNIQUE, {MedicineCategory} STRING NOT NULL, {MedicineManufacturingCompany} STRING NOT NULL," +
-                $"{MedicineStock} INTEGER NOT NULL, {MedicineMinStock} INTEGER NOT NULL, {MedicineDueDate} DATE NOT NULL," +
+                $"{MedicineStock} INTEGER NOT NULL, {MedicineMinStock} INTEGER NOT NULL, {MedicineDueDate} STRING NOT NULL," +
                 $"{MedicineAcquisitionValue} REAL NOT NULL, {MedicineSellingPrice} REAL NOT NULL, " +
-                $"{MedicineQuality} CHAR(1) NOT NULL, {MedicineType} STRING(16) NOT NULL)",conn).ExecuteNonQuery();
+                $"{MedicineQuality} CHAR(1) NOT NULL, {MedicineType} CHAR(1) NOT NULL)",conn).ExecuteNonQuery();
 
             //To-Do insert default role id values and default administator data
             new SQLiteCommand($"INSERT INTO {RolesTableName}({RoleIDField},{DescriptionField}) VALUES ('0', 'Administrator')", conn).ExecuteNonQuery();
@@ -374,9 +374,9 @@ namespace PharmacyInformationSystem.BusinessLogic
                 SQLiteCommand insertMedData = new SQLiteCommand($"INSERT INTO {MedicineTableName}({MedicineName}," +
                     $"{MedicineCategory},{MedicineManufacturingCompany},{MedicineStock},{MedicineMinStock},{MedicineDueDate}," +
                     $"{MedicineAcquisitionValue},{MedicineSellingPrice},{MedicineQuality},{MedicineType}) VALUES ('{medicine.MedName}'," +
-                    $"{medicine.MedCategory},'{medicine.MedManfactureComp}','{medicine.MedStockCount}','{medicine.MedMinStock}','" +
-                    $"{medicine.MedDueDate}','{medicine.MedAcquisitionValue}','{medicine.MedSellingValue}','" +
-                    $"{medicine.MedQuality}','{medicine.MedType}')",conn);
+                    $"'{medicine.MedCategory}','{medicine.MedManfactureComp}','{medicine.MedStockCount}','{medicine.MedMinStock}'," +
+                    $"'{medicine.MedDueDate}','{medicine.MedAcquisitionValue}','{medicine.MedSellingValue}'," +
+                    $"'{medicine.MedQuality}','{medicine.MedType}')",conn);
                 try
                 {
                     if (insertMedData.ExecuteNonQuery() < 0)
@@ -470,8 +470,8 @@ namespace PharmacyInformationSystem.BusinessLogic
                                 medDueDate: reader[6].ToString(),
                                 medAcquisitionValue: double.Parse(reader[7].ToString()),
                                 medSellingValue: double.Parse(reader[8].ToString()),
-                                medQuality: reader[9].ToString(),
-                                medType: reader[10].ToString()
+                                medQuality: Char.Parse(reader[9].ToString()),
+                                medType: Char.Parse(reader[10].ToString())
                             )) ;
                     }
                     return medicine;

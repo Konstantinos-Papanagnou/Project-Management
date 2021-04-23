@@ -53,7 +53,7 @@ namespace PharmacyInformationSystem.UIComponents
         /// </summary>
         public void SetStoreKeeperView(IUpdatable<Medicine> Form)
         {
-            Bar = new MainUserControls.SideBarItem("Αποθήκη", "Προσθήκη", "Επεξεργασία", "Διαγραφή", "", Properties.Resources.icons8_warehouse_24);
+            Bar = new MainUserControls.SideBarItem("Αποθήκη", "Προσθήκη", "", "", "", Properties.Resources.icons8_warehouse_24);
             Bar.Slave1.Click += (object sender, EventArgs e)=>
             { 
                 MedicineViewAdd medicineViewAdd = new MedicineViewAdd(Form);

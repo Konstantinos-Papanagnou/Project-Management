@@ -19,14 +19,23 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         {
             this.Form = Form;
             InitializeComponent();
+            QualityBox.SelectedIndex = 0;
+            TypeBox.SelectedIndex = 0;
+            AddBtn.NotifyDefault(true);
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
+            if (!ValidateInputs()) {
+                MessageBox.Show("Fill All the fields with correct values first!", "Can't Continue Operation!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
 
 
-            Form.RefreshList();
-            DialogResult = DialogResult.OK;   
+            Medicine = new Medicine(NameBox.Text, CategoryBox.Text, ManufacturerBox.Text, (int)Stocks.Value, (int)MinimumStocks.Value, DueDateBox.Value.ToShortDateString(), (double)AcquisitionCost.Value, (double)SellingCost.Value, QualityBox.Text[0], TypeBox.Text[0]);
+            Form.RefreshList(Medicine, Operation.Update);
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private bool ValidateInputs()
@@ -43,14 +52,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
                 return false;
             }
             else CategoryError.Visible = false;
-            if (!Sanitizer.CheckString(ManifacturerBox.Text))
+            if (!Sanitizer.CheckString(ManufacturerBox.Text))
             {
-                ManifacturerError.Visible = true;
+                ManufacturerError.Visible = true;
                 return false;
             }
-            else ManifacturerError.Visible = false;
-
-            
+            else ManufacturerError.Visible = false;
 
             return true;
         }

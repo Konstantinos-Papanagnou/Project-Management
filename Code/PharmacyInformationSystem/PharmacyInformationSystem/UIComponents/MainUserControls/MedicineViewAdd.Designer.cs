@@ -30,58 +30,57 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicineViewAdd));
-            this.ManifacturerBox = new System.Windows.Forms.TextBox();
+            this.ManufacturerBox = new System.Windows.Forms.TextBox();
             this.ManifaturerLbl = new System.Windows.Forms.Label();
             this.CategoryBox = new System.Windows.Forms.TextBox();
             this.CategoryLbl = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.NameLbl = new System.Windows.Forms.Label();
-            this.PriceBox = new System.Windows.Forms.TextBox();
             this.PriceLbl = new System.Windows.Forms.Label();
-            this.CostBox = new System.Windows.Forms.TextBox();
             this.CostLbl = new System.Windows.Forms.Label();
             this.DueDateLbl = new System.Windows.Forms.Label();
             this.QualityLbl = new System.Windows.Forms.Label();
-            this.TypeBox = new System.Windows.Forms.TextBox();
             this.TypeLbl = new System.Windows.Forms.Label();
             this.AddBtn = new System.Windows.Forms.Button();
-            this.MinQuantityBox = new System.Windows.Forms.TextBox();
             this.MinQuantityLbl = new System.Windows.Forms.Label();
-            this.QuantityBox = new System.Windows.Forms.TextBox();
             this.QuantityLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.NameError = new System.Windows.Forms.Panel();
-            this.CostError = new System.Windows.Forms.Panel();
-            this.TypeError = new System.Windows.Forms.Panel();
-            this.ManifacturerError = new System.Windows.Forms.Panel();
+            this.ManufacturerError = new System.Windows.Forms.Panel();
             this.CategoryError = new System.Windows.Forms.Panel();
-            this.PriceError = new System.Windows.Forms.Panel();
-            this.QuantityError = new System.Windows.Forms.Panel();
-            this.MinQuantity = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.DueDateBox = new System.Windows.Forms.DateTimePicker();
             this.QualityBox = new System.Windows.Forms.ComboBox();
+            this.AcquisitionCost = new System.Windows.Forms.NumericUpDown();
+            this.SellingCost = new System.Windows.Forms.NumericUpDown();
+            this.Stocks = new System.Windows.Forms.NumericUpDown();
+            this.MinimumStocks = new System.Windows.Forms.NumericUpDown();
+            this.TypeBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcquisitionCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellingCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Stocks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimumStocks)).BeginInit();
             this.SuspendLayout();
             // 
-            // ManifacturerBox
+            // ManufacturerBox
             // 
-            this.ManifacturerBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.ManifacturerBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ManifacturerBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.ManifacturerBox.Location = new System.Drawing.Point(91, 176);
-            this.ManifacturerBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ManifacturerBox.Name = "ManifacturerBox";
-            this.ManifacturerBox.Size = new System.Drawing.Size(285, 30);
-            this.ManifacturerBox.TabIndex = 3;
-            this.ManifacturerBox.Tag = "idcard";
+            this.ManufacturerBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ManufacturerBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ManufacturerBox.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.ManufacturerBox.Location = new System.Drawing.Point(91, 176);
+            this.ManufacturerBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ManufacturerBox.Name = "ManufacturerBox";
+            this.ManufacturerBox.Size = new System.Drawing.Size(285, 30);
+            this.ManufacturerBox.TabIndex = 3;
+            this.ManufacturerBox.Tag = "idcard";
             // 
             // ManifaturerLbl
             // 
@@ -140,18 +139,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.NameLbl.TabIndex = 11;
             this.NameLbl.Text = "Όνομα";
             // 
-            // PriceBox
-            // 
-            this.PriceBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.PriceBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PriceBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PriceBox.Location = new System.Drawing.Point(254, 355);
-            this.PriceBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PriceBox.Name = "PriceBox";
-            this.PriceBox.Size = new System.Drawing.Size(123, 30);
-            this.PriceBox.TabIndex = 8;
-            this.PriceBox.Tag = "idcard";
-            // 
             // PriceLbl
             // 
             this.PriceLbl.AutoSize = true;
@@ -162,18 +149,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PriceLbl.Size = new System.Drawing.Size(145, 24);
             this.PriceLbl.TabIndex = 22;
             this.PriceLbl.Text = "Τιμή Φαρμάκου:";
-            // 
-            // CostBox
-            // 
-            this.CostBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.CostBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CostBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.CostBox.Location = new System.Drawing.Point(254, 309);
-            this.CostBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CostBox.Name = "CostBox";
-            this.CostBox.Size = new System.Drawing.Size(123, 30);
-            this.CostBox.TabIndex = 7;
-            this.CostBox.Tag = "lastname";
             // 
             // CostLbl
             // 
@@ -208,18 +183,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.QualityLbl.TabIndex = 23;
             this.QualityLbl.Text = "Ποιότητα";
             // 
-            // TypeBox
-            // 
-            this.TypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.TypeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TypeBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.TypeBox.Location = new System.Drawing.Point(432, 256);
-            this.TypeBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TypeBox.Name = "TypeBox";
-            this.TypeBox.Size = new System.Drawing.Size(285, 30);
-            this.TypeBox.TabIndex = 6;
-            this.TypeBox.Tag = "firstname";
-            // 
             // TypeLbl
             // 
             this.TypeLbl.AutoSize = true;
@@ -235,6 +198,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             this.AddBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.AddBtn.FlatAppearance.BorderSize = 0;
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Calibri", 12F);
@@ -247,18 +211,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.AddBtn.UseVisualStyleBackColor = false;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
-            // MinQuantityBox
-            // 
-            this.MinQuantityBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.MinQuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MinQuantityBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.MinQuantityBox.Location = new System.Drawing.Point(244, 532);
-            this.MinQuantityBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinQuantityBox.Name = "MinQuantityBox";
-            this.MinQuantityBox.Size = new System.Drawing.Size(123, 30);
-            this.MinQuantityBox.TabIndex = 10;
-            this.MinQuantityBox.Tag = "idcard";
-            // 
             // MinQuantityLbl
             // 
             this.MinQuantityLbl.AutoSize = true;
@@ -269,18 +221,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.MinQuantityLbl.Size = new System.Drawing.Size(133, 24);
             this.MinQuantityLbl.TabIndex = 33;
             this.MinQuantityLbl.Text = "Ελάχιστο Όριο:";
-            // 
-            // QuantityBox
-            // 
-            this.QuantityBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.QuantityBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.QuantityBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.QuantityBox.Location = new System.Drawing.Point(244, 487);
-            this.QuantityBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.QuantityBox.Name = "QuantityBox";
-            this.QuantityBox.Size = new System.Drawing.Size(123, 30);
-            this.QuantityBox.TabIndex = 9;
-            this.QuantityBox.Tag = "lastname";
             // 
             // QuantityLbl
             // 
@@ -327,35 +267,15 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.NameError.TabIndex = 38;
             this.NameError.Visible = false;
             // 
-            // CostError
+            // ManufacturerError
             // 
-            this.CostError.BackColor = System.Drawing.Color.Red;
-            this.CostError.Location = new System.Drawing.Point(255, 337);
-            this.CostError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CostError.Name = "CostError";
-            this.CostError.Size = new System.Drawing.Size(123, 4);
-            this.CostError.TabIndex = 39;
-            this.CostError.Visible = false;
-            // 
-            // TypeError
-            // 
-            this.TypeError.BackColor = System.Drawing.Color.Red;
-            this.TypeError.Location = new System.Drawing.Point(432, 284);
-            this.TypeError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TypeError.Name = "TypeError";
-            this.TypeError.Size = new System.Drawing.Size(285, 4);
-            this.TypeError.TabIndex = 39;
-            this.TypeError.Visible = false;
-            // 
-            // ManifacturerError
-            // 
-            this.ManifacturerError.BackColor = System.Drawing.Color.Red;
-            this.ManifacturerError.Location = new System.Drawing.Point(93, 204);
-            this.ManifacturerError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ManifacturerError.Name = "ManifacturerError";
-            this.ManifacturerError.Size = new System.Drawing.Size(285, 4);
-            this.ManifacturerError.TabIndex = 39;
-            this.ManifacturerError.Visible = false;
+            this.ManufacturerError.BackColor = System.Drawing.Color.Red;
+            this.ManufacturerError.Location = new System.Drawing.Point(93, 204);
+            this.ManufacturerError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ManufacturerError.Name = "ManufacturerError";
+            this.ManufacturerError.Size = new System.Drawing.Size(285, 4);
+            this.ManufacturerError.TabIndex = 39;
+            this.ManufacturerError.Visible = false;
             // 
             // CategoryError
             // 
@@ -366,36 +286,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.CategoryError.Size = new System.Drawing.Size(285, 4);
             this.CategoryError.TabIndex = 39;
             this.CategoryError.Visible = false;
-            // 
-            // PriceError
-            // 
-            this.PriceError.BackColor = System.Drawing.Color.Red;
-            this.PriceError.Location = new System.Drawing.Point(252, 383);
-            this.PriceError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PriceError.Name = "PriceError";
-            this.PriceError.Size = new System.Drawing.Size(123, 4);
-            this.PriceError.TabIndex = 40;
-            this.PriceError.Visible = false;
-            // 
-            // QuantityError
-            // 
-            this.QuantityError.BackColor = System.Drawing.Color.Red;
-            this.QuantityError.Location = new System.Drawing.Point(244, 515);
-            this.QuantityError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.QuantityError.Name = "QuantityError";
-            this.QuantityError.Size = new System.Drawing.Size(123, 4);
-            this.QuantityError.TabIndex = 41;
-            this.QuantityError.Visible = false;
-            // 
-            // MinQuantity
-            // 
-            this.MinQuantity.BackColor = System.Drawing.Color.Red;
-            this.MinQuantity.Location = new System.Drawing.Point(244, 561);
-            this.MinQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinQuantity.Name = "MinQuantity";
-            this.MinQuantity.Size = new System.Drawing.Size(123, 4);
-            this.MinQuantity.TabIndex = 42;
-            this.MinQuantity.Visible = false;
             // 
             // pictureBox4
             // 
@@ -421,7 +311,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.pictureBox1.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_euro_18;
-            this.pictureBox1.Location = new System.Drawing.Point(392, 312);
+            this.pictureBox1.Location = new System.Drawing.Point(392, 311);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 23);
@@ -448,6 +338,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             // QualityBox
             // 
+            this.QualityBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.QualityBox.FormattingEnabled = true;
             this.QualityBox.Items.AddRange(new object[] {
             "Κανονικό",
@@ -457,6 +348,58 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.QualityBox.Size = new System.Drawing.Size(286, 24);
             this.QualityBox.TabIndex = 5;
             // 
+            // AcquisitionCost
+            // 
+            this.AcquisitionCost.DecimalPlaces = 2;
+            this.AcquisitionCost.Location = new System.Drawing.Point(247, 312);
+            this.AcquisitionCost.Name = "AcquisitionCost";
+            this.AcquisitionCost.Size = new System.Drawing.Size(131, 22);
+            this.AcquisitionCost.TabIndex = 7;
+            // 
+            // SellingCost
+            // 
+            this.SellingCost.DecimalPlaces = 2;
+            this.SellingCost.Location = new System.Drawing.Point(247, 359);
+            this.SellingCost.Name = "SellingCost";
+            this.SellingCost.Size = new System.Drawing.Size(131, 22);
+            this.SellingCost.TabIndex = 8;
+            // 
+            // Stocks
+            // 
+            this.Stocks.Location = new System.Drawing.Point(245, 490);
+            this.Stocks.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.Stocks.Name = "Stocks";
+            this.Stocks.Size = new System.Drawing.Size(131, 22);
+            this.Stocks.TabIndex = 9;
+            // 
+            // MinimumStocks
+            // 
+            this.MinimumStocks.Location = new System.Drawing.Point(245, 534);
+            this.MinimumStocks.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.MinimumStocks.Name = "MinimumStocks";
+            this.MinimumStocks.Size = new System.Drawing.Size(131, 22);
+            this.MinimumStocks.TabIndex = 10;
+            // 
+            // TypeBox
+            // 
+            this.TypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TypeBox.FormattingEnabled = true;
+            this.TypeBox.Items.AddRange(new object[] {
+            "Φάρμακο",
+            "Παραφαρμακευτικό"});
+            this.TypeBox.Location = new System.Drawing.Point(430, 260);
+            this.TypeBox.Name = "TypeBox";
+            this.TypeBox.Size = new System.Drawing.Size(286, 24);
+            this.TypeBox.TabIndex = 6;
+            // 
             // MedicineViewAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -464,36 +407,31 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(777, 585);
+            this.Controls.Add(this.TypeBox);
+            this.Controls.Add(this.MinimumStocks);
+            this.Controls.Add(this.Stocks);
+            this.Controls.Add(this.SellingCost);
+            this.Controls.Add(this.AcquisitionCost);
             this.Controls.Add(this.QualityBox);
             this.Controls.Add(this.DueDateBox);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.MinQuantity);
-            this.Controls.Add(this.QuantityError);
-            this.Controls.Add(this.PriceError);
-            this.Controls.Add(this.CostError);
-            this.Controls.Add(this.TypeError);
-            this.Controls.Add(this.ManifacturerError);
+            this.Controls.Add(this.ManufacturerError);
             this.Controls.Add(this.CategoryError);
             this.Controls.Add(this.NameError);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.MinQuantityBox);
             this.Controls.Add(this.MinQuantityLbl);
-            this.Controls.Add(this.QuantityBox);
             this.Controls.Add(this.QuantityLbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.TypeBox);
             this.Controls.Add(this.TypeLbl);
             this.Controls.Add(this.QualityLbl);
-            this.Controls.Add(this.PriceBox);
             this.Controls.Add(this.PriceLbl);
-            this.Controls.Add(this.CostBox);
             this.Controls.Add(this.CostLbl);
             this.Controls.Add(this.DueDateLbl);
-            this.Controls.Add(this.ManifacturerBox);
+            this.Controls.Add(this.ManufacturerBox);
             this.Controls.Add(this.ManifaturerLbl);
             this.Controls.Add(this.CategoryBox);
             this.Controls.Add(this.CategoryLbl);
@@ -502,12 +440,18 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "MedicineViewAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Medicine";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcquisitionCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellingCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Stocks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimumStocks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -515,40 +459,35 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
 
         #endregion
 
-        private System.Windows.Forms.TextBox ManifacturerBox;
+        private System.Windows.Forms.TextBox ManufacturerBox;
         private System.Windows.Forms.Label ManifaturerLbl;
         private System.Windows.Forms.TextBox CategoryBox;
         private System.Windows.Forms.Label CategoryLbl;
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label NameLbl;
-        private System.Windows.Forms.TextBox PriceBox;
         private System.Windows.Forms.Label PriceLbl;
-        private System.Windows.Forms.TextBox CostBox;
         private System.Windows.Forms.Label CostLbl;
         private System.Windows.Forms.Label DueDateLbl;
         private System.Windows.Forms.Label QualityLbl;
-        private System.Windows.Forms.TextBox TypeBox;
         private System.Windows.Forms.Label TypeLbl;
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox MinQuantityBox;
         private System.Windows.Forms.Label MinQuantityLbl;
-        private System.Windows.Forms.TextBox QuantityBox;
         private System.Windows.Forms.Label QuantityLbl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel NameError;
-        private System.Windows.Forms.Panel CostError;
-        private System.Windows.Forms.Panel TypeError;
-        private System.Windows.Forms.Panel ManifacturerError;
+        private System.Windows.Forms.Panel ManufacturerError;
         private System.Windows.Forms.Panel CategoryError;
-        private System.Windows.Forms.Panel PriceError;
-        private System.Windows.Forms.Panel QuantityError;
-        private System.Windows.Forms.Panel MinQuantity;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DateTimePicker DueDateBox;
         private System.Windows.Forms.ComboBox QualityBox;
+        private System.Windows.Forms.NumericUpDown AcquisitionCost;
+        private System.Windows.Forms.NumericUpDown SellingCost;
+        private System.Windows.Forms.NumericUpDown Stocks;
+        private System.Windows.Forms.NumericUpDown MinimumStocks;
+        private System.Windows.Forms.ComboBox TypeBox;
     }
 }

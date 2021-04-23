@@ -27,6 +27,7 @@ namespace PharmacyInformationSystem.UIComponents
             Login = login;
             InitializeComponent();
             User = user;
+            SideMenu.ViewUserInfoBtn.Text += user.Username;
             SideMenu.ViewUserInfoBtn.Click += ViewUserInfoBtn_Click;
             SideMenu.Logout.Click += Logout_Click;
 
