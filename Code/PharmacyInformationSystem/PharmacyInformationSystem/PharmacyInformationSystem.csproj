@@ -71,13 +71,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogic\Medicine.cs" />
+    <Compile Include="BusinessLogic\StoreKeeperFunctionality\Medicine.cs" />
     <Compile Include="BusinessLogic\DatabaseHandler.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\AuthenticationFailure.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\AuthenticationHandler.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\Hashing.cs" />
-    <Compile Include="BusinessLogic\MedicineSanitizer.cs" />
-    <Compile Include="BusinessLogic\UserSanitizer.cs" />
+    <Compile Include="BusinessLogic\StoreKeeperFunctionality\MedicineSanitizer.cs" />
+    <Compile Include="BusinessLogic\LoginFunctionality\UserSanitizer.cs" />
     <Compile Include="BusinessLogic\Users.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -129,17 +129,11 @@
     <Compile Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.Designer.cs">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\MedicineViewAdd.cs">
+    <Compile Include="UIComponents\MainUserControls\Peripherals\MedicineViewAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\MedicineViewAdd.Designer.cs">
+    <Compile Include="UIComponents\MainUserControls\Peripherals\MedicineViewAdd.Designer.cs">
       <DependentUpon>MedicineViewAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\MedicineViewData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\MedicineViewData.Designer.cs">
-      <DependentUpon>MedicineViewData.cs</DependentUpon>
     </Compile>
     <Compile Include="UIComponents\Login\RegisterView.cs">
       <SubType>Form</SubType>
@@ -147,10 +141,10 @@
     <Compile Include="UIComponents\Login\RegisterView.Designer.cs">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\MedicineViewDelete.cs">
+    <Compile Include="UIComponents\MainUserControls\Peripherals\MedicineViewDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\MedicineViewDelete.Designer.cs">
+    <Compile Include="UIComponents\MainUserControls\Peripherals\MedicineViewDelete.Designer.cs">
       <DependentUpon>MedicineViewDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageListView.cs">
@@ -172,16 +166,16 @@
     <Compile Include="UIComponents\MainUserControls\UserViewList\ListNavigator.designer.cs">
       <DependentUpon>ListNavigator.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\SideBarItem.cs">
+    <Compile Include="UIComponents\SideBarItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\SideBarItem.Designer.cs">
+    <Compile Include="UIComponents\SideBarItem.Designer.cs">
       <DependentUpon>SideBarItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\SideMenu.cs">
+    <Compile Include="UIComponents\SideMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\SideMenu.Designer.cs">
+    <Compile Include="UIComponents\SideMenu.Designer.cs">
       <DependentUpon>SideMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\UserViewList\UserListViewItem.cs">
@@ -196,10 +190,10 @@
     <Compile Include="UIComponents\MainUserControls\UserViewList\UsersList.Designer.cs">
       <DependentUpon>UsersList.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\ViewUserData.cs">
+    <Compile Include="UIComponents\MainUserControls\Peripherals\ViewUserData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\ViewUserData.Designer.cs">
+    <Compile Include="UIComponents\MainUserControls\Peripherals\ViewUserData.Designer.cs">
       <DependentUpon>ViewUserData.cs</DependentUpon>
     </Compile>
     <Compile Include="UnitTesting\SanitizerUnitTesting.cs" />
@@ -229,16 +223,13 @@
     <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.resx">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\MedicineViewAdd.resx">
+    <EmbeddedResource Include="UIComponents\MainUserControls\Peripherals\MedicineViewAdd.resx">
       <DependentUpon>MedicineViewAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\MedicineViewData.resx">
-      <DependentUpon>MedicineViewData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\Login\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\MedicineViewDelete.resx">
+    <EmbeddedResource Include="UIComponents\MainUserControls\Peripherals\MedicineViewDelete.resx">
       <DependentUpon>MedicineViewDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageListView.resx">
@@ -250,10 +241,10 @@
     <EmbeddedResource Include="UIComponents\MainUserControls\UserViewList\ListNavigator.resx">
       <DependentUpon>ListNavigator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\SideBarItem.resx">
+    <EmbeddedResource Include="UIComponents\SideBarItem.resx">
       <DependentUpon>SideBarItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\SideMenu.resx">
+    <EmbeddedResource Include="UIComponents\SideMenu.resx">
       <DependentUpon>SideMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\UserViewList\UserListViewItem.resx">
@@ -262,7 +253,7 @@
     <EmbeddedResource Include="UIComponents\MainUserControls\UserViewList\UsersList.resx">
       <DependentUpon>UsersList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\ViewUserData.resx">
+    <EmbeddedResource Include="UIComponents\MainUserControls\Peripherals\ViewUserData.resx">
       <DependentUpon>ViewUserData.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
