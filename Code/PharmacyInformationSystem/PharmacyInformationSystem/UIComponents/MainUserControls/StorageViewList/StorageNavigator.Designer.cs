@@ -36,7 +36,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::PharmacyInformationSystem.Properties.Resources.icons8_pill_bottle_24_1_;
+            //this.pictureBox1.BackgroundImage = global::PharmacyInformationSystem.Properties.Resources.icons8_pill_bottle_24_1_;
             this.pictureBox1.Location = new System.Drawing.Point(22, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 26);
