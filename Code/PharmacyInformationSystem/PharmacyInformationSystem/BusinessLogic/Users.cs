@@ -231,7 +231,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="medicine"></param>
         /// <returns></returns>
-        public bool AddMedicine(Medicine medicine)
+        public Medicine AddMedicine(Medicine medicine)
         {
             return Database.AddMedicine(medicine);
         }
