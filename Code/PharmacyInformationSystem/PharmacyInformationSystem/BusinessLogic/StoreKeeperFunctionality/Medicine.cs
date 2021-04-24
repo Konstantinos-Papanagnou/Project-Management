@@ -34,7 +34,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             MedType = medType;
         }
 
-        public Medicine(int medID, string medName, string medCategory, string medManfactureComp, int medStockCount, int medMinStock, string medDueDate, double medAcquisitionValue, double medSellingValue, char medQuality, char medType)
+        public Medicine(int medID, string medName, string medCategory, string medManfactureComp, string medDueDate, int medStockCount, int medMinStock, double medAcquisitionValue, double medSellingValue, char medQuality, char medType)
         {
             MedID = medID;
             MedName = medName ?? throw new ArgumentNullException(nameof(medName));
