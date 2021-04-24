@@ -123,6 +123,16 @@ namespace PharmacyInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_bin_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-bin-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_drop_down_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-drop-down-20", resourceCulture);
@@ -193,6 +203,16 @@ namespace PharmacyInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_row_24_1_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-edit-row-24(1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_euro_18 {
             get {
                 object obj = ResourceManager.GetObject("icons8-euro-18", resourceCulture);
@@ -216,6 +236,16 @@ namespace PharmacyInformationSystem.Properties {
         internal static System.Drawing.Bitmap icons8_euro_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-euro-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_euro_24_3_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-euro-24(3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
