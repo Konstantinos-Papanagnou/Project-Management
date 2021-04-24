@@ -147,7 +147,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // 
             this.EditMenu.BackColor = System.Drawing.SystemColors.ControlLight;
             this.EditMenu.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            //this.EditMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_edit_row_24_1_;
+            this.EditMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_edit_row_24_1_;
             this.EditMenu.Name = "EditMenu";
             this.EditMenu.Size = new System.Drawing.Size(184, 26);
             this.EditMenu.Text = "Επεξεργασία";
@@ -157,7 +157,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // 
             this.RemoveMenu.BackColor = System.Drawing.SystemColors.ControlLight;
             this.RemoveMenu.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.RemoveMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_delete_bin_24;
+            this.RemoveMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_delete_bin_24;
             this.RemoveMenu.Name = "RemoveMenu";
             this.RemoveMenu.Size = new System.Drawing.Size(184, 26);
             this.RemoveMenu.Text = "Διαγραφή";

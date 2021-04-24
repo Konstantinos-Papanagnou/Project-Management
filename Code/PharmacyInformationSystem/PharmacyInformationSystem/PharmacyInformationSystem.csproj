@@ -79,6 +79,11 @@
     <Compile Include="BusinessLogic\MedicineSanitizer.cs" />
     <Compile Include="BusinessLogic\UserSanitizer.cs" />
     <Compile Include="BusinessLogic\Users.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\Login\IShowable.cs" />
     <Compile Include="UIComponents\MainScreen.cs">
       <SubType>Form</SubType>
@@ -204,6 +209,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -277,7 +283,10 @@
   <ItemGroup>
     <Content Include="cross-icon.ico" />
     <None Include="Resources\cross-icon.png" />
+    <None Include="Resources\add-user.png" />
+    <Content Include="Resources\crate.png" />
     <None Include="Resources\icons8-drop-down-241.png" />
+    <Content Include="Resources\diagram.png" />
     <Content Include="Resources\icons8-caduceus-24.png" />
     <Content Include="Resources\icons8-combo-chart-24.png" />
     <Content Include="Resources\icons8-delete-24.png" />
@@ -286,8 +295,15 @@
     <Content Include="Resources\icons8-drop-down-24%283%29.png" />
     <Content Include="Resources\icons8-drop-down-24%284%29.png" />
     <Content Include="Resources\icons8-edit-row-24%281%29.png" />
+    <Content Include="Resources\icons8-edit-row-24.png" />
+    <Content Include="Resources\icons8-euro-18.png" />
+    <Content Include="Resources\icons8-euro-20.png" />
+    <Content Include="Resources\icons8-euro-24%281%29.png" />
+    <Content Include="Resources\icons8-euro-24%282%29.png" />
     <Content Include="Resources\icons8-euro-24%283%29.png" />
+    <Content Include="Resources\icons8-euro-24.png" />
     <Content Include="Resources\icons8-expand-arrow-24.png" />
+    <Content Include="Resources\icons8-export-pdf-24.png" />
     <Content Include="Resources\icons8-gear-24.png" />
     <Content Include="Resources\icons8-group-24.png" />
     <Content Include="Resources\icons8-improvement-24.png" />
@@ -305,6 +321,9 @@
     <Content Include="Resources\icons8-total-sales-24.png" />
     <Content Include="Resources\icons8-trolley-24.png" />
     <Content Include="Resources\icons8-warehouse-24.png" />
+    <None Include="Resources\user.png" />
+    <Content Include="Resources\medicine.png" />
+    <Content Include="Resources\setting.png" />
     <Content Include="Resources\users.png" />
     <Content Include="UIComponents\Login\cross-icon.png" />
   </ItemGroup>

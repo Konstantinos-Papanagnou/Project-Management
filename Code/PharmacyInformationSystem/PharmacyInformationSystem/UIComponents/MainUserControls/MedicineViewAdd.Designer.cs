@@ -377,7 +377,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             // pictureBox4
             // 
-            //this.pictureBox4.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_caduceus_24;
+            this.pictureBox4.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_caduceus_24;
             this.pictureBox4.Location = new System.Drawing.Point(37, 18);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(26, 28);
@@ -386,7 +386,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             // pictureBox3
             // 
-            //this.pictureBox3.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_trolley_24;
+            this.pictureBox3.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_trolley_24;
             this.pictureBox3.Location = new System.Drawing.Point(32, 348);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 28);
@@ -396,7 +396,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            //this.pictureBox1.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_euro_24_3_;
+            this.pictureBox1.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_euro_24_3_;
             this.pictureBox1.Location = new System.Drawing.Point(287, 269);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 31);
@@ -406,7 +406,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            //this.pictureBox2.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_euro_24_3_;
+            this.pictureBox2.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_euro_24_3_;
             this.pictureBox2.Location = new System.Drawing.Point(287, 306);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 31);
