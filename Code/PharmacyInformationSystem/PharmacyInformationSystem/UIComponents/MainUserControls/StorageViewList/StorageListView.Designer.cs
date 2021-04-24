@@ -42,6 +42,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.Quality = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DrugType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listSelections = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ανανέωσηToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.storageNavigator1 = new PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.StorageNavigator();
@@ -70,12 +71,13 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.List.FullRowSelect = true;
             this.List.HideSelection = false;
             this.List.Location = new System.Drawing.Point(0, 54);
-            this.List.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.List.Margin = new System.Windows.Forms.Padding(4);
             this.List.Name = "List";
             this.List.Size = new System.Drawing.Size(1259, 732);
             this.List.TabIndex = 0;
             this.List.UseCompatibleStateImageBehavior = false;
             this.List.View = System.Windows.Forms.View.Details;
+            this.List.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.List_ColumnClick);
             // 
             // DrugName
             // 
@@ -110,12 +112,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // Cost
             // 
             this.Cost.Text = "Κόστος Αγοράς (€)";
-            this.Cost.Width = 167;
+            this.Cost.Width = 146;
             // 
             // Price
             // 
             this.Price.Text = "Τιμή Ποριόντος (€)";
-            this.Price.Width = 170;
+            this.Price.Width = 149;
             // 
             // Quality
             // 
@@ -125,32 +127,43 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // DrugType
             // 
             this.DrugType.Text = "Είδος";
+            this.DrugType.Width = 130;
             // 
             // listSelections
             // 
             this.listSelections.BackColor = System.Drawing.SystemColors.ControlLight;
             this.listSelections.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.listSelections.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ανανέωσηToolStripMenuItem,
             this.EditMenu,
             this.RemoveMenu});
             this.listSelections.Name = "listSelections";
-            this.listSelections.Size = new System.Drawing.Size(215, 88);
+            this.listSelections.Size = new System.Drawing.Size(184, 88);
+            // 
+            // ανανέωσηToolStripMenuItem
+            // 
+            this.ανανέωσηToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.ανανέωσηToolStripMenuItem.Name = "ανανέωσηToolStripMenuItem";
+            this.ανανέωσηToolStripMenuItem.Size = new System.Drawing.Size(183, 28);
+            this.ανανέωσηToolStripMenuItem.Text = "Ανανέωση";
+            this.ανανέωσηToolStripMenuItem.Click += new System.EventHandler(this.ανανέωσηToolStripMenuItem_Click);
             // 
             // EditMenu
             // 
             this.EditMenu.Font = new System.Drawing.Font("Calibri", 11F);
             this.EditMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_edit_row_24_1_1;
             this.EditMenu.Name = "EditMenu";
-            this.EditMenu.Size = new System.Drawing.Size(214, 28);
+            this.EditMenu.Size = new System.Drawing.Size(183, 28);
             this.EditMenu.Text = "Επεξεργασία";
             this.EditMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.EditMenu.Click += new System.EventHandler(this.EditMenu_Click);
             // 
             // RemoveMenu
             // 
             this.RemoveMenu.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.RemoveMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_delete_bin_24;
             this.RemoveMenu.Name = "RemoveMenu";
-            this.RemoveMenu.Size = new System.Drawing.Size(214, 28);
+            this.RemoveMenu.Size = new System.Drawing.Size(183, 28);
             this.RemoveMenu.Text = "Διαγραφή";
             this.RemoveMenu.Click += new System.EventHandler(this.RemoveMenu_Click);
             // 
@@ -158,7 +171,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // 
             this.storageNavigator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.storageNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.storageNavigator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.storageNavigator1.Margin = new System.Windows.Forms.Padding(5);
             this.storageNavigator1.Name = "storageNavigator1";
             this.storageNavigator1.Size = new System.Drawing.Size(1259, 55);
             this.storageNavigator1.TabIndex = 1;
@@ -170,9 +183,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.Controls.Add(this.storageNavigator1);
             this.Controls.Add(this.List);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StorageListView";
             this.Size = new System.Drawing.Size(1259, 786);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.StorageListView_Paint);
             this.listSelections.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -196,5 +210,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         private System.Windows.Forms.ToolStripMenuItem EditMenu;
         private System.Windows.Forms.ToolStripMenuItem RemoveMenu;
         private StorageNavigator storageNavigator1;
+        private System.Windows.Forms.ToolStripMenuItem ανανέωσηToolStripMenuItem;
     }
 }
