@@ -365,7 +365,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="medicine"></param>
         /// <returns></returns>
-        internal bool AddMedicine(Medicine medicine)
+        internal Medicine AddMedicine(Medicine medicine)
         {
             using(SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
@@ -377,15 +377,9 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"'{medicine.MedCategory}','{medicine.MedManfactureComp}','{medicine.MedStockCount}','{medicine.MedMinStock}'," +
                     $"'{medicine.MedDueDate}','{medicine.MedAcquisitionValue}','{medicine.MedSellingValue}'," +
                     $"'{medicine.MedQuality}','{medicine.MedType}')",conn);
-                try
-                {
-                    if (insertMedData.ExecuteNonQuery() < 0)
-                        return false;
-                } 
-                catch
-                {
-                    return false;
-                }
+
+                if (insertMedData.ExecuteNonQuery() < 0)
+                    return null;
                 //Get the new MedID of the medicine
                 insertMedData.CommandText = $"SELECT {MedicineID} FROM {MedicineTableName} WHERE" +
                     $" {MedicineName} = '{medicine.MedName}' AND {MedicineDueDate} = '{medicine.MedDueDate}'";
@@ -394,13 +388,14 @@ namespace PharmacyInformationSystem.BusinessLogic
                     int medid = 0;
                     while (reader.Read())
                     {
-                        medid = int.Parse(reader[0].ToString());
+                        bool success = int.TryParse(reader[0].ToString(), out medid);
                         //Something went wrong? Who got have imagined! Good luck figuring it out!
-                        if (medid == 0) return false;
+                        if (!success) return null;
                     }
+                    medicine.MedID = medid;
                 }
             }
-            return true;
+            return medicine;
         }
         
         /// <summary>
@@ -435,8 +430,8 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"{MedicineName}='{medicine.MedName}', {MedicineCategory}='{medicine.MedCategory}'," +
                     $"{MedicineStock}='{medicine.MedStockCount}', {MedicineMinStock}='{medicine.MedMinStock}', " +
                     $"{MedicineAcquisitionValue}='{medicine.MedAcquisitionValue}'," +
-                    $" {MedicineSellingPrice}='{medicine.MedSellingValue}' WHERE {MedicineID}='{medicine.MedID}'";
-                return true;
+                    $" {MedicineSellingPrice}='{medicine.MedSellingValue}', {MedicineDueDate}='{medicine.MedDueDate}' WHERE {MedicineID}='{medicine.MedID}'";
+                return updateMedicine.ExecuteNonQuery() > 0;
             }
         }
 
@@ -479,26 +474,6 @@ namespace PharmacyInformationSystem.BusinessLogic
             }
         }
 
-        /*
-        /// <summary>
-        /// Category of med
-        /// </summary>
-        /// <param name="conn"></param>
-        /// <param name="medId"></param>
-        /// <param name="category"></param>
-        /// <returns></returns>
-        private bool InsertCategory(SQLiteConnection conn, int medId, string category)
-        {
-            try
-            {
-                SQLiteCommand insertPhoneNumber = new SQLiteCommand($"INSERT INTO {MedicineTableName}({MedicineCategory}," +
-                    $") VALUES ('{category}') WHERE {MedicineID}='{medId}'", conn);
-                return insertPhoneNumber.ExecuteNonQuery() > 0;
-            }
-            catch { return false; }
-        }
-        */
         
     }
-
 }
