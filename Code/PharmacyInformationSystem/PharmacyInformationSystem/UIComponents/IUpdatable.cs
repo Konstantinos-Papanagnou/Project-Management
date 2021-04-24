@@ -10,7 +10,8 @@ namespace PharmacyInformationSystem.UIComponents
     public enum Operation
     {
         Remove,
-        Update
+        Update,
+        Add
     }
     public interface IUpdatable<T>
     {
