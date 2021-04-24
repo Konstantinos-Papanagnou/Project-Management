@@ -243,7 +243,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <returns></returns>
         public bool RemoveMedicene(Medicine medicine)
         {
-            return Database.RemoveMedicine(medicine.MedID);
+            return Database.RemoveMedicine(medicine);
         }
 
         /// <summary>

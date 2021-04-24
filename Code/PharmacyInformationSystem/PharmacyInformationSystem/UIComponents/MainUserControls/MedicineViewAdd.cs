@@ -26,7 +26,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            if (!ValidateInputs()) {
+            if (!ValidateInputs() || (int)Stocks.Value < (int)MinimumStocks.Value) {
                 MessageBox.Show("Fill All the fields with correct values first!", "Can't Continue Operation!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; 
             }

@@ -42,9 +42,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.Quality = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DrugType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listSelections = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.EditMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.storageNavigator1 = new PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.StorageNavigator();
-            this.EditMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.listSelections.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,9 +69,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.List.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.List.FullRowSelect = true;
             this.List.HideSelection = false;
-            this.List.Location = new System.Drawing.Point(0, 44);
+            this.List.Location = new System.Drawing.Point(0, 54);
+            this.List.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.List.Name = "List";
-            this.List.Size = new System.Drawing.Size(944, 595);
+            this.List.Size = new System.Drawing.Size(1259, 732);
             this.List.TabIndex = 0;
             this.List.UseCompatibleStateImageBehavior = false;
             this.List.View = System.Windows.Forms.View.Details;
@@ -133,42 +134,45 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             this.EditMenu,
             this.RemoveMenu});
             this.listSelections.Name = "listSelections";
-            this.listSelections.Size = new System.Drawing.Size(160, 56);
-            // 
-            // RemoveMenu
-            // 
-            this.RemoveMenu.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.RemoveMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_delete_bin_24;
-            this.RemoveMenu.Name = "RemoveMenu";
-            this.RemoveMenu.Size = new System.Drawing.Size(159, 26);
-            this.RemoveMenu.Text = "Διαγραφή";
-            // 
-            // storageNavigator1
-            // 
-            this.storageNavigator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.storageNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.storageNavigator1.Name = "storageNavigator1";
-            this.storageNavigator1.Size = new System.Drawing.Size(944, 45);
-            this.storageNavigator1.TabIndex = 1;
+            this.listSelections.Size = new System.Drawing.Size(215, 88);
             // 
             // EditMenu
             // 
             this.EditMenu.Font = new System.Drawing.Font("Calibri", 11F);
             this.EditMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_edit_row_24_1_1;
             this.EditMenu.Name = "EditMenu";
-            this.EditMenu.Size = new System.Drawing.Size(159, 26);
+            this.EditMenu.Size = new System.Drawing.Size(214, 28);
             this.EditMenu.Text = "Επεξεργασία";
             this.EditMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
+            // RemoveMenu
+            // 
+            this.RemoveMenu.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.RemoveMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_delete_bin_24;
+            this.RemoveMenu.Name = "RemoveMenu";
+            this.RemoveMenu.Size = new System.Drawing.Size(214, 28);
+            this.RemoveMenu.Text = "Διαγραφή";
+            this.RemoveMenu.Click += new System.EventHandler(this.RemoveMenu_Click);
+            // 
+            // storageNavigator1
+            // 
+            this.storageNavigator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.storageNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.storageNavigator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.storageNavigator1.Name = "storageNavigator1";
+            this.storageNavigator1.Size = new System.Drawing.Size(1259, 55);
+            this.storageNavigator1.TabIndex = 1;
+            // 
             // StorageListView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.Controls.Add(this.storageNavigator1);
             this.Controls.Add(this.List);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StorageListView";
-            this.Size = new System.Drawing.Size(944, 639);
+            this.Size = new System.Drawing.Size(1259, 786);
             this.listSelections.ResumeLayout(false);
             this.ResumeLayout(false);
 

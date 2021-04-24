@@ -73,5 +73,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
                     return "Γενόσημο";
             }
         }
+
+        private void RemoveMenu_Click(object sender, EventArgs e)
+        {
+            MedicineViewDelete medicineDelete = new MedicineViewDelete();
+            medicineDelete.ShowDialog();
+        }
     }
 }

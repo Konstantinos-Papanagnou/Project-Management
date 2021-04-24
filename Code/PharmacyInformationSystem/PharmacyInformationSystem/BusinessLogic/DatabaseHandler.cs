@@ -408,14 +408,14 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="medId"></param>
         /// <returns></returns>
-        internal bool RemoveMedicine(int medId)
+        internal bool RemoveMedicine(Medicine medicine)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
                 SQLiteCommand deleteMedicine = new SQLiteCommand(conn);
                 //Remove the medicine from Medicines table
-                deleteMedicine.CommandText = $"DELETE FROM {MedicineTableName} WHERE {MedicineID} = '{medId}'";
+                deleteMedicine.CommandText = $"DELETE FROM {MedicineTableName} WHERE {MedicineID} = '{medicine.MedID}'";
                 return deleteMedicine.ExecuteNonQuery() > 0;
             }
         }
