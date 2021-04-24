@@ -147,6 +147,12 @@
     <Compile Include="UIComponents\Login\RegisterView.Designer.cs">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\MedicineViewDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\MedicineViewDelete.Designer.cs">
+      <DependentUpon>MedicineViewDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +238,9 @@
     <EmbeddedResource Include="UIComponents\Login\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\MedicineViewDelete.resx">
+      <DependentUpon>MedicineViewDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageListView.resx">
       <DependentUpon>StorageListView.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +289,8 @@
     <Content Include="Resources\diagram.png" />
     <Content Include="Resources\icons8-caduceus-24.png" />
     <Content Include="Resources\icons8-combo-chart-24.png" />
+    <Content Include="Resources\icons8-delete-24.png" />
+    <Content Include="Resources\icons8-delete-bin-24.png" />
     <Content Include="Resources\icons8-drop-down-20.png" />
     <Content Include="Resources\icons8-drop-down-24%283%29.png" />
     <Content Include="Resources\icons8-drop-down-24%284%29.png" />
@@ -287,6 +298,9 @@
     <Content Include="Resources\icons8-edit-row-24.png" />
     <Content Include="Resources\icons8-euro-18.png" />
     <Content Include="Resources\icons8-euro-20.png" />
+    <Content Include="Resources\icons8-euro-24%281%29.png" />
+    <Content Include="Resources\icons8-euro-24%282%29.png" />
+    <Content Include="Resources\icons8-euro-24%283%29.png" />
     <Content Include="Resources\icons8-euro-24.png" />
     <Content Include="Resources\icons8-expand-arrow-24.png" />
     <Content Include="Resources\icons8-export-pdf-24.png" />
@@ -294,6 +308,7 @@
     <Content Include="Resources\icons8-group-24.png" />
     <Content Include="Resources\icons8-improvement-24.png" />
     <Content Include="Resources\icons8-marketing-24.png" />
+    <Content Include="Resources\icons8-money-box-24.png" />
     <Content Include="Resources\icons8-pill-bottle-24%281%29.png" />
     <Content Include="Resources\icons8-plus-1-month-24.png" />
     <Content Include="Resources\icons8-plus-1-year-24.png" />
