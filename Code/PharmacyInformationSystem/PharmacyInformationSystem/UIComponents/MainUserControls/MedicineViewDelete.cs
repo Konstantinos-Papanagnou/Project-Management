@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PharmacyInformationSystem.BusinessLogic;
 
 namespace PharmacyInformationSystem.UIComponents.MainUserControls
 {
@@ -15,6 +16,18 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         public MedicineViewDelete()
         {
             InitializeComponent();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void CancleBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

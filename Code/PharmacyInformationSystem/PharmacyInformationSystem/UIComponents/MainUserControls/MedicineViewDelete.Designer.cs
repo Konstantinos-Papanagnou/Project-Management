@@ -33,7 +33,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CancleBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,43 +69,47 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.CancleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancleBtn.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.CancleBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CancleBtn.Location = new System.Drawing.Point(-3, 197);
-            this.CancleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CancleBtn.Location = new System.Drawing.Point(16, 200);
+            this.CancleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CancleBtn.Name = "CancleBtn";
             this.CancleBtn.Size = new System.Drawing.Size(296, 65);
             this.CancleBtn.TabIndex = 2;
             this.CancleBtn.Text = "ΑΚΥΡΟ";
             this.CancleBtn.UseVisualStyleBackColor = false;
+            this.CancleBtn.Click += new System.EventHandler(this.CancleBtn_Click);
             // 
-            // button1
+            // delete
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(296, 197);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(284, 65);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "ΔΙΑΓΡΑΦΗ";
-            this.button1.UseVisualStyleBackColor = false;
+            this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.delete.FlatAppearance.BorderSize = 0;
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.delete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.delete.Location = new System.Drawing.Point(320, 200);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(284, 65);
+            this.delete.TabIndex = 3;
+            this.delete.Text = "ΔΙΑΓΡΑΦΗ";
+            this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // MedicineViewDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(579, 260);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(622, 288);
+            this.Controls.Add(this.delete);
             this.Controls.Add(this.CancleBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MedicineViewDelete";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " Delete Medicine";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,6 +121,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button CancleBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button delete;
     }
 }

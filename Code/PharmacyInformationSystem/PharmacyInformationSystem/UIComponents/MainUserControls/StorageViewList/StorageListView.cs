@@ -42,11 +42,15 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         {
             User.AddMedicine(med);
             AddToList(med);
+            Medicines.Add(med);
         }
 
         private void AddToList(Medicine med)
         {
             var lvi = new ListViewItem(med.MedName);
+
+            lvi.Tag = med.MedID;
+
             lvi.SubItems.Add(med.MedCategory);
             lvi.SubItems.Add(med.MedManfactureComp);
             lvi.SubItems.Add(med.MedDueDate);
@@ -74,10 +78,29 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             }
         }
 
+
+        private int searchforRemove(int id)
+        {
+            for (int i = 0; i < Medicines.Count;  i++)
+            {
+                if (Medicines[i].MedID == id)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         private void RemoveMenu_Click(object sender, EventArgs e)
         {
             MedicineViewDelete medicineDelete = new MedicineViewDelete();
-            medicineDelete.ShowDialog();
+            if(medicineDelete.ShowDialog() == DialogResult.OK)
+            {
+                 User.RemoveMedicine(int.Parse(List.SelectedItems[0].Tag.ToString()));
+                int index = searchforRemove(int.Parse(List.SelectedItems[0].Tag.ToString()));
+                Medicines.RemoveAt(index);
+                List.Items.RemoveAt(index);
+            }
         }
     }
 }

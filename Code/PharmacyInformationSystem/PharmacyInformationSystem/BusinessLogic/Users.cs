@@ -241,9 +241,9 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="medicine"></param>
         /// <returns></returns>
-        public bool RemoveMedicene(Medicine medicine)
+        public bool RemoveMedicine(int MedID)
         {
-            return Database.RemoveMedicine(medicine);
+            return Database.RemoveMedicine(MedID);
         }
 
         /// <summary>
