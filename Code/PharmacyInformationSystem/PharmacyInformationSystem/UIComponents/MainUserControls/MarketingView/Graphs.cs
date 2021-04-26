@@ -25,8 +25,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             MonthlyChart.Series["Μηνιαίο Κέρδος"].XValueMember = "Μήνες";
             MonthlyChart.Series["Μηνιαίο Κέρδος"].YValueMembers = "Πωλήσεις";
 
-            MonthlyChart.Series["Ετήσιο Κέρδος"].XValueMember = "Έτη";
-            MonthlyChart.Series["Ετήσιο Κέρδος"].YValueMembers = "Πωλήσεις";
+            YearlyChart.Series["Ετήσιο Κέρδος"].XValueMember = "Έτη";
+            YearlyChart.Series["Ετήσιο Κέρδος"].YValueMembers = "Πωλήσεις";
 
         }
 

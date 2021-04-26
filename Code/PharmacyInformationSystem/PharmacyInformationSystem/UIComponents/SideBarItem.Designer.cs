@@ -73,6 +73,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.SubOperation4.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.SubOperation4.Size = new System.Drawing.Size(228, 43);
             this.SubOperation4.TabIndex = 7;
+            this.SubOperation4.Tag = "Slave";
             this.SubOperation4.Text = "button4";
             this.SubOperation4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubOperation4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -92,6 +93,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.SubOperation3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.SubOperation3.Size = new System.Drawing.Size(228, 43);
             this.SubOperation3.TabIndex = 6;
+            this.SubOperation3.Tag = "Slave";
             this.SubOperation3.Text = "button3";
             this.SubOperation3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubOperation3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -111,6 +113,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.SubOperation2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.SubOperation2.Size = new System.Drawing.Size(228, 43);
             this.SubOperation2.TabIndex = 5;
+            this.SubOperation2.Tag = "Slave";
             this.SubOperation2.Text = "button2";
             this.SubOperation2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubOperation2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -130,6 +133,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.SubOperation1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.SubOperation1.Size = new System.Drawing.Size(228, 43);
             this.SubOperation1.TabIndex = 4;
+            this.SubOperation1.Tag = "Slave";
             this.SubOperation1.Text = "button1";
             this.SubOperation1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubOperation1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
