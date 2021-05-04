@@ -23,6 +23,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         private const string PasswordField = "Password";
         private const string IdCardField = "IDCard";
         private const string RoleIDField = "RoleID";
+        private const string SalaryField = "Salary";
         #endregion
 
         #region Role Table
@@ -75,7 +76,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {UsersTableName}({EmployeeIDField} INTEGER PRIMARY KEY AUTOINCREMENT," +
                 $" {FirstNameField} STRING NOT NULL, {LastNameField} STRING NOT NULL, {IdCardField} CHAR(8) UNIQUE NOT NULL, " +
                 $"{UsernameField} CHAR(6) UNIQUE NOT NULL, {PasswordField} CHAR(64) NOT NULL, {RoleIDField} INT NOT NULL," +
-                $" FOREIGN KEY({RoleIDField}) REFERENCES {RolesTableName}({RoleIDField}))", conn).ExecuteNonQuery();
+                $" {SalaryField} REAL NOT NULL, FOREIGN KEY({RoleIDField}) REFERENCES {RolesTableName}({RoleIDField}))", conn).ExecuteNonQuery();
 
             new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {PhoneNumberTableName}({EmployeeIDField} INTEGER," +
                 $" {PhoneNumberField} CHAR(10) NOT NULL, PRIMARY KEY({EmployeeIDField}, {PhoneNumberField}), FOREIGN KEY({EmployeeIDField}) REFERENCES {UsersTableName}({EmployeeIDField}))", conn).ExecuteNonQuery();
@@ -94,7 +95,7 @@ namespace PharmacyInformationSystem.BusinessLogic
 
             new SQLiteCommand($"INSERT INTO {UsersTableName}({FirstNameField},{LastNameField}," +
                 $"{IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}) VALUES " +
-                $"('Admin', 'Admin', 'Dummy', 'admin', '{Hashing.ComputeHash("Password123")}', '0')", conn).ExecuteNonQuery();
+                $"('Admin', 'Admin', 'Dummy', 'admin', '{Hashing.ComputeHash("Password123")}', '0', '1500.50')", conn).ExecuteNonQuery();
 
 
         }
@@ -158,6 +159,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                                 Password: reader[5].ToString(),
                                 RoleID: int.Parse(reader[6].ToString()),
                                 null
+
                             );
                         //Grab the phone numbers associated with him
                         SQLiteCommand grabPhones = new SQLiteCommand($"SELECT * FROM {PhoneNumberTableName} WHERE {EmployeeIDField} = '{user.EmployeeID}'", conn);
