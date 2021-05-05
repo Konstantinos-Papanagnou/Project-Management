@@ -38,6 +38,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PhoneNumbers = new System.Windows.Forms.RichTextBox();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SalaryLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,12 +140,24 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // SalaryLbl
+            // 
+            this.SalaryLbl.AutoSize = true;
+            this.SalaryLbl.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalaryLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SalaryLbl.Location = new System.Drawing.Point(397, 252);
+            this.SalaryLbl.Name = "SalaryLbl";
+            this.SalaryLbl.Size = new System.Drawing.Size(133, 29);
+            this.SalaryLbl.TabIndex = 8;
+            this.SalaryLbl.Text = "Μισθός (€): ";
+            // 
             // ViewUserData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(789, 566);
+            this.Controls.Add(this.SalaryLbl);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.PhoneNumbers);
             this.Controls.Add(this.pictureBox1);
@@ -179,5 +192,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox PhoneNumbers;
         private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.Label SalaryLbl;
     }
 }

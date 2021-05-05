@@ -16,7 +16,7 @@ namespace PharmacyInformationSystem.UnitTesting
             Administrator user = (Administrator)handler.AuthenticateUser("admini", "Password123");
             //user.InsertUser(new User("ΠΑΝΑΓΙΩΤΗΣ", "ΣΚΛΙΔΑΣ", "Αp520256", 2, user.GenerateUsername("ΠΑΝΑΓΙΩΤΗΣ", "ΣΚΛΙΔΑΣ"), "Password5", 1, new List<string>() { "6980520325", "6952123569" }));
             //user.ModifyUser(new User("ΠΑΝΑΓΙΩΤΗΣ", "ΣΚΛΙΔΑΣ", "Αp555555", 4, "pasqli", "Password565", 3, new List<string>() { "6980520325" }));
-            user.DeleteUser(new User("ΠΑΝΑΓΙΩΤΗΣ", "ΣΚΛΙΔΑΣ", "Αp520256", 2, user.GenerateUsername("ΠΑΝΑΓΙΩΤΗΣ", "ΣΚΛΙΔΑΣ"), "Password5", 1, new List<string>() { "6980520325", "6952123569" }));
+            //user.DeleteUser(new User("ΠΑΝΑΓΙΩΤΗΣ", "ΣΚΛΙΔΑΣ", "Αp520256", 2, user.GenerateUsername("ΠΑΝΑΓΙΩΤΗΣ", "ΣΚΛΙΔΑΣ"), "Password5", 1, new List<string>() { "6980520325", "6952123569" }));
             List<User> users = user.GetAllUsers();
 
             return true;

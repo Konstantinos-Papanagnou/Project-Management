@@ -36,6 +36,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.panel3 = new System.Windows.Forms.Panel();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.ExpandablePanel = new System.Windows.Forms.Panel();
+            this.SalaryAmountLbl = new System.Windows.Forms.Label();
+            this.SalaryDescLbl = new System.Windows.Forms.Label();
             this.PhoneNumbersLbl = new System.Windows.Forms.Label();
             this.RoleLbl = new System.Windows.Forms.Label();
             this.UsernameLbl = new System.Windows.Forms.Label();
@@ -56,29 +58,28 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // 
             this.SumInfoLbl.AutoSize = true;
             this.SumInfoLbl.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.SumInfoLbl.Location = new System.Drawing.Point(12, 15);
-            this.SumInfoLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SumInfoLbl.Location = new System.Drawing.Point(16, 18);
             this.SumInfoLbl.Name = "SumInfoLbl";
-            this.SumInfoLbl.Size = new System.Drawing.Size(56, 23);
+            this.SumInfoLbl.Size = new System.Drawing.Size(74, 29);
             this.SumInfoLbl.TabIndex = 0;
             this.SumInfoLbl.Text = "label1";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel1.Location = new System.Drawing.Point(4, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(5, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(939, 2);
+            this.panel1.Size = new System.Drawing.Size(1252, 2);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Location = new System.Drawing.Point(4, 54);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(5, 66);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(940, 2);
+            this.panel2.Size = new System.Drawing.Size(1253, 2);
             this.panel2.TabIndex = 2;
             // 
             // ModifyBtn
@@ -86,10 +87,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.ModifyBtn.FlatAppearance.BorderSize = 0;
             this.ModifyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ModifyBtn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.ModifyBtn.Location = new System.Drawing.Point(559, 14);
-            this.ModifyBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ModifyBtn.Location = new System.Drawing.Point(745, 17);
+            this.ModifyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ModifyBtn.Name = "ModifyBtn";
-            this.ModifyBtn.Size = new System.Drawing.Size(125, 29);
+            this.ModifyBtn.Size = new System.Drawing.Size(167, 36);
             this.ModifyBtn.TabIndex = 4;
             this.ModifyBtn.Text = "Επεξεργασία";
             this.ModifyBtn.UseVisualStyleBackColor = true;
@@ -98,10 +99,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel3.Location = new System.Drawing.Point(696, 7);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(928, 9);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 41);
+            this.panel3.Size = new System.Drawing.Size(1, 50);
             this.panel3.TabIndex = 5;
             // 
             // DeleteBtn
@@ -109,10 +110,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.DeleteBtn.FlatAppearance.BorderSize = 0;
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBtn.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.DeleteBtn.Location = new System.Drawing.Point(711, 14);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeleteBtn.Location = new System.Drawing.Point(948, 17);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(134, 29);
+            this.DeleteBtn.Size = new System.Drawing.Size(179, 36);
             this.DeleteBtn.TabIndex = 6;
             this.DeleteBtn.Text = "Διαγραφή";
             this.DeleteBtn.UseVisualStyleBackColor = true;
@@ -120,6 +121,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // 
             // ExpandablePanel
             // 
+            this.ExpandablePanel.Controls.Add(this.SalaryAmountLbl);
+            this.ExpandablePanel.Controls.Add(this.SalaryDescLbl);
             this.ExpandablePanel.Controls.Add(this.PhoneNumbersLbl);
             this.ExpandablePanel.Controls.Add(this.RoleLbl);
             this.ExpandablePanel.Controls.Add(this.UsernameLbl);
@@ -132,21 +135,41 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.ExpandablePanel.Controls.Add(this.label3);
             this.ExpandablePanel.Controls.Add(this.label2);
             this.ExpandablePanel.Controls.Add(this.label1);
-            this.ExpandablePanel.Location = new System.Drawing.Point(52, 56);
-            this.ExpandablePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExpandablePanel.Location = new System.Drawing.Point(69, 69);
+            this.ExpandablePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExpandablePanel.Name = "ExpandablePanel";
-            this.ExpandablePanel.Size = new System.Drawing.Size(628, 201);
+            this.ExpandablePanel.Size = new System.Drawing.Size(837, 283);
             this.ExpandablePanel.TabIndex = 7;
+            // 
+            // SalaryAmountLbl
+            // 
+            this.SalaryAmountLbl.AutoSize = true;
+            this.SalaryAmountLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.SalaryAmountLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
+            this.SalaryAmountLbl.Location = new System.Drawing.Point(259, 246);
+            this.SalaryAmountLbl.Name = "SalaryAmountLbl";
+            this.SalaryAmountLbl.Size = new System.Drawing.Size(45, 25);
+            this.SalaryAmountLbl.TabIndex = 21;
+            this.SalaryAmountLbl.Text = "100";
+            // 
+            // SalaryDescLbl
+            // 
+            this.SalaryDescLbl.AutoSize = true;
+            this.SalaryDescLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.SalaryDescLbl.Location = new System.Drawing.Point(15, 246);
+            this.SalaryDescLbl.Name = "SalaryDescLbl";
+            this.SalaryDescLbl.Size = new System.Drawing.Size(113, 25);
+            this.SalaryDescLbl.TabIndex = 20;
+            this.SalaryDescLbl.Text = "Μισθός (€):";
             // 
             // PhoneNumbersLbl
             // 
             this.PhoneNumbersLbl.AutoSize = true;
             this.PhoneNumbersLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.PhoneNumbersLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.PhoneNumbersLbl.Location = new System.Drawing.Point(196, 167);
-            this.PhoneNumbersLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PhoneNumbersLbl.Location = new System.Drawing.Point(261, 206);
             this.PhoneNumbersLbl.Name = "PhoneNumbersLbl";
-            this.PhoneNumbersLbl.Size = new System.Drawing.Size(0, 20);
+            this.PhoneNumbersLbl.Size = new System.Drawing.Size(0, 25);
             this.PhoneNumbersLbl.TabIndex = 19;
             // 
             // RoleLbl
@@ -154,10 +177,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.RoleLbl.AutoSize = true;
             this.RoleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.RoleLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.RoleLbl.Location = new System.Drawing.Point(194, 135);
-            this.RoleLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RoleLbl.Location = new System.Drawing.Point(259, 166);
             this.RoleLbl.Name = "RoleLbl";
-            this.RoleLbl.Size = new System.Drawing.Size(94, 20);
+            this.RoleLbl.Size = new System.Drawing.Size(120, 25);
             this.RoleLbl.TabIndex = 18;
             this.RoleLbl.Text = "Τεστ Ρόλος";
             // 
@@ -166,10 +188,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.UsernameLbl.AutoSize = true;
             this.UsernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.UsernameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.UsernameLbl.Location = new System.Drawing.Point(194, 105);
-            this.UsernameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UsernameLbl.Location = new System.Drawing.Point(259, 129);
             this.UsernameLbl.Name = "UsernameLbl";
-            this.UsernameLbl.Size = new System.Drawing.Size(155, 20);
+            this.UsernameLbl.Size = new System.Drawing.Size(199, 25);
             this.UsernameLbl.TabIndex = 17;
             this.UsernameLbl.Text = "Τεστ Όνομα Χρήστη";
             // 
@@ -178,10 +199,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.IdCardLbl.AutoSize = true;
             this.IdCardLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.IdCardLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.IdCardLbl.Location = new System.Drawing.Point(194, 74);
-            this.IdCardLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.IdCardLbl.Location = new System.Drawing.Point(259, 91);
             this.IdCardLbl.Name = "IdCardLbl";
-            this.IdCardLbl.Size = new System.Drawing.Size(91, 20);
+            this.IdCardLbl.Size = new System.Drawing.Size(114, 25);
             this.IdCardLbl.TabIndex = 16;
             this.IdCardLbl.Text = "ΑΜ 520562";
             // 
@@ -190,10 +210,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.LastNameLbl.AutoSize = true;
             this.LastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.LastNameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.LastNameLbl.Location = new System.Drawing.Point(194, 41);
-            this.LastNameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LastNameLbl.Location = new System.Drawing.Point(259, 50);
             this.LastNameLbl.Name = "LastNameLbl";
-            this.LastNameLbl.Size = new System.Drawing.Size(107, 20);
+            this.LastNameLbl.Size = new System.Drawing.Size(138, 25);
             this.LastNameLbl.TabIndex = 15;
             this.LastNameLbl.Text = "Τεστ Επίθετο";
             // 
@@ -202,10 +221,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.NameLbl.AutoSize = true;
             this.NameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.NameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.NameLbl.Location = new System.Drawing.Point(194, 11);
-            this.NameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NameLbl.Location = new System.Drawing.Point(259, 14);
             this.NameLbl.Name = "NameLbl";
-            this.NameLbl.Size = new System.Drawing.Size(95, 20);
+            this.NameLbl.Size = new System.Drawing.Size(124, 25);
             this.NameLbl.TabIndex = 14;
             this.NameLbl.Text = "Τεστ Όνομα";
             // 
@@ -213,10 +231,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label6.Location = new System.Drawing.Point(11, 167);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(15, 206);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 20);
+            this.label6.Size = new System.Drawing.Size(231, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "Τηλέφωνα Επικοινωνίας:";
             // 
@@ -224,10 +241,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label5.Location = new System.Drawing.Point(11, 135);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(15, 166);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.Size = new System.Drawing.Size(74, 25);
             this.label5.TabIndex = 12;
             this.label5.Text = "Ρόλος:";
             // 
@@ -235,10 +251,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label4.Location = new System.Drawing.Point(11, 105);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(15, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 20);
+            this.label4.Size = new System.Drawing.Size(153, 25);
             this.label4.TabIndex = 11;
             this.label4.Text = "Όνομα Χρήστη:";
             // 
@@ -246,10 +261,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label3.Location = new System.Drawing.Point(11, 74);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(15, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 20);
+            this.label3.Size = new System.Drawing.Size(211, 25);
             this.label3.TabIndex = 10;
             this.label3.Text = "Αριθμός Ταυτότητας:";
             // 
@@ -257,10 +271,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label2.Location = new System.Drawing.Point(11, 41);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(15, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.Size = new System.Drawing.Size(92, 25);
             this.label2.TabIndex = 9;
             this.label2.Text = "Επίθετο:";
             // 
@@ -268,10 +281,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(11, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(15, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(78, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Όνομα:";
             // 
@@ -281,17 +293,17 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.ExpandBtn.FlatAppearance.BorderSize = 0;
             this.ExpandBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExpandBtn.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_drop_down_24_3_;
-            this.ExpandBtn.Location = new System.Drawing.Point(518, 12);
-            this.ExpandBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ExpandBtn.Location = new System.Drawing.Point(691, 15);
+            this.ExpandBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExpandBtn.Name = "ExpandBtn";
-            this.ExpandBtn.Size = new System.Drawing.Size(37, 36);
+            this.ExpandBtn.Size = new System.Drawing.Size(49, 44);
             this.ExpandBtn.TabIndex = 3;
             this.ExpandBtn.UseVisualStyleBackColor = true;
             this.ExpandBtn.Click += new System.EventHandler(this.ExpandBtn_Click);
             // 
             // UserListViewItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
             this.Controls.Add(this.ExpandablePanel);
@@ -303,9 +315,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SumInfoLbl);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserListViewItem";
-            this.Size = new System.Drawing.Size(900, 56);
+            this.Size = new System.Drawing.Size(1200, 72);
             this.ExpandablePanel.ResumeLayout(false);
             this.ExpandablePanel.PerformLayout();
             this.ResumeLayout(false);
@@ -335,5 +347,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SalaryAmountLbl;
+        private System.Windows.Forms.Label SalaryDescLbl;
     }
 }

@@ -61,8 +61,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.VerifyPasswordError = new System.Windows.Forms.Panel();
             this.VerifyPasswordBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.SalaryTV = new System.Windows.Forms.Label();
+            this.SalaryBox = new System.Windows.Forms.NumericUpDown();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalaryBox)).BeginInit();
             this.SuspendLayout();
             // 
             // NameBox
@@ -102,6 +105,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.RoleBox.Name = "RoleBox";
             this.RoleBox.Size = new System.Drawing.Size(285, 24);
             this.RoleBox.TabIndex = 7;
+            this.RoleBox.SelectedIndexChanged += new System.EventHandler(this.RoleBox_SelectedIndexChanged);
             // 
             // FirstNameError
             // 
@@ -305,7 +309,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // PhoneNumberError
             // 
             this.PhoneNumberError.BackColor = System.Drawing.Color.Red;
-            this.PhoneNumberError.Location = new System.Drawing.Point(81, 579);
+            this.PhoneNumberError.Location = new System.Drawing.Point(81, 628);
             this.PhoneNumberError.Name = "PhoneNumberError";
             this.PhoneNumberError.Size = new System.Drawing.Size(286, 4);
             this.PhoneNumberError.TabIndex = 24;
@@ -316,10 +320,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PhoneNumberBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.PhoneNumberBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PhoneNumberBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PhoneNumberBox.Location = new System.Drawing.Point(81, 555);
+            this.PhoneNumberBox.Location = new System.Drawing.Point(81, 604);
             this.PhoneNumberBox.Name = "PhoneNumberBox";
             this.PhoneNumberBox.Size = new System.Drawing.Size(285, 30);
-            this.PhoneNumberBox.TabIndex = 8;
+            this.PhoneNumberBox.TabIndex = 9;
             this.PhoneNumberBox.Tag = "phonenumbers";
             this.PhoneNumberBox.Leave += new System.EventHandler(this.FirstNameBox_Leave);
             // 
@@ -328,7 +332,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F);
             this.label9.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label9.Location = new System.Drawing.Point(81, 528);
+            this.label9.Location = new System.Drawing.Point(81, 577);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 24);
             this.label9.TabIndex = 22;
@@ -352,7 +356,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.Save.FlatAppearance.BorderSize = 0;
             this.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Save.Font = new System.Drawing.Font("Calibri", 12F);
-            this.Save.Location = new System.Drawing.Point(229, 614);
+            this.Save.Location = new System.Drawing.Point(229, 663);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(138, 46);
             this.Save.TabIndex = 9;
@@ -407,12 +411,38 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.label5.TabIndex = 28;
             this.label5.Text = "Επιβεβαίωση Κωδικού Πρόσβασης";
             // 
+            // SalaryTV
+            // 
+            this.SalaryTV.AutoSize = true;
+            this.SalaryTV.Font = new System.Drawing.Font("Calibri", 12F);
+            this.SalaryTV.ForeColor = System.Drawing.Color.FloralWhite;
+            this.SalaryTV.Location = new System.Drawing.Point(81, 512);
+            this.SalaryTV.Name = "SalaryTV";
+            this.SalaryTV.Size = new System.Drawing.Size(100, 24);
+            this.SalaryTV.TabIndex = 31;
+            this.SalaryTV.Text = "Μισθός (€)";
+            // 
+            // SalaryBox
+            // 
+            this.SalaryBox.DecimalPlaces = 2;
+            this.SalaryBox.Location = new System.Drawing.Point(81, 547);
+            this.SalaryBox.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.SalaryBox.Name = "SalaryBox";
+            this.SalaryBox.Size = new System.Drawing.Size(285, 22);
+            this.SalaryBox.TabIndex = 8;
+            // 
             // RegisterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(439, 677);
+            this.ClientSize = new System.Drawing.Size(439, 722);
+            this.Controls.Add(this.SalaryBox);
+            this.Controls.Add(this.SalaryTV);
             this.Controls.Add(this.VerifyPasswordError);
             this.Controls.Add(this.VerifyPasswordBox);
             this.Controls.Add(this.label5);
@@ -445,6 +475,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalaryBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,6 +514,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         private System.Windows.Forms.Panel VerifyPasswordError;
         private System.Windows.Forms.TextBox VerifyPasswordBox;
         private System.Windows.Forms.Label label5;
-
+        private System.Windows.Forms.Label SalaryTV;
+        private System.Windows.Forms.NumericUpDown SalaryBox;
     }
 }

@@ -47,6 +47,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
                     RoleLbl.Text = "Ομάδα Marketing";
                     break;
             }
+            SalaryAmountLbl.Text = user.Salary.ToString();
+            if (user.RoleID == 2)
+            {
+                SalaryDescLbl.Text = "Μισθός (%):";
+            }
             if (user.PhoneNumbers == null || user.PhoneNumbers.Count == 0) {
                 PhoneNumbersLbl.Text = "Δεν βρέθηκαν τηλέφωνα για αυτόν τον Χρήστη";
                 return;
@@ -64,8 +69,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList
         {
             Expanded = !Expanded;
             if (Expanded)
-                this.Size = new Size(909, 296);
-            else this.Size = new Size(909, 69);
+                this.Size = new Size(909, 300);
+            else this.Size = new Size(909, 60);
         }
 
         /// <summary>

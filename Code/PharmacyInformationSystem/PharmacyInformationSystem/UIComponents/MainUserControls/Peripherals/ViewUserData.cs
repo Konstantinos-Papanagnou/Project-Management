@@ -39,6 +39,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
                     RoleLbl.Text += "Ομάδα Marketing";
                     break;
             }
+            if (User.RoleID == 2)
+                SalaryLbl.Text = "Μισθός (%): ";
+            SalaryLbl.Text += User.Salary.ToString();
             if (User.PhoneNumbers == null || User.PhoneNumbers.Count == 0)
             {
                 PhoneNumbers.Text = "Δεν βρέθηκαν τηλέφωνα για αυτόν τον χρήστη.";

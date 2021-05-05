@@ -94,7 +94,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             new SQLiteCommand($"INSERT INTO {RolesTableName}({RoleIDField},{DescriptionField}) VALUES ('3', 'Marketing Team')", conn).ExecuteNonQuery();
 
             new SQLiteCommand($"INSERT INTO {UsersTableName}({FirstNameField},{LastNameField}," +
-                $"{IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}) VALUES " +
+                $"{IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}, {SalaryField}) VALUES " +
                 $"('Admin', 'Admin', 'Dummy', 'admin', '{Hashing.ComputeHash("Password123")}', '0', '1500.50')", conn).ExecuteNonQuery();
 
 
@@ -158,7 +158,8 @@ namespace PharmacyInformationSystem.BusinessLogic
                                 Username: reader[4].ToString(),
                                 Password: reader[5].ToString(),
                                 RoleID: int.Parse(reader[6].ToString()),
-                                null
+                                PhoneNumbers: null,
+                                Salary: double.Parse(reader[7].ToString())
 
                             );
                         //Grab the phone numbers associated with him
@@ -218,7 +219,8 @@ namespace PharmacyInformationSystem.BusinessLogic
                                 Username: reader[4].ToString(),
                                 Password: reader[5].ToString(),
                                 RoleID: int.Parse(reader[6].ToString()),
-                                PhoneNumbers: phoneNumbers
+                                PhoneNumbers: phoneNumbers,
+                                Salary: double.Parse(reader[7].ToString())
                             ));
                     }
                     return users;
@@ -237,9 +239,9 @@ namespace PharmacyInformationSystem.BusinessLogic
                 conn.Open();
                 //Insert User Data first
                 SQLiteCommand insertUserData = new SQLiteCommand($"INSERT INTO {UsersTableName}({FirstNameField}, " +
-                    $"{LastNameField}, {IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}) VALUES (" +
+                    $"{LastNameField}, {IdCardField}, {UsernameField}, {PasswordField}, {RoleIDField}, {SalaryField}) VALUES (" +
                     $"'{user.FirstName}','{user.LastName}','{user.IdCard}','{user.Username}" +
-                    $"','{Hashing.ComputeHash(user.Password)}','{user.RoleID}')", conn);
+                    $"','{Hashing.ComputeHash(user.Password)}','{user.RoleID}', '{user.Salary}')", conn);
                 try { if (insertUserData.ExecuteNonQuery() < 0) return false; } catch { return false; }
                 //Get the new EmployeeId of the user
                 insertUserData.CommandText = $"SELECT {EmployeeIDField} FROM {UsersTableName} WHERE {UsernameField} = '{user.Username}'";
@@ -341,7 +343,8 @@ namespace PharmacyInformationSystem.BusinessLogic
                         $"{LastNameField}='{Sanitizer.SanitizeInput(user.LastName)}'," +
                         $"{UsernameField}='{Sanitizer.SanitizeInput(user.Username)}'," +
                         $"{RoleIDField}='{user.RoleID}'," +
-                        $"{IdCardField}='{user.IdCard}' WHERE {EmployeeIDField} = '{user.EmployeeID}'";
+                        $"{IdCardField}='{user.IdCard}'," +
+                        $"{SalaryField}='{user.Salary}' WHERE {EmployeeIDField} = '{user.EmployeeID}'";
                 else
                     modifyUser.CommandText = $"UPDATE {UsersTableName} SET " +
                         $"{FirstNameField}='{Sanitizer.SanitizeInput(user.FirstName)}'," +
@@ -350,7 +353,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                         $"{RoleIDField}='{user.RoleID}'," +
                         $"{IdCardField}='{user.IdCard}'," +
                         $"{PasswordField}='{Hashing.ComputeHash(user.Password)}'" +
-                        $" WHERE {EmployeeIDField} = '{user.EmployeeID}'";
+                        $"{SalaryField}='{user.Salary}' WHERE {EmployeeIDField} = '{user.EmployeeID}'";
                 try { if (!(modifyUser.ExecuteNonQuery() > 0)) return false; } catch { return false; }
 
                 DeletePhoneNumbers(conn, user.EmployeeID);

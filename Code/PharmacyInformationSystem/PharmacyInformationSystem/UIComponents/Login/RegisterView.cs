@@ -45,8 +45,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             LastNameBox.Text = User.LastName;
             IdCardBox.Text = User.IdCard;
             if (User.RoleID == 0) { RoleBox.Enabled = false; AdminBypass = true; }
-            
+            SetSellerSalaryView(User.RoleID == 2);
             RoleBox.SelectedIndex = User.RoleID -1;
+            SalaryBox.Value = (decimal)User.Salary;
+
             foreach (var item in User.PhoneNumbers)
                 PhoneNumberBox.Text += item + ", ";
             if(PhoneNumberBox.Text.Length > 0) PhoneNumberBox.Text = PhoneNumberBox.Text.Remove(PhoneNumberBox.Text.Length - 2);
@@ -211,12 +213,41 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
                     phones = PhoneNumberBox.Text.Replace(" ", "").Split(',').ToList<string>();
                 else phones = new List<string>() { PhoneNumberBox.Text };
                 if (!EditMode)
-                    User = new User(FirstNameBox.Text, LastNameBox.Text, IdCardBox.Text, -1, null, PasswordBox.Text, RoleBox.SelectedIndex + 1, phones);
-                else User = new User(FirstNameBox.Text, LastNameBox.Text, IdCardBox.Text, User.EmployeeID, User.Username, PasswordBox.Text, AdminBypass ? User.RoleID : RoleBox.SelectedIndex + 1 , phones);
+                    User = new User(FirstNameBox.Text, LastNameBox.Text, IdCardBox.Text, -1, null, PasswordBox.Text, RoleBox.SelectedIndex + 1, phones, (double)SalaryBox.Value);
+                else User = new User(FirstNameBox.Text, LastNameBox.Text, IdCardBox.Text, User.EmployeeID, User.Username, PasswordBox.Text, AdminBypass ? User.RoleID : RoleBox.SelectedIndex + 1 , phones, (double)SalaryBox.Value);
                 DialogResult = DialogResult.OK;
                 this.Close();
             }else
                 MessageBox.Show("Fill All the fields with correct values first!", "Can't Continue Operation!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void RoleBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetSellerSalaryView(RoleBox.SelectedIndex == 1);
+        }
+
+        private void SetSellerSalaryView(bool isSeller=true)
+        {
+            if (isSeller)
+            {
+                //Change it to work with percentage
+                SalaryBox.Maximum = 100;
+                SalaryBox.Value = 10;
+                SalaryBox.DecimalPlaces = 0;
+                SalaryBox.Minimum = 0;
+                SalaryTV.Text = "Μισθός (%)";
+            }
+            else
+            {
+                //Back to normal salary
+                SalaryBox.Maximum = 5000;
+                SalaryBox.Value = 0;
+                SalaryBox.DecimalPlaces = 2;
+                SalaryBox.Minimum = 0;
+                SalaryTV.Text = "Μισθός (€)";
+            }
+
+        }
+
     }
 }

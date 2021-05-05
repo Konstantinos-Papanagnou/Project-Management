@@ -14,10 +14,11 @@ namespace PharmacyInformationSystem.BusinessLogic
         public int EmployeeID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public double Salary { get; set; }
         public int RoleID { get; set; }
         public List<string> PhoneNumbers { get; set; }
     
-        public User(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers)
+        public User(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary)
         {
             this.FirstName = FirstName;
             this.LastName = LastName;
@@ -27,18 +28,19 @@ namespace PharmacyInformationSystem.BusinessLogic
             this.Password = Password;
             this.RoleID = RoleID;
             this.PhoneNumbers = PhoneNumbers;
+            this.Salary = Salary;
         }
     }
 
     public class Administrator : User
     {
         public DatabaseHandler Database { get; private set; }
-        public Administrator(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers) :base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers)
+        public Administrator(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary) :base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers, Salary)
         {
             Database = new DatabaseHandler();
         }
 
-        public Administrator(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) {
+        public Administrator(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers, user.Salary) {
             Database = new DatabaseHandler();
         }
 
@@ -128,11 +130,11 @@ namespace PharmacyInformationSystem.BusinessLogic
     public class MarketingTeam : User
     {
         DatabaseHandler Database;
-        public MarketingTeam(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers)
+        public MarketingTeam(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers, Salary)
         {
             Database = new DatabaseHandler();
         }
-        public MarketingTeam(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) 
+        public MarketingTeam(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers, user.Salary) 
         {
             Database = new DatabaseHandler(); 
         }
@@ -218,11 +220,11 @@ namespace PharmacyInformationSystem.BusinessLogic
     public class StoreKeeper : User
     {
         DatabaseHandler Database;
-        public StoreKeeper(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers)
+        public StoreKeeper(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers, Salary)
         {
             Database = new DatabaseHandler();
         }
-        public StoreKeeper(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { 
+        public StoreKeeper(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers, user.Salary) { 
             Database = new DatabaseHandler(); 
         }
 
@@ -269,11 +271,11 @@ namespace PharmacyInformationSystem.BusinessLogic
     public class Seller : User
     {
         DatabaseHandler Database;
-        public Seller(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers)
+        public Seller(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers, Salary)
         {
             Database = new DatabaseHandler();
         }
-        public Seller(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers) { Database = new DatabaseHandler(); }
+        public Seller(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers, user.Salary) { Database = new DatabaseHandler(); }
 
     }
 }
