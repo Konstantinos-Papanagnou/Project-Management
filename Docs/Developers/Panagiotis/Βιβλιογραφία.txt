@@ -1,0 +1,15 @@
+APA Style:
+
+i) Designing Pharmacy Transaction Information System: Soegoto, E. S., & Ginanjar, D. (2018, August). Designing Pharmacy Transaction Information System. In IOP Conference Series: Materials Science and Engineering (Vol. 407, No. 1, p. 012032). IOP Publishing.
+
+ii) Πληροφορίες σχετικά με τα φάρμακα αντλίθηκαν από την επίσημη ιστοσελίδα του "Γαληνός - Οδηγός φαρμάκων": https://www.galinos.gr/
+
+iii) Lucidchart (2017, July 21). UML Class Diagram Diagram Tutorial [Video]. YouTube. https://www.youtube.com/watch?v=UI6lqHOVHic
+
+iv) Lucidchart (2018, February 7). UML Use Case Diagram Tutorial [Video]. YouTube. https://www.youtube.com/watch?v=zid-MVo7M-E&t
+
+v) Degan Kettles (2020, July 1). How to create a Level-1 Data Flow Diagram (DFD) [Video]. YouTube. https://www.youtube.com/watch?v=bxKEPdTOvLk&t
+
+vi) VoidRealms (2011, July 13). C# 16 - Interface Basics [Video]. YouTube. https://www.youtube.com/watch?v=cjboaM6-PQs&t
+
+vi) VoidRealms (2011, July 13). C# 20 - First Windows Forms Application [Video]. YouTube. https://www.youtube.com/watch?v=Oxg6ciIcO3U
