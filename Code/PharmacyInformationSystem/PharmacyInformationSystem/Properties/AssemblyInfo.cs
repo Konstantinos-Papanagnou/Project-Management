@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PharmacyInformationSystem")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Pharmacy Information System")]
+[assembly: AssemblyDescription("Pharmacy Information System is an application powered by Pharmasix")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("PharmacyInformationSystem")]
-[assembly: AssemblyCopyright("Copyright © HP Inc. 2021")]
+[assembly: AssemblyCompany("Pharmasix Inc.")]
+[assembly: AssemblyProduct("Pharmacy Information System")]
+[assembly: AssemblyCopyright("Copyright © Pharmasix 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
