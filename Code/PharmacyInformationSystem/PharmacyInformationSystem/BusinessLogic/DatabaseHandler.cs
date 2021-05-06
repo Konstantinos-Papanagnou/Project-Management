@@ -11,7 +11,9 @@ namespace PharmacyInformationSystem.BusinessLogic
 {
     public class DatabaseHandler
     {
-        public static readonly string DatabaseName = "Pharmacy.db";
+        private static readonly string AppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        private static readonly string FolderPath = System.IO.Path.Combine(AppData + "/PharmacyInformationSystem");
+        public static readonly string DatabaseName = System.IO.Path.Combine(FolderPath, "Pharmacy.db");
         public static readonly string ConnName = "Data Source = " + DatabaseName + "; Version=3; foreign keys=true;";
 
         #region User Table
@@ -56,6 +58,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         public DatabaseHandler()
         {
+            System.IO.Directory.CreateDirectory(FolderPath);
             if (File.Exists(DatabaseName))
                 return;
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
