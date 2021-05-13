@@ -1,0 +1,1 @@
+c['148']=[['149',"MedicineViewDelete Constructor","topic_000000000000007C.html",0],['150',"Methods","topic_000000000000007B_methods--.html",1]];

@@ -1,0 +1,1 @@
+search_result['399']=["topic_00000000000000C6.html","SideMenu.SetAdminView Method","Configures to the Admin view"];

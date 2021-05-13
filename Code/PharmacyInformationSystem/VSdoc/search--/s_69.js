@@ -1,0 +1,1 @@
+search_result['69']=["topic_0000000000000025.html","Sanitizer.CheckString Method","Checks if the string supplied is within the policy"];
