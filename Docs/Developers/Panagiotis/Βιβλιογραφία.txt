@@ -15,3 +15,7 @@ vi) VoidRealms (2011, July 13). C# 16 - Interface Basics [Video]. YouTube. https
 vi) VoidRealms (2011, July 13). C# 20 - First Windows Forms Application [Video]. YouTube. https://www.youtube.com/watch?v=Oxg6ciIcO3U
 
 vii) Bloom, L. (2017, January 12). How to Write a Great User Manual in 12 Steps. Dozuki. https://www.dozuki.com/blog/2017/01/12/how-to-write-a-user-manual
+
+viii) Elmasri, R., & Navathe, S. (2015). Fundamentals of Database Systems (7th ed.). Pearson.
+
+ix) Τσουκαλάς Β. (2021) Πρακτική Μεθοδολογία Σχεδίασης Βάσεων Δεδομένων με χρήση Μοντέλου Οντοτήτων Συσχετίσεων (ΜΟΣ).
