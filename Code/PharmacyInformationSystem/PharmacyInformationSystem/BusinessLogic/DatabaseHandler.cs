@@ -53,6 +53,19 @@ namespace PharmacyInformationSystem.BusinessLogic
         private const string MedicineType = "Type";
         #endregion
 
+        #region Pharmacist Table
+        private const string PharmacistTableName = "Pharmacist";
+        private const string PharmacistID = "PharmacistID";
+        private const string PharmacistFirstName = "FirstName";
+        private const string PharmacistLastName = "LastName";
+        private const string PharmacistPhone = "Phone";
+        private const string PharmacistANumber = "AddressNumber";
+        private const string PharmacistAStreet = "AddressStreet";
+        private const string PharmacistATown = "AddressTown";
+        private const string PharmacistAPostalCode = "PostalCode";
+        private const string PharmacistSellerID = "SellerID";
+        #endregion
+
         /// <summary>
         /// Initializes and creates the database if it doesn't already exist
         /// </summary>
@@ -89,6 +102,12 @@ namespace PharmacyInformationSystem.BusinessLogic
                 $"{MedicineStock} INTEGER NOT NULL, {MedicineMinStock} INTEGER NOT NULL, {MedicineDueDate} STRING NOT NULL," +
                 $"{MedicineAcquisitionValue} REAL NOT NULL, {MedicineSellingPrice} REAL NOT NULL, " +
                 $"{MedicineQuality} CHAR(1) NOT NULL, {MedicineType} CHAR(1) NOT NULL)",conn).ExecuteNonQuery();
+
+            new SQLiteCommand($"CREATE TABLE IF NOT EXIST {PharmacistTableName}({PharmacistID} INTEGER PRIMARY KEY AUTOINCREMENT," +
+                $"{PharmacistFirstName} STRING NOT NULL,{PharmacistLastName} STRING NOT NULL,{PharmacistPhone} CHAR(10) NOT NULL," +
+                $"{PharmacistANumber} STRING NOT NULL,{PharmacistAStreet} STRING NOT NULL,{PharmacistATown} STRING NOT NULL," +
+                $"{PharmacistAPostalCode} CHAR(5) NOT NULL,{PharmacistSellerID} INTEGER NOT NULL, " +
+                $"FOREIGN KEY({PharmacistSellerID}) REFERENCES {UsersTableName}({EmployeeIDField}))", conn).ExecuteNonQuery();
 
             //To-Do insert default role id values and default administator data
             new SQLiteCommand($"INSERT INTO {RolesTableName}({RoleIDField},{DescriptionField}) VALUES ('0', 'Administrator')", conn).ExecuteNonQuery();
