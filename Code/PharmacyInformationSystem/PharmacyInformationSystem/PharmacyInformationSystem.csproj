@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\Pharmacist.cs" />
     <Compile Include="BusinessLogic\StoreKeeperFunctionality\Medicine.cs" />
     <Compile Include="BusinessLogic\DatabaseHandler.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\AuthenticationFailure.cs" />
