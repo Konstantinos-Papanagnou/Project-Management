@@ -58,6 +58,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         private const string PharmacistID = "PharmacistID";
         private const string PharmacistFirstName = "FirstName";
         private const string PharmacistLastName = "LastName";
+        private const string PharmacistAFM = "AFM";
         private const string PharmacistPhone = "Phone";
         private const string PharmacistANumber = "AddressNumber";
         private const string PharmacistAStreet = "AddressStreet";
@@ -104,7 +105,8 @@ namespace PharmacyInformationSystem.BusinessLogic
                 $"{MedicineQuality} CHAR(1) NOT NULL, {MedicineType} CHAR(1) NOT NULL)",conn).ExecuteNonQuery();
 
             new SQLiteCommand($"CREATE TABLE IF NOT EXIST {PharmacistTableName}({PharmacistID} INTEGER PRIMARY KEY AUTOINCREMENT," +
-                $"{PharmacistFirstName} STRING NOT NULL,{PharmacistLastName} STRING NOT NULL,{PharmacistPhone} CHAR(10) NOT NULL UNIQUE," +
+                $"{PharmacistFirstName} STRING NOT NULL,{PharmacistLastName} STRING NOT NULL,{PharmacistAFM} CHAR(9) NOT NULL UNIQUE" +
+                $",{PharmacistPhone} CHAR(10) NOT NULL UNIQUE," +
                 $"{PharmacistANumber} STRING NOT NULL,{PharmacistAStreet} STRING NOT NULL,{PharmacistATown} STRING NOT NULL," +
                 $"{PharmacistAPostalCode} CHAR(5) NOT NULL,{PharmacistSellerID} INTEGER NOT NULL, " +
                 $"FOREIGN KEY({PharmacistSellerID}) REFERENCES {UsersTableName}({EmployeeIDField}))", conn).ExecuteNonQuery();
@@ -501,6 +503,77 @@ namespace PharmacyInformationSystem.BusinessLogic
             }
         }
 
-        
+        /// <summary>
+        /// Inserts a new pharmacist
+        /// </summary>
+        /// <param name="pharmacist"></param>
+        /// <returns></returns>
+        internal bool InsertPharmacist(Pharmacist pharmacist)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                //Insert Pharmacist Data first
+                SQLiteCommand insertPharmacistData = new SQLiteCommand($"INSERT INTO {PharmacistTableName}({PharmacistFirstName}, " +
+                    $"{PharmacistLastName}, {PharmacistAFM}, {PharmacistPhone}, {PharmacistANumber}, {PharmacistAStreet}, " +
+                    $"{PharmacistATown}, {PharmacistAPostalCode},{PharmacistSellerID}) VALUES (" +
+                    $"'{pharmacist.FirstName}','{pharmacist.LastName}','{pharmacist.AFM}','{pharmacist.Phone}','{pharmacist.PANumber}" +
+                    $"','{pharmacist.PAStreet}','{pharmacist.PAPostalCode}', '{pharmacist.PSellerID}')", conn);
+                try { if (insertPharmacistData.ExecuteNonQuery() < 0) return false; } catch { return false; }
+                //Get the new PharmacistId of the pharmacist
+                insertPharmacistData.CommandText = $"SELECT {PharmacistID} FROM {PharmacistTableName} WHERE {PharmacistAFM} = '{pharmacist.AFM}'";
+                using (var reader = insertPharmacistData.ExecuteReader())
+                {
+                    //Well done finding this easter egg!
+                    int druggistID = 0;
+                    while (reader.Read())
+                    {
+                        druggistID = int.Parse(reader[0].ToString());
+                    }
+                    //User was not added/found something went completely wrong
+                    if (druggistID == 0) return false;
+
+                    return true;
+                }
+            }
+        }
+
+        internal bool ModifyPharmacist(Pharmacist pharmacist)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                SQLiteCommand modifyPharmacist = new SQLiteCommand(conn);
+                modifyPharmacist.CommandText=$"UPDATE {PharmacistTableName} SET "+
+                    $"{PharmacistFirstName}='{Sanitizer.SanitizeInput(pharmacist.FirstName)}',"+
+                    $"{PharmacistLastName}='{Sanitizer.SanitizeInput(pharmacist.LastName)}'," +
+                    $"{PharmacistPhone}='{pharmacist.Phone}',"+
+
+                /*$"{SalaryField}='{user.Salary}' WHERE {EmployeeIDField} = '{user.EmployeeID}'";
+                else
+                    modifyUser.CommandText = $"UPDATE {UsersTableName} SET " +
+                        $"{FirstNameField}='{Sanitizer.SanitizeInput(user.FirstName)}'," +
+                        $"{LastNameField}='{Sanitizer.SanitizeInput(user.LastName)}'," +
+                        $"{UsernameField}='{Sanitizer.SanitizeInput(user.Username)}'," +
+                        $"{RoleIDField}='{user.RoleID}'," +
+                        $"{IdCardField}='{user.IdCard}'," +
+                        $"{PasswordField}='{Hashing.ComputeHash(user.Password)}'" +
+                        $"{SalaryField}='{user.Salary}' WHERE {EmployeeIDField} = '{user.EmployeeID}'";
+                try { if (!(modifyUser.ExecuteNonQuery() > 0)) return false; } catch { return false; }
+
+                DeletePhoneNumbers(conn, user.EmployeeID);
+                foreach (string number in user.PhoneNumbers)
+                {
+                    InsertPhoneNumber(conn, user.EmployeeID, number);
+                }*/
+                return true;
+            }
+        }
+
+
+
+
+
+
     }
 }
