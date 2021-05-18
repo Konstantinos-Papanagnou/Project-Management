@@ -80,6 +80,8 @@
     <Compile Include="BusinessLogic\StoreKeeperFunctionality\MedicineSanitizer.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\UserSanitizer.cs" />
     <Compile Include="BusinessLogic\Users.cs" />
+    <Compile Include="BusinessLogic\Order.cs" />
+    <Compile Include="BusinessLogic\OrderLine.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
