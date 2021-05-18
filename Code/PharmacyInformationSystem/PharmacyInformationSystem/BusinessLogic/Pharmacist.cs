@@ -11,6 +11,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         public int PharmacistID { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
+        public string AFM { get; set; }
         public string Phone { get; set; }
         public string PANumber { get; set; }
         public string PAStreet { get; set; }
