@@ -66,6 +66,24 @@ namespace PharmacyInformationSystem.BusinessLogic
         private const string PharmacistAPostalCode = "PostalCode";
         private const string PharmacistSellerID = "SellerID";
         #endregion
+        /*public int OrderID { get; set; }
+        public double TotalCost { get; set; }
+        public string OrderDate { get; set; }
+        public List<string> OrderList { get; set; }
+        public int SellerIDOrder { get; set; }
+        public string SellerFirstName { get; set; }
+        public string SellerLaststName { get; set; }
+        public int PharmacistIDOrder { get; set; }
+        public string PharmaFirstName { get; set; }
+        public string PharmaLaststName { get; set; }
+        public string PharmaAddressNumber { get; set; }
+        public string PharmaAddressStreet { get; set; }
+        public string PharmaAddressTown { get; set; }
+        public string PharmaAddressPostalCode { get; set; }
+        public string PharmaPhoneNumber { get; set; }*/
+        #region Order Table
+
+        #endregion
 
         /// <summary>
         /// Initializes and creates the database if it doesn't already exist
@@ -538,34 +556,26 @@ namespace PharmacyInformationSystem.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Modify existing pharmacist
+        /// </summary>
+        /// <param name="pharmacist"></param>
+        /// <returns></returns>
         internal bool ModifyPharmacist(Pharmacist pharmacist)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
                 SQLiteCommand modifyPharmacist = new SQLiteCommand(conn);
-                modifyPharmacist.CommandText=$"UPDATE {PharmacistTableName} SET "+
-                    $"{PharmacistFirstName}='{Sanitizer.SanitizeInput(pharmacist.FirstName)}',"+
+                modifyPharmacist.CommandText = $"UPDATE {PharmacistTableName} SET " +
+                    $"{PharmacistFirstName}='{Sanitizer.SanitizeInput(pharmacist.FirstName)}'," +
                     $"{PharmacistLastName}='{Sanitizer.SanitizeInput(pharmacist.LastName)}'," +
-                    $"{PharmacistPhone}='{pharmacist.Phone}',"+
-
-                /*$"{SalaryField}='{user.Salary}' WHERE {EmployeeIDField} = '{user.EmployeeID}'";
-                else
-                    modifyUser.CommandText = $"UPDATE {UsersTableName} SET " +
-                        $"{FirstNameField}='{Sanitizer.SanitizeInput(user.FirstName)}'," +
-                        $"{LastNameField}='{Sanitizer.SanitizeInput(user.LastName)}'," +
-                        $"{UsernameField}='{Sanitizer.SanitizeInput(user.Username)}'," +
-                        $"{RoleIDField}='{user.RoleID}'," +
-                        $"{IdCardField}='{user.IdCard}'," +
-                        $"{PasswordField}='{Hashing.ComputeHash(user.Password)}'" +
-                        $"{SalaryField}='{user.Salary}' WHERE {EmployeeIDField} = '{user.EmployeeID}'";
-                try { if (!(modifyUser.ExecuteNonQuery() > 0)) return false; } catch { return false; }
-
-                DeletePhoneNumbers(conn, user.EmployeeID);
-                foreach (string number in user.PhoneNumbers)
-                {
-                    InsertPhoneNumber(conn, user.EmployeeID, number);
-                }*/
+                    $"{PharmacistPhone}='{pharmacist.Phone}'," +
+                    $"{PharmacistANumber}='{pharmacist.PANumber}'," +
+                    $"{PharmacistAStreet}='{pharmacist.PAStreet}'," +
+                    $"{PharmacistATown}='{pharmacist.PATown}'," +
+                    $"{PharmacistAPostalCode}='{pharmacist.PAPostalCode}'," +
+                    $"{PharmacistSellerID}='{pharmacist.PSellerID}' WHERE {PharmacistAFM}='{pharmacist.AFM}'";
                 return true;
             }
         }
