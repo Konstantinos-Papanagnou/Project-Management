@@ -612,6 +612,52 @@ namespace PharmacyInformationSystem.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Deletes all order lines
+        /// </summary>
+        /// <param name="conn"></param>
+        /// <param name="orderID"></param>
+        /// <returns></returns>
+        private bool DeleteOrderLine(SQLiteConnection conn, int orderID)
+        {
+            SQLiteCommand deleteOrderLine = new SQLiteCommand($"DELETE FROM {OrderLineTableName} WHERE {PharmacistIDOrder} = '{orderID}'", conn);
+            return deleteOrderLine.ExecuteNonQuery() > 0;
+        }
+
+        /// <summary>
+        /// Deletes or cancels an order
+        /// </summary>
+        /// <param name="conn"></param>
+        /// <param name="druggistID"></param>
+        /// <param name="orderID"></param>
+        /// <returns></returns>
+        
+        private bool DeleteOrder(SQLiteConnection conn, int druggistID, Order order)
+        {
+            DeleteOrderLine(conn, order.OrderID);
+            SQLiteCommand deleteOrder = new SQLiteCommand($"DELETE FROM {OrderTableName} WHERE {PharmacistIDOrder} = '{druggistID}'", conn);
+            return deleteOrder.ExecuteNonQuery() > 0;
+        }
+
+        /// <summary>
+        /// Deletes a pharmacist
+        /// </summary>
+        /// <param name="druggistID"></param>
+        /// <param name="order"></param>
+        /// <returns></returns>
+        internal bool DeletePharmacist(int druggistID, Order order)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                //First remove all the information of that pharmacist from the other tables.
+                SQLiteCommand deletePharmacist = new SQLiteCommand(conn);
+                DeleteOrder(conn, druggistID, order);
+                //Finally remove the pharmacist from the Pharmacists table
+                deletePharmacist.CommandText = $"DELETE FROM {PharmacistTableName} WHERE {PharmacistID} = '{druggistID}'";
+                return deletePharmacist.ExecuteNonQuery() > 0;
+            }
+        }
 
 
 
