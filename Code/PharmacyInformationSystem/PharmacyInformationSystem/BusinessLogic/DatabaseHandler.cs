@@ -66,25 +66,35 @@ namespace PharmacyInformationSystem.BusinessLogic
         private const string PharmacistAPostalCode = "PostalCode";
         private const string PharmacistSellerID = "SellerID";
         #endregion
-        /*public int OrderID { get; set; }
-        public double TotalCost { get; set; }
-        public string OrderDate { get; set; }
-        public List<string> OrderList { get; set; }
-        public int SellerIDOrder { get; set; }
-        public string SellerFirstName { get; set; }
-        public string SellerLaststName { get; set; }
-        public int PharmacistIDOrder { get; set; }
-        public string PharmaFirstName { get; set; }
-        public string PharmaLaststName { get; set; }
-        public string PharmaAddressNumber { get; set; }
-        public string PharmaAddressStreet { get; set; }
-        public string PharmaAddressTown { get; set; }
-        public string PharmaAddressPostalCode { get; set; }
-        public string PharmaPhoneNumber { get; set; }*/
+        
         #region Order Table
-
+        private const string OrderTableName = "Order";
+        private const string OrderIDField = "OrderID";
+        private const string SellerIDOrderField = "SellerID";
+        private const string SellerFirstName = "SFirstName";
+        private const string SellerLaststName = "SLastName";
+        private const string PharmacistIDOrder = "PharmacistID";
+        private const string PharmaFirstName = "PFirstName";
+        private const string PharmaLastName = "PLastName";
+        private const string PharmaAddressNumber = "PAddressNumber";
+        private const string PharmaAddressStreet = "PAddressStreet";
+        private const string PharmaAddressTown = "PAddressTown";
+        private const string PharmaAddressPostalCode = "PAddressPostalCode";
+        private const string PharmaPhoneNumber = "PPhoneNumber";
+        private const string TotalCostField = "TotalCost";
+        private const string OrderDateField = "OrderDate";
+        private const string OrderLineField = "OrderLine";
         #endregion
 
+        #region OrderLine Table
+        private const string OrderLineTableName = "OrderLine";
+        private const string OrdIDField = "OrderID";
+        private const string MediID = "MedicineID";
+        private const string MediName = "MedicineName";
+        private const string ProductQuantity = "ProductQuanftity";
+        private const string TotalProductCost = "TotalProductCost";
+        #endregion
+        
         /// <summary>
         /// Initializes and creates the database if it doesn't already exist
         /// </summary>
@@ -128,6 +138,28 @@ namespace PharmacyInformationSystem.BusinessLogic
                 $"{PharmacistANumber} STRING NOT NULL,{PharmacistAStreet} STRING NOT NULL,{PharmacistATown} STRING NOT NULL," +
                 $"{PharmacistAPostalCode} CHAR(5) NOT NULL,{PharmacistSellerID} INTEGER NOT NULL, " +
                 $"FOREIGN KEY({PharmacistSellerID}) REFERENCES {UsersTableName}({EmployeeIDField}))", conn).ExecuteNonQuery();
+
+            new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {OrderTableName}({OrderIDField} INTEGER PRIMARY KEY AUTOINCREMENT,"+
+                $"{SellerIDOrderField} INTEGER NOT NULL REFERENCES {UsersTableName}({EmployeeIDField})," +
+                $"{SellerFirstName} STRING NOT NULL REFERENCES {UsersTableName}({FirstNameField})," +
+                $"{SellerLaststName} STRING NOT NULL REFERENCES {UsersTableName}({LastNameField})," +
+                $"{PharmacistIDOrder} INTEGER NOT NULL REFERENCES {PharmacistTableName}({PharmacistID})," +
+                $"{PharmaFirstName} STRING NOT NULL REFERENCES {PharmacistTableName}({PharmacistFirstName})," +
+                $"{PharmaLastName} STRING NOT NULL REFERENCES {PharmacistTableName}({PharmacistLastName})," +
+                $"{PharmaAddressNumber} STRING NOT NULL REFERENCES {PharmacistTableName}({PharmacistANumber})," +
+                $"{PharmaAddressStreet} STRING NOT NULL REFERENCES {PharmacistTableName}({PharmacistAStreet})," +
+                $"{PharmaAddressTown} STRING NOT NULL REFERENCES {PharmacistTableName}({PharmacistATown})," +
+                $"{PharmaAddressPostalCode} CHAR(5) NOT NULL REFERENCES {PharmacistTableName}({PharmacistAPostalCode})," +
+                $"{PharmaPhoneNumber} CHAR(10) NOT NULL UNIQUE REFERENCES {PharmacistTableName}({PharmacistPhone})," +
+                $"{TotalCostField} DOUBLE NOT NULL,{OrderDateField} STRING NOT NULL," +
+                $"{OrderLineField} STRING NOT NULL)", conn).ExecuteNonQuery();
+
+            new SQLiteCommand($"CREATE IF NOT EXIST {OrderLineTableName}(" +
+                $"{OrdIDField} INTEGER NOT NULL REFERENCES {OrderTableName}({OrderIDField}) ," +
+                $"{MediID} INTEGER NOT NULL REFERENCES {MedicineTableName}({MedicineID})," +
+                $"{MediName} STRING NOT NULL REFERENCES {MedicineTableName}({MedicineName})," +
+                $"{ProductQuantity} INTEGER NOT NULL,{TotalProductCost} INTEGER NOT NULL, " +
+                $"PRIMARY KEY({OrdIDField},{MediID})",conn).ExecuteNonQuery();
 
             //To-Do insert default role id values and default administator data
             new SQLiteCommand($"INSERT INTO {RolesTableName}({RoleIDField},{DescriptionField}) VALUES ('0', 'Administrator')", conn).ExecuteNonQuery();
