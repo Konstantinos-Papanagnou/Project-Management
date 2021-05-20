@@ -426,7 +426,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                         $"{UsernameField}='{Sanitizer.SanitizeInput(user.Username)}'," +
                         $"{RoleIDField}='{user.RoleID}'," +
                         $"{IdCardField}='{user.IdCard}'," +
-                        $"{PasswordField}='{Hashing.ComputeHash(user.Password)}'" +
+                        $"{PasswordField}='{Hashing.ComputeHash(user.Password)}'," +
                         $"{SalaryField}='{user.Salary}' WHERE {EmployeeIDField} = '{user.EmployeeID}'";
                 try { if (!(modifyUser.ExecuteNonQuery() > 0)) return false; } catch { return false; }
 
