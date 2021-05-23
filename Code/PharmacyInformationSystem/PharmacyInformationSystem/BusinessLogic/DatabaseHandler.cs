@@ -644,7 +644,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="druggistID"></param>
         /// <param name="order"></param>
-        /// <returns></returns>
+        /// <returns>True if record was deleted successfully</returns>
         internal bool DeletePharmacist(int druggistID, Order order)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
@@ -659,7 +659,25 @@ namespace PharmacyInformationSystem.BusinessLogic
             }
         }
 
-
+        /// <summary>
+        /// Inserts a new line in an order
+        /// </summary>
+        /// <param name="conn"></param>
+        /// <param name="oID"></param>
+        /// <param name="medicine"></param>
+        /// <param name="quantity"></param>
+        /// <returns>True if record was inserted successfully</returns>
+        private bool InsertOrderLine(SQLiteConnection conn, int oID, Medicine medicine, int quantity )
+        {
+            try
+            {
+                SQLiteCommand insertOrderLine = new SQLiteCommand($"INSERT INTO {OrderLineTableName}({OrdIDField}," +
+                    $"{MediID},{MediName},{ProductQuantity},{TotalProductCost}) VALUES ('{oID}','{medicine.MedID}'," +
+                    $"'{quantity}','{quantity*medicine.MedSellingValue}')", conn);
+                return insertOrderLine.ExecuteNonQuery() > 0;
+            }
+            catch { return false; }
+        }
 
 
 
