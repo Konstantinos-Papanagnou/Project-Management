@@ -667,19 +667,55 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <param name="medicine"></param>
         /// <param name="quantity"></param>
         /// <returns>True if record was inserted successfully</returns>
-        private bool InsertOrderLine(SQLiteConnection conn, int oID, Medicine medicine, int quantity )
+        private bool InsertOrderLine(SQLiteConnection conn, int oID, Medicine medicine, int quantity)
         {
             try
             {
                 SQLiteCommand insertOrderLine = new SQLiteCommand($"INSERT INTO {OrderLineTableName}({OrdIDField}," +
                     $"{MediID},{MediName},{ProductQuantity},{TotalProductCost}) VALUES ('{oID}','{medicine.MedID}'," +
-                    $"'{quantity}','{quantity*medicine.MedSellingValue}')", conn);
+                    $"'{medicine.MedName}','{quantity}','{quantity*medicine.MedSellingValue}')", conn);
                 return insertOrderLine.ExecuteNonQuery() > 0;
             }
             catch { return false; }
         }
 
+        internal bool InsertOrder(Order order)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                //Insert User Data first
+                SQLiteCommand insertOrderData = new SQLiteCommand($"INSERT INTO {OrderTableName}({SellerIDOrderField}, " +
+                    $"{SellerFirstName}, {SellerLaststName}, {PharmacistIDOrder}, {PharmaFirstName}, {PharmaLastName}, " +
+                    $"{PharmaAddressNumber},{PharmaAddressStreet},{PharmaAddressTown},{PharmaAddressPostalCode},{PharmaPhoneNumber}, " +
+                    $"{OrderDateField}) VALUES (" +
+                    $"'{order.SellerIDOrder}','{order.SellerFirstName}','{order.SellerLaststName}','{order.PharmacistIDOrder}" +
+                    $"','{order.PharmaFirstName}','{order.PharmaLaststName}', '{order.PharmaAddressNumber}','{order.PharmaAddressStreet}','" +
+                    $"{order.PharmaAddressTown}','{order.PharmaAddressPostalCode}','{order.PharmaPhoneNumber}','{order.OrderDate}')", conn);
+                try { if (insertOrderData.ExecuteNonQuery() < 0) return false; } catch { return false; }
+                //Get the new OrderId of the order
+                insertOrderData.CommandText = $"SELECT {OrderIDField} FROM {OrderTableName} WHERE {SellerIDOrderField} = '{order.SellerIDOrder}' " +
+                    $"AND {PharmacistIDOrder} ='{order.PharmacistIDOrder}' AND {OrderDateField} ='{order.OrderDate}'";
+                using (var reader = insertOrderData.ExecuteReader())
+                {
+                    int orid = 0;
+                    while (reader.Read())
+                    {
+                        orid = int.Parse(reader[0].ToString());
+                    }
+                    //Order was not added/found something went completely wrong
+                    if (orid == 0) return false;
+                    //Insert the order lines of the order one at a time
+                    foreach (string orderLine in order.OrderList)
+                    {
+                        /*private bool InsertOrderLine(SQLiteConnection conn, int oID, Medicine medicine, int quantity)*/
+                        InsertOrderLine(conn, orid, orderLine, 5);
+                    }
 
+                    return true;
+                }
+            }
+        }
 
     }
 }
