@@ -17,9 +17,9 @@ namespace PharmacyInformationSystem.BusinessLogic
         public string PAStreet { get; set; }
         public string PATown { get; set; }
         public string PAPostalCode { get; set; }
-        public string PSellerID { get; set; }
+        public int PSellerID { get; set; }
 
-        public Pharmacist(int pharmacistID, string lastName, string firstName, string phone, string pANumber, string pAStreet, string pATown, string pAPostalCode, string pSellerID)
+        public Pharmacist(int pharmacistID, string lastName, string firstName, string phone, string pANumber, string pAStreet, string pATown, string pAPostalCode, int pSellerID)
         {
             PharmacistID = pharmacistID;
             LastName = lastName;
