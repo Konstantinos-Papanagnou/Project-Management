@@ -375,7 +375,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="conn">The open connection to the database</param>
         /// <param name="employeeId">The employee id of the user to remove the number from</param>
-        /// <returns></returns>
+        /// <returns>True if phone number was deleted successfully</returns>
         private bool DeletePhoneNumbers(SQLiteConnection conn, int employeeId)
         {
             SQLiteCommand deleteUser = new SQLiteCommand($"DELETE FROM {PhoneNumberTableName} WHERE {EmployeeIDField} = '{employeeId}'", conn);
@@ -388,7 +388,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <param name="conn">The open connection to the database</param>
         /// <param name="employeeId">The employee id of the user associated with the number</param>
         /// <param name="phoneNumber">The phone number to insert</param>
-        /// <returns></returns>
+        /// <returns>True if phone number was inserted successfully</returns>
         private bool InsertPhoneNumber(SQLiteConnection conn, int employeeId, string phoneNumber)
         {
             try
@@ -443,7 +443,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// Adds Medicine's Data 
         /// </summary>
         /// <param name="medicine"></param>
-        /// <returns></returns>
+        /// <returns>True if medicine was inserted successfully</returns>
         internal Medicine AddMedicine(Medicine medicine)
         {
             using(SQLiteConnection conn = new SQLiteConnection(ConnName))
@@ -481,7 +481,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// Removes a specific medicine
         /// </summary>
         /// <param name="medId"></param>
-        /// <returns></returns>
+        /// <returns>True if medicine was deleted successfully</returns>
         internal bool RemoveMedicine(int medID)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
@@ -498,7 +498,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// Update medicine's info
         /// </summary>
         /// <param name="medicine"></param>
-        /// <returns></returns>
+        /// <returns>True if medicine's data was updated successfully</returns>
         internal bool UpdateMedicine(Medicine medicine)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
@@ -517,7 +517,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <summary>
         /// Display all Medicines
         /// </summary>
-        /// <returns></returns>
+        /// <returns>All medicines and their associated data from the database</returns>
         internal List<Medicine> DisplayMedicines()
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
@@ -557,7 +557,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// Inserts a new pharmacist
         /// </summary>
         /// <param name="pharmacist"></param>
-        /// <returns></returns>
+        /// <returns>True if pharmacist's data was inserted successfully</returns>
         internal bool InsertPharmacist(Pharmacist pharmacist)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
@@ -592,7 +592,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// Modify existing pharmacist
         /// </summary>
         /// <param name="pharmacist"></param>
-        /// <returns></returns>
+        /// <returns>True if pharmacist's data was modified successfully</returns>
         internal bool ModifyPharmacist(Pharmacist pharmacist)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
@@ -617,7 +617,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="conn"></param>
         /// <param name="orderID"></param>
-        /// <returns></returns>
+        /// <returns>True if order line was deleted successfully</returns>
         private bool DeleteOrderLine(SQLiteConnection conn, int orderID)
         {
             SQLiteCommand deleteOrderLine = new SQLiteCommand($"DELETE FROM {OrderLineTableName} WHERE {PharmacistIDOrder} = '{orderID}'", conn);
@@ -630,7 +630,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <param name="conn"></param>
         /// <param name="druggistID"></param>
         /// <param name="orderID"></param>
-        /// <returns></returns>
+        /// <returns>True if order was deleted successfully</returns>
         
         private bool DeleteOrder(SQLiteConnection conn, int druggistID, Order order)
         {
@@ -678,7 +678,11 @@ namespace PharmacyInformationSystem.BusinessLogic
             }
             catch { return false; }
         }
-
+        /// <summary>
+        /// Insert order
+        /// </summary>
+        /// <param name="order"></param>
+        /// <returns>True if order was inserted successfully</returns>
         internal bool InsertOrder(Order order)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
@@ -713,6 +717,40 @@ namespace PharmacyInformationSystem.BusinessLogic
                     }
 
                     return true;
+                }
+            }
+        }
+        /// <summary>
+        /// Retrive pharmacists from Database
+        /// </summary>
+        /// <returns>All pharmacist for a particular seller and their associated data from the database</returns>
+        internal List<Pharmacist> RetrievePharmacist()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+
+                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM {PharmacistTableName}", conn);
+                using (var reader = command.ExecuteReader())
+                {
+                    List<Pharmacist> pharmacists = new List<Pharmacist>();
+                    //Get the Pharmacists
+                    while (reader.Read())
+                    {
+                        //add the pharmacist to the list
+                        pharmacists.Add(new Pharmacist(
+                            pharmacistID: int.Parse(reader[0].ToString()),
+                            lastName: reader[1].ToString(),
+                            firstName: reader[2].ToString(),
+                            phone: reader[3].ToString(),
+                            pANumber: reader[4].ToString(),
+                            pAStreet: reader[5].ToString(),
+                            pATown: reader[6].ToString(),
+                            pAPostalCode: reader[7].ToString(),
+                            pSellerID: int.Parse(reader[8].ToString())
+                            ));
+                    }
+                    return pharmacists;
                 }
             }
         }
