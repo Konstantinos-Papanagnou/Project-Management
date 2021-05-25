@@ -144,7 +144,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="med"></param>
         /// <param name="unitSold"></param>
-        /// <returns></returns>
+        /// <returns>Medicine's profit per day</returns>
         public double ProfitPerDay(Medicine med, int unitSold)
         {
             return (med.MedSellingValue - med.MedAcquisitionValue) * unitSold;
@@ -155,7 +155,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="med"></param>
         /// <param name="unitSold"></param>
-        /// <returns></returns>
+        /// <returns>Medicine's profit per month</returns>
         public double ProfitPerMonth(Medicine med, int unitSold)
         {
             double ppM = 0;
@@ -171,7 +171,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="med"></param>
         /// <param name="unitSold"></param>
-        /// <returns></returns>
+        /// <returns>Medicine's profit per year</returns>
         public double ProfitPerYear(Medicine med, int unitSold)
         {
             double ppY = 0;
@@ -188,7 +188,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <param name="medCount"></param>
         /// <param name="med"></param>
         /// <param name="unitSold"></param>
-        /// <returns></returns>
+        /// <returns>Company's profit per month</returns>
         public double CompanyPerMonth(int medCount, Medicine med, int unitSold)
         {
             double cpM = 0;
@@ -205,7 +205,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <param name="medCount"></param>
         /// <param name="med"></param>
         /// <param name="unitSold"></param>
-        /// <returns></returns>
+        /// <returns>Company's profit per year</returns>
         public double CompanyPerYear(int medCount, Medicine med, int unitSold)
         {
             double cpΥ = 0;
@@ -232,7 +232,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// Adds a medicine
         /// </summary>
         /// <param name="medicine"></param>
-        /// <returns></returns>
+        /// <returns>True if medicine was added successfully</returns>
         public Medicine AddMedicine(Medicine medicine)
         {
             return Database.AddMedicine(medicine);
@@ -242,7 +242,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// Removes a specific medicine
         /// </summary>
         /// <param name="medicine"></param>
-        /// <returns></returns>
+        /// <returns>True if medicine was delete successfully</returns>
         public bool RemoveMedicine(int MedID)
         {
             return Database.RemoveMedicine(MedID);
@@ -252,7 +252,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// Update a specific medicine
         /// </summary>
         /// <param name="medicine"></param>
-        /// <returns></returns>
+        /// <returns>True if medicine info was updated successfully</returns>
         public bool UpdateMedicine(Medicine medicine)
         {
             return Database.UpdateMedicine(medicine);
@@ -261,7 +261,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <summary>
         /// Displays all medicines
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The list with all the medicine from the database</returns>
         public List<Medicine> GetMedicines()
         {
             return Database.DisplayMedicines();
