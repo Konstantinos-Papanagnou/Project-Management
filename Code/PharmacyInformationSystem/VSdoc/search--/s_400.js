@@ -1,1 +1,0 @@
-search_result['400']=["topic_00000000000000C7.html","SideMenu.SetMarketingView Method","Configures to the marketing view"];

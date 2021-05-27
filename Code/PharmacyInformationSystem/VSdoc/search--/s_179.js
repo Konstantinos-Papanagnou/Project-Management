@@ -1,1 +1,0 @@
-search_result['179']=["topic_0000000000000060.html","RegisterView Constructor","Call this Constructor if you want to insert user information"];

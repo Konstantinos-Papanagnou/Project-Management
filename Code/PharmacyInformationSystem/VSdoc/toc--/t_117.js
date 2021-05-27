@@ -1,1 +1,0 @@
-c['117']=[['118',"Dispose Method","topic_00000000000000CA_overloads--.html",1],['120',"SetAdminView Method","topic_00000000000000C6.html",0],['121',"SetMarketingView Method","topic_00000000000000C7.html",0],['122',"SetSellerView Method","topic_00000000000000C9.html",0],['123',"SetStoreKeeperView Method","topic_00000000000000C8.html",0]];

@@ -1,1 +1,0 @@
-search_result['67']=["topic_0000000000000024.html","Medicine(Int32, String, String, String, String, Int32, Int32, Double, Double, Char, Char) Constructor",""];

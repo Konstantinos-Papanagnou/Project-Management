@@ -1,1 +1,0 @@
-c['26']=[['27',"CompanyPerMonth Method","topic_0000000000000040.html",0],['28',"CompanyPerYear Method","topic_0000000000000041.html",0],['29',"ProfitPerDay Method","topic_000000000000003D.html",0],['30',"ProfitPerMonth Method","topic_000000000000003E.html",0],['31',"ProfitPerYear Method","topic_000000000000003F.html",0]];

@@ -1,1 +1,0 @@
-search_result['370']=["topic_00000000000000B6.html","UsersList.RefreshList (User, Operation) Method","Implementation of the Derived interface to update the ui list based with less overhead\r\nThis method does not require to retrieve all the users from the database\r\nInstead we are updating the existing u..."];

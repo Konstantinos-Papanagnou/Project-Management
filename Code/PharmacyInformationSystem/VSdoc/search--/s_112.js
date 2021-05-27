@@ -1,1 +1,0 @@
-search_result['112']=["topic_000000000000003D.html","MarketingTeam.ProfitPerDay Method","Medicine\u0027s profit per day"];

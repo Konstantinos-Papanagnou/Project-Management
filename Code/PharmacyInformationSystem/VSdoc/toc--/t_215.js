@@ -1,1 +1,0 @@
-c['215']=[['216',"Format Enumeration","topic_000000000000009A.html",0],['217',"Mask Enumeration","topic_0000000000000098.html",0],['218',"Fields","topic_000000000000008B_vars--.html",1]];

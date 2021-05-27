@@ -1,1 +1,0 @@
-c['32']=[['33',"Medicine Constructor","topic_0000000000000023_overloads--.html",1],['36',"Properties","topic_0000000000000017_props--.html",1]];
