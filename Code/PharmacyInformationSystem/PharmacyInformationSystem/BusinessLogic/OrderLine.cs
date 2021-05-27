@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PharmacyInformationSystem.BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,18 +10,16 @@ namespace PharmacyInformationSystem
     class OrderLine
     {
         public int OrdID { get; set; }
-        public int MediID { get; set; }
-        public string MediName { get; set; } 
+        public Medicine Medicine { get; set; }
         public int ProductQuantity { get; set; }
         public double TotalProductCost { get; set; }
 
-        public OrderLine(int ordID, int mediID, string mediName, int productQuantity, double totalProductCost)
+        public OrderLine(int OrdID, Medicine Medicine, int ProductQuantity, double TotalProductCost)
         {
-            OrdID = ordID;
-            MediID = mediID;
-            MediName = mediName;
-            ProductQuantity = productQuantity;
-            TotalProductCost = totalProductCost;
+            this.OrdID = OrdID;
+            this.Medicine = Medicine;
+            this.ProductQuantity = ProductQuantity;
+            this.TotalProductCost = TotalProductCost;
         }
     }
 }

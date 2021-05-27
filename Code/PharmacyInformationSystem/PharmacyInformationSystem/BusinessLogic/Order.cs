@@ -3,44 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PharmacyInformationSystem.BusinessLogic;
 
 namespace PharmacyInformationSystem
 {
+    /// <summary>
+    /// Class for the Order
+    /// </summary>
     class Order
     {
         public int OrderID { get; set; }
-        public int SellerIDOrder { get; set; }
-        public string SellerFirstName { get; set; }
-        public string SellerLaststName { get; set; }
-        public int PharmacistIDOrder { get; set; }
-        public string PharmaFirstName { get; set; }
-        public string PharmaLaststName { get; set; }
-        public string PharmaAddressNumber { get; set; }
-        public string PharmaAddressStreet { get; set; }
-        public string PharmaAddressTown { get; set; }
-        public string PharmaAddressPostalCode { get; set; }
-        public string PharmaPhoneNumber { get; set; }
+        public Seller Seller { get; set; }
+        public Pharmacist Pharmacist { get; set; }
         public double TotalCost { get; set; }
         public string OrderDate { get; set; }
-        public List<string> OrderList { get; set; }
-
-        public Order(int orderID, int sellerIDOrder, string sellerFirstName, string sellerLaststName, int pharmacistIDOrder, string pharmaFirstName, string pharmaLaststName, string pharmaAddressNumber, string pharmaAddressStreet, string pharmaAddressTown, string pharmaAddressPostalCode, string pharmaPhoneNumber, double totalCost, string orderDate, List<string> orderList)
+        public List<OrderLine> OrderList { get; set; }
+        /// <summary>
+        /// Constructs a new Order
+        /// </summary>
+        /// <param name="OrderID">The assigned Order ID</param>
+        /// <param name="Seller">The assigned Seller</param>
+        /// <param name="Pharmacist">The assigned Pharmacist</param>
+        /// <param name="TotalCost">The total cost of the order</param>
+        /// <param name="OrderDate">The date the order took place</param>
+        /// <param name="OrderList">The list of items described in the order</param>
+        public Order(int OrderID, Seller Seller, Pharmacist Pharmacist, double TotalCost, string OrderDate, List<OrderLine> OrderList)
         {
-            OrderID = orderID;
-            SellerIDOrder = sellerIDOrder;
-            SellerFirstName = sellerFirstName;
-            SellerLaststName = sellerLaststName;
-            PharmacistIDOrder = pharmacistIDOrder;
-            PharmaFirstName = pharmaFirstName;
-            PharmaLaststName = pharmaLaststName;
-            PharmaAddressNumber = pharmaAddressNumber;
-            PharmaAddressStreet = pharmaAddressStreet;
-            PharmaAddressTown = pharmaAddressTown;
-            PharmaAddressPostalCode = pharmaAddressPostalCode;
-            PharmaPhoneNumber = pharmaPhoneNumber;
-            TotalCost = totalCost;
-            OrderDate = orderDate;
-            OrderList = orderList;
+            this.OrderID = OrderID;
+            this.Seller = Seller;
+            this.Pharmacist = Pharmacist;
+            this.TotalCost = TotalCost;
+            this.OrderDate = OrderDate;
+            this.OrderList = OrderList;
         }
     }
 }
