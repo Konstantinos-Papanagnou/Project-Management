@@ -1,0 +1,1 @@
+search_result['12']=["frlrfPharmacyInformationSystemBusinessLogicAdministratorClassSubstituteTopic.html","Administrator.Substitute Method","Helper function to substitute the greek alphabet with our custom alphabet"];

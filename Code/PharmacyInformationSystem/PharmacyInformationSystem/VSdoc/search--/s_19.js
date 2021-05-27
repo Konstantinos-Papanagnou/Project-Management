@@ -1,0 +1,1 @@
+search_result['19']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassAddMedicineTopic.html","DatabaseHandler.AddMedicine Method","Adds Medicine\u0027s Data"];

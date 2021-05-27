@@ -1,0 +1,1 @@
+search_result['580']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsRegisterViewClassctorTopic_overloads--.html","RegisterView Constructor","Call this Constructor if you want to insert user information"];

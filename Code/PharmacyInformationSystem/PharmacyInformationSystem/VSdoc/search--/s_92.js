@@ -1,0 +1,1 @@
+search_result['92']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassRetrieveUsersTopic.html","DatabaseHandler.RetrieveUsers Method","Retrieves all users from the database"];

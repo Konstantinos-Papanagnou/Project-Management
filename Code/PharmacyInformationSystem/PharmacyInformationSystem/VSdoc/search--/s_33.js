@@ -1,0 +1,1 @@
+search_result['33']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassDoesUsernameExistsTopic.html","DatabaseHandler.DoesUsernameExists Method","Checks to see in the database if the username is already occupied"];

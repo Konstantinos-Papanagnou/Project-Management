@@ -1,0 +1,1 @@
+search_result['415']=["frlrfPharmacyInformationSystemUIComponentsMainScreenClassInitializeComponentTopic.html","MainScreen.InitializeComponent Method","Required method for Designer support - do not modify\r\nthe contents of this method with the code editor."];

@@ -1,0 +1,1 @@
+search_result['830']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsViewUserDataClassExitBtn_ClickTopic.html","ViewUserData.ExitBtn_Click Method","Listens for exiting events"];

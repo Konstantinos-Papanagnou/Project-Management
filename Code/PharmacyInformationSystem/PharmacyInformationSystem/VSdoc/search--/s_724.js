@@ -1,0 +1,1 @@
+search_result['724']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewListStorageListViewClassSearchforRemoveTopic.html","StorageListView.SearchforRemove Method",""];

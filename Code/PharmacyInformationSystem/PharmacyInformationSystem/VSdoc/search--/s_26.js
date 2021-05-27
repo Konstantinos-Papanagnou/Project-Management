@@ -1,0 +1,1 @@
+search_result['26']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassDeleteOrderLineTopic.html","DatabaseHandler.DeleteOrderLine Method","Deletes all order lines"];

@@ -1,0 +1,1 @@
+search_result['11']=["frlrfPharmacyInformationSystemBusinessLogicAdministratorClassModifyUserTopic.html","Administrator.ModifyUser Method","Wrapper function for the DatabaseHandler"];

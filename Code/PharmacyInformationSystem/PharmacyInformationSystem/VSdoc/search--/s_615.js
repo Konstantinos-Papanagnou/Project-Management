@@ -1,0 +1,1 @@
+search_result['615']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsRegisterViewClassRoleBox_SelectedIndexChangedTopic.html","RegisterView.RoleBox_SelectedIndexChanged Method",""];

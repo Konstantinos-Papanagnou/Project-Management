@@ -1,0 +1,1 @@
+search_result['386']=["frlrfPharmacyInformationSystemUIComponentsLoginLoginClassGetScreenBackTopic.html","Login.GetScreenBack Method","Implementation of the Derived interface to get the login screen back."];

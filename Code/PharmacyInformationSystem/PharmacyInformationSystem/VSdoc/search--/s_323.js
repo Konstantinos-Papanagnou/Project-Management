@@ -1,0 +1,1 @@
+search_result['323']=["frlrfPharmacyInformationSystemPropertiesResourcesClassTopic.html","Resources Class","A strongly-typed resource class, for looking up localized strings, etc."];

@@ -1,0 +1,1 @@
+search_result['715']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewListStorageListViewClassPriceTopic.html","Price Field",""];

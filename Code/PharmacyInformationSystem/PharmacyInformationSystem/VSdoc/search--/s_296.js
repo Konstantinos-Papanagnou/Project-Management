@@ -1,0 +1,1 @@
+search_result['296']=["frlrfPharmacyInformationSystemPropertiesResourcesClassicons8_euro_18Topic.html","Resources.icons8_euro_18 Property","Looks up a localized resource of type System.Drawing.Bitmap."];

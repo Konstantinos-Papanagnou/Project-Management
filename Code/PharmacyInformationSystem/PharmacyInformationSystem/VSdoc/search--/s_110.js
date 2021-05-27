@@ -1,0 +1,1 @@
+search_result['110']=["frlrfPharmacyInformationSystemBusinessLogicLoginFunctionalityAuthenticationFailureClassTopic.html","AuthenticationFailure Class","Exception thrown when the authentication fails\r\nContains a Message with the reason"];
