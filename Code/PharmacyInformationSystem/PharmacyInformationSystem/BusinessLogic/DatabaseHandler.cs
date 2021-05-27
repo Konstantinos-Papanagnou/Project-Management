@@ -9,7 +9,7 @@ using PharmacyInformationSystem.BusinessLogic.LoginFunctionality;
 
 namespace PharmacyInformationSystem.BusinessLogic
 {
-    public class DatabaseHandler
+    class DatabaseHandler
     {
         private static readonly string AppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         private static readonly string FolderPath = System.IO.Path.Combine(AppData + "/PharmacyInformationSystem");
@@ -71,26 +71,15 @@ namespace PharmacyInformationSystem.BusinessLogic
         private const string OrderTableName = "Order";
         private const string OrderIDField = "OrderID";
         private const string SellerIDOrderField = "SellerID";
-        private const string SellerFirstName = "SFirstName";
-        private const string SellerLaststName = "SLastName";
         private const string PharmacistIDOrder = "PharmacistID";
-        private const string PharmaFirstName = "PFirstName";
-        private const string PharmaLastName = "PLastName";
-        private const string PharmaAddressNumber = "PAddressNumber";
-        private const string PharmaAddressStreet = "PAddressStreet";
-        private const string PharmaAddressTown = "PAddressTown";
-        private const string PharmaAddressPostalCode = "PAddressPostalCode";
-        private const string PharmaPhoneNumber = "PPhoneNumber";
         private const string TotalCostField = "TotalCost";
         private const string OrderDateField = "OrderDate";
-        private const string OrderLineField = "OrderLine";
         #endregion
 
         #region OrderLine Table
         private const string OrderLineTableName = "OrderLine";
         private const string OrdIDField = "OrderID";
         private const string MediID = "MedicineID";
-        private const string MediName = "MedicineName";
         private const string ProductQuantity = "ProductQuanftity";
         private const string TotalProductCost = "TotalProductCost";
         #endregion
@@ -479,9 +468,11 @@ namespace PharmacyInformationSystem.BusinessLogic
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
-                SQLiteCommand deleteMedicine = new SQLiteCommand(conn);
-                //Remove the medicine from Medicines table
-                deleteMedicine.CommandText = $"DELETE FROM {MedicineTableName} WHERE {MedicineID} = '{medID}'";
+                SQLiteCommand deleteMedicine = new SQLiteCommand(conn)
+                {
+                    //Remove the medicine from Medicines table
+                    CommandText = $"DELETE FROM {MedicineTableName} WHERE {MedicineID} = '{medID}'"
+                };
                 return deleteMedicine.ExecuteNonQuery() > 0;
             }
         }
@@ -496,12 +487,14 @@ namespace PharmacyInformationSystem.BusinessLogic
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
-                SQLiteCommand updateMedicine = new SQLiteCommand(conn);
-                updateMedicine.CommandText = $"UPDATE {MedicineTableName} SET " +
+                SQLiteCommand updateMedicine = new SQLiteCommand(conn)
+                {
+                    CommandText = $"UPDATE {MedicineTableName} SET " +
                     $"{MedicineName}='{medicine.MedName}', {MedicineCategory}='{medicine.MedCategory}'," +
                     $"{MedicineStock}='{medicine.MedStockCount}', {MedicineMinStock}='{medicine.MedMinStock}', " +
                     $"{MedicineAcquisitionValue}='{medicine.MedAcquisitionValue}'," +
-                    $" {MedicineSellingPrice}='{medicine.MedSellingValue}', {MedicineDueDate}='{medicine.MedDueDate}' WHERE {MedicineID}='{medicine.MedID}'";
+                    $" {MedicineSellingPrice}='{medicine.MedSellingValue}', {MedicineDueDate}='{medicine.MedDueDate}' WHERE {MedicineID}='{medicine.MedID}'"
+                };
                 return updateMedicine.ExecuteNonQuery() > 0;
             }
         }
@@ -590,8 +583,9 @@ namespace PharmacyInformationSystem.BusinessLogic
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
-                SQLiteCommand modifyPharmacist = new SQLiteCommand(conn);
-                modifyPharmacist.CommandText = $"UPDATE {PharmacistTableName} SET " +
+                SQLiteCommand modifyPharmacist = new SQLiteCommand(conn)
+                {
+                    CommandText = $"UPDATE {PharmacistTableName} SET " +
                     $"{PharmacistFirstName}='{Sanitizer.SanitizeInput(pharmacist.FirstName)}'," +
                     $"{PharmacistLastName}='{Sanitizer.SanitizeInput(pharmacist.LastName)}'," +
                     $"{PharmacistPhone}='{pharmacist.Phone}'," +
@@ -599,8 +593,9 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"{PharmacistAStreet}='{pharmacist.PAStreet}'," +
                     $"{PharmacistATown}='{pharmacist.PATown}'," +
                     $"{PharmacistAPostalCode}='{pharmacist.PAPostalCode}'," +
-                    $"{PharmacistSellerID}='{pharmacist.PSellerID}' WHERE {PharmacistAFM}='{pharmacist.AFM}'";
-                return true;
+                    $"{PharmacistSellerID}='{pharmacist.PSellerID}' WHERE {PharmacistAFM}='{pharmacist.AFM}'"
+                };
+                return modifyPharmacist.ExecuteNonQuery() > 0 ;
             }
         }
 

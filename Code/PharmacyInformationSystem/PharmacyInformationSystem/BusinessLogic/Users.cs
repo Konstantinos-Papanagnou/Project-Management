@@ -34,7 +34,7 @@ namespace PharmacyInformationSystem.BusinessLogic
 
     public class Administrator : User
     {
-        public DatabaseHandler Database { get; private set; }
+        internal DatabaseHandler Database { get; private set; }
         public Administrator(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary) :base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers, Salary)
         {
             Database = new DatabaseHandler();

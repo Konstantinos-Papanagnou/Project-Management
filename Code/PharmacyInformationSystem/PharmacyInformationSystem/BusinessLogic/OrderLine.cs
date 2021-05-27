@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PharmacyInformationSystem
 {
-    class OrderLine
+    public class OrderLine
     {
         public int OrdID { get; set; }
         public Medicine Medicine { get; set; }

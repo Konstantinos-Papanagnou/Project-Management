@@ -10,7 +10,7 @@ namespace PharmacyInformationSystem
     /// <summary>
     /// Class for the Order
     /// </summary>
-    class Order
+    public class Order
     {
         public int OrderID { get; set; }
         public Seller Seller { get; set; }
