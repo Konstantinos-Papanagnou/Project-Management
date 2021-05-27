@@ -276,6 +276,15 @@ namespace PharmacyInformationSystem.BusinessLogic
             Database = new DatabaseHandler();
         }
         public Seller(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers, user.Salary) { Database = new DatabaseHandler(); }
+        
+        /// <summary>
+        /// Displays all medicines
+        /// </summary>
+        /// <returns>The list with all the medicine from the database</returns>
+        public List<Medicine> GetMedicines()
+        {
+            return Database.DisplayMedicines();
+        }
 
     }
 }
