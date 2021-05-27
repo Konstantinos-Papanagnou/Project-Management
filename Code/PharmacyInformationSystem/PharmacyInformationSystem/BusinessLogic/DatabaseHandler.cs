@@ -683,7 +683,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="order"></param>
         /// <returns>True if order was inserted successfully</returns>
-        internal bool InsertOrder(Order order)
+        internal bool InsertOrder(Order order, Medicine medicine, int quantity)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
@@ -713,7 +713,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                     foreach (string orderLine in order.OrderList)
                     {
                         /*private bool InsertOrderLine(SQLiteConnection conn, int oID, Medicine medicine, int quantity)*/
-                        InsertOrderLine(conn, orid, orderLine, 5);
+                        InsertOrderLine(conn, orid, medicine, quantity);
                     }
 
                     return true;
