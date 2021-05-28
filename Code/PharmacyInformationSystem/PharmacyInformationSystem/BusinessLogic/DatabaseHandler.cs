@@ -675,7 +675,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
-                //Insert User Data first
+                //Insert order Data first
                 SQLiteCommand insertOrderData = new SQLiteCommand($"INSERT INTO {OrderTableName}({SellerIDOrderField}, " +
                     $"{PharmacistIDOrder}," +
                     $"{OrderDateField}, {TotalCostField}) VALUES (" +
