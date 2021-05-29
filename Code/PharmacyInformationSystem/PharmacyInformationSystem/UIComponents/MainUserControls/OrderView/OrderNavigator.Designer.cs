@@ -29,8 +29,16 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // OrderNavigator
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "OrderNavigator";
+            this.Size = new System.Drawing.Size(900, 50);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

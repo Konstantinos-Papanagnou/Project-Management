@@ -32,16 +32,17 @@ namespace PharmacyInformationSystem.BusinessLogic
             PSellerID = pSellerID;
         }
 
-        public Pharmacist(string lastName, string firstName, string phone, string pANumber, string pAStreet, string pATown, string pAPostalCode, string pSellerID)
-        {
-            LastName = lastName;
-            FirstName = firstName;
-            Phone = phone;
-            PANumber = pANumber;
-            PAStreet = pAStreet;
-            PATown = pATown;
-            PAPostalCode = pAPostalCode;
-            PSellerID = pSellerID;
+        public Pharmacist(string lastName, string firstName, string afm, string phone, string streetNumber, string street, string town, string postalcode, string sellerID) {
+            this.LastName = lastName;
+            this.FirstName = firstName;
+            this.AFM = afm;
+            this.Phone = phone;
+            this.PAStreet = street;
+            this.PANumber = streetNumber;
+            this.PATown = town;
+            this.PAPostalCode = postalcode;
+            this.PSellerID = sellerID;
         }
+
     }
 }

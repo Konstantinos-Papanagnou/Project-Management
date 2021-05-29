@@ -132,6 +132,18 @@
     <Compile Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.Designer.cs">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderList.Designer.cs">
+      <DependentUpon>OrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderNavigator.Designer.cs">
+      <DependentUpon>OrderNavigator.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\Peripherals\MedicineViewAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.resx">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\OrderView\OrderNavigator.resx">
+      <DependentUpon>OrderNavigator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\Peripherals\MedicineViewAdd.resx">
       <DependentUpon>MedicineViewAdd.cs</DependentUpon>
