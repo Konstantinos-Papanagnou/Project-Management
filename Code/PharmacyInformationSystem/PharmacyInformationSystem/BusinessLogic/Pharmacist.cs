@@ -31,5 +31,17 @@ namespace PharmacyInformationSystem.BusinessLogic
             PAPostalCode = pAPostalCode;
             PSellerID = pSellerID;
         }
+
+        public Pharmacist(string lastName, string firstName, string phone, string pANumber, string pAStreet, string pATown, string pAPostalCode, string pSellerID)
+        {
+            LastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
+            FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
+            Phone = phone ?? throw new ArgumentNullException(nameof(phone));
+            PANumber = pANumber ?? throw new ArgumentNullException(nameof(pANumber));
+            PAStreet = pAStreet ?? throw new ArgumentNullException(nameof(pAStreet));
+            PATown = pATown ?? throw new ArgumentNullException(nameof(pATown));
+            PAPostalCode = pAPostalCode ?? throw new ArgumentNullException(nameof(pAPostalCode));
+            PSellerID = pSellerID ?? throw new ArgumentNullException(nameof(pSellerID));
+        }
     }
 }
