@@ -1,1 +1,0 @@
-search_result['719']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewListStorageListViewClassRefreshListTopic2.html","StorageListView.RefreshList (Medicine, Operation) Method",""];

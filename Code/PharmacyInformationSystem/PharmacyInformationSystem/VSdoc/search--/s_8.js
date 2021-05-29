@@ -1,1 +1,0 @@
-search_result['8']=["frlrfPharmacyInformationSystemBusinessLogicAdministratorClassGenerateUsernameTopic.html","Administrator.GenerateUsername Method","Generates a custom username based on the user\u0027s first and last name"];

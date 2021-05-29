@@ -1,1 +1,0 @@
-search_result['464']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsMarketingViewGraphsClassDisposeTopic.html","Graphs.Dispose Method","Clean up any resources being used."];

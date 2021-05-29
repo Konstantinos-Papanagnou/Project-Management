@@ -1,1 +1,0 @@
-search_result['559']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsMedicineViewDeleteClasscomponentsTopic.html","components Field","Required designer variable."];

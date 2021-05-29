@@ -1,1 +1,0 @@
-search_result['864']=["frlrfPharmacyInformationSystemUIComponentsSideMenuClassSetSellerViewTopic.html","SideMenu.SetSellerView Method","Configures to the Seller\u0027s View"];

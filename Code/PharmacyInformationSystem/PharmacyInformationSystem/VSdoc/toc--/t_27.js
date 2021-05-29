@@ -1,1 +1,0 @@
-c['27']=[['28',"Administrator Constructor","frlrfPharmacyInformationSystemBusinessLogicAdministratorClassctorTopic_overloads--.html",1],['31',"Properties","frlrfPharmacyInformationSystemBusinessLogicAdministratorClassTopic_props--.html",1],['33',"Methods","frlrfPharmacyInformationSystemBusinessLogicAdministratorClassTopic_methods--.html",1]];

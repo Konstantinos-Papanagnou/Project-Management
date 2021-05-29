@@ -1,1 +1,0 @@
-search_result['564']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsMedicineViewDeleteClassDisposeTopic_overloads--.html","MedicineViewDelete.Dispose Method","Clean up any resources being used."];
