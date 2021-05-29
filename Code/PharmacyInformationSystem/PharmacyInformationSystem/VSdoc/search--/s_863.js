@@ -1,0 +1,1 @@
+search_result['863']=["frlrfPharmacyInformationSystemUIComponentsSideMenuClassSetMarketingViewTopic.html","SideMenu.SetMarketingView Method","Configures to the marketing view"];

@@ -1,0 +1,1 @@
+search_result['73']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassPharmacistATownTopic.html","PharmacistATown Field",""];
