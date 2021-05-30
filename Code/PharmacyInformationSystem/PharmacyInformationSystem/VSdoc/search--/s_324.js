@@ -1,1 +1,0 @@
-search_result['324']=["frlrfPharmacyInformationSystemPropertiesResourcesClassTopic_attached_props--.html","Resources Attached Properties",""];

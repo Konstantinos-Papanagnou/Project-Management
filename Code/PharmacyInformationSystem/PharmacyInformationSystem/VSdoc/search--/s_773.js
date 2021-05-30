@@ -1,1 +1,0 @@
-search_result['773']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsUsersListClassPhoneCheckTopic.html","UsersList.PhoneCheck Method","Helper function to check inside all of the phone numbers for a pattern"];

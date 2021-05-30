@@ -1,1 +1,0 @@
-search_result['40']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassGetUserDataTopic_overloads--.html","DatabaseHandler.GetUserData Method","Retrieves the User Data"];

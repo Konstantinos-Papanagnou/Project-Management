@@ -1,0 +1,1 @@
+c['33']=[['34',"Medicine(int, string, string, string, string, int, int, double, double, char, char) Constructor","topic_0000000000000024.html",0],['35',"Medicine(string, string, string, int, int, string, double, double, char, char) Constructor","topic_0000000000000023.html",0]];

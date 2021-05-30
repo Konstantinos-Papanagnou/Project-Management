@@ -17,9 +17,9 @@ namespace PharmacyInformationSystem.BusinessLogic
         public string PAStreet { get; set; }
         public string PATown { get; set; }
         public string PAPostalCode { get; set; }
-        public int PSellerID { get; set; }
+        public string PSellerID { get; set; }
 
-        public Pharmacist(int pharmacistID, string lastName, string firstName, string phone, string pANumber, string pAStreet, string pATown, string pAPostalCode, int pSellerID)
+        public Pharmacist(int pharmacistID, string lastName, string firstName, string phone, string pANumber, string pAStreet, string pATown, string pAPostalCode, string pSellerID)
         {
             PharmacistID = pharmacistID;
             LastName = lastName;
@@ -31,5 +31,18 @@ namespace PharmacyInformationSystem.BusinessLogic
             PAPostalCode = pAPostalCode;
             PSellerID = pSellerID;
         }
+
+        public Pharmacist(string lastName, string firstName, string afm, string phone, string streetNumber, string street, string town, string postalcode, string sellerID) {
+            this.LastName = lastName;
+            this.FirstName = firstName;
+            this.AFM = afm;
+            this.Phone = phone;
+            this.PAStreet = street;
+            this.PANumber = streetNumber;
+            this.PATown = town;
+            this.PAPostalCode = postalcode;
+            this.PSellerID = sellerID;
+        }
+
     }
 }

@@ -1,1 +1,0 @@
-search_result['23']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassCredentialCheckTopic.html","DatabaseHandler.CredentialCheck Method","Checks if there is a user with the credentials specified"];

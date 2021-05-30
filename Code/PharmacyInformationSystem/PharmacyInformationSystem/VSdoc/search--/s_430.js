@@ -1,1 +1,0 @@
-search_result['430']=["frlrfPharmacyInformationSystemUIComponentsMainScreenClassViewUserInfoBtn_ClickTopic.html","MainScreen.ViewUserInfoBtn_Click Method","Listens for the ViewUserInfo button from the sidebar view"];

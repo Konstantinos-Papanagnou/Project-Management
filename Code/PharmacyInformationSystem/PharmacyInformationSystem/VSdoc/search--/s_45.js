@@ -1,1 +1,0 @@
-search_result['45']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassInsertPhoneNumberTopic.html","DatabaseHandler.InsertPhoneNumber Method","Helper function to Insert a new phoneNumber"];

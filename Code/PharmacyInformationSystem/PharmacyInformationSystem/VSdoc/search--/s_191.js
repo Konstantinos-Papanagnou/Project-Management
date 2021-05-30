@@ -1,1 +1,0 @@
-search_result['191']=["frlrfPharmacyInformationSystemBusinessLogicSanitizerClassCheckIDCardTopic.html","Sanitizer.CheckIDCard Method","Runs a check against the IDCard"];

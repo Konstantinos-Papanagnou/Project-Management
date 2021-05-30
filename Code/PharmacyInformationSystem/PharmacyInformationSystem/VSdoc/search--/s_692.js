@@ -1,1 +1,0 @@
-search_result['692']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewListListViewExtensionsHDITEMFormatClassTopic.html","Format Enumeration",""];

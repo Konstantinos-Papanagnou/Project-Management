@@ -1,1 +1,0 @@
-search_result['3']=["frlrfPharmacyInformationSystemBusinessLogicAdministratorClassctorTopic2.html","Administrator(User) Constructor",""];

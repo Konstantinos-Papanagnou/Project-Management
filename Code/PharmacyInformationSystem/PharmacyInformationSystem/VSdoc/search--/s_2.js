@@ -1,1 +1,0 @@
-search_result['2']=["frlrfPharmacyInformationSystemBusinessLogicAdministratorClassctorTopic.html","Administrator(String, String, String, Int32, String, String, Int32, List\u0026lt;String\u0026gt;, Double) Constructor",""];

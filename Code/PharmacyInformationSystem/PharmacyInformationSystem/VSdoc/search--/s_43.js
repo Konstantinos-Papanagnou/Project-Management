@@ -1,1 +1,0 @@
-search_result['43']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassInsertOrderTopic.html","DatabaseHandler.InsertOrder Method","Insert order"];

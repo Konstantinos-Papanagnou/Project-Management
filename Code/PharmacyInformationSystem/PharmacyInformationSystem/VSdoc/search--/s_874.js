@@ -1,1 +1,0 @@
-search_result['874']=["frlrfPharmacyInformationSystemUIComponentsSideMenuClassViewUserInfoBtnTopic.html","SideMenu.ViewUserInfoBtn Property","Get the View User Info to grab events"];

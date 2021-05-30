@@ -1,1 +1,0 @@
-search_result['117']=["frlrfPharmacyInformationSystemBusinessLogicLoginFunctionalityAuthenticationHandlerClassAuthenticateUserTopic.html","AuthenticationHandler.AuthenticateUser Method","Authenticates the User"];

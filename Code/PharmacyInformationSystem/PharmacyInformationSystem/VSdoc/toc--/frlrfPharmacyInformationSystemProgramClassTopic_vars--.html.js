@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"PharmacyInformationSystem Reference","frlrfpharmacyinformationsystem_referenceCustomTopic.html"],['4',"PharmacyInformationSystem Namespace","frlrfPharmacyInformationSystem.html"],['21',"Program Class","frlrfPharmacyInformationSystemProgramClassTopic.html"],['24',"Fields","frlrfPharmacyInformationSystemProgramClassTopic_vars--.html"]];

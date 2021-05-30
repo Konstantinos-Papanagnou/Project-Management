@@ -1,1 +1,0 @@
-search_result['71']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassPharmacistAPostalCodeTopic.html","PharmacistAPostalCode Field",""];

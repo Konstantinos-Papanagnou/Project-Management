@@ -1,0 +1,1 @@
+c['193']=[['194',"GainNavigator Constructor","topic_000000000000006C.html",0],['195',"Methods","topic_000000000000006B_methods--.html",1]];

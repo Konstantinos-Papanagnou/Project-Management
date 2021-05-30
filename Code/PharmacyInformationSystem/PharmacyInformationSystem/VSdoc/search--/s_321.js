@@ -1,1 +1,0 @@
-search_result['321']=["frlrfPharmacyInformationSystemPropertiesResourcesClassResourceManagerTopic.html","Resources.ResourceManager Property","Returns the cached ResourceManager instance used by this class."];

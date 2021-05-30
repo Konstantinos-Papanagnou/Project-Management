@@ -1,1 +1,0 @@
-search_result['187']=["frlrfPharmacyInformationSystemBusinessLogicPharmacistClassTopic_props--.html","Pharmacist Properties",""];

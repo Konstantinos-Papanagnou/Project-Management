@@ -1,1 +1,0 @@
-search_result['504']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsMarketingViewMarketingNavigatorClassTopic.html","MarketingNavigator Class",""];

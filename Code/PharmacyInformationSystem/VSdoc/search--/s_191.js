@@ -1,0 +1,1 @@
+search_result['191']=["topic_0000000000000064.html","MainScreen Constructor","Initializes the view based on the user\u0027s access rights"];

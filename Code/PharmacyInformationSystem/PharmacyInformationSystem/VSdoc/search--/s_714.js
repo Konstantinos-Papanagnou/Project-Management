@@ -1,1 +1,0 @@
-search_result['714']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewListStorageListViewClassMinQuantityTopic.html","MinQuantity Field",""];

@@ -1,1 +1,0 @@
-search_result['156']=["frlrfPharmacyInformationSystemBusinessLogicMedicineClassMedCategoryTopic.html","Medicine.MedCategory Property",""];

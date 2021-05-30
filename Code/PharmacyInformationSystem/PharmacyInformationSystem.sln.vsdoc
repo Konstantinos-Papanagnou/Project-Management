@@ -31,14 +31,47 @@
   <string>externalFilesFolder</string>
   <string>templateLocale</string>
   <string>fileNamingConvention</string>
-  <string>generateVbSyntax</string>
-  <string>generateCsharpSyntax</string>
-  <string>generateCppSyntax</string>
-  <string>generateJscriptSyntax</string>
   <string>helpTitle</string>
   <string>customTopics</string>
   <string>ListNamespacesWithShortNames</string>
   <string>emptyOutputFolder</string>
+  <string>supportedPlatforms</string>
+  <string>supportedNetFramework</string>
+  <string>SupportedNetCore</string>
+  <string>SupportedNetStandard</string>
+  <string>SupportedXamarinAndroid</string>
+  <string>SupportedXamarinIos</string>
+  <string>SupportedXamarinMac</string>
+  <string>supportedNetFrameworkClientProfile</string>
+  <string>supportedPortableClassLibrary</string>
+  <string>supportedNetForWindowsStoreApps</string>
+  <string>supportedNetCompactFramework</string>
+  <string>supportedXnaFramework</string>
+  <string>supportedOthers</string>
+  <string>comConstant</string>
+  <string>comEvent</string>
+  <string>comMethod</string>
+  <string>comStdModule</string>
+  <string>comObject</string>
+  <string>comForm</string>
+  <string>comProperty</string>
+  <string>comVariable</string>
+  <string>comEnumeration</string>
+  <string>comStructure</string>
+  <string>comDelegate</string>
+  <string>comInterface</string>
+  <string>comEventDecl</string>
+  <string>comDeclare</string>
+  <string>comPublic</string>
+  <string>comPrivate</string>
+  <string>comFriend</string>
+  <string>comProtected</string>
+  <string>comProtectedFriend</string>
+  <string>ShowExtensionMethods</string>
+  <string>regexFilters</string>
+  <string>useConditionalCompilation</string>
+  <string>conditionalConstants</string>
+  <string>comNonCommented</string>
 </ArrayOfString>]]></add>
       <add key="VBdocman_comProtected"><![CDATA[-1]]></add>
       <add key="VBdocman_supportedNetFrameworkClientProfile"><![CDATA[]]></add>
@@ -101,7 +134,7 @@
         <type>placeholder</type>
         <is-default>no</is-default>
         <name />
-        <id>4b204058f29144a4bdd4020208c072f8</id>
+        <id>f2e10a4f621141d7891f6558fd8c3d6b</id>
         <comment><![CDATA[vsdocman_escaped_]_]_></comment>
         <namespaces />
         <topics />

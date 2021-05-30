@@ -1,1 +1,0 @@
-search_result['1']=["frlrfPharmacyInformationSystemBusinessLogic.html","PharmacyInformationSystem.BusinessLogic Namespace",""];

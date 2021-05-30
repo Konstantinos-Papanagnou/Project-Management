@@ -1,1 +1,0 @@
-c['177']=[['178',"Seller(User) Constructor","frlrfPharmacyInformationSystemBusinessLogicSellerClassctorTopic2.html",0],['179',"Seller(string, string, string, int, string, string, int, List\u003cString\u003e, double) Constructor","frlrfPharmacyInformationSystemBusinessLogicSellerClassctorTopic.html",0]];

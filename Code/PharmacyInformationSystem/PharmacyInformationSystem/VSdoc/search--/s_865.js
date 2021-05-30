@@ -1,1 +1,0 @@
-search_result['865']=["frlrfPharmacyInformationSystemUIComponentsSideMenuClassSetStoreKeeperViewTopic.html","SideMenu.SetStoreKeeperView Method","Configures to the Storekeeper\u0027s view"];

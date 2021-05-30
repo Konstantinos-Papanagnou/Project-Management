@@ -1,1 +1,0 @@
-search_result['103']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassTotalCostFieldTopic.html","TotalCostField Field",""];

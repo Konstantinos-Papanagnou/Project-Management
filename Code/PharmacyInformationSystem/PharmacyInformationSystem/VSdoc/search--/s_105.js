@@ -1,1 +1,0 @@
-search_result['105']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassUpdateMedicineTopic.html","DatabaseHandler.UpdateMedicine Method","Update medicine\u0027s info"];

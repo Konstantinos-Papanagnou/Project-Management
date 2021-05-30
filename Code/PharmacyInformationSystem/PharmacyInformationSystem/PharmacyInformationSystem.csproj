@@ -132,6 +132,24 @@
     <Compile Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.Designer.cs">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderList.Designer.cs">
+      <DependentUpon>OrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\OrderNavigator.Designer.cs">
+      <DependentUpon>OrderNavigator.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\Peripherals\MedicineViewAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +167,30 @@
     </Compile>
     <Compile Include="UIComponents\MainUserControls\Peripherals\MedicineViewDelete.Designer.cs">
       <DependentUpon>MedicineViewDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\DeletePharmacist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\DeletePharmacist.Designer.cs">
+      <DependentUpon>DeletePharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\FormPharmacist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\FormPharmacist.Designer.cs">
+      <DependentUpon>FormPharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\NavigatorPharmacist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\NavigatorPharmacist.Designer.cs">
+      <DependentUpon>NavigatorPharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\TablePharmacist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\TablePharmacist.Designer.cs">
+      <DependentUpon>TablePharmacist.cs</DependentUpon>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageListView.cs">
       <SubType>UserControl</SubType>
@@ -226,6 +268,12 @@
     <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.resx">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\OrderView\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\OrderView\OrderNavigator.resx">
+      <DependentUpon>OrderNavigator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\Peripherals\MedicineViewAdd.resx">
       <DependentUpon>MedicineViewAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +282,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\Peripherals\MedicineViewDelete.resx">
       <DependentUpon>MedicineViewDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\PharmacistUIView\DeletePharmacist.resx">
+      <DependentUpon>DeletePharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\PharmacistUIView\FormPharmacist.resx">
+      <DependentUpon>FormPharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\PharmacistUIView\NavigatorPharmacist.resx">
+      <DependentUpon>NavigatorPharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\PharmacistUIView\TablePharmacist.resx">
+      <DependentUpon>TablePharmacist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageListView.resx">
       <DependentUpon>StorageListView.cs</DependentUpon>
@@ -281,7 +341,12 @@
     <Content Include="Resources\crate.png" />
     <None Include="Resources\icons8-drop-down-241.png" />
     <Content Include="Resources\diagram.png" />
+    <Content Include="Resources\icons8-address-26.png" />
     <Content Include="Resources\icons8-caduceus-24.png" />
+    <Content Include="Resources\icons8-caduceus-36.png" />
+    <Content Include="Resources\icons8-caduceus-48.png" />
+    <Content Include="Resources\icons8-caduceus-64%281%29.png" />
+    <Content Include="Resources\icons8-caduceus-64.png" />
     <Content Include="Resources\icons8-combo-chart-24.png" />
     <Content Include="Resources\icons8-delete-bin-24.png" />
     <Content Include="Resources\icons8-drop-down-20.png" />
@@ -298,8 +363,11 @@
     <Content Include="Resources\icons8-gear-24.png" />
     <Content Include="Resources\icons8-group-24.png" />
     <Content Include="Resources\icons8-improvement-24.png" />
+    <Content Include="Resources\icons8-invoice-26.png" />
     <Content Include="Resources\icons8-marketing-24.png" />
     <Content Include="Resources\icons8-money-box-24.png" />
+    <Content Include="Resources\icons8-person-26.png" />
+    <Content Include="Resources\icons8-pharmacist-26.png" />
     <Content Include="Resources\icons8-pill-bottle-24%281%29.png" />
     <Content Include="Resources\icons8-plus-1-month-24.png" />
     <Content Include="Resources\icons8-plus-1-year-24.png" />
@@ -309,10 +377,14 @@
     <Content Include="Resources\icons8-search-18.png" />
     <Content Include="Resources\icons8-search-24.png" />
     <Content Include="Resources\icons8-search-client-24.png" />
+    <Content Include="Resources\icons8-shop-26.png" />
     <Content Include="Resources\icons8-total-sales-24.png" />
     <Content Include="Resources\icons8-trolley-24.png" />
     <Content Include="Resources\icons8-warehouse-24.png" />
     <None Include="Resources\user.png" />
+    <Content Include="Resources\icons8-warning-48.ico" />
+    <Content Include="Resources\icons8-warning-48.png" />
+    <Content Include="Resources\icons8-working-with-papers-26%281%29.png" />
     <Content Include="Resources\medicine.png" />
     <Content Include="Resources\setting.png" />
     <Content Include="Resources\users.png" />

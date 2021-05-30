@@ -1,0 +1,1 @@
+c['188']=[['189',"DrugGainTable Constructor","topic_0000000000000069.html",0],['190',"Methods","topic_0000000000000068_methods--.html",1]];

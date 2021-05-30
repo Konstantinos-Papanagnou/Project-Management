@@ -1,1 +1,0 @@
-c['534']=[['535',"ViewUserData Constructor","frlrfPharmacyInformationSystemUIComponentsMainUserControlsViewUserDataClassctorTopic.html",0],['536',"Methods","frlrfPharmacyInformationSystemUIComponentsMainUserControlsViewUserDataClassTopic_methods--.html",1],['541',"Fields","frlrfPharmacyInformationSystemUIComponentsMainUserControlsViewUserDataClassTopic_vars--.html",1]];

@@ -1,0 +1,1 @@
+c['141']=[['142',"MedicineViewAdd Constructor","topic_0000000000000079.html",0],['143',"Methods","topic_0000000000000077_methods--.html",1],['146',"Fields","topic_0000000000000077_vars--.html",1]];

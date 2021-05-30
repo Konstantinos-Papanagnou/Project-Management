@@ -1,1 +1,0 @@
-search_result['196']=["frlrfPharmacyInformationSystemBusinessLogicSanitizerClassCheckStringTopic.html","Sanitizer.CheckString Method","Checks if the string supplied is within the policy"];
