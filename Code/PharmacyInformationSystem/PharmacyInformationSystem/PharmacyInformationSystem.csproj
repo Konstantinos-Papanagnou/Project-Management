@@ -132,6 +132,12 @@
     <Compile Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.Designer.cs">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\DeleteOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\OrderView\DeleteOrder.Designer.cs">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\OrderView\OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.resx">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\OrderView\DeleteOrder.resx">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\OrderView\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
