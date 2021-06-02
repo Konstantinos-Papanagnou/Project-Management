@@ -1,0 +1,1 @@
+c['137']=[['138',"Medicine(int, string, string, string, string, int, int, double, double, char, char) Constructor","frlrfPharmacyInformationSystemBusinessLogicMedicineClassctorTopic2.html",0],['139',"Medicine(string, string, string, int, int, string, double, double, char, char) Constructor","frlrfPharmacyInformationSystemBusinessLogicMedicineClassctorTopic.html",0]];

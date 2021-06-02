@@ -1,1 +1,0 @@
-c['187']=[['188',"DrugGainTable Class","topic_0000000000000068.html",1],['193',"GainNavigator Class","topic_000000000000006B.html",1],['198',"Graphs Class","topic_000000000000006E.html",1],['203',"MarketingList Class","topic_0000000000000071.html",1],['208',"MarketingNavigator Class","topic_0000000000000074.html",1]];

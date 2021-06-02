@@ -1,0 +1,1 @@
+c['345']=[['346',"RefreshList() Method","frlrfPharmacyInformationSystemUIComponentsIUpdatable`1ClassRefreshListTopic.html",0],['347',"RefreshList(T, Operation) Method","frlrfPharmacyInformationSystemUIComponentsIUpdatable`1ClassRefreshListTopic2.html",0]];

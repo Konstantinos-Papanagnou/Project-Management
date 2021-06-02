@@ -1,0 +1,1 @@
+search_result['128']=["frlrfPharmacyInformationSystemBusinessLogicLoginFunctionalityHashingClassComputeHashTopic.html","Hashing.ComputeHash Method","Computes the hash of the supplied password with SHA256 algorithm"];

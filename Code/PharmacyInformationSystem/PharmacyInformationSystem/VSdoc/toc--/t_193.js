@@ -1,0 +1,1 @@
+c['193']=[['194',"User Constructor","frlrfPharmacyInformationSystemBusinessLogicUserClassctorTopic.html",0],['195',"Properties","frlrfPharmacyInformationSystemBusinessLogicUserClassTopic_props--.html",1]];

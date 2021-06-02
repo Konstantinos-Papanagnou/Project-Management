@@ -1,0 +1,1 @@
+search_result['89']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassRetrievePharmacistTopic2.html","DatabaseHandler.RetrievePharmacist (SQLiteConnection, Int32) Method",""];

@@ -1,0 +1,1 @@
+search_result['30']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassDeleteUserTopic.html","DatabaseHandler.DeleteUser Method","Deleted the user specified from the databse"];

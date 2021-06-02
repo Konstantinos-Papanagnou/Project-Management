@@ -1,1 +1,0 @@
-var breadcrumbs=[['-1',"",""],['2',"SOLUTION-WIDE PROPERTIES Reference","topic_00000000000000CE.html"],['4',"PharmacyInformationSystem.BusinessLogic Namespace","topic_0000000000000000.html"],['63',"StoreKeeper Class","topic_0000000000000042.html"],['67',"Methods","topic_0000000000000042_methods--.html"],['68',"AddMedicine Method","topic_0000000000000045.html"]];

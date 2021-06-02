@@ -1,1 +1,0 @@
-search_result['195']=["topic_0000000000000067.html","PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView Namespace",""];

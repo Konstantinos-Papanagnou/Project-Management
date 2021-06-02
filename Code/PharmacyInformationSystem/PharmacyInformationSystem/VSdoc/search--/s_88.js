@@ -1,0 +1,1 @@
+search_result['88']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassRetrievePharmacistTopic.html","DatabaseHandler.RetrievePharmacist (Int32) Method","Retrive pharmacists from Database"];

@@ -1,1 +1,0 @@
-search_result['401']=["topic_00000000000000C8.html","SideMenu.SetStoreKeeperView Method","Configures to the Storekeeper\u0027s view"];

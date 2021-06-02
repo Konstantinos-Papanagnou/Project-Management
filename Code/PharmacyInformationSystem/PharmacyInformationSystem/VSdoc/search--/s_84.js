@@ -1,0 +1,1 @@
+search_result['84']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassRemoveMedicineTopic.html","DatabaseHandler.RemoveMedicine Method","Removes a specific medicine"];

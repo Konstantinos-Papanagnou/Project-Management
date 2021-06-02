@@ -1,0 +1,1 @@
+search_result['46']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassInsertUserTopic.html","DatabaseHandler.InsertUser Method","Insert a user to the database along with his user data"];
