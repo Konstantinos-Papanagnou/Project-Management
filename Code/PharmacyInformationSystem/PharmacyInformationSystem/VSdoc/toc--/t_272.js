@@ -1,1 +1,0 @@
-c['272']=[['273',"resourceCulture Field","frlrfPharmacyInformationSystemPropertiesResourcesClassresourceCultureTopic.html",0],['274',"resourceMan Field","frlrfPharmacyInformationSystemPropertiesResourcesClassresourceManTopic.html",0]];

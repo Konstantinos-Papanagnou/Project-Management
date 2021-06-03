@@ -1,1 +1,0 @@
-search_result['640']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsSideBarItemClassMarkSelectedTopic.html","SideBarItem.MarkSelected Method","Method that Marks Selected a specific button object of the slave category"];

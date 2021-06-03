@@ -1,1 +1,0 @@
-search_result['320']=["frlrfPharmacyInformationSystemPropertiesResourcesClassresourceCultureTopic.html","resourceCulture Field",""];

@@ -1,1 +1,0 @@
-search_result['570']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsMedicineViewDeleteClassTopic_events--.html","MedicineViewDelete Events",""];

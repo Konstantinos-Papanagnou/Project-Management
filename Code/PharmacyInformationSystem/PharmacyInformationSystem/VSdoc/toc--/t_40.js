@@ -1,1 +1,0 @@
-c['40']=[['41',"DatabaseHandler Constructor","frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassctorTopic.html",0],['42',"Methods","frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassTopic_methods--.html",1],['72',"Fields","frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassTopic_vars--.html",1]];

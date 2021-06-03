@@ -1,1 +1,0 @@
-search_result['122']=["frlrfPharmacyInformationSystemBusinessLogicLoginFunctionalityAuthenticationHandlerClassTopic.html","AuthenticationHandler Class","Wrapper class for the Authentication Management"];

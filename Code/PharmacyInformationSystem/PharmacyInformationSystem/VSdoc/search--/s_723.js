@@ -1,1 +1,0 @@
-search_result['723']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewListStorageListViewClassRemoveMenu_ClickTopic.html","StorageListView.RemoveMenu_Click Method",""];

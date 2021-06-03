@@ -1,1 +1,0 @@
-search_result['198']=["frlrfPharmacyInformationSystemBusinessLogicSanitizerClassTopic.html","Sanitizer Class","Wrapper class that handles application policy and Sanitization techniques"];

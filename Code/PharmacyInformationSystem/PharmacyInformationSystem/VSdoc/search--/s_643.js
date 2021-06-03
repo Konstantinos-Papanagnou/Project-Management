@@ -1,1 +1,0 @@
-search_result['643']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsSideBarItemClassSlave1Topic.html","SideBarItem.Slave1 Property","Use this slave Object to grab the events"];

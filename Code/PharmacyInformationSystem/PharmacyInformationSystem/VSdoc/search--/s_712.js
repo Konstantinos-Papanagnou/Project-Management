@@ -1,1 +1,0 @@
-search_result['712']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewListStorageListViewClassMapValuesTopic.html","StorageListView.MapValues Method",""];

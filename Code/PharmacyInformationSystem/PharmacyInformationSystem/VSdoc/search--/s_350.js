@@ -1,1 +1,0 @@
-search_result['350']=["frlrfPharmacyInformationSystemUIComponentsIUpdatable`1ClassTopic_events--.html","IUpdatable\u0026lt;T\u0026gt; Events",""];

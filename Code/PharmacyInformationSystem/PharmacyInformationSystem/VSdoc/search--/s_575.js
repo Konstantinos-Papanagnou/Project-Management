@@ -1,1 +1,0 @@
-search_result['575']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsRegisterViewClassbutton1_ClickTopic.html","RegisterView.button1_Click Method","Returns the modifications to the calling class"];

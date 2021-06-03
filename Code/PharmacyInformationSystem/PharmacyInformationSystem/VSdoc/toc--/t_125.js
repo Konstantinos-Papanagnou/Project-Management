@@ -1,1 +1,0 @@
-c['125']=[['126',"MarketingTeam(User) Constructor","frlrfPharmacyInformationSystemBusinessLogicMarketingTeamClassctorTopic2.html",0],['127',"MarketingTeam(string, string, string, int, string, string, int, List\u003cString\u003e, double) Constructor","frlrfPharmacyInformationSystemBusinessLogicMarketingTeamClassctorTopic.html",0]];

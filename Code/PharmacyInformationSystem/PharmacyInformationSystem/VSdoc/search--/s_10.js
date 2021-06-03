@@ -1,1 +1,0 @@
-search_result['10']=["frlrfPharmacyInformationSystemBusinessLogicAdministratorClassInsertUserTopic.html","Administrator.InsertUser Method","Wrapper function for the DatabaseHandler"];

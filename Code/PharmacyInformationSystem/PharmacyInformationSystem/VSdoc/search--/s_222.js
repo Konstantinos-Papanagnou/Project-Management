@@ -1,1 +1,0 @@
-search_result['222']=["frlrfPharmacyInformationSystemBusinessLogicStoreKeeperClassRemoveMedicineTopic.html","StoreKeeper.RemoveMedicine Method","Removes a specific medicine"];
