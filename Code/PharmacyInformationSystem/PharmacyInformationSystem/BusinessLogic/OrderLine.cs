@@ -1,25 +1,26 @@
-﻿using PharmacyInformationSystem.BusinessLogic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PharmacyInformationSystem
+namespace PharmacyInformationSystem.BusinessLogic
 {
-    public class OrderLine
+    class OrderLine
     {
         public int OrdID { get; set; }
-        public Medicine Medicine { get; set; }
+        public int MediID { get; set; }
+        public string MediName { get; set; } 
         public int ProductQuantity { get; set; }
         public double TotalProductCost { get; set; }
 
-        public OrderLine(int OrdID, Medicine Medicine, int ProductQuantity, double TotalProductCost)
+        public OrderLine(int ordID, int mediID, string mediName, int productQuantity, double totalProductCost)
         {
-            this.OrdID = OrdID;
-            this.Medicine = Medicine;
-            this.ProductQuantity = ProductQuantity;
-            this.TotalProductCost = TotalProductCost;
+            OrdID = ordID;
+            MediID = mediID;
+            MediName = mediName;
+            ProductQuantity = productQuantity;
+            TotalProductCost = totalProductCost;
         }
     }
 }

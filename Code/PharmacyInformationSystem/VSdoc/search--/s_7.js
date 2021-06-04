@@ -1,0 +1,1 @@
+search_result['7']=["frlrfPharmacyInformationSystemBusinessLogicAdministratorClassDeleteUserTopic.html","Administrator.DeleteUser Method","Wrapper function for the DatabaseHandler"];

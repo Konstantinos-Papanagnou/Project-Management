@@ -1,0 +1,1 @@
+search_result['9']=["frlrfPharmacyInformationSystemBusinessLogicAdministratorClassGetAllUsersTopic.html","Administrator.GetAllUsers Method","Wrapper function for the DatabaseHandler"];

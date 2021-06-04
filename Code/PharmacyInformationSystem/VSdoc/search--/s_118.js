@@ -1,0 +1,1 @@
+search_result['118']=["frlrfPharmacyInformationSystemBusinessLogicLoginFunctionalityAuthenticationHandlerClassBlockTopic.html","AuthenticationHandler.Block Method","Blocks the user from authenticating for 30 seconds."];

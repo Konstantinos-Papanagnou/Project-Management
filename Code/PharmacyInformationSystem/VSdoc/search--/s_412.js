@@ -1,0 +1,1 @@
+search_result['412']=["frlrfPharmacyInformationSystemUIComponentsMainScreenClassctorTopic.html","MainScreen Constructor","Initializes the view based on the user\u0027s access rights"];

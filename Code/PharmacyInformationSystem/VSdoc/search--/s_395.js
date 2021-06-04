@@ -1,0 +1,1 @@
+search_result['395']=["frlrfPharmacyInformationSystemUIComponentsLoginLoginClassLoginButton_ClickTopic.html","Login.LoginButton_Click Method","Listens for Clicks on the Login Button"];

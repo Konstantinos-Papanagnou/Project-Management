@@ -1,0 +1,1 @@
+search_result['61']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassModifyPharmacistTopic.html","DatabaseHandler.ModifyPharmacist Method","Modify existing pharmacist"];

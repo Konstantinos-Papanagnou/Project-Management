@@ -1,0 +1,1 @@
+search_result['789']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsUserViewListUserListViewItemClassDeleteBtn_ClickTopic.html","UserListViewItem.DeleteBtn_Click Method","Listens for a Delete Request and it Deletes the user"];

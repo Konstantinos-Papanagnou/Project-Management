@@ -1,0 +1,1 @@
+search_result['29']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassDeletePhoneNumbersTopic.html","DatabaseHandler.DeletePhoneNumbers Method","Helper function to delete all phone numbers"];

@@ -1,0 +1,1 @@
+search_result['646']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsSideBarItemClassSlave4Topic.html","SideBarItem.Slave4 Property","Use this slave Object to grab the events"];

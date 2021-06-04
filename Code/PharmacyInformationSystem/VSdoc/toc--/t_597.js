@@ -1,0 +1,1 @@
+c['597']=[['598',"Dispose Method","frlrfPharmacyInformationSystemUIComponentsMainUserControlsMarketingViewMarketingListClassDisposeTopic_overloads--.html",1],['600',"InitializeComponent Method","frlrfPharmacyInformationSystemUIComponentsMainUserControlsMarketingViewMarketingListClassInitializeComponentTopic.html",0]];

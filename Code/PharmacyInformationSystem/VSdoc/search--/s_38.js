@@ -1,0 +1,1 @@
+search_result['38']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassGetUserDataTopic2.html","DatabaseHandler.GetUserData (SQLiteConnection, Int32) Method",""];

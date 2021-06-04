@@ -1,0 +1,1 @@
+search_result['22']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassCreateTablesTopic.html","DatabaseHandler.CreateTables Method","Initializes the database and creates the tables"];

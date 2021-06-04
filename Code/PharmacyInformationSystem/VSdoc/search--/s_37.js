@@ -1,0 +1,1 @@
+search_result['37']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassGetUserDataTopic.html","DatabaseHandler.GetUserData (String) Method","Retrieves the User Data"];
