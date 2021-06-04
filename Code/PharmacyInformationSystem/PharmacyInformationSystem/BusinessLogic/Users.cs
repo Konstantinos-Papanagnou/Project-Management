@@ -309,7 +309,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="pharmacist">The pharmacist to add</param>
         /// <returns>True if the pharmacist was inserted successfully</returns>
-        public bool AddPharmacist(Pharmacist pharmacist)
+        public Pharmacist AddPharmacist(Pharmacist pharmacist)
         {
             pharmacist.PSellerID = EmployeeID;
             return Database.InsertPharmacist(pharmacist);

@@ -39,8 +39,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
                 StreetBox.Text = phar.PAStreet;
                 NumberBox.Text = phar.PAStreet;
                 PostalCodeBox.Text = phar.PAPostalCode;
-
-                SellerIdBox.Text = phar.PSellerID.ToString();
             }
         }
 
@@ -53,9 +51,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             }
 
             if (Op == Operation.Add)
-                Pharmacist = new Logic::Pharmacist(LastNameBox.Text, FirstNameBox.Text, AFMBox.Text, PhoneBox.Text, NumberBox.Text, StreetBox.Text, TownBox.Text, PostalCodeBox.Text, int.Parse(SellerIdBox.Text));
-            else
-                Pharmacist = new Logic::Pharmacist(LastNameBox.Text, FirstNameBox.Text, AFMBox.Text, PhoneBox.Text, NumberBox.Text, StreetBox.Text, TownBox.Text, PostalCodeBox.Text, int.Parse(SellerIdBox.Text));
+            {
+                Pharmacist = new Logic::Pharmacist(LastNameBox.Text, FirstNameBox.Text, AFMBox.Text, PhoneBox.Text, NumberBox.Text, StreetBox.Text, TownBox.Text, PostalCodeBox.Text, -1);
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            Pharmacist = new Logic::Pharmacist(Pharmacist.PharmacistID, LastNameBox.Text, FirstNameBox.Text, AFMBox.Text, PhoneBox.Text, NumberBox.Text, StreetBox.Text, TownBox.Text, PostalCodeBox.Text, -1);
             Form.RefreshList(Pharmacist, Op);
             DialogResult = DialogResult.OK;
             this.Close();
@@ -63,25 +64,25 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
 
         private bool ValidateInputs()
         {
-            if (!Logic::Sanitizer.CheckString(FirstNameBox.Text))
+            if (!Logic::Sanitizer.CheckFirstName(FirstNameBox.Text))
             {
                 FirstNameError.Visible = true;
                 return false;
             }
             else FirstNameError.Visible = false;
-            if (!Logic::Sanitizer.CheckString(LastNameBox.Text))
+            if (!Logic::Sanitizer.CheckLastName(LastNameBox.Text))
             {
                 LastNameError.Visible = true;
                 return false;
             }
             else LastNameError.Visible = false;
-            if (!Logic::Sanitizer.CheckString(AFMBox.Text))
+            if (!Logic::Sanitizer.CheckAFM(AFMBox.Text))
             {
                 AFMError.Visible = true;
                 return false;
             }
             else AFMError.Visible = false;
-            if (!Logic::Sanitizer.CheckString(PhoneBox.Text))
+            if (!Logic::Sanitizer.CheckPhoneNumber(PhoneBox.Text))
             {
                 PhoneError.Visible = true;
                 return false;
@@ -93,7 +94,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
                 return false;
             }
             else TownError.Visible = false;
-            if (!Logic::Sanitizer.CheckString(PostalCodeBox.Text))
+            if (!Logic::Sanitizer.CheckPostalCode(PostalCodeBox.Text))
             {
                 PostalCodeError.Visible = true;
                 return false;
@@ -101,22 +102,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             else PostalCodeError.Visible = false;
             if (!Logic::Sanitizer.CheckString(StreetBox.Text))
             {
-                StreetBox.Visible = true;
+                StreetError.Visible = true;
                 return false;
             }
-            else StreetBox.Visible = false;
-            if (!Logic::Sanitizer.CheckString(NumberBox.Text))
-            {
-                NumberError.Visible = true;
-                return false;
-            }
-            else NumberError.Visible = false;
-            if (!Logic::Sanitizer.CheckString(SellerIdBox.Text))
-            {
-                SellerIdError.Visible = true;
-                return false;
-            }
-            else SellerIdError.Visible = false;
+            else StreetError.Visible = false;
 
             return true;
         }

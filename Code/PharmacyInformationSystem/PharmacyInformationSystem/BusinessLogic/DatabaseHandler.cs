@@ -68,7 +68,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         #endregion
         
         #region Order Table
-        private const string OrderTableName = "Order";
+        private const string OrderTableName = "OrderTable";
         private const string OrderIDField = "OrderID";
         private const string SellerIDOrderField = "SellerID";
         private const string PharmacistIDOrder = "PharmacistID";
@@ -121,26 +121,32 @@ namespace PharmacyInformationSystem.BusinessLogic
                 $"{MedicineAcquisitionValue} REAL NOT NULL, {MedicineSellingPrice} REAL NOT NULL, " +
                 $"{MedicineQuality} CHAR(1) NOT NULL, {MedicineType} CHAR(1) NOT NULL)",conn).ExecuteNonQuery();
 
-            new SQLiteCommand($"CREATE TABLE IF NOT EXIST {PharmacistTableName}({PharmacistID} INTEGER PRIMARY KEY AUTOINCREMENT," +
+            new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {PharmacistTableName}({PharmacistID} INTEGER PRIMARY KEY AUTOINCREMENT," +
                 $"{PharmacistFirstName} STRING NOT NULL,{PharmacistLastName} STRING NOT NULL,{PharmacistAFM} CHAR(9) NOT NULL UNIQUE" +
                 $",{PharmacistPhone} CHAR(10) NOT NULL UNIQUE," +
                 $"{PharmacistANumber} STRING NOT NULL,{PharmacistAStreet} STRING NOT NULL,{PharmacistATown} STRING NOT NULL," +
                 $"{PharmacistAPostalCode} CHAR(5) NOT NULL,{PharmacistSellerID} INTEGER NOT NULL, " +
                 $"FOREIGN KEY({PharmacistSellerID}) REFERENCES {UsersTableName}({EmployeeIDField}))", conn).ExecuteNonQuery();
 
-            new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {OrderTableName}({OrderIDField} INTEGER PRIMARY KEY AUTOINCREMENT," +
+            Console.WriteLine($"CREATE TABLE IF NOT EXISTS {OrderTableName}({OrderIDField} INTEGER PRIMARY KEY AUTOINCREMENT," +
                 $"{SellerIDOrderField} INTEGER NOT NULL," +
-                $"{PharmacistID} INTEGER NOT NULL" +
+                $"{PharmacistID} INTEGER NOT NULL," +
                 $"{TotalCostField} DOUBLE NOT NULL,{OrderDateField} STRING NOT NULL," +
                 $"FOREIGN KEY({PharmacistID}) REFERENCES {PharmacistTableName}({PharmacistID})," +
-                $"FOREIGN KEY({SellerIDOrderField}) REFERENCES {UsersTableName}({EmployeeIDField});", conn).ExecuteNonQuery();
+                $"FOREIGN KEY({SellerIDOrderField}) REFERENCES {UsersTableName}({EmployeeIDField}))");
+            new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {OrderTableName}({OrderIDField} INTEGER PRIMARY KEY AUTOINCREMENT," +
+                $"{SellerIDOrderField} INTEGER NOT NULL," +
+                $"{PharmacistID} INTEGER NOT NULL," +
+                $"{TotalCostField} DOUBLE NOT NULL,{OrderDateField} STRING NOT NULL," +
+                $"FOREIGN KEY({PharmacistID}) REFERENCES {PharmacistTableName}({PharmacistID})," +
+                $"FOREIGN KEY({SellerIDOrderField}) REFERENCES {UsersTableName}({EmployeeIDField}))", conn).ExecuteNonQuery();
 
-            new SQLiteCommand($"CREATE IF NOT EXIST {OrderLineTableName}(" +
+            new SQLiteCommand($"CREATE TABLE IF NOT EXISTS {OrderLineTableName}(" +
                 $"{OrdIDField} INTEGER NOT NULL," +
-                $"{MediID} INTEGER NOT NUL," +
+                $"{MediID} INTEGER NOT NULL," +
                 $"{ProductQuantity} INTEGER NOT NULL,{TotalProductCost} INTEGER NOT NULL, " +
                 $"PRIMARY KEY({OrdIDField},{MediID}), FOREIGN KEY({OrdIDField}) REFERENCES {OrderTableName}({OrderIDField})," +
-                $"FOREIGN KEY({MediID}) REFERENCES {MedicineTableName}({MedicineID})",conn).ExecuteNonQuery();
+                $"FOREIGN KEY({MediID}) REFERENCES {MedicineTableName}({MedicineID}))",conn).ExecuteNonQuery();
 
             //To-Do insert default role id values and default administator data
             new SQLiteCommand($"INSERT INTO {RolesTableName}({RoleIDField},{DescriptionField}) VALUES ('0', 'Administrator')", conn).ExecuteNonQuery();
@@ -542,8 +548,8 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// Inserts a new pharmacist
         /// </summary>
         /// <param name="pharmacist"></param>
-        /// <returns>True if pharmacist's data was inserted successfully</returns>
-        internal bool InsertPharmacist(Pharmacist pharmacist)
+        /// <returns>The Inserted pharmacist with the assigned id</returns>
+        internal Pharmacist InsertPharmacist(Pharmacist pharmacist)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
@@ -553,22 +559,31 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"{PharmacistLastName}, {PharmacistAFM}, {PharmacistPhone}, {PharmacistANumber}, {PharmacistAStreet}, " +
                     $"{PharmacistATown}, {PharmacistAPostalCode},{PharmacistSellerID}) VALUES (" +
                     $"'{Sanitizer.SanitizeInput(pharmacist.FirstName)}','{Sanitizer.SanitizeInput(pharmacist.LastName)}','{Sanitizer.SanitizeInput(pharmacist.AFM)}','{Sanitizer.SanitizeInput(pharmacist.Phone)}','{Sanitizer.SanitizeInput(pharmacist.PANumber)}" +
-                    $"','{Sanitizer.SanitizeInput(pharmacist.PAStreet)}','{Sanitizer.SanitizeInput(pharmacist.PAPostalCode)}', '{pharmacist.PSellerID}')", conn);
-                try { if (insertPharmacistData.ExecuteNonQuery() < 0) return false; } catch { return false; }
+                    $"','{Sanitizer.SanitizeInput(pharmacist.PAStreet)}', '{Sanitizer.SanitizeInput(pharmacist.PATown)}' ,'{Sanitizer.SanitizeInput(pharmacist.PAPostalCode)}', '{pharmacist.PSellerID}')", conn);
+                try { if (insertPharmacistData.ExecuteNonQuery() < 0) return null; } catch { return null; }
                 //Get the new PharmacistId of the pharmacist
-                insertPharmacistData.CommandText = $"SELECT {PharmacistID} FROM {PharmacistTableName} WHERE {PharmacistAFM} = '{pharmacist.AFM}'";
+                insertPharmacistData.CommandText = $"SELECT * FROM {PharmacistTableName} WHERE {PharmacistAFM} = '{pharmacist.AFM}'";
+                Pharmacist ph = null;
                 using (var reader = insertPharmacistData.ExecuteReader())
                 {
                     //Well done finding this easter egg!
-                    int druggistID = 0;
                     while (reader.Read())
                     {
-                        druggistID = int.Parse(reader[0].ToString());
+                        ph = new Pharmacist(
+                            pharmacistID: int.Parse(reader[0].ToString()),
+                            lastName: reader[1].ToString(),
+                            firstName: reader[2].ToString(),
+                            AFM: reader[3].ToString(),
+                            phone: reader[4].ToString(),
+                            pANumber: reader[5].ToString(),
+                            pAStreet: reader[6].ToString(),
+                            pATown: reader[7].ToString(),
+                            pAPostalCode: reader[8].ToString(),
+                            pSellerID: int.Parse(reader[9].ToString()));
                     }
                     //User was not added/found something went completely wrong
-                    if (druggistID == 0) return false;
 
-                    return true;
+                    return ph;
                 }
             }
         }
@@ -593,7 +608,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"{PharmacistAStreet}='{Sanitizer.SanitizeInput(pharmacist.PAStreet)}'," +
                     $"{PharmacistATown}='{Sanitizer.SanitizeInput(pharmacist.PATown)}'," +
                     $"{PharmacistAPostalCode}='{pharmacist.PAPostalCode}'," +
-                    $"{PharmacistSellerID}='{pharmacist.PSellerID}' WHERE {PharmacistAFM}='{Sanitizer.SanitizeInput(pharmacist.AFM)}'"
+                    $"{PharmacistSellerID}='{pharmacist.PSellerID}' WHERE {PharmacistID}='{pharmacist.PharmacistID}'"
                 };
                 return modifyPharmacist.ExecuteNonQuery() > 0 ;
             }

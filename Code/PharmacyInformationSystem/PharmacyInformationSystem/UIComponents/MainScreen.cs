@@ -42,10 +42,11 @@ namespace PharmacyInformationSystem.UIComponents
                 SideMenu.Bar.Master.Click += MarkettingTeamMasterSlaveClick;
                 SideMenu.Bar.Slave1.Click += MarkettingTeamMasterSlaveClick;
                 OperationsPanel.Controls.Add(new MainUserControls.MarketingView.MarketingList());
-                SideMenu.Bar.Slave2.Click += (object sender, EventArgs e) => {
+                SideMenu.Bar.Slave2.Click += (object sender, EventArgs e) =>
+                {
                     OperationsPanel.Controls.Clear();
                     OperationsPanel.Controls.Add(new MainUserControls.MarketingView.Graphs());
-                    SideMenu.Bar.MarkSelected(sender); 
+                    SideMenu.Bar.MarkSelected(sender);
                 };
             }
             else if (User is StoreKeeper keeper)
@@ -54,7 +55,12 @@ namespace PharmacyInformationSystem.UIComponents
                 SideMenu.SetStoreKeeperView(View);
                 OperationsPanel.Controls.Add(View);
             }
-            else SideMenu.SetSellerView();
+            else
+            {
+                var View = new MainUserControls.Pharmacist.TablePharmacist((Seller)User);
+                SideMenu.SetSellerView();
+                OperationsPanel.Controls.Add(View);
+            }
         }
 
         public void MarkettingTeamMasterSlaveClick(object sender, EventArgs e)

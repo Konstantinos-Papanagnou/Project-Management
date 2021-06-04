@@ -39,6 +39,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
             this.NumberColmn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PostalCodeColmn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SellerIdColmn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.navigatorPharmacist1 = new PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist.NavigatorPharmacist();
+            this.List = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // PharmacistList
@@ -60,8 +62,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
             this.PharmacistList.ForeColor = System.Drawing.Color.FloralWhite;
             this.PharmacistList.HideSelection = false;
             this.PharmacistList.Location = new System.Drawing.Point(0, 0);
+            this.PharmacistList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PharmacistList.Name = "PharmacistList";
-            this.PharmacistList.Size = new System.Drawing.Size(944, 639);
+            this.PharmacistList.Size = new System.Drawing.Size(1259, 786);
             this.PharmacistList.TabIndex = 0;
             this.PharmacistList.UseCompatibleStateImageBehavior = false;
             // 
@@ -101,14 +104,38 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
             // 
             this.SellerIdColmn.Text = "Κωδικός Πωλητή";
             // 
+            // navigatorPharmacist1
+            // 
+            this.navigatorPharmacist1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.navigatorPharmacist1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigatorPharmacist1.Location = new System.Drawing.Point(0, 0);
+            this.navigatorPharmacist1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navigatorPharmacist1.Name = "navigatorPharmacist1";
+            this.navigatorPharmacist1.Size = new System.Drawing.Size(1259, 94);
+            this.navigatorPharmacist1.TabIndex = 1;
+            // 
+            // List
+            // 
+            this.List.AutoScroll = true;
+            this.List.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.List.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.List.Location = new System.Drawing.Point(0, 94);
+            this.List.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.List.Name = "List";
+            this.List.Size = new System.Drawing.Size(1259, 692);
+            this.List.TabIndex = 4;
+            // 
             // TablePharmacist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
+            this.Controls.Add(this.List);
+            this.Controls.Add(this.navigatorPharmacist1);
             this.Controls.Add(this.PharmacistList);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TablePharmacist";
-            this.Size = new System.Drawing.Size(944, 639);
+            this.Size = new System.Drawing.Size(1259, 786);
             this.ResumeLayout(false);
 
         }
@@ -125,5 +152,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
         private System.Windows.Forms.ColumnHeader NumberColmn;
         private System.Windows.Forms.ColumnHeader PostalCodeColmn;
         private System.Windows.Forms.ColumnHeader SellerIdColmn;
+        private NavigatorPharmacist navigatorPharmacist1;
+        private System.Windows.Forms.FlowLayoutPanel List;
     }
 }

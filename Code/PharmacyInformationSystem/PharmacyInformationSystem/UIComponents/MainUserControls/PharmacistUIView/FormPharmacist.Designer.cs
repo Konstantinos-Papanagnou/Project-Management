@@ -42,8 +42,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.FirstNameBox = new System.Windows.Forms.TextBox();
             this.NameLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.StreetError = new System.Windows.Forms.Panel();
             this.PhoneError = new System.Windows.Forms.Panel();
             this.TownError = new System.Windows.Forms.Panel();
             this.StreetBox = new System.Windows.Forms.TextBox();
@@ -58,12 +57,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.NumberLbl = new System.Windows.Forms.Label();
             this.PostalCodeBox = new System.Windows.Forms.TextBox();
             this.PostalCodeLbl = new System.Windows.Forms.Label();
-            this.SellerIdError = new System.Windows.Forms.Panel();
-            this.SellerIdBox = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -71,30 +66,30 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // AFMError
             // 
             this.AFMError.BackColor = System.Drawing.Color.Red;
-            this.AFMError.Location = new System.Drawing.Point(71, 164);
-            this.AFMError.Margin = new System.Windows.Forms.Padding(2);
+            this.AFMError.Location = new System.Drawing.Point(95, 202);
+            this.AFMError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AFMError.Name = "AFMError";
-            this.AFMError.Size = new System.Drawing.Size(214, 3);
+            this.AFMError.Size = new System.Drawing.Size(285, 4);
             this.AFMError.TabIndex = 52;
             this.AFMError.Visible = false;
             // 
             // LastNameError
             // 
             this.LastNameError.BackColor = System.Drawing.Color.Red;
-            this.LastNameError.Location = new System.Drawing.Point(324, 102);
-            this.LastNameError.Margin = new System.Windows.Forms.Padding(2);
+            this.LastNameError.Location = new System.Drawing.Point(432, 126);
+            this.LastNameError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LastNameError.Name = "LastNameError";
-            this.LastNameError.Size = new System.Drawing.Size(214, 3);
+            this.LastNameError.Size = new System.Drawing.Size(285, 4);
             this.LastNameError.TabIndex = 53;
             this.LastNameError.Visible = false;
             // 
             // FirstNameError
             // 
             this.FirstNameError.BackColor = System.Drawing.Color.Red;
-            this.FirstNameError.Location = new System.Drawing.Point(69, 101);
-            this.FirstNameError.Margin = new System.Windows.Forms.Padding(2);
+            this.FirstNameError.Location = new System.Drawing.Point(92, 124);
+            this.FirstNameError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FirstNameError.Name = "FirstNameError";
-            this.FirstNameError.Size = new System.Drawing.Size(214, 3);
+            this.FirstNameError.Size = new System.Drawing.Size(285, 4);
             this.FirstNameError.TabIndex = 51;
             this.FirstNameError.Visible = false;
             // 
@@ -103,9 +98,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(67, 18);
+            this.label1.Location = new System.Drawing.Point(89, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 22);
+            this.label1.Size = new System.Drawing.Size(235, 27);
             this.label1.TabIndex = 49;
             this.label1.Text = "Στοιχεία φαρμακοποιού";
             // 
@@ -116,10 +112,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.AddBtn.FlatAppearance.BorderSize = 0;
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Calibri", 14F);
-            this.AddBtn.Location = new System.Drawing.Point(580, 387);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AddBtn.Location = new System.Drawing.Point(773, 476);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(138, 42);
+            this.AddBtn.Size = new System.Drawing.Size(184, 52);
             this.AddBtn.TabIndex = 44;
             this.AddBtn.Text = "Αποθήκευση";
             this.AddBtn.UseVisualStyleBackColor = false;
@@ -130,11 +126,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.AFMBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.AFMBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AFMBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.AFMBox.Location = new System.Drawing.Point(69, 141);
-            this.AFMBox.Margin = new System.Windows.Forms.Padding(2);
+            this.AFMBox.Location = new System.Drawing.Point(92, 174);
+            this.AFMBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AFMBox.Name = "AFMBox";
-            this.AFMBox.Size = new System.Drawing.Size(214, 26);
-            this.AFMBox.TabIndex = 42;
+            this.AFMBox.Size = new System.Drawing.Size(285, 30);
+            this.AFMBox.TabIndex = 3;
             this.AFMBox.Tag = "AFM";
             // 
             // AFMLbl
@@ -142,10 +138,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.AFMLbl.AutoSize = true;
             this.AFMLbl.Font = new System.Drawing.Font("Calibri", 12F);
             this.AFMLbl.ForeColor = System.Drawing.Color.FloralWhite;
-            this.AFMLbl.Location = new System.Drawing.Point(69, 120);
-            this.AFMLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AFMLbl.Location = new System.Drawing.Point(92, 148);
             this.AFMLbl.Name = "AFMLbl";
-            this.AFMLbl.Size = new System.Drawing.Size(55, 19);
+            this.AFMLbl.Size = new System.Drawing.Size(69, 24);
             this.AFMLbl.TabIndex = 47;
             this.AFMLbl.Text = "Α.Φ.Μ.";
             // 
@@ -154,11 +149,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.LastNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.LastNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LastNameBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.LastNameBox.Location = new System.Drawing.Point(325, 78);
-            this.LastNameBox.Margin = new System.Windows.Forms.Padding(2);
+            this.LastNameBox.Location = new System.Drawing.Point(433, 96);
+            this.LastNameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LastNameBox.Name = "LastNameBox";
-            this.LastNameBox.Size = new System.Drawing.Size(214, 26);
-            this.LastNameBox.TabIndex = 41;
+            this.LastNameBox.Size = new System.Drawing.Size(285, 30);
+            this.LastNameBox.TabIndex = 2;
             this.LastNameBox.Tag = "lastname";
             // 
             // LastNameLbl
@@ -166,10 +161,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.LastNameLbl.AutoSize = true;
             this.LastNameLbl.Font = new System.Drawing.Font("Calibri", 12F);
             this.LastNameLbl.ForeColor = System.Drawing.Color.FloralWhite;
-            this.LastNameLbl.Location = new System.Drawing.Point(325, 56);
-            this.LastNameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LastNameLbl.Location = new System.Drawing.Point(433, 69);
             this.LastNameLbl.Name = "LastNameLbl";
-            this.LastNameLbl.Size = new System.Drawing.Size(60, 19);
+            this.LastNameLbl.Size = new System.Drawing.Size(75, 24);
             this.LastNameLbl.TabIndex = 46;
             this.LastNameLbl.Text = "Επίθετο";
             // 
@@ -178,11 +172,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.FirstNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.FirstNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FirstNameBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.FirstNameBox.Location = new System.Drawing.Point(70, 78);
-            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(2);
+            this.FirstNameBox.Location = new System.Drawing.Point(93, 96);
+            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FirstNameBox.Name = "FirstNameBox";
-            this.FirstNameBox.Size = new System.Drawing.Size(214, 26);
-            this.FirstNameBox.TabIndex = 40;
+            this.FirstNameBox.Size = new System.Drawing.Size(285, 30);
+            this.FirstNameBox.TabIndex = 1;
             this.FirstNameBox.Tag = "firstname";
             // 
             // NameLbl
@@ -190,10 +184,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.NameLbl.AutoSize = true;
             this.NameLbl.Font = new System.Drawing.Font("Calibri", 12F);
             this.NameLbl.ForeColor = System.Drawing.Color.FloralWhite;
-            this.NameLbl.Location = new System.Drawing.Point(70, 56);
-            this.NameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NameLbl.Location = new System.Drawing.Point(93, 69);
             this.NameLbl.Name = "NameLbl";
-            this.NameLbl.Size = new System.Drawing.Size(53, 19);
+            this.NameLbl.Size = new System.Drawing.Size(65, 24);
             this.NameLbl.TabIndex = 45;
             this.NameLbl.Text = "Όνομα";
             // 
@@ -202,50 +195,40 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.label2.Location = new System.Drawing.Point(67, 194);
+            this.label2.Location = new System.Drawing.Point(89, 239);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 22);
+            this.label2.Size = new System.Drawing.Size(111, 27);
             this.label2.TabIndex = 54;
             this.label2.Text = "Διεύθυνση";
             // 
-            // label3
+            // StreetError
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.label3.Location = new System.Drawing.Point(67, 360);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 22);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Πωλητής";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
-            this.panel1.Location = new System.Drawing.Point(75, 337);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 3);
-            this.panel1.TabIndex = 65;
-            this.panel1.Visible = false;
+            this.StreetError.BackColor = System.Drawing.Color.Red;
+            this.StreetError.Location = new System.Drawing.Point(100, 415);
+            this.StreetError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.StreetError.Name = "StreetError";
+            this.StreetError.Size = new System.Drawing.Size(285, 4);
+            this.StreetError.TabIndex = 65;
+            this.StreetError.Visible = false;
             // 
             // PhoneError
             // 
             this.PhoneError.BackColor = System.Drawing.Color.Red;
-            this.PhoneError.Location = new System.Drawing.Point(323, 165);
-            this.PhoneError.Margin = new System.Windows.Forms.Padding(2);
+            this.PhoneError.Location = new System.Drawing.Point(431, 203);
+            this.PhoneError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PhoneError.Name = "PhoneError";
-            this.PhoneError.Size = new System.Drawing.Size(214, 3);
+            this.PhoneError.Size = new System.Drawing.Size(285, 4);
             this.PhoneError.TabIndex = 66;
             this.PhoneError.Visible = false;
             // 
             // TownError
             // 
             this.TownError.BackColor = System.Drawing.Color.Red;
-            this.TownError.Location = new System.Drawing.Point(73, 274);
-            this.TownError.Margin = new System.Windows.Forms.Padding(2);
+            this.TownError.Location = new System.Drawing.Point(97, 337);
+            this.TownError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TownError.Name = "TownError";
-            this.TownError.Size = new System.Drawing.Size(214, 3);
+            this.TownError.Size = new System.Drawing.Size(285, 4);
             this.TownError.TabIndex = 64;
             this.TownError.Visible = false;
             // 
@@ -254,11 +237,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.StreetBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.StreetBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.StreetBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.StreetBox.Location = new System.Drawing.Point(73, 314);
-            this.StreetBox.Margin = new System.Windows.Forms.Padding(2);
+            this.StreetBox.Location = new System.Drawing.Point(97, 386);
+            this.StreetBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StreetBox.Name = "StreetBox";
-            this.StreetBox.Size = new System.Drawing.Size(214, 26);
-            this.StreetBox.TabIndex = 60;
+            this.StreetBox.Size = new System.Drawing.Size(285, 30);
+            this.StreetBox.TabIndex = 7;
             this.StreetBox.Tag = "street";
             // 
             // label4
@@ -266,10 +249,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F);
             this.label4.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label4.Location = new System.Drawing.Point(73, 293);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(97, 361);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 19);
+            this.label4.Size = new System.Drawing.Size(52, 24);
             this.label4.TabIndex = 63;
             this.label4.Text = "Οδός";
             // 
@@ -278,11 +260,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PhoneBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.PhoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PhoneBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PhoneBox.Location = new System.Drawing.Point(324, 141);
-            this.PhoneBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PhoneBox.Location = new System.Drawing.Point(432, 174);
+            this.PhoneBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PhoneBox.Name = "PhoneBox";
-            this.PhoneBox.Size = new System.Drawing.Size(214, 26);
-            this.PhoneBox.TabIndex = 59;
+            this.PhoneBox.Size = new System.Drawing.Size(285, 30);
+            this.PhoneBox.TabIndex = 4;
             this.PhoneBox.Tag = "phone";
             // 
             // PhoneLbl
@@ -290,10 +272,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PhoneLbl.AutoSize = true;
             this.PhoneLbl.Font = new System.Drawing.Font("Calibri", 12F);
             this.PhoneLbl.ForeColor = System.Drawing.Color.FloralWhite;
-            this.PhoneLbl.Location = new System.Drawing.Point(324, 119);
-            this.PhoneLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PhoneLbl.Location = new System.Drawing.Point(432, 146);
             this.PhoneLbl.Name = "PhoneLbl";
-            this.PhoneLbl.Size = new System.Drawing.Size(76, 19);
+            this.PhoneLbl.Size = new System.Drawing.Size(96, 24);
             this.PhoneLbl.TabIndex = 62;
             this.PhoneLbl.Tag = "";
             this.PhoneLbl.Text = "Τηλέφωνο";
@@ -303,11 +284,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.TownBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TownBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TownBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.TownBox.Location = new System.Drawing.Point(74, 251);
-            this.TownBox.Margin = new System.Windows.Forms.Padding(2);
+            this.TownBox.Location = new System.Drawing.Point(99, 309);
+            this.TownBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TownBox.Name = "TownBox";
-            this.TownBox.Size = new System.Drawing.Size(214, 26);
-            this.TownBox.TabIndex = 58;
+            this.TownBox.Size = new System.Drawing.Size(285, 30);
+            this.TownBox.TabIndex = 5;
             this.TownBox.Tag = "patown";
             // 
             // TownLbl
@@ -315,30 +296,29 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.TownLbl.AutoSize = true;
             this.TownLbl.Font = new System.Drawing.Font("Calibri", 12F);
             this.TownLbl.ForeColor = System.Drawing.Color.FloralWhite;
-            this.TownLbl.Location = new System.Drawing.Point(74, 229);
-            this.TownLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TownLbl.Location = new System.Drawing.Point(99, 282);
             this.TownLbl.Name = "TownLbl";
-            this.TownLbl.Size = new System.Drawing.Size(43, 19);
+            this.TownLbl.Size = new System.Drawing.Size(53, 24);
             this.TownLbl.TabIndex = 61;
             this.TownLbl.Text = "Πόλη";
             // 
             // NumberError
             // 
             this.NumberError.BackColor = System.Drawing.Color.Red;
-            this.NumberError.Location = new System.Drawing.Point(325, 337);
-            this.NumberError.Margin = new System.Windows.Forms.Padding(2);
+            this.NumberError.Location = new System.Drawing.Point(433, 415);
+            this.NumberError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NumberError.Name = "NumberError";
-            this.NumberError.Size = new System.Drawing.Size(214, 3);
+            this.NumberError.Size = new System.Drawing.Size(285, 4);
             this.NumberError.TabIndex = 72;
             this.NumberError.Visible = false;
             // 
             // PostalCodeError
             // 
             this.PostalCodeError.BackColor = System.Drawing.Color.Red;
-            this.PostalCodeError.Location = new System.Drawing.Point(323, 274);
-            this.PostalCodeError.Margin = new System.Windows.Forms.Padding(2);
+            this.PostalCodeError.Location = new System.Drawing.Point(431, 337);
+            this.PostalCodeError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PostalCodeError.Name = "PostalCodeError";
-            this.PostalCodeError.Size = new System.Drawing.Size(214, 3);
+            this.PostalCodeError.Size = new System.Drawing.Size(285, 4);
             this.PostalCodeError.TabIndex = 71;
             this.PostalCodeError.Visible = false;
             // 
@@ -347,11 +327,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.NumberBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.NumberBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NumberBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.NumberBox.Location = new System.Drawing.Point(323, 314);
-            this.NumberBox.Margin = new System.Windows.Forms.Padding(2);
+            this.NumberBox.Location = new System.Drawing.Point(431, 386);
+            this.NumberBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NumberBox.Name = "NumberBox";
-            this.NumberBox.Size = new System.Drawing.Size(214, 26);
-            this.NumberBox.TabIndex = 68;
+            this.NumberBox.Size = new System.Drawing.Size(285, 30);
+            this.NumberBox.TabIndex = 8;
             this.NumberBox.Tag = "number";
             // 
             // NumberLbl
@@ -359,10 +339,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.NumberLbl.AutoSize = true;
             this.NumberLbl.Font = new System.Drawing.Font("Calibri", 12F);
             this.NumberLbl.ForeColor = System.Drawing.Color.FloralWhite;
-            this.NumberLbl.Location = new System.Drawing.Point(323, 293);
-            this.NumberLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NumberLbl.Location = new System.Drawing.Point(431, 361);
             this.NumberLbl.Name = "NumberLbl";
-            this.NumberLbl.Size = new System.Drawing.Size(63, 19);
+            this.NumberLbl.Size = new System.Drawing.Size(78, 24);
             this.NumberLbl.TabIndex = 70;
             this.NumberLbl.Text = "Αριθμός";
             // 
@@ -371,11 +350,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PostalCodeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.PostalCodeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PostalCodeBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PostalCodeBox.Location = new System.Drawing.Point(324, 251);
-            this.PostalCodeBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PostalCodeBox.Location = new System.Drawing.Point(432, 309);
+            this.PostalCodeBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PostalCodeBox.Name = "PostalCodeBox";
-            this.PostalCodeBox.Size = new System.Drawing.Size(214, 26);
-            this.PostalCodeBox.TabIndex = 67;
+            this.PostalCodeBox.Size = new System.Drawing.Size(285, 30);
+            this.PostalCodeBox.TabIndex = 6;
             this.PostalCodeBox.Tag = "postalcode";
             // 
             // PostalCodeLbl
@@ -383,77 +362,45 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.PostalCodeLbl.AutoSize = true;
             this.PostalCodeLbl.Font = new System.Drawing.Font("Calibri", 12F);
             this.PostalCodeLbl.ForeColor = System.Drawing.Color.FloralWhite;
-            this.PostalCodeLbl.Location = new System.Drawing.Point(324, 229);
-            this.PostalCodeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PostalCodeLbl.Location = new System.Drawing.Point(432, 282);
             this.PostalCodeLbl.Name = "PostalCodeLbl";
-            this.PostalCodeLbl.Size = new System.Drawing.Size(31, 19);
+            this.PostalCodeLbl.Size = new System.Drawing.Size(38, 24);
             this.PostalCodeLbl.TabIndex = 69;
             this.PostalCodeLbl.Text = "Τ.Κ.";
-            // 
-            // SellerIdError
-            // 
-            this.SellerIdError.BackColor = System.Drawing.Color.Red;
-            this.SellerIdError.Location = new System.Drawing.Point(74, 422);
-            this.SellerIdError.Margin = new System.Windows.Forms.Padding(2);
-            this.SellerIdError.Name = "SellerIdError";
-            this.SellerIdError.Size = new System.Drawing.Size(214, 3);
-            this.SellerIdError.TabIndex = 74;
-            this.SellerIdError.Visible = false;
-            // 
-            // SellerIdBox
-            // 
-            this.SellerIdBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.SellerIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SellerIdBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.SellerIdBox.Location = new System.Drawing.Point(74, 399);
-            this.SellerIdBox.Margin = new System.Windows.Forms.Padding(2);
-            this.SellerIdBox.Name = "SellerIdBox";
-            this.SellerIdBox.Size = new System.Drawing.Size(214, 26);
-            this.SellerIdBox.TabIndex = 73;
-            this.SellerIdBox.Tag = "sellerid";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_shop_26;
-            this.pictureBox2.Location = new System.Drawing.Point(38, 356);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 28);
-            this.pictureBox2.TabIndex = 57;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_address_26;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 193);
+            this.pictureBox1.Location = new System.Drawing.Point(53, 238);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 28);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_person_26;
-            this.pictureBox4.Location = new System.Drawing.Point(40, 17);
+            this.pictureBox4.Location = new System.Drawing.Point(53, 21);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 28);
+            this.pictureBox4.Size = new System.Drawing.Size(35, 34);
             this.pictureBox4.TabIndex = 50;
             this.pictureBox4.TabStop = false;
             // 
             // FormPharmacist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(739, 451);
-            this.Controls.Add(this.SellerIdError);
-            this.Controls.Add(this.SellerIdBox);
+            this.ClientSize = new System.Drawing.Size(985, 555);
             this.Controls.Add(this.NumberError);
             this.Controls.Add(this.PostalCodeError);
             this.Controls.Add(this.NumberBox);
             this.Controls.Add(this.NumberLbl);
             this.Controls.Add(this.PostalCodeBox);
             this.Controls.Add(this.PostalCodeLbl);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.StreetError);
             this.Controls.Add(this.PhoneError);
             this.Controls.Add(this.TownError);
             this.Controls.Add(this.StreetBox);
@@ -462,8 +409,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.Controls.Add(this.PhoneLbl);
             this.Controls.Add(this.TownBox);
             this.Controls.Add(this.TownLbl);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.AFMError);
@@ -479,9 +424,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.Controls.Add(this.FirstNameBox);
             this.Controls.Add(this.NameLbl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPharmacist";
             this.Text = "FormPharmacist";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -505,9 +450,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         private System.Windows.Forms.Label NameLbl;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel StreetError;
         private System.Windows.Forms.Panel PhoneError;
         private System.Windows.Forms.Panel TownError;
         private System.Windows.Forms.TextBox StreetBox;
@@ -522,7 +465,5 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
         private System.Windows.Forms.Label NumberLbl;
         private System.Windows.Forms.TextBox PostalCodeBox;
         private System.Windows.Forms.Label PostalCodeLbl;
-        private System.Windows.Forms.Panel SellerIdError;
-        private System.Windows.Forms.TextBox SellerIdBox;
     }
 }

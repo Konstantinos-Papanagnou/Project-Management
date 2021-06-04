@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogic\PDFManager.cs" />
     <Compile Include="BusinessLogic\Pharmacist.cs" />
+    <Compile Include="BusinessLogic\SellerFunctionality\SellerSanitizer.cs" />
     <Compile Include="BusinessLogic\StoreKeeperFunctionality\Medicine.cs" />
     <Compile Include="BusinessLogic\DatabaseHandler.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\AuthenticationFailure.cs" />
@@ -235,6 +236,12 @@
     <Compile Include="UIComponents\MainUserControls\PharmacistUIView\TablePharmacist.Designer.cs">
       <DependentUpon>TablePharmacist.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\PharmacistListViewItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\PharmacistUIView\PharmacistListViewItem.Designer.cs">
+      <DependentUpon>PharmacistListViewItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIComponents\MainUserControls\StorageViewList\StorageListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -340,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\PharmacistUIView\TablePharmacist.resx">
       <DependentUpon>TablePharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\PharmacistUIView\PharmacistListViewItem.resx">
+      <DependentUpon>PharmacistListViewItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\StorageViewList\StorageListView.resx">
       <DependentUpon>StorageListView.cs</DependentUpon>
