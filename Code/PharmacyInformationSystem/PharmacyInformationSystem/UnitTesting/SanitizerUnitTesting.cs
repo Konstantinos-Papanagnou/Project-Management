@@ -10,7 +10,18 @@ namespace PharmacyInformationSystem.UnitTesting
 {
     public class SanitizerUnitTesting
     {
+
         public bool Test()
+        {
+            
+            PDFManager m = new PDFManager();
+            Order order = new Order(1020, new Seller("TestName", "TestLastName", "AM541236", 5, "tetest", "whoami", 3, null, 10), 
+                new Pharmacist("PLastName", "PFirstName", "PAFM", "6985412365", "pNumber", "pStreet", "pTown", "pPostalCode", 5),
+                275, DateTime.Now.ToString("dd/MM/yyyy HH:mm"), new List<OrderLine>() { new OrderLine(1020, new Medicine("Depon", "PainKiller", "Depon Inc", 500, 100, "10-20-3300", 2.5, 3, 'F', 'T'), 50, 150), new OrderLine(1020, new Medicine("Ασπιρινη", "PainKiller", "Ασπιρινη Inc", 500, 100, "10-20-3300", 1.5, 2.5, 'F', 'T'), 50, 125) });
+            m.CreateInvoice(order);
+            return true;
+        }
+        /*public bool Test()
         {
             AuthenticationHandler handler = new AuthenticationHandler();
             Administrator user = (Administrator)handler.AuthenticateUser("admini", "Password123");
@@ -21,7 +32,7 @@ namespace PharmacyInformationSystem.UnitTesting
 
             return true;
 
-            /*string hash = Hashing.ComputeHash("password123");
+            *//*string hash = Hashing.ComputeHash("password123");
             string hash2 = Hashing.ComputeHash("password123");
             if (hash == hash2)
                 Console.WriteLine("They are the same");
@@ -37,8 +48,8 @@ namespace PharmacyInformationSystem.UnitTesting
             bool sixth = Sanitizer.CheckRoleID(2);
             bool seventh = Sanitizer.CheckPhoneNumber("6905324568");
             Console.WriteLine(Sanitizer.SanitizeInput("Hello there i'm here to DROP TABLE USER;"));
-            return first && second && third && fourth && fifth && sixth && seventh;*/
-        }
+            return first && second && third && fourth && fifth && sixth && seventh;*//*
+        }*/
         
     }
 }
