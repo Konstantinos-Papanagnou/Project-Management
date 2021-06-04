@@ -766,12 +766,13 @@ namespace PharmacyInformationSystem.BusinessLogic
                             pharmacistID: int.Parse(reader[0].ToString()),
                             lastName: reader[1].ToString(),
                             firstName: reader[2].ToString(),
-                            phone: reader[3].ToString(),
-                            pANumber: reader[4].ToString(),
-                            pAStreet: reader[5].ToString(),
-                            pATown: reader[6].ToString(),
-                            pAPostalCode: reader[7].ToString(),
-                            pSellerID: int.Parse(reader[8].ToString())
+                            AFM: reader[3].ToString(),
+                            phone: reader[4].ToString(),
+                            pANumber: reader[5].ToString(),
+                            pAStreet: reader[6].ToString(),
+                            pATown: reader[7].ToString(),
+                            pAPostalCode: reader[8].ToString(),
+                            pSellerID: int.Parse(reader[9].ToString())
                             ));
                     }
                     return pharmacists;
@@ -789,16 +790,17 @@ namespace PharmacyInformationSystem.BusinessLogic
                 {
                     //add the pharmacist to the list
                     return new Pharmacist(
-                        pharmacistID: int.Parse(reader[0].ToString()),
-                        lastName: reader[1].ToString(),
-                        firstName: reader[2].ToString(),
-                        phone: reader[3].ToString(),
-                        pANumber: reader[4].ToString(),
-                        pAStreet: reader[5].ToString(),
-                        pATown: reader[6].ToString(),
-                        pAPostalCode: reader[7].ToString(),
-                        pSellerID: int.Parse(reader[8].ToString())
-                        );
+                            pharmacistID: int.Parse(reader[0].ToString()),
+                            lastName: reader[1].ToString(),
+                            firstName: reader[2].ToString(),
+                            AFM: reader[3].ToString(),
+                            phone: reader[4].ToString(),
+                            pANumber: reader[5].ToString(),
+                            pAStreet: reader[6].ToString(),
+                            pATown: reader[7].ToString(),
+                            pAPostalCode: reader[8].ToString(),
+                            pSellerID: int.Parse(reader[9].ToString())
+                            );
                 }
                 return null;
             }
