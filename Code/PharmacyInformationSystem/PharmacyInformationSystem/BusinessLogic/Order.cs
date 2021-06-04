@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PharmacyInformationSystem.BusinessLogic;
 
-namespace PharmacyInformationSystem
+namespace PharmacyInformationSystem.BusinessLogic
 {
     /// <summary>
     /// Class for the Order

@@ -14,7 +14,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 {
     public partial class OrderForm : Form
     {
-        private Logic::Order Order;
+        private Logic.Order Order;
 
         public OrderForm()
         {

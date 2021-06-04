@@ -40,7 +40,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
                 NumberBox.Text = phar.PAStreet;
                 PostalCodeBox.Text = phar.PAPostalCode;
 
-                SellerIdBox.Text = phar.PSellerID;
+                SellerIdBox.Text = phar.PSellerID.ToString();
             }
         }
 
@@ -53,9 +53,9 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             }
 
             if (Op == Operation.Add)
-                Pharmacist = new Logic::Pharmacist(LastNameBox.Text, FirstNameBox.Text, AFMBox.Text, PhoneBox.Text, TownBox.Text, StreetBox.Text, NumberBox.Text, PostalCodeBox.Text, SellerIdBox.Text);
+                Pharmacist = new Logic::Pharmacist(LastNameBox.Text, FirstNameBox.Text, AFMBox.Text, PhoneBox.Text, NumberBox.Text, StreetBox.Text, TownBox.Text, PostalCodeBox.Text, int.Parse(SellerIdBox.Text));
             else
-                Pharmacist = new Logic::Pharmacist(LastNameBox.Text, FirstNameBox.Text, AFMBox.Text, PhoneBox.Text, TownBox.Text, StreetBox.Text, NumberBox.Text, PostalCodeBox.Text, SellerIdBox.Text);
+                Pharmacist = new Logic::Pharmacist(LastNameBox.Text, FirstNameBox.Text, AFMBox.Text, PhoneBox.Text, NumberBox.Text, StreetBox.Text, TownBox.Text, PostalCodeBox.Text, int.Parse(SellerIdBox.Text));
             Form.RefreshList(Pharmacist, Op);
             DialogResult = DialogResult.OK;
             this.Close();

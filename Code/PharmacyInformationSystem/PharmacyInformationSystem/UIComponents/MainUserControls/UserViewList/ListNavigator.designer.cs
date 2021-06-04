@@ -47,9 +47,9 @@ namespace PharmacyInformationSystem.UIComponents
             this.ListSearchBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListSearchBox.Font = new System.Drawing.Font("Calibri", 12F);
             this.ListSearchBox.Location = new System.Drawing.Point(0, 0);
-            this.ListSearchBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ListSearchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ListSearchBox.Name = "ListSearchBox";
-            this.ListSearchBox.Size = new System.Drawing.Size(221, 27);
+            this.ListSearchBox.Size = new System.Drawing.Size(295, 32);
             this.ListSearchBox.TabIndex = 0;
             // 
             // panel1
@@ -57,9 +57,10 @@ namespace PharmacyInformationSystem.UIComponents
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.ListSearchBox);
-            this.panel1.Location = new System.Drawing.Point(405, 8);
+            this.panel1.Location = new System.Drawing.Point(540, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 28);
+            this.panel1.Size = new System.Drawing.Size(299, 34);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
@@ -67,9 +68,10 @@ namespace PharmacyInformationSystem.UIComponents
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.pictureBox1.BackgroundImage = global::PharmacyInformationSystem.Properties.Resources.icons8_search_18;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(193, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(257, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 23);
+            this.pictureBox1.Size = new System.Drawing.Size(33, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -79,10 +81,9 @@ namespace PharmacyInformationSystem.UIComponents
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.Label1.Location = new System.Drawing.Point(268, 12);
-            this.Label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label1.Location = new System.Drawing.Point(357, 15);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(134, 19);
+            this.Label1.Size = new System.Drawing.Size(172, 24);
             this.Label1.TabIndex = 4;
             this.Label1.Text = "Αναζήτηση Χρήστη:";
             // 
@@ -93,10 +94,11 @@ namespace PharmacyInformationSystem.UIComponents
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(45, 42);
+            this.label2.Location = new System.Drawing.Point(60, 52);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(74, 23);
+            this.label2.Size = new System.Drawing.Size(95, 29);
             this.label2.TabIndex = 6;
             this.label2.Text = "Χρήστες";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,11 +110,11 @@ namespace PharmacyInformationSystem.UIComponents
             this.ListAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ListAddBtn.Font = new System.Drawing.Font("Calibri", 12F);
             this.ListAddBtn.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_plus_24;
-            this.ListAddBtn.Location = new System.Drawing.Point(645, 0);
-            this.ListAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ListAddBtn.Location = new System.Drawing.Point(860, 0);
+            this.ListAddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ListAddBtn.Name = "ListAddBtn";
-            this.ListAddBtn.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.ListAddBtn.Size = new System.Drawing.Size(209, 44);
+            this.ListAddBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.ListAddBtn.Size = new System.Drawing.Size(279, 54);
             this.ListAddBtn.TabIndex = 1;
             this.ListAddBtn.Text = "Προσθήκη νέου χρήστη";
             this.ListAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,15 +124,16 @@ namespace PharmacyInformationSystem.UIComponents
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_search_client_24;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 42);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 52);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 23);
+            this.pictureBox2.Size = new System.Drawing.Size(36, 28);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
             // ListNavigator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.Controls.Add(this.pictureBox2);
@@ -138,10 +141,10 @@ namespace PharmacyInformationSystem.UIComponents
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ListAddBtn);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ListNavigator";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Size = new System.Drawing.Size(900, 76);
+            this.Size = new System.Drawing.Size(1200, 94);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
