@@ -552,8 +552,8 @@ namespace PharmacyInformationSystem.BusinessLogic
                 SQLiteCommand insertPharmacistData = new SQLiteCommand($"INSERT INTO {PharmacistTableName}({PharmacistFirstName}, " +
                     $"{PharmacistLastName}, {PharmacistAFM}, {PharmacistPhone}, {PharmacistANumber}, {PharmacistAStreet}, " +
                     $"{PharmacistATown}, {PharmacistAPostalCode},{PharmacistSellerID}) VALUES (" +
-                    $"'{pharmacist.FirstName}','{pharmacist.LastName}','{pharmacist.AFM}','{pharmacist.Phone}','{pharmacist.PANumber}" +
-                    $"','{pharmacist.PAStreet}','{pharmacist.PAPostalCode}', '{pharmacist.PSellerID}')", conn);
+                    $"'{Sanitizer.SanitizeInput(pharmacist.FirstName)}','{Sanitizer.SanitizeInput(pharmacist.LastName)}','{Sanitizer.SanitizeInput(pharmacist.AFM)}','{Sanitizer.SanitizeInput(pharmacist.Phone)}','{Sanitizer.SanitizeInput(pharmacist.PANumber)}" +
+                    $"','{Sanitizer.SanitizeInput(pharmacist.PAStreet)}','{Sanitizer.SanitizeInput(pharmacist.PAPostalCode)}', '{pharmacist.PSellerID}')", conn);
                 try { if (insertPharmacistData.ExecuteNonQuery() < 0) return false; } catch { return false; }
                 //Get the new PharmacistId of the pharmacist
                 insertPharmacistData.CommandText = $"SELECT {PharmacistID} FROM {PharmacistTableName} WHERE {PharmacistAFM} = '{pharmacist.AFM}'";
@@ -590,10 +590,10 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"{PharmacistLastName}='{Sanitizer.SanitizeInput(pharmacist.LastName)}'," +
                     $"{PharmacistPhone}='{pharmacist.Phone}'," +
                     $"{PharmacistANumber}='{pharmacist.PANumber}'," +
-                    $"{PharmacistAStreet}='{pharmacist.PAStreet}'," +
-                    $"{PharmacistATown}='{pharmacist.PATown}'," +
+                    $"{PharmacistAStreet}='{Sanitizer.SanitizeInput(pharmacist.PAStreet)}'," +
+                    $"{PharmacistATown}='{Sanitizer.SanitizeInput(pharmacist.PATown)}'," +
                     $"{PharmacistAPostalCode}='{pharmacist.PAPostalCode}'," +
-                    $"{PharmacistSellerID}='{pharmacist.PSellerID}' WHERE {PharmacistAFM}='{pharmacist.AFM}'"
+                    $"{PharmacistSellerID}='{pharmacist.PSellerID}' WHERE {PharmacistAFM}='{Sanitizer.SanitizeInput(pharmacist.AFM)}'"
                 };
                 return modifyPharmacist.ExecuteNonQuery() > 0 ;
             }
@@ -627,22 +627,26 @@ namespace PharmacyInformationSystem.BusinessLogic
         }
 
         /// <summary>
-        /// Deletes a pharmacist
+        /// Updates a Pharmacist to Inactive (Never truly deletes them)
         /// </summary>
-        /// <param name="druggistID"></param>
-        /// <param name="order"></param>
+        /// <param name="druggistID">The Drugist id to change</param>
         /// <returns>True if record was deleted successfully</returns>
-        internal bool DeletePharmacist(int druggistID, Order order)
+        internal bool DeletePharmacist(int druggistIDr)
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
-                //First remove all the information of that pharmacist from the other tables.
-                SQLiteCommand deletePharmacist = new SQLiteCommand(conn);
-                DeleteOrder(conn, druggistID, order);
                 //Finally remove the pharmacist from the Pharmacists table
-                deletePharmacist.CommandText = $"DELETE FROM {PharmacistTableName} WHERE {PharmacistID} = '{druggistID}'";
-                return deletePharmacist.ExecuteNonQuery() > 0;
+                SQLiteCommand modifyPharmacist = new SQLiteCommand(conn)
+                {
+                    CommandText = $"UPDATE {PharmacistTableName} SET " +
+                    $"{PharmacistANumber}=''," +
+                    $"{PharmacistAStreet}=''," +
+                    $"{PharmacistATown}=''," +
+                    $"{PharmacistAPostalCode}=''" +
+                    $" WHERE {PharmacistID}='{druggistIDr}'"
+                };
+                return modifyPharmacist.ExecuteNonQuery() > 0;
             }
         }
 

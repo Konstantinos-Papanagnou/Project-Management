@@ -129,7 +129,7 @@ namespace PharmacyInformationSystem.BusinessLogic
 
     public class MarketingTeam : User
     {
-        DatabaseHandler Database;
+        readonly DatabaseHandler Database;
         public MarketingTeam(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers, Salary)
         {
             Database = new DatabaseHandler();
@@ -219,7 +219,7 @@ namespace PharmacyInformationSystem.BusinessLogic
 
     public class StoreKeeper : User
     {
-        DatabaseHandler Database;
+        readonly DatabaseHandler Database;
         public StoreKeeper(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers, Salary)
         {
             Database = new DatabaseHandler();
@@ -270,7 +270,7 @@ namespace PharmacyInformationSystem.BusinessLogic
 
     public class Seller : User
     {
-        DatabaseHandler Database;
+        readonly DatabaseHandler Database;
         public Seller(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers, Salary)
         {
             Database = new DatabaseHandler();
@@ -282,8 +282,68 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <returns>The list with all the medicine from the database</returns>
         public List<Medicine> GetMedicines()
-        {
+        {   
             return Database.DisplayMedicines();
+        }
+
+        /// <summary>
+        /// Return every order for this specific seller
+        /// </summary>
+        /// <returns>All the orders that match with the seller's id</returns>
+        public List<Order> GetOrders()
+        {
+            return Database.RetrieveOrders(EmployeeID);
+        }
+
+        /// <summary>
+        /// Return all the Pharmacists binded to this Seller
+        /// </summary>
+        /// <returns>All the binded pharmacists</returns>
+        public List<Pharmacist> GetPharmacists()
+        {
+            return Database.RetrievePharmacist(EmployeeID);
+        }
+
+        /// <summary>
+        /// Adds a Pharmacist to the list of pharmacists for the specified seller
+        /// </summary>
+        /// <param name="pharmacist">The pharmacist to add</param>
+        /// <returns>True if the pharmacist was inserted successfully</returns>
+        public bool AddPharmacist(Pharmacist pharmacist)
+        {
+            pharmacist.PSellerID = EmployeeID;
+            return Database.InsertPharmacist(pharmacist);
+        }
+
+        /// <summary>
+        /// Modify Pharmacist's information
+        /// </summary>
+        /// <param name="pharmacist">The Pharmacist details</param>
+        /// <returns>True if modification was successfull</returns>
+        public bool ModifyPharmacist(Pharmacist pharmacist)
+        {
+            pharmacist.PSellerID = EmployeeID;
+            return Database.ModifyPharmacist(pharmacist);
+        }
+
+        /// <summary>
+        /// Removes the pharmacist from the database
+        /// </summary>
+        /// <param name="PharmacistID">The Pharmacist id to remove</param>
+        /// <returns>True if modification was successfull</returns>
+        public bool RemovePharmacist(int PharmacistID)
+        {
+            return Database.DeletePharmacist(PharmacistID);
+        }
+
+        /// <summary>
+        /// Adds a pending order to the database
+        /// </summary>
+        /// <param name="order">The order to be added</param>
+        /// <returns>True if addition was successful</returns>
+        public bool GetOrder(Order order)
+        {
+            return Database.InsertOrder(order);
         }
 
     }
