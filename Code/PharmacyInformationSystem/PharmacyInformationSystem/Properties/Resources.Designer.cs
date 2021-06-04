@@ -123,46 +123,6 @@ namespace PharmacyInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_caduceus_36 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-caduceus-36", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_caduceus_48 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-caduceus-48", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_caduceus_64 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-caduceus-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_caduceus_64_1_ {
-            get {
-                object obj = ResourceManager.GetObject("icons8-caduceus-64(1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_combo_chart_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-combo-chart-24", resourceCulture);
@@ -353,16 +313,6 @@ namespace PharmacyInformationSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_invoice_26 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-invoice-26", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_marketing_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-marketing-24", resourceCulture);
@@ -396,6 +346,16 @@ namespace PharmacyInformationSystem.Properties {
         internal static System.Drawing.Bitmap icons8_pill_bottle_24_1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-pill-bottle-24(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_invoice_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-invoice-26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
