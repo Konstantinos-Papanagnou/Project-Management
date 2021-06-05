@@ -45,7 +45,7 @@ namespace PharmacyInformationSystem.UIComponents
         /// </summary>
         public void SetMarketingView()
         {
-            Bar = new MainUserControls.SideBarItem("Marketing", "Κέρδος Φαρμάκου", "Κέρδος Εταιρίας", "", "", Properties.Resources.icons8_marketing_24);
+            Bar = new MainUserControls.SideBarItem("Marketing", "Κέρδος Φαρμάκου", "Κέρδος Κατηγορίας", "Κέρδος Εταιρίας", "", Properties.Resources.icons8_marketing_24);
             panelSubMenu.Controls.Add(Bar);
         }
         /// <summary>

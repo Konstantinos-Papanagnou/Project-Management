@@ -29,12 +29,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.YearlyGainBtn = new System.Windows.Forms.Button();
@@ -59,7 +59,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             this.panel2.Controls.Add(this.YearlyGainBtn);
             this.panel2.Controls.Add(this.YearlyChart);
             this.panel2.Location = new System.Drawing.Point(48, 438);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1157, 372);
             this.panel2.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             // 
             this.pictureBox2.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_plus_1_year_24;
             this.pictureBox2.Location = new System.Drawing.Point(1, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 33);
             this.pictureBox2.TabIndex = 3;
@@ -82,7 +82,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             this.YearlyGainBtn.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.YearlyGainBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.YearlyGainBtn.Location = new System.Drawing.Point(0, 0);
-            this.YearlyGainBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.YearlyGainBtn.Margin = new System.Windows.Forms.Padding(4);
             this.YearlyGainBtn.Name = "YearlyGainBtn";
             this.YearlyGainBtn.Padding = new System.Windows.Forms.Padding(33, 0, 33, 0);
             this.YearlyGainBtn.Size = new System.Drawing.Size(1157, 34);
@@ -95,25 +95,25 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             // YearlyChart
             // 
             this.YearlyChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(221)))), ((int)(((byte)(222)))));
-            chartArea3.Name = "ChartArea1";
-            this.YearlyChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.YearlyChart.Legends.Add(legend3);
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(221)))), ((int)(((byte)(222)))));
+            chartArea1.Name = "ChartArea1";
+            this.YearlyChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.YearlyChart.Legends.Add(legend1);
             this.YearlyChart.Location = new System.Drawing.Point(0, 34);
-            this.YearlyChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.YearlyChart.Margin = new System.Windows.Forms.Padding(4);
             this.YearlyChart.Name = "YearlyChart";
             this.YearlyChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series3.ChartArea = "ChartArea1";
-            series3.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            series3.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(237)))), ((int)(((byte)(67)))));
-            series3.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(232)))), ((int)(((byte)(16)))));
-            series3.Legend = "Legend1";
-            series3.Name = "Ετήσιο Κέρδος";
-            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series3.XValueMember = "Έτη";
-            series3.YValueMembers = "Πωλήσεις";
-            this.YearlyChart.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            series1.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(237)))), ((int)(((byte)(67)))));
+            series1.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(232)))), ((int)(((byte)(16)))));
+            series1.Legend = "Legend1";
+            series1.Name = "Ετήσιο Κέρδος";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            series1.XValueMember = "Έτη";
+            series1.YValueMembers = "Πωλήσεις";
+            this.YearlyChart.Series.Add(series1);
             this.YearlyChart.Size = new System.Drawing.Size(1100, 315);
             this.YearlyChart.TabIndex = 1;
             this.YearlyChart.Text = "chart2";
@@ -125,7 +125,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             this.panel1.Controls.Add(this.MonthlyGainBtn);
             this.panel1.Controls.Add(this.MonthlyChart);
             this.panel1.Location = new System.Drawing.Point(48, 60);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1157, 370);
             this.panel1.TabIndex = 4;
@@ -134,7 +134,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             // 
             this.pictureBox1.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_plus_1_month_24;
             this.pictureBox1.Location = new System.Drawing.Point(0, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 31);
             this.pictureBox1.TabIndex = 3;
@@ -148,7 +148,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             this.MonthlyGainBtn.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.MonthlyGainBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
             this.MonthlyGainBtn.Location = new System.Drawing.Point(0, 0);
-            this.MonthlyGainBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MonthlyGainBtn.Margin = new System.Windows.Forms.Padding(4);
             this.MonthlyGainBtn.Name = "MonthlyGainBtn";
             this.MonthlyGainBtn.Padding = new System.Windows.Forms.Padding(33, 0, 33, 0);
             this.MonthlyGainBtn.Size = new System.Drawing.Size(1157, 34);
@@ -157,31 +157,30 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             this.MonthlyGainBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MonthlyGainBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.MonthlyGainBtn.UseVisualStyleBackColor = true;
-            this.MonthlyGainBtn.Click += new System.EventHandler(this.MonthlyGainBtn_Click);
             // 
             // MonthlyChart
             // 
             this.MonthlyChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(221)))), ((int)(((byte)(222)))));
-            chartArea4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(189)))), ((int)(((byte)(190)))));
-            chartArea4.Name = "ChartArea1";
-            this.MonthlyChart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.MonthlyChart.Legends.Add(legend4);
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(221)))), ((int)(((byte)(222)))));
+            chartArea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(189)))), ((int)(((byte)(190)))));
+            chartArea2.Name = "ChartArea1";
+            this.MonthlyChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.MonthlyChart.Legends.Add(legend2);
             this.MonthlyChart.Location = new System.Drawing.Point(4, 34);
-            this.MonthlyChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MonthlyChart.Margin = new System.Windows.Forms.Padding(4);
             this.MonthlyChart.Name = "MonthlyChart";
             this.MonthlyChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series4.ChartArea = "ChartArea1";
-            series4.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(170)))), ((int)(((byte)(232)))));
-            series4.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(146)))), ((int)(((byte)(225)))));
-            series4.Legend = "Legend1";
-            series4.Name = "Μηνιαίο Κέρδος";
-            series4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series4.XValueMember = "Μήνες";
-            series4.YValueMembers = "Πωλήσεις";
-            this.MonthlyChart.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(170)))), ((int)(((byte)(232)))));
+            series2.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(146)))), ((int)(((byte)(225)))));
+            series2.Legend = "Legend1";
+            series2.Name = "Μηνιαίο Κέρδος";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series2.XValueMember = "Μήνες";
+            series2.YValueMembers = "Πωλήσεις";
+            this.MonthlyChart.Series.Add(series2);
             this.MonthlyChart.Size = new System.Drawing.Size(1096, 334);
             this.MonthlyChart.TabIndex = 1;
             this.MonthlyChart.Text = "chart2";
@@ -204,7 +203,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             this.Controls.Add(this.gainNavigator1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Graphs";
             this.Size = new System.Drawing.Size(1259, 781);
             this.panel2.ResumeLayout(false);

@@ -41,11 +41,16 @@ namespace PharmacyInformationSystem.UIComponents
                 SideMenu.SetMarketingView();
                 SideMenu.Bar.Master.Click += MarkettingTeamMasterSlaveClick;
                 SideMenu.Bar.Slave1.Click += MarkettingTeamMasterSlaveClick;
-                OperationsPanel.Controls.Add(new MainUserControls.MarketingView.MarketingList());
+                OperationsPanel.Controls.Add(new MainUserControls.MarketingView.MedGraphs((MarketingTeam)User));
                 SideMenu.Bar.Slave2.Click += (object sender, EventArgs e) =>
                 {
                     OperationsPanel.Controls.Clear();
-                    OperationsPanel.Controls.Add(new MainUserControls.MarketingView.Graphs());
+                    OperationsPanel.Controls.Add(new MainUserControls.MarketingView.CategoryGraphs((MarketingTeam)User));
+                    SideMenu.Bar.MarkSelected(sender);
+                };
+                SideMenu.Bar.Slave3.Click += (object sender, EventArgs e) => {
+                    OperationsPanel.Controls.Clear();
+                    OperationsPanel.Controls.Add(new MainUserControls.MarketingView.Graphs((MarketingTeam)User));
                     SideMenu.Bar.MarkSelected(sender);
                 };
             }
@@ -79,7 +84,7 @@ namespace PharmacyInformationSystem.UIComponents
         {
             OperationsPanel.Controls.Clear();
             SideMenu.Bar.MarkSelected(SideMenu.Bar.Slave1);
-            OperationsPanel.Controls.Add(new MainUserControls.MarketingView.MarketingList());
+            OperationsPanel.Controls.Add(new MainUserControls.MarketingView.MedGraphs((MarketingTeam)User));
         }
 
         /// <summary>

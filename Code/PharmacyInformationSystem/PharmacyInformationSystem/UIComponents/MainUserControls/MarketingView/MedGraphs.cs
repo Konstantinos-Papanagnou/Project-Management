@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,20 +13,18 @@ using PharmacyInformationSystem.BusinessLogic;
 
 namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
 {
-    public partial class Graphs : UserControl
+    public partial class MedGraphs : UserControl
     {
-        public Graphs(MarketingTeam MT)
+        public MedGraphs(MarketingTeam MT)
         {
             InitializeComponent();
-            DrawPieChart(MonthlyChart, MT.MonthlyCompanyGain(), "Μηνιαίο Κέρδος Εταιρίας");
-            DrawPieChart(YearlyChart, MT.YearlyCompanyGain(), "Ετήσιο Κέρδος Εταιρίας");
-            MonthlyChart.ChartAreas[0].AxisX.Maximum = 12;
-            MonthlyChart.ChartAreas[0].AxisX.Minimum = 1;
+
+            DrawPieChart(MedToday, MT.MedProfitToday(), "Πιο Κερδοφόρα Φάρμακα Σήμερα");
+            DrawPieChart(MedMonth, MT.MedProfitThisMonth(), "Πιο Κερδοφόρα Φάρμακα αυτό τον Μήνα");
+            DrawPieChart(MedYear, MT.MedProfitThisYear(), "Πιο Κερδοφόρα Φάρμακα αυτό τον Χρόνο");
         }
 
-
-
-        private void DrawPieChart(Chart chart, Dictionary<int, double> values, string Title)
+        private void DrawPieChart(Chart chart, Dictionary<string, double> values, string Title)
         {
             //reset your chart series and legends
             chart.Series.Clear();
@@ -43,10 +42,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             string seriesname = Title;
             chart.Series.Add(seriesname);
             //set the chart-type to "Pie"
-            chart.Series[seriesname].ChartType = SeriesChartType.Column;
+            chart.Series[seriesname].ChartType = SeriesChartType.Doughnut;
 
             //Add some datapoints so the series. in this case you can pass the values to this method
-            foreach (var key in values.Keys)
+            foreach(var key in values.Keys)
             {
                 chart.Series[seriesname].Points.AddXY(key, values[key]);
             }

@@ -85,6 +85,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
+            if (DrugCombo.SelectedIndex == -1) return;
             if (EditingMode)
             {
                 AddBtn.Text = "+";
@@ -160,6 +161,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
+            if (Order.OrderList.Count == 0) return;
             if(Order.Pharmacist == null)
             {
                 MessageBox.Show("Πρέπει να επιλέξεις Φαρμακοποιό για να ολοκληρωθεί η παραγγελία!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

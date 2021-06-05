@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -129,92 +130,184 @@ namespace PharmacyInformationSystem.BusinessLogic
 
     public class MarketingTeam : User
     {
-        readonly DatabaseHandler Database;
+        public List<Order> Orders { get; private set; }
+        public List<Medicine> Meds { get; private set; }
         public MarketingTeam(string FirstName, string LastName, string IdCard, int EmployeeID, string Username, string Password, int RoleID, List<string> PhoneNumbers, double Salary) : base(FirstName, LastName, IdCard, EmployeeID, Username, Password, RoleID, PhoneNumbers, Salary)
         {
-            Database = new DatabaseHandler();
+            var Database = new DatabaseHandler();
+            Orders = Database.RetrieveOrders();
+            Meds = Database.DisplayMedicines();
         }
         public MarketingTeam(User user) : base(user.FirstName, user.LastName, user.IdCard, user.EmployeeID, user.Username, user.Password, user.RoleID, user.PhoneNumbers, user.Salary) 
         {
-            Database = new DatabaseHandler(); 
+            var Database = new DatabaseHandler();
+            Orders = Database.RetrieveOrders();
+            Meds = Database.DisplayMedicines();
         }
 
         /// <summary>
-        /// Medicine's profit per day
+        /// Calculated today's profit of all Meds
         /// </summary>
-        /// <param name="med"></param>
-        /// <param name="unitSold"></param>
-        /// <returns>Medicine's profit per day</returns>
-        public double ProfitPerDay(Medicine med, int unitSold)
+        /// <returns>Today's profit of all meds</returns>
+        public Dictionary<string, double> MedProfitToday()
         {
-            return (med.MedSellingValue - med.MedAcquisitionValue) * unitSold;
+            Dictionary<string, double> profitToday = new Dictionary<string, double>();
+            foreach(var med in Meds)
+                profitToday.Add(med.MedName, 0);
+            foreach (var order in Orders)
+                if (order.OrderDate == DateTime.Now.ToString("dd/MM/yyyy"))
+                    foreach (var line in order.OrderList)
+                    {
+                        profitToday[line.Medicine.MedName] += line.TotalProductCost;
+                    }
+            return profitToday;
         }
 
         /// <summary>
-        /// Medicine's profit per month
+        /// Calculated this month's profit of all Meds
         /// </summary>
-        /// <param name="med"></param>
-        /// <param name="unitSold"></param>
-        /// <returns>Medicine's profit per month</returns>
-        public double ProfitPerMonth(Medicine med, int unitSold)
+        /// <returns>This month's profit of all meds</returns>
+        public Dictionary<string, double> MedProfitThisMonth()
         {
-            double ppM = 0;
-            for (int day = 0; day < 22; day++)
+
+            Dictionary<string, double> profitMonth = new Dictionary<string, double>();
+            foreach (var med in Meds)
+                profitMonth.Add(med.MedName, 0);
+            foreach (var order in Orders)
+                if (DateTime.ParseExact(order.OrderDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).Month == DateTime.Now.Month && DateTime.ParseExact(order.OrderDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).Year == DateTime.Now.Year)
+                    foreach (var line in order.OrderList)
+                    {
+                        profitMonth[line.Medicine.MedName] += line.TotalProductCost;
+                    }
+            return profitMonth;
+        }
+
+        /// <summary>
+        /// Calculated this year's profit of all Meds
+        /// </summary>
+        /// <returns>This year's profit of all meds</returns>
+        public Dictionary<string, double> MedProfitThisYear()
+        {
+            Dictionary<string, double> profitYear = new Dictionary<string, double>();
+            foreach (var med in Meds)
+                profitYear.Add(med.MedName, 0);
+            foreach (var order in Orders)
+                if (DateTime.ParseExact(order.OrderDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).Year == DateTime.Now.Year)
+                    foreach (var line in order.OrderList)
+                    {
+                        profitYear[line.Medicine.MedName] += line.TotalProductCost;
+                    }
+            return profitYear;
+        }
+
+        /// <summary>
+        /// Calculated today's profit of all Categories
+        /// </summary>
+        /// <returns>Today's profit of all categories</returns>
+        public Dictionary<string, double> CategoryProfitToday()
+        {
+            Dictionary<string, double> profitToday = new Dictionary<string, double>();
+            foreach (var med in Meds)
             {
-                ppM += ProfitPerDay(med, unitSold);
+                if (profitToday.Keys.Contains(med.MedCategory)) continue;
+                profitToday.Add(med.MedCategory, 0);
             }
-            return ppM;
+            foreach (var order in Orders)
+                if (order.OrderDate == DateTime.Now.ToString("dd/MM/yyyy"))
+                    foreach (var line in order.OrderList)
+                    {
+                        profitToday[line.Medicine.MedCategory] += line.TotalProductCost;
+                    }
+            return profitToday;
         }
 
         /// <summary>
-        /// Medicine's profit per year
+        /// Calculated this month's profit of all Meds
         /// </summary>
-        /// <param name="med"></param>
-        /// <param name="unitSold"></param>
-        /// <returns>Medicine's profit per year</returns>
-        public double ProfitPerYear(Medicine med, int unitSold)
+        /// <returns>This month's profit of all meds</returns>
+        public Dictionary<string, double> CategoryProfitThisMonth()
         {
-            double ppY = 0;
-            for (int month = 0; month < 12; month++)
+
+            Dictionary<string, double> profitMonth = new Dictionary<string, double>();
+            foreach (var med in Meds)
             {
-                ppY += ProfitPerMonth(med, unitSold);
+                if (profitMonth.Keys.Contains(med.MedCategory)) continue;
+                profitMonth.Add(med.MedCategory, 0);
             }
-            return ppY;
+            foreach (var order in Orders)
+                if (DateTime.ParseExact(order.OrderDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).Month == DateTime.Now.Month && DateTime.ParseExact(order.OrderDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).Year == DateTime.Now.Year)
+                    foreach (var line in order.OrderList)
+                    {
+                        profitMonth[line.Medicine.MedCategory] += line.TotalProductCost;
+                    }
+            return profitMonth;
         }
 
         /// <summary>
-        /// Company's profit per month
+        /// Calculated this year's profit of all Meds
         /// </summary>
-        /// <param name="medCount"></param>
-        /// <param name="med"></param>
-        /// <param name="unitSold"></param>
-        /// <returns>Company's profit per month</returns>
-        public double CompanyPerMonth(int medCount, Medicine med, int unitSold)
+        /// <returns>This year's profit of all meds</returns>
+        public Dictionary<string, double> CategoryProfitThisYear()
         {
-            double cpM = 0;
-            for (int count = 0; count < medCount; count++)
+            Dictionary<string, double> profitYear = new Dictionary<string, double>();
+            foreach (var med in Meds)
             {
-                cpM += ProfitPerMonth(med, unitSold);
+                if (profitYear.Keys.Contains(med.MedCategory)) continue;
+                profitYear.Add(med.MedCategory, 0);
             }
-            return cpM;
+            foreach (var order in Orders)
+                if (DateTime.ParseExact(order.OrderDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).Year == DateTime.Now.Year)
+                    foreach (var line in order.OrderList)
+                    {
+                        profitYear[line.Medicine.MedCategory] += line.TotalProductCost;
+                    }
+            return profitYear;
         }
 
         /// <summary>
-        /// Company's profit per year
+        /// Calculates 12 months of the company's gain
         /// </summary>
-        /// <param name="medCount"></param>
-        /// <param name="med"></param>
-        /// <param name="unitSold"></param>
-        /// <returns>Company's profit per year</returns>
-        public double CompanyPerYear(int medCount, Medicine med, int unitSold)
+        /// <returns>All 12 months of the company's gain</returns>
+        public Dictionary<int, double> MonthlyCompanyGain()
         {
-            double cpΥ = 0;
-            for (int count = 0; count < 12; count++)
+            Dictionary<int, double> gain = new Dictionary<int, double>();
+            for (int i = 1; i <= 12; i++)
             {
-                cpΥ += CompanyPerMonth(medCount, med, unitSold);
+                gain.Add(i, ProfitPerMonth(i));
             }
-            return cpΥ;
+            return gain;
         }
+
+        /// <summary>
+        /// Calculated a month's profit of all Meds
+        /// </summary>
+        /// <param name="month">The month you want to examine</param>
+        /// <returns>The specified month's profit of all meds</returns>
+        private double ProfitPerMonth(int month)
+        {
+            double profitMonth = 0;
+            foreach (var order in Orders)
+                if (DateTime.ParseExact(order.OrderDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).Month == month && DateTime.ParseExact(order.OrderDate, "dd/MM/yyyy", CultureInfo.InvariantCulture).Year == DateTime.Now.Year)
+                    profitMonth += order.TotalCost;
+            return profitMonth;
+        }
+
+        /// <summary>
+        /// Calculates all the company's yearly activity of gain
+        /// </summary>
+        /// <returns>yearly activity of gain</returns>
+        public Dictionary<int, double> YearlyCompanyGain()
+        {
+            Dictionary<int, double> gain = new Dictionary<int, double>();
+            foreach(var order in Orders)
+            {
+                int year = int.Parse(order.OrderDate.Split('/').Last());
+                if(!gain.Keys.Contains(year)) gain.Add(year, 0);
+                gain[year] += order.TotalCost;
+            }
+            return gain;
+        }
+
     }
 
     public class StoreKeeper : User

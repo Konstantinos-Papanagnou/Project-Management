@@ -141,12 +141,6 @@
     <Compile Include="UIComponents\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\MarketingView\DrugGainTable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UIComponents\MainUserControls\MarketingView\DrugGainTable.Designer.cs">
-      <DependentUpon>DrugGainTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIComponents\MainUserControls\MarketingView\GainNavigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,11 +153,17 @@
     <Compile Include="UIComponents\MainUserControls\MarketingView\Graphs.Designer.cs">
       <DependentUpon>Graphs.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\MarketingView\MarketingList.cs">
+    <Compile Include="UIComponents\MainUserControls\MarketingView\CategoryGraphs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UIComponents\MainUserControls\MarketingView\MarketingList.Designer.cs">
-      <DependentUpon>MarketingList.cs</DependentUpon>
+    <Compile Include="UIComponents\MainUserControls\MarketingView\CategoryGraphs.Designer.cs">
+      <DependentUpon>CategoryGraphs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\MarketingView\MedGraphs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIComponents\MainUserControls\MarketingView\MedGraphs.Designer.cs">
+      <DependentUpon>MedGraphs.cs</DependentUpon>
     </Compile>
     <Compile Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.cs">
       <SubType>UserControl</SubType>
@@ -310,17 +310,17 @@
     <EmbeddedResource Include="UIComponents\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\DrugGainTable.resx">
-      <DependentUpon>DrugGainTable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\GainNavigator.resx">
       <DependentUpon>GainNavigator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\Graphs.resx">
       <DependentUpon>Graphs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\MarketingList.resx">
-      <DependentUpon>MarketingList.cs</DependentUpon>
+    <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\CategoryGraphs.resx">
+      <DependentUpon>CategoryGraphs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\MedGraphs.resx">
+      <DependentUpon>MedGraphs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\MarketingView\MarketingNavigator.resx">
       <DependentUpon>MarketingNavigator.cs</DependentUpon>

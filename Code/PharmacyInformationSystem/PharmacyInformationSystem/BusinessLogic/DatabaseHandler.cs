@@ -597,7 +597,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"{PharmacistATown}, {PharmacistAPostalCode},{PharmacistSellerID}) VALUES (" +
                     $"'{Sanitizer.SanitizeInput(pharmacist.FirstName)}','{Sanitizer.SanitizeInput(pharmacist.LastName)}','{Sanitizer.SanitizeInput(pharmacist.AFM)}','{Sanitizer.SanitizeInput(pharmacist.Phone)}','{Sanitizer.SanitizeInput(pharmacist.PANumber)}" +
                     $"','{Sanitizer.SanitizeInput(pharmacist.PAStreet)}', '{Sanitizer.SanitizeInput(pharmacist.PATown)}' ,'{Sanitizer.SanitizeInput(pharmacist.PAPostalCode)}', '{pharmacist.PSellerID}')", conn);
-                try { if (insertPharmacistData.ExecuteNonQuery() < 0) return null; } catch { throw new SellerFunctionality.SQLConstraintException("Υπάρχει ήδη φαρμακοποιός με αυτό το ΑΦΜ"); }
+                try{ if (insertPharmacistData.ExecuteNonQuery() < 0) return null; } catch { throw new SellerFunctionality.SQLConstraintException("Υπάρχει ήδη φαρμακοποιός με αυτό το ΑΦΜ ή τηλέφωνο"); }
                 //Get the new PharmacistId of the pharmacist
                 insertPharmacistData.CommandText = $"SELECT * FROM {PharmacistTableName} WHERE {PharmacistAFM} = '{pharmacist.AFM}'";
                 Pharmacist ph = null;
@@ -654,7 +654,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                 }
                 catch
                 {
-                    throw new SellerFunctionality.SQLConstraintException("Υπάρχει ήδη ένας φαρμακοποιός με αυτό το ΑΦΜ");
+                    throw new SellerFunctionality.SQLConstraintException("Υπάρχει ήδη ένας φαρμακοποιός με αυτό το ΑΦΜ ή τηλέφωνο");
                 }
             }
         }
@@ -690,7 +690,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                     UpdateMedicineStock(o.Medicine);
                 }
                 DeleteOrderLine(conn, order.OrderID);
-                SQLiteCommand deleteOrder = new SQLiteCommand($"DELETE FROM {OrderTableName} WHERE {PharmacistIDOrder} = '{order.Pharmacist.PharmacistID}'", conn);
+                SQLiteCommand deleteOrder = new SQLiteCommand($"DELETE FROM {OrderTableName} WHERE {OrderIDField} = '{order.OrderID}'", conn);
                 return deleteOrder.ExecuteNonQuery() > 0;
             }
         }
@@ -795,7 +795,28 @@ namespace PharmacyInformationSystem.BusinessLogic
                     {
                         orders.Add(new Order(int.Parse(reader[0].ToString()),
                                 GetUserData(conn, int.Parse(reader[1].ToString())), RetrievePharmacist(conn, int.Parse(reader[2].ToString())),
-                                double.Parse(reader[3].ToString()), reader[4].ToString(), RetrieveOrderLines(conn, int.Parse(reader[1].ToString()))
+                                double.Parse(reader[3].ToString()), reader[4].ToString(), RetrieveOrderLines(conn, int.Parse(reader[0].ToString()))
+                            ));
+                    }
+                }
+                return orders;
+            }
+        }
+
+        internal List<Order> RetrieveOrders()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                SQLiteCommand get = new SQLiteCommand($"SELECT * FROM {OrderTableName}", conn);
+                List<Order> orders = new List<Order>();
+                using (var reader = get.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        orders.Add(new Order(int.Parse(reader[0].ToString()),
+                                GetUserData(conn, int.Parse(reader[1].ToString())), RetrievePharmacist(conn, int.Parse(reader[2].ToString())),
+                                double.Parse(reader[3].ToString()), reader[4].ToString(), RetrieveOrderLines(conn, int.Parse(reader[0].ToString()))
                             ));
                     }
                 }
