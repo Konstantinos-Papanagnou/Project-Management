@@ -341,9 +341,19 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// </summary>
         /// <param name="order">The order to be added</param>
         /// <returns>True if addition was successful</returns>
-        public bool GetOrder(Order order)
+        public bool InsertOrder(Order order)
         {
             return Database.InsertOrder(order);
+        }
+
+        public int GetNewOrderID()
+        {
+            return Database.GetNewOrderID();
+        }
+
+        public bool UpdateStock(Medicine med)
+        {
+            return Database.UpdateMedicineStock(med);
         }
 
     }

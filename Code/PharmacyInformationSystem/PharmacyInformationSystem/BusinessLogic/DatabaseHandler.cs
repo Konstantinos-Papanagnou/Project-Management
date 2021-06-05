@@ -443,9 +443,12 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"'{medicine.MedCategory}','{medicine.MedManfactureComp}','{medicine.MedStockCount}','{medicine.MedMinStock}'," +
                     $"'{medicine.MedDueDate}','{medicine.MedAcquisitionValue}','{medicine.MedSellingValue}'," +
                     $"'{medicine.MedQuality}','{medicine.MedType}')",conn);
-
-                if (insertMedData.ExecuteNonQuery() < 0)
-                    return null;
+                try
+                {
+                    if (insertMedData.ExecuteNonQuery() < 0)
+                        return null;
+                }
+                catch { throw new SellerFunctionality.SQLConstraintException("Υπάρχει ήδη φάρμακο με αυτό το όνομα"); }
                 //Get the new MedID of the medicine
                 insertMedData.CommandText = $"SELECT {MedicineID} FROM {MedicineTableName} WHERE" +
                     $" {MedicineName} = '{medicine.MedName}' AND {MedicineDueDate} = '{medicine.MedDueDate}'";
@@ -501,7 +504,41 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"{MedicineAcquisitionValue}='{medicine.MedAcquisitionValue}'," +
                     $" {MedicineSellingPrice}='{medicine.MedSellingValue}', {MedicineDueDate}='{medicine.MedDueDate}' WHERE {MedicineID}='{medicine.MedID}'"
                 };
-                return updateMedicine.ExecuteNonQuery() > 0;
+                try
+                {
+                    return updateMedicine.ExecuteNonQuery() > 0;
+                }
+                catch
+                {
+                    throw new SellerFunctionality.SQLConstraintException("Υπάρχει ήδη φάρμακο με αυτό το όνομα");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Update medicine's stock
+        /// </summary>
+        /// <param name="medicine"></param>
+        /// <returns>True if medicine's data was updated successfully</returns>
+        internal bool UpdateMedicineStock(Medicine medicine)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                SQLiteCommand updateMedicine = new SQLiteCommand(conn)
+                {
+                    CommandText = $"UPDATE {MedicineTableName} SET " +
+                    $"{MedicineStock}='{medicine.MedStockCount}'" +
+                    $" WHERE {MedicineID}='{medicine.MedID}'"
+                };
+                try
+                {
+                    return updateMedicine.ExecuteNonQuery() > 0;
+                }
+                catch
+                {
+                    throw new SellerFunctionality.SQLConstraintException("Υπάρχει ήδη φάρμακο με αυτό το όνομα");
+                }
             }
         }
 
@@ -560,7 +597,7 @@ namespace PharmacyInformationSystem.BusinessLogic
                     $"{PharmacistATown}, {PharmacistAPostalCode},{PharmacistSellerID}) VALUES (" +
                     $"'{Sanitizer.SanitizeInput(pharmacist.FirstName)}','{Sanitizer.SanitizeInput(pharmacist.LastName)}','{Sanitizer.SanitizeInput(pharmacist.AFM)}','{Sanitizer.SanitizeInput(pharmacist.Phone)}','{Sanitizer.SanitizeInput(pharmacist.PANumber)}" +
                     $"','{Sanitizer.SanitizeInput(pharmacist.PAStreet)}', '{Sanitizer.SanitizeInput(pharmacist.PATown)}' ,'{Sanitizer.SanitizeInput(pharmacist.PAPostalCode)}', '{pharmacist.PSellerID}')", conn);
-                try { if (insertPharmacistData.ExecuteNonQuery() < 0) return null; } catch { return null; }
+                try { if (insertPharmacistData.ExecuteNonQuery() < 0) return null; } catch { throw new SellerFunctionality.SQLConstraintException("Υπάρχει ήδη φαρμακοποιός με αυτό το ΑΦΜ"); }
                 //Get the new PharmacistId of the pharmacist
                 insertPharmacistData.CommandText = $"SELECT * FROM {PharmacistTableName} WHERE {PharmacistAFM} = '{pharmacist.AFM}'";
                 Pharmacist ph = null;
@@ -597,20 +634,28 @@ namespace PharmacyInformationSystem.BusinessLogic
         {
             using (SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
-                conn.Open();
-                SQLiteCommand modifyPharmacist = new SQLiteCommand(conn)
+                try
                 {
-                    CommandText = $"UPDATE {PharmacistTableName} SET " +
-                    $"{PharmacistFirstName}='{Sanitizer.SanitizeInput(pharmacist.FirstName)}'," +
-                    $"{PharmacistLastName}='{Sanitizer.SanitizeInput(pharmacist.LastName)}'," +
-                    $"{PharmacistPhone}='{pharmacist.Phone}'," +
-                    $"{PharmacistANumber}='{pharmacist.PANumber}'," +
-                    $"{PharmacistAStreet}='{Sanitizer.SanitizeInput(pharmacist.PAStreet)}'," +
-                    $"{PharmacistATown}='{Sanitizer.SanitizeInput(pharmacist.PATown)}'," +
-                    $"{PharmacistAPostalCode}='{pharmacist.PAPostalCode}'," +
-                    $"{PharmacistSellerID}='{pharmacist.PSellerID}' WHERE {PharmacistID}='{pharmacist.PharmacistID}'"
-                };
-                return modifyPharmacist.ExecuteNonQuery() > 0 ;
+                    conn.Open();
+                    SQLiteCommand modifyPharmacist = new SQLiteCommand(conn)
+                    {
+                        CommandText = $"UPDATE {PharmacistTableName} SET " +
+                        $"{PharmacistFirstName}='{Sanitizer.SanitizeInput(pharmacist.FirstName)}'," +
+                        $"{PharmacistLastName}='{Sanitizer.SanitizeInput(pharmacist.LastName)}'," +
+                        $"{PharmacistAFM}='{pharmacist.AFM}'," +
+                        $"{PharmacistPhone}='{pharmacist.Phone}'," +
+                        $"{PharmacistANumber}='{pharmacist.PANumber}'," +
+                        $"{PharmacistAStreet}='{Sanitizer.SanitizeInput(pharmacist.PAStreet)}'," +
+                        $"{PharmacistATown}='{Sanitizer.SanitizeInput(pharmacist.PATown)}'," +
+                        $"{PharmacistAPostalCode}='{pharmacist.PAPostalCode}'," +
+                        $"{PharmacistSellerID}='{pharmacist.PSellerID}' WHERE {PharmacistID}='{pharmacist.PharmacistID}'"
+                    };
+                    return modifyPharmacist.ExecuteNonQuery() > 0;
+                }
+                catch
+                {
+                    throw new SellerFunctionality.SQLConstraintException("Υπάρχει ήδη ένας φαρμακοποιός με αυτό το ΑΦΜ");
+                }
             }
         }
 
@@ -695,10 +740,10 @@ namespace PharmacyInformationSystem.BusinessLogic
             {
                 conn.Open();
                 //Insert User Data first
-                SQLiteCommand insertOrderData = new SQLiteCommand($"INSERT INTO {OrderTableName}({SellerIDOrderField}, " +
+                SQLiteCommand insertOrderData = new SQLiteCommand($"INSERT INTO {OrderTableName}({OrderIDField},{SellerIDOrderField}, " +
                     $"{PharmacistIDOrder}," +
                     $"{OrderDateField}, {TotalCostField}) VALUES (" +
-                    $"'{order.Seller.EmployeeID}','{order.Pharmacist.PharmacistID}','{order.OrderDate}','{order.TotalCost}')", conn);
+                    $"'{order.OrderID}','{order.Seller.EmployeeID}','{order.Pharmacist.PharmacistID}','{order.OrderDate}','{order.TotalCost}')", conn);
                 try 
                 {
                     if (insertOrderData.ExecuteNonQuery() < 0) return false;
@@ -730,17 +775,20 @@ namespace PharmacyInformationSystem.BusinessLogic
 
         internal List<Order> RetrieveOrders(int SellerId)
         {
-            using(SQLiteConnection conn = new SQLiteConnection())
+            using(SQLiteConnection conn = new SQLiteConnection(ConnName))
             {
                 conn.Open();
                 SQLiteCommand get = new SQLiteCommand($"SELECT * FROM {OrderTableName} WHERE {SellerIDOrderField} = '{SellerId}'", conn);
                 List<Order> orders = new List<Order>();
                 using (var reader = get.ExecuteReader())
                 {
-                    orders.Add(new Order(int.Parse(reader[0].ToString()),
-                            GetUserData(conn, int.Parse(reader[1].ToString())),RetrievePharmacist(conn, int.Parse(reader[2].ToString())),
-                            double.Parse(reader[3].ToString()), reader[4].ToString(), RetrieveOrderLines(conn, int.Parse(reader[1].ToString()))
-                        ));
+                    while (reader.Read())
+                    {
+                        orders.Add(new Order(int.Parse(reader[0].ToString()),
+                                GetUserData(conn, int.Parse(reader[1].ToString())), RetrievePharmacist(conn, int.Parse(reader[2].ToString())),
+                                double.Parse(reader[3].ToString()), reader[4].ToString(), RetrieveOrderLines(conn, int.Parse(reader[1].ToString()))
+                            ));
+                    }
                 }
                 return orders;
             }
@@ -828,7 +876,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <returns>The medicine information</returns>
         private Medicine RetrieveMedicines(SQLiteConnection conn, int medid)
         {
-            SQLiteCommand command = new SQLiteCommand($"SELECT * FROM {MedicineTableName} WHERE {MediID}='{medid}'", conn);
+            SQLiteCommand command = new SQLiteCommand($"SELECT * FROM {MedicineTableName} WHERE {MedicineID}='{medid}'", conn);
             using (var reader = command.ExecuteReader())
             {
                 //Get the Medicines
@@ -894,6 +942,25 @@ namespace PharmacyInformationSystem.BusinessLogic
                 return new Seller(user);
             }
             
+        }
+
+        internal int GetNewOrderID()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                SQLiteCommand command = new SQLiteCommand($"SELECT MAX({OrderIDField}) FROM {OrderTableName}", conn);
+                using(var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var i = reader[0].ToString();
+                        if (i == "") return 1;
+                        return int.Parse(i) + 1;
+                    }
+                    return -1;
+                }
+            }
         }
 
     }

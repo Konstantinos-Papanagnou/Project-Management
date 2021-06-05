@@ -110,6 +110,7 @@
     <Compile Include="BusinessLogic\PDFManager.cs" />
     <Compile Include="BusinessLogic\Pharmacist.cs" />
     <Compile Include="BusinessLogic\SellerFunctionality\SellerSanitizer.cs" />
+    <Compile Include="BusinessLogic\SellerFunctionality\SQLConstraintException.cs" />
     <Compile Include="BusinessLogic\StoreKeeperFunctionality\Medicine.cs" />
     <Compile Include="BusinessLogic\DatabaseHandler.cs" />
     <Compile Include="BusinessLogic\LoginFunctionality\AuthenticationFailure.cs" />
@@ -323,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\OrderView\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\MainUserControls\OrderView\OrderList.resx">
+      <DependentUpon>OrderList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIComponents\MainUserControls\OrderView\OrderNavigator.resx">
       <DependentUpon>OrderNavigator.cs</DependentUpon>

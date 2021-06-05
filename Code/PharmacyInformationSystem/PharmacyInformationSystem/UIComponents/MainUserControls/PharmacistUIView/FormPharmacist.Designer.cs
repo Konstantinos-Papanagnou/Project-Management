@@ -372,7 +372,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             this.pictureBox1.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_address_26;
             this.pictureBox1.Location = new System.Drawing.Point(53, 238);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 34);
             this.pictureBox1.TabIndex = 55;
@@ -382,7 +382,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             // 
             this.pictureBox4.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_person_26;
             this.pictureBox4.Location = new System.Drawing.Point(53, 21);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 34);
             this.pictureBox4.TabIndex = 50;
@@ -423,8 +423,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
             this.Controls.Add(this.LastNameLbl);
             this.Controls.Add(this.FirstNameBox);
             this.Controls.Add(this.NameLbl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FormPharmacist";
             this.Text = "FormPharmacist";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -35,18 +35,30 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
         {
             if (op == Operation.Add)
             {
-                med = User.AddMedicine(med);
-                AddToList(med);
-                Medicines.Add(med);
+                try
+                {
+                    med = User.AddMedicine(med);
+                    AddToList(med);
+                    Medicines.Add(med);
+                }catch(BusinessLogic.SellerFunctionality.SQLConstraintException e)
+                {
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else if(op == Operation.Update)
             {
+                try { 
                 //Update
                 User.UpdateMedicine(med);
                 List.Items.RemoveAt(SearchforRemove(med.MedID, false));
                 AddToList(med);
                 Medicines.RemoveAt(SearchforRemove(med.MedID));
                 Medicines.Add(med);
+                }
+                catch (BusinessLogic.SellerFunctionality.SQLConstraintException e)
+                {
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

@@ -36,12 +36,16 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
             FormPharmacist form = new FormPharmacist(this, Operation.Add);
             if (form.ShowDialog() == DialogResult.OK)
             {
-                var ph = Seller.AddPharmacist(form.Pharmacist);
-                if (ph != null)
+                try
                 {
-                    RefreshList();
+                    var ph = Seller.AddPharmacist(form.Pharmacist);
+                    if (ph != null)
+                    {
+                        RefreshList();
+                    }
+                    else MessageBox.Show("Ωχ, κάτι πήγε στραβά!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else MessageBox.Show("Ωχ, κάτι πήγε στραβά!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch(Logic.SellerFunctionality.SQLConstraintException e1) { MessageBox.Show(e1.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
@@ -87,25 +91,29 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
                 }
             }
             if (index == -1) return;
-            List.Controls.Remove(Items[index]);
-            Items.RemoveAt(index);
             if (op == Operation.Update)
             {
-                if (Seller.ModifyPharmacist(user))
+                try
                 {
-                    PharmacistListViewItem item = new PharmacistListViewItem(this, user);
-                    Items.Add(item);
-                    List.Controls.Add(item);
-                }
-                else MessageBox.Show("Ωχ, κάτι πήγε στραβά!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (Seller.ModifyPharmacist(user))
+                    {
+                        PharmacistListViewItem item = new PharmacistListViewItem(this, user);
+                        Items.Add(item);
+                        List.Controls.Add(item);
+                    }
+                    else { MessageBox.Show("Ωχ, κάτι πήγε στραβά!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                } catch (Logic.SellerFunctionality.SQLConstraintException e) { MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
             }
             if (op == Operation.Remove)
             {
                 if (!Seller.RemovePharmacist(user.PharmacistID))
                 {
                     MessageBox.Show("Ωχ, κάτι πήγε στραβά!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
+            List.Controls.Remove(Items[index]);
+            Items.RemoveAt(index);
         }
     }
 }

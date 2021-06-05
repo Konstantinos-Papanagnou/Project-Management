@@ -12,6 +12,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 {
     public partial class OrderNavigator : UserControl
     {
+        public Button AddNew { get { return AddBtn; } }
         public OrderNavigator()
         {
             InitializeComponent();

@@ -30,103 +30,70 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
-            this.PharmFirstNameError = new System.Windows.Forms.Panel();
-            this.AddBtn = new System.Windows.Forms.Button();
+            this.SaveBtn = new System.Windows.Forms.Button();
             this.OrderIdLbl = new System.Windows.Forms.Label();
             this.LogoPanel = new System.Windows.Forms.Panel();
-            this.SellerLbl = new System.Windows.Forms.Label();
+            this.PharmacistCombo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.OrderDateLbl = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.PharmFirstNameBox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.SellerLbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.RemoveBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.FinalPriceLbl = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.DateBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.PriceBox = new System.Windows.Forms.TextBox();
+            this.ManuBox = new System.Windows.Forms.TextBox();
+            this.CategoryBox = new System.Windows.Forms.TextBox();
+            this.DrugCombo = new System.Windows.Forms.ComboBox();
+            this.QuantityBox = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.PharmLastNameBox = new System.Windows.Forms.TextBox();
-            this.PharmIdBox = new System.Windows.Forms.TextBox();
-            this.PharmTownBox = new System.Windows.Forms.TextBox();
-            this.PharmPhoneBox = new System.Windows.Forms.TextBox();
-            this.PharmTownError = new System.Windows.Forms.Panel();
-            this.PharmPhoneError = new System.Windows.Forms.Panel();
-            this.PharmIdError = new System.Windows.Forms.Panel();
-            this.PharmLastNameError = new System.Windows.Forms.Panel();
-            this.SellerFirstNameError = new System.Windows.Forms.Panel();
-            this.SellerFirstNameBox = new System.Windows.Forms.TextBox();
-            this.SellerLastNameBox = new System.Windows.Forms.TextBox();
-            this.SellerIdBox = new System.Windows.Forms.TextBox();
-            this.SellerLastNameError = new System.Windows.Forms.Panel();
-            this.SellerIdError = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.MedNameBox = new System.Windows.Forms.TextBox();
-            this.MedIdBox = new System.Windows.Forms.TextBox();
-            this.Quantity = new System.Windows.Forms.NumericUpDown();
-            this.Total = new System.Windows.Forms.NumericUpDown();
-            this.MedIdError = new System.Windows.Forms.Panel();
-            this.MedNameError = new System.Windows.Forms.Panel();
-            this.PharmStreetBox = new System.Windows.Forms.TextBox();
-            this.PharmNumberBox = new System.Windows.Forms.TextBox();
-            this.PharmPostalCodeBox = new System.Windows.Forms.TextBox();
-            this.PharmStreetError = new System.Windows.Forms.Panel();
-            this.PharmNumberError = new System.Windows.Forms.Panel();
-            this.PharmPostalCodeError = new System.Windows.Forms.Panel();
+            this.List = new System.Windows.Forms.ListView();
+            this.DrugName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DueDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FinalQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LogoPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Quantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Total)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuantityBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // PharmFirstNameError
+            // SaveBtn
             // 
-            this.PharmFirstNameError.BackColor = System.Drawing.Color.Red;
-            this.PharmFirstNameError.Location = new System.Drawing.Point(98, 54);
-            this.PharmFirstNameError.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmFirstNameError.Name = "PharmFirstNameError";
-            this.PharmFirstNameError.Size = new System.Drawing.Size(307, 3);
-            this.PharmFirstNameError.TabIndex = 84;
-            this.PharmFirstNameError.Visible = false;
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
-            this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddBtn.FlatAppearance.BorderSize = 0;
-            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddBtn.Font = new System.Drawing.Font("Calibri", 14F);
-            this.AddBtn.Location = new System.Drawing.Point(817, 459);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(138, 42);
-            this.AddBtn.TabIndex = 78;
-            this.AddBtn.Text = "Αποθήκευση";
-            this.AddBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
+            this.SaveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveBtn.FlatAppearance.BorderSize = 0;
+            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBtn.Font = new System.Drawing.Font("Calibri", 14F);
+            this.SaveBtn.Location = new System.Drawing.Point(1157, 562);
+            this.SaveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(184, 52);
+            this.SaveBtn.TabIndex = 9;
+            this.SaveBtn.Text = "Αποθήκευση";
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // OrderIdLbl
             // 
             this.OrderIdLbl.AutoSize = true;
             this.OrderIdLbl.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.OrderIdLbl.ForeColor = System.Drawing.Color.FloralWhite;
-            this.OrderIdLbl.Location = new System.Drawing.Point(10, 7);
-            this.OrderIdLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OrderIdLbl.Location = new System.Drawing.Point(13, 9);
             this.OrderIdLbl.Name = "OrderIdLbl";
-            this.OrderIdLbl.Size = new System.Drawing.Size(180, 19);
+            this.OrderIdLbl.Size = new System.Drawing.Size(219, 24);
             this.OrderIdLbl.TabIndex = 79;
             this.OrderIdLbl.Text = "ΑΡΙΘΜΟΣ ΠΑΡΑΓΓΕΛΙΑΣ: ";
             // 
@@ -135,221 +102,60 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.LogoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LogoPanel.CausesValidation = false;
+            this.LogoPanel.Controls.Add(this.PharmacistCombo);
+            this.LogoPanel.Controls.Add(this.label2);
             this.LogoPanel.Controls.Add(this.OrderDateLbl);
             this.LogoPanel.Controls.Add(this.OrderIdLbl);
-            this.LogoPanel.Location = new System.Drawing.Point(21, 67);
+            this.LogoPanel.Location = new System.Drawing.Point(28, 82);
+            this.LogoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.LogoPanel.Name = "LogoPanel";
-            this.LogoPanel.Size = new System.Drawing.Size(369, 57);
+            this.LogoPanel.Size = new System.Drawing.Size(546, 108);
             this.LogoPanel.TabIndex = 108;
-            this.LogoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.onPaint);
             // 
-            // SellerLbl
+            // PharmacistCombo
             // 
-            this.SellerLbl.AutoSize = true;
-            this.SellerLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SellerLbl.Location = new System.Drawing.Point(60, 13);
-            this.SellerLbl.Name = "SellerLbl";
-            this.SellerLbl.Size = new System.Drawing.Size(135, 29);
-            this.SellerLbl.TabIndex = 1;
-            this.SellerLbl.Text = "ΥΠΟΝΟΜΙΑ ";
-            this.SellerLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.SellerLbl.Click += new System.EventHandler(this.SellerLbl_Click);
+            this.PharmacistCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PharmacistCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PharmacistCombo.FormattingEnabled = true;
+            this.PharmacistCombo.Location = new System.Drawing.Point(252, 73);
+            this.PharmacistCombo.Name = "PharmacistCombo";
+            this.PharmacistCombo.Size = new System.Drawing.Size(218, 24);
+            this.PharmacistCombo.TabIndex = 1;
+            this.PharmacistCombo.SelectedIndexChanged += new System.EventHandler(this.PharmacistCombo_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label2.ForeColor = System.Drawing.Color.FloralWhite;
+            this.label2.Location = new System.Drawing.Point(13, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(217, 24);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "ΑΦΜ ΦΑΡΜΑΚΟΠΟΙΟΥ: ";
             // 
             // OrderDateLbl
             // 
             this.OrderDateLbl.AutoSize = true;
             this.OrderDateLbl.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.OrderDateLbl.ForeColor = System.Drawing.Color.FloralWhite;
-            this.OrderDateLbl.Location = new System.Drawing.Point(10, 32);
-            this.OrderDateLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OrderDateLbl.Location = new System.Drawing.Point(13, 39);
             this.OrderDateLbl.Name = "OrderDateLbl";
-            this.OrderDateLbl.Size = new System.Drawing.Size(118, 19);
+            this.OrderDateLbl.Size = new System.Drawing.Size(146, 24);
             this.OrderDateLbl.TabIndex = 80;
             this.OrderDateLbl.Text = "ΗΜΕΡΟΜΗΝΙΑ: ";
             // 
-            // label3
+            // SellerLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label3.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label3.Location = new System.Drawing.Point(12, 3);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 19);
-            this.label3.TabIndex = 81;
-            this.label3.Text = "ΣΤΟΙΧΕΙΑ ΠΩΛΗΤΗ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label4.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label4.Location = new System.Drawing.Point(12, 3);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 19);
-            this.label4.TabIndex = 82;
-            this.label4.Text = "ΣΤΟΙΧΕΙΑ ΦΑΡΜΑΚΟΠΟΙΟΥ";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.CausesValidation = false;
-            this.panel1.Controls.Add(this.SellerIdError);
-            this.panel1.Controls.Add(this.SellerLastNameError);
-            this.panel1.Controls.Add(this.SellerIdBox);
-            this.panel1.Controls.Add(this.SellerLastNameBox);
-            this.panel1.Controls.Add(this.SellerFirstNameError);
-            this.panel1.Controls.Add(this.SellerFirstNameBox);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(21, 133);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 201);
-            this.panel1.TabIndex = 109;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.CausesValidation = false;
-            this.panel2.Controls.Add(this.PharmPostalCodeError);
-            this.panel2.Controls.Add(this.PharmNumberError);
-            this.panel2.Controls.Add(this.PharmStreetError);
-            this.panel2.Controls.Add(this.PharmPostalCodeBox);
-            this.panel2.Controls.Add(this.PharmNumberBox);
-            this.panel2.Controls.Add(this.PharmStreetBox);
-            this.panel2.Controls.Add(this.PharmTownError);
-            this.panel2.Controls.Add(this.PharmPhoneError);
-            this.panel2.Controls.Add(this.PharmIdError);
-            this.panel2.Controls.Add(this.PharmLastNameError);
-            this.panel2.Controls.Add(this.PharmPhoneBox);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.PharmTownBox);
-            this.panel2.Controls.Add(this.PharmIdBox);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.PharmFirstNameError);
-            this.panel2.Controls.Add(this.PharmLastNameBox);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.PharmFirstNameBox);
-            this.panel2.Location = new System.Drawing.Point(396, 133);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(410, 201);
-            this.panel2.TabIndex = 110;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label5.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label5.Location = new System.Drawing.Point(19, 38);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 19);
-            this.label5.TabIndex = 82;
-            this.label5.Text = "Όνομα: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label6.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label6.Location = new System.Drawing.Point(19, 74);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 19);
-            this.label6.TabIndex = 83;
-            this.label6.Text = "Επίθετο: ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label7.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label7.Location = new System.Drawing.Point(19, 112);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 19);
-            this.label7.TabIndex = 84;
-            this.label7.Text = "Κωδικός: ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label8.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label8.Location = new System.Drawing.Point(12, 100);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 19);
-            this.label8.TabIndex = 87;
-            this.label8.Text = "Κωδικός: ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label9.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label9.Location = new System.Drawing.Point(14, 67);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 19);
-            this.label9.TabIndex = 86;
-            this.label9.Text = "Επίθετο: ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label10.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label10.Location = new System.Drawing.Point(14, 35);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 19);
-            this.label10.TabIndex = 85;
-            this.label10.Text = "Όνομα: ";
-            // 
-            // PharmFirstNameBox
-            // 
-            this.PharmFirstNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.PharmFirstNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PharmFirstNameBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PharmFirstNameBox.Location = new System.Drawing.Point(98, 29);
-            this.PharmFirstNameBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmFirstNameBox.Name = "PharmFirstNameBox";
-            this.PharmFirstNameBox.Size = new System.Drawing.Size(307, 26);
-            this.PharmFirstNameBox.TabIndex = 100;
-            this.PharmFirstNameBox.Tag = "postalcode";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label12.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label12.Location = new System.Drawing.Point(12, 165);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 19);
-            this.label12.TabIndex = 89;
-            this.label12.Text = "Τηλέφωνο: ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label13.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label13.Location = new System.Drawing.Point(12, 131);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 19);
-            this.label13.TabIndex = 88;
-            this.label13.Text = "Διεύθυνση: ";
+            this.SellerLbl.AutoSize = true;
+            this.SellerLbl.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SellerLbl.Location = new System.Drawing.Point(80, 16);
+            this.SellerLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SellerLbl.Name = "SellerLbl";
+            this.SellerLbl.Size = new System.Drawing.Size(159, 37);
+            this.SellerLbl.TabIndex = 1;
+            this.SellerLbl.Text = "ΕΠΩΝΥΜΙΑ";
+            this.SellerLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -358,76 +164,214 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.panel3.CausesValidation = false;
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.SellerLbl);
-            this.panel3.Location = new System.Drawing.Point(21, 12);
+            this.panel3.Location = new System.Drawing.Point(28, 15);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(369, 49);
+            this.panel3.Size = new System.Drawing.Size(546, 60);
             this.panel3.TabIndex = 109;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_caduceus_48;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 1);
+            this.pictureBox3.Location = new System.Drawing.Point(5, 1);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(57, 47);
+            this.pictureBox3.Size = new System.Drawing.Size(76, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.CausesValidation = false;
-            this.panel4.Controls.Add(this.MedNameError);
-            this.panel4.Controls.Add(this.MedIdError);
-            this.panel4.Controls.Add(this.Total);
-            this.panel4.Controls.Add(this.Quantity);
-            this.panel4.Controls.Add(this.MedIdBox);
-            this.panel4.Controls.Add(this.MedNameBox);
+            this.panel4.Controls.Add(this.RemoveBtn);
+            this.panel4.Controls.Add(this.AddBtn);
+            this.panel4.Controls.Add(this.FinalPriceLbl);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.DateBox);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.PriceBox);
+            this.panel4.Controls.Add(this.ManuBox);
+            this.panel4.Controls.Add(this.CategoryBox);
+            this.panel4.Controls.Add(this.DrugCombo);
+            this.panel4.Controls.Add(this.QuantityBox);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label23);
-            this.panel4.Controls.Add(this.label24);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.label26);
-            this.panel4.Location = new System.Drawing.Point(21, 340);
+            this.panel4.Location = new System.Drawing.Point(28, 208);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(785, 161);
+            this.panel4.Size = new System.Drawing.Size(546, 341);
             this.panel4.TabIndex = 110;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // label23
+            // RemoveBtn
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label23.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label23.Location = new System.Drawing.Point(12, 99);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(68, 19);
-            this.label23.TabIndex = 84;
-            this.label23.Text = "Σύνολο: ";
+            this.RemoveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.RemoveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RemoveBtn.FlatAppearance.BorderSize = 0;
+            this.RemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveBtn.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.RemoveBtn.Location = new System.Drawing.Point(366, 262);
+            this.RemoveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RemoveBtn.Name = "RemoveBtn";
+            this.RemoveBtn.Size = new System.Drawing.Size(65, 51);
+            this.RemoveBtn.TabIndex = 121;
+            this.RemoveBtn.Text = "-";
+            this.RemoveBtn.UseVisualStyleBackColor = false;
+            this.RemoveBtn.Visible = false;
+            this.RemoveBtn.Click += new System.EventHandler(this.RemoveBtn_Click);
             // 
-            // label24
+            // AddBtn
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label24.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label24.Location = new System.Drawing.Point(12, 66);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(75, 19);
-            this.label24.TabIndex = 83;
-            this.label24.Text = "Κωδικός: ";
+            this.AddBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(249)))), ((int)(((byte)(149)))));
+            this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddBtn.FlatAppearance.BorderSize = 0;
+            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBtn.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.AddBtn.Location = new System.Drawing.Point(453, 262);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(65, 51);
+            this.AddBtn.TabIndex = 8;
+            this.AddBtn.Text = "+";
+            this.AddBtn.UseVisualStyleBackColor = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // FinalPriceLbl
+            // 
+            this.FinalPriceLbl.AutoSize = true;
+            this.FinalPriceLbl.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.FinalPriceLbl.ForeColor = System.Drawing.Color.FloralWhite;
+            this.FinalPriceLbl.Location = new System.Drawing.Point(16, 279);
+            this.FinalPriceLbl.Name = "FinalPriceLbl";
+            this.FinalPriceLbl.Size = new System.Drawing.Size(120, 24);
+            this.FinalPriceLbl.TabIndex = 120;
+            this.FinalPriceLbl.Text = "Τελική Τιμή: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label6.ForeColor = System.Drawing.Color.FloralWhite;
+            this.label6.Location = new System.Drawing.Point(16, 203);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 24);
+            this.label6.TabIndex = 119;
+            this.label6.Text = "Ημ. Λήξης: ";
+            // 
+            // DateBox
+            // 
+            this.DateBox.Location = new System.Drawing.Point(134, 206);
+            this.DateBox.Name = "DateBox";
+            this.DateBox.ReadOnly = true;
+            this.DateBox.Size = new System.Drawing.Size(218, 22);
+            this.DateBox.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label5.ForeColor = System.Drawing.Color.FloralWhite;
+            this.label5.Location = new System.Drawing.Point(16, 165);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 24);
+            this.label5.TabIndex = 117;
+            this.label5.Text = "Τιμή: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label4.ForeColor = System.Drawing.Color.FloralWhite;
+            this.label4.Location = new System.Drawing.Point(16, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 24);
+            this.label4.TabIndex = 116;
+            this.label4.Text = "Εταιρία: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.ForeColor = System.Drawing.Color.FloralWhite;
+            this.label3.Location = new System.Drawing.Point(16, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 24);
+            this.label3.TabIndex = 115;
+            this.label3.Text = "Κατηγορία: ";
+            // 
+            // PriceBox
+            // 
+            this.PriceBox.Location = new System.Drawing.Point(134, 167);
+            this.PriceBox.Name = "PriceBox";
+            this.PriceBox.ReadOnly = true;
+            this.PriceBox.Size = new System.Drawing.Size(218, 22);
+            this.PriceBox.TabIndex = 5;
+            // 
+            // ManuBox
+            // 
+            this.ManuBox.Location = new System.Drawing.Point(134, 127);
+            this.ManuBox.Name = "ManuBox";
+            this.ManuBox.ReadOnly = true;
+            this.ManuBox.Size = new System.Drawing.Size(218, 22);
+            this.ManuBox.TabIndex = 4;
+            // 
+            // CategoryBox
+            // 
+            this.CategoryBox.Location = new System.Drawing.Point(134, 86);
+            this.CategoryBox.Name = "CategoryBox";
+            this.CategoryBox.ReadOnly = true;
+            this.CategoryBox.Size = new System.Drawing.Size(218, 22);
+            this.CategoryBox.TabIndex = 3;
+            // 
+            // DrugCombo
+            // 
+            this.DrugCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DrugCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DrugCombo.FormattingEnabled = true;
+            this.DrugCombo.Location = new System.Drawing.Point(134, 44);
+            this.DrugCombo.Name = "DrugCombo";
+            this.DrugCombo.Size = new System.Drawing.Size(218, 24);
+            this.DrugCombo.TabIndex = 2;
+            this.DrugCombo.SelectedIndexChanged += new System.EventHandler(this.DrugCombo_SelectedIndexChanged);
+            // 
+            // QuantityBox
+            // 
+            this.QuantityBox.Location = new System.Drawing.Point(134, 242);
+            this.QuantityBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QuantityBox.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.QuantityBox.Name = "QuantityBox";
+            this.QuantityBox.Size = new System.Drawing.Size(98, 22);
+            this.QuantityBox.TabIndex = 7;
+            this.QuantityBox.ValueChanged += new System.EventHandler(this.QuantityBox_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.ForeColor = System.Drawing.Color.FloralWhite;
+            this.label1.Location = new System.Drawing.Point(16, 240);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 24);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "Ποσότητα: ";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label25.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label25.Location = new System.Drawing.Point(12, 36);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Location = new System.Drawing.Point(16, 44);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(66, 19);
+            this.label25.Size = new System.Drawing.Size(82, 24);
             this.label25.TabIndex = 82;
             this.label25.Text = "Προιόν: ";
             // 
@@ -436,397 +380,129 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label26.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label26.Location = new System.Drawing.Point(12, 3);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Location = new System.Drawing.Point(16, 4);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(93, 19);
+            this.label26.Size = new System.Drawing.Size(112, 24);
             this.label26.TabIndex = 81;
             this.label26.Text = "ΠΑΡΑΓΓΕΛΙΑ";
             // 
-            // PharmLastNameBox
+            // List
             // 
-            this.PharmLastNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.PharmLastNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PharmLastNameBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PharmLastNameBox.Location = new System.Drawing.Point(98, 61);
-            this.PharmLastNameBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmLastNameBox.Name = "PharmLastNameBox";
-            this.PharmLastNameBox.Size = new System.Drawing.Size(307, 26);
-            this.PharmLastNameBox.TabIndex = 101;
-            this.PharmLastNameBox.Tag = "postalcode";
+            this.List.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.List.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            this.List.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.List.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DrugName,
+            this.Category,
+            this.DueDate,
+            this.FinalQuantity,
+            this.Price,
+            this.Type});
+            this.List.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.List.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.List.FullRowSelect = true;
+            this.List.HideSelection = false;
+            this.List.Location = new System.Drawing.Point(587, 17);
+            this.List.Margin = new System.Windows.Forms.Padding(4);
+            this.List.Name = "List";
+            this.List.Size = new System.Drawing.Size(754, 532);
+            this.List.TabIndex = 111;
+            this.List.UseCompatibleStateImageBehavior = false;
+            this.List.View = System.Windows.Forms.View.Details;
+            this.List.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.List_ItemSelectionChanged);
             // 
-            // PharmIdBox
+            // DrugName
             // 
-            this.PharmIdBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.PharmIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PharmIdBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PharmIdBox.Location = new System.Drawing.Point(98, 93);
-            this.PharmIdBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmIdBox.Name = "PharmIdBox";
-            this.PharmIdBox.Size = new System.Drawing.Size(307, 26);
-            this.PharmIdBox.TabIndex = 102;
-            this.PharmIdBox.Tag = "postalcode";
+            this.DrugName.Text = "Όνομα";
+            this.DrugName.Width = 99;
             // 
-            // PharmTownBox
+            // Category
             // 
-            this.PharmTownBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.PharmTownBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PharmTownBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PharmTownBox.Location = new System.Drawing.Point(98, 125);
-            this.PharmTownBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmTownBox.Name = "PharmTownBox";
-            this.PharmTownBox.Size = new System.Drawing.Size(96, 26);
-            this.PharmTownBox.TabIndex = 103;
-            this.PharmTownBox.Tag = "postalcode";
+            this.Category.Text = "Κατηγορία";
+            this.Category.Width = 105;
             // 
-            // PharmPhoneBox
+            // DueDate
             // 
-            this.PharmPhoneBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.PharmPhoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PharmPhoneBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PharmPhoneBox.Location = new System.Drawing.Point(98, 158);
-            this.PharmPhoneBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmPhoneBox.Name = "PharmPhoneBox";
-            this.PharmPhoneBox.Size = new System.Drawing.Size(307, 26);
-            this.PharmPhoneBox.TabIndex = 104;
-            this.PharmPhoneBox.Tag = "postalcode";
+            this.DueDate.Text = "Ημ. Λήξης";
+            this.DueDate.Width = 116;
             // 
-            // PharmTownError
+            // FinalQuantity
             // 
-            this.PharmTownError.BackColor = System.Drawing.Color.Red;
-            this.PharmTownError.Location = new System.Drawing.Point(98, 148);
-            this.PharmTownError.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmTownError.Name = "PharmTownError";
-            this.PharmTownError.Size = new System.Drawing.Size(95, 3);
-            this.PharmTownError.TabIndex = 85;
-            this.PharmTownError.Visible = false;
+            this.FinalQuantity.Text = "Ποσότητα";
+            this.FinalQuantity.Width = 113;
             // 
-            // PharmPhoneError
+            // Price
             // 
-            this.PharmPhoneError.BackColor = System.Drawing.Color.Red;
-            this.PharmPhoneError.Location = new System.Drawing.Point(98, 181);
-            this.PharmPhoneError.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmPhoneError.Name = "PharmPhoneError";
-            this.PharmPhoneError.Size = new System.Drawing.Size(307, 3);
-            this.PharmPhoneError.TabIndex = 85;
-            this.PharmPhoneError.Visible = false;
+            this.Price.Text = "Τιμή";
+            this.Price.Width = 66;
             // 
-            // PharmIdError
+            // Type
             // 
-            this.PharmIdError.BackColor = System.Drawing.Color.Red;
-            this.PharmIdError.Location = new System.Drawing.Point(98, 116);
-            this.PharmIdError.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmIdError.Name = "PharmIdError";
-            this.PharmIdError.Size = new System.Drawing.Size(307, 3);
-            this.PharmIdError.TabIndex = 85;
-            this.PharmIdError.Visible = false;
-            // 
-            // PharmLastNameError
-            // 
-            this.PharmLastNameError.BackColor = System.Drawing.Color.Red;
-            this.PharmLastNameError.Location = new System.Drawing.Point(98, 83);
-            this.PharmLastNameError.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmLastNameError.Name = "PharmLastNameError";
-            this.PharmLastNameError.Size = new System.Drawing.Size(307, 3);
-            this.PharmLastNameError.TabIndex = 85;
-            this.PharmLastNameError.Visible = false;
-            // 
-            // SellerFirstNameError
-            // 
-            this.SellerFirstNameError.BackColor = System.Drawing.Color.Red;
-            this.SellerFirstNameError.Location = new System.Drawing.Point(100, 54);
-            this.SellerFirstNameError.Margin = new System.Windows.Forms.Padding(2);
-            this.SellerFirstNameError.Name = "SellerFirstNameError";
-            this.SellerFirstNameError.Size = new System.Drawing.Size(214, 3);
-            this.SellerFirstNameError.TabIndex = 101;
-            this.SellerFirstNameError.Visible = false;
-            // 
-            // SellerFirstNameBox
-            // 
-            this.SellerFirstNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.SellerFirstNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SellerFirstNameBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.SellerFirstNameBox.Location = new System.Drawing.Point(100, 30);
-            this.SellerFirstNameBox.Margin = new System.Windows.Forms.Padding(2);
-            this.SellerFirstNameBox.Name = "SellerFirstNameBox";
-            this.SellerFirstNameBox.Size = new System.Drawing.Size(214, 26);
-            this.SellerFirstNameBox.TabIndex = 102;
-            this.SellerFirstNameBox.Tag = "postalcode";
-            // 
-            // SellerLastNameBox
-            // 
-            this.SellerLastNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.SellerLastNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SellerLastNameBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.SellerLastNameBox.Location = new System.Drawing.Point(100, 67);
-            this.SellerLastNameBox.Margin = new System.Windows.Forms.Padding(2);
-            this.SellerLastNameBox.Name = "SellerLastNameBox";
-            this.SellerLastNameBox.Size = new System.Drawing.Size(214, 26);
-            this.SellerLastNameBox.TabIndex = 105;
-            this.SellerLastNameBox.Tag = "postalcode";
-            // 
-            // SellerIdBox
-            // 
-            this.SellerIdBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.SellerIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SellerIdBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.SellerIdBox.Location = new System.Drawing.Point(100, 105);
-            this.SellerIdBox.Margin = new System.Windows.Forms.Padding(2);
-            this.SellerIdBox.Name = "SellerIdBox";
-            this.SellerIdBox.Size = new System.Drawing.Size(214, 26);
-            this.SellerIdBox.TabIndex = 106;
-            this.SellerIdBox.Tag = "postalcode";
-            // 
-            // SellerLastNameError
-            // 
-            this.SellerLastNameError.BackColor = System.Drawing.Color.Red;
-            this.SellerLastNameError.Location = new System.Drawing.Point(100, 93);
-            this.SellerLastNameError.Margin = new System.Windows.Forms.Padding(2);
-            this.SellerLastNameError.Name = "SellerLastNameError";
-            this.SellerLastNameError.Size = new System.Drawing.Size(214, 3);
-            this.SellerLastNameError.TabIndex = 102;
-            this.SellerLastNameError.Visible = false;
-            // 
-            // SellerIdError
-            // 
-            this.SellerIdError.BackColor = System.Drawing.Color.Red;
-            this.SellerIdError.Location = new System.Drawing.Point(100, 128);
-            this.SellerIdError.Margin = new System.Windows.Forms.Padding(2);
-            this.SellerIdError.Name = "SellerIdError";
-            this.SellerIdError.Size = new System.Drawing.Size(214, 3);
-            this.SellerIdError.TabIndex = 103;
-            this.SellerIdError.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label1.Location = new System.Drawing.Point(12, 127);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 19);
-            this.label1.TabIndex = 85;
-            this.label1.Text = "Ποσότητα: ";
-            // 
-            // MedNameBox
-            // 
-            this.MedNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.MedNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MedNameBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.MedNameBox.Location = new System.Drawing.Point(82, 29);
-            this.MedNameBox.Margin = new System.Windows.Forms.Padding(2);
-            this.MedNameBox.Name = "MedNameBox";
-            this.MedNameBox.Size = new System.Drawing.Size(214, 26);
-            this.MedNameBox.TabIndex = 107;
-            this.MedNameBox.Tag = "postalcode";
-            // 
-            // MedIdBox
-            // 
-            this.MedIdBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.MedIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MedIdBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.MedIdBox.Location = new System.Drawing.Point(83, 62);
-            this.MedIdBox.Margin = new System.Windows.Forms.Padding(2);
-            this.MedIdBox.Name = "MedIdBox";
-            this.MedIdBox.Size = new System.Drawing.Size(214, 26);
-            this.MedIdBox.TabIndex = 107;
-            this.MedIdBox.Tag = "postalcode";
-            // 
-            // Quantity
-            // 
-            this.Quantity.Location = new System.Drawing.Point(100, 126);
-            this.Quantity.Margin = new System.Windows.Forms.Padding(2);
-            this.Quantity.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Size = new System.Drawing.Size(98, 20);
-            this.Quantity.TabIndex = 111;
-            // 
-            // Total
-            // 
-            this.Total.DecimalPlaces = 2;
-            this.Total.Location = new System.Drawing.Point(100, 98);
-            this.Total.Margin = new System.Windows.Forms.Padding(2);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(98, 20);
-            this.Total.TabIndex = 111;
-            // 
-            // MedIdError
-            // 
-            this.MedIdError.BackColor = System.Drawing.Color.Red;
-            this.MedIdError.Location = new System.Drawing.Point(82, 85);
-            this.MedIdError.Margin = new System.Windows.Forms.Padding(2);
-            this.MedIdError.Name = "MedIdError";
-            this.MedIdError.Size = new System.Drawing.Size(214, 3);
-            this.MedIdError.TabIndex = 86;
-            this.MedIdError.Visible = false;
-            // 
-            // MedNameError
-            // 
-            this.MedNameError.BackColor = System.Drawing.Color.Red;
-            this.MedNameError.Location = new System.Drawing.Point(83, 52);
-            this.MedNameError.Margin = new System.Windows.Forms.Padding(2);
-            this.MedNameError.Name = "MedNameError";
-            this.MedNameError.Size = new System.Drawing.Size(214, 3);
-            this.MedNameError.TabIndex = 87;
-            this.MedNameError.Visible = false;
-            // 
-            // PharmStreetBox
-            // 
-            this.PharmStreetBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.PharmStreetBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PharmStreetBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PharmStreetBox.Location = new System.Drawing.Point(198, 125);
-            this.PharmStreetBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmStreetBox.Name = "PharmStreetBox";
-            this.PharmStreetBox.Size = new System.Drawing.Size(100, 26);
-            this.PharmStreetBox.TabIndex = 105;
-            this.PharmStreetBox.Tag = "postalcode";
-            // 
-            // PharmNumberBox
-            // 
-            this.PharmNumberBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.PharmNumberBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PharmNumberBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PharmNumberBox.Location = new System.Drawing.Point(302, 125);
-            this.PharmNumberBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmNumberBox.Name = "PharmNumberBox";
-            this.PharmNumberBox.Size = new System.Drawing.Size(29, 26);
-            this.PharmNumberBox.TabIndex = 106;
-            this.PharmNumberBox.Tag = "postalcode";
-            // 
-            // PharmPostalCodeBox
-            // 
-            this.PharmPostalCodeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.PharmPostalCodeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PharmPostalCodeBox.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.PharmPostalCodeBox.Location = new System.Drawing.Point(335, 124);
-            this.PharmPostalCodeBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmPostalCodeBox.Name = "PharmPostalCodeBox";
-            this.PharmPostalCodeBox.Size = new System.Drawing.Size(71, 26);
-            this.PharmPostalCodeBox.TabIndex = 107;
-            this.PharmPostalCodeBox.Tag = "postalcode";
-            // 
-            // PharmStreetError
-            // 
-            this.PharmStreetError.BackColor = System.Drawing.Color.Red;
-            this.PharmStreetError.Location = new System.Drawing.Point(198, 148);
-            this.PharmStreetError.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmStreetError.Name = "PharmStreetError";
-            this.PharmStreetError.Size = new System.Drawing.Size(100, 3);
-            this.PharmStreetError.TabIndex = 86;
-            this.PharmStreetError.Visible = false;
-            // 
-            // PharmNumberError
-            // 
-            this.PharmNumberError.BackColor = System.Drawing.Color.Red;
-            this.PharmNumberError.Location = new System.Drawing.Point(302, 149);
-            this.PharmNumberError.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmNumberError.Name = "PharmNumberError";
-            this.PharmNumberError.Size = new System.Drawing.Size(30, 3);
-            this.PharmNumberError.TabIndex = 87;
-            this.PharmNumberError.Visible = false;
-            // 
-            // PharmPostalCodeError
-            // 
-            this.PharmPostalCodeError.BackColor = System.Drawing.Color.Red;
-            this.PharmPostalCodeError.Location = new System.Drawing.Point(335, 148);
-            this.PharmPostalCodeError.Margin = new System.Windows.Forms.Padding(2);
-            this.PharmPostalCodeError.Name = "PharmPostalCodeError";
-            this.PharmPostalCodeError.Size = new System.Drawing.Size(70, 3);
-            this.PharmPostalCodeError.TabIndex = 88;
-            this.PharmPostalCodeError.Visible = false;
+            this.Type.Text = "Είδος";
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(964, 525);
+            this.ClientSize = new System.Drawing.Size(1354, 625);
+            this.Controls.Add(this.List);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LogoPanel);
-            this.Controls.Add(this.AddBtn);
+            this.Controls.Add(this.SaveBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "OrderForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Παραγγελία";
-            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.LogoPanel.ResumeLayout(false);
             this.LogoPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Quantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Total)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuantityBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel PharmFirstNameError;
-        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Label OrderIdLbl;
         private System.Windows.Forms.Panel LogoPanel;
         private System.Windows.Forms.Label SellerLbl;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label OrderDateLbl;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox PharmFirstNameBox;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Panel SellerIdError;
-        private System.Windows.Forms.Panel SellerLastNameError;
-        private System.Windows.Forms.TextBox SellerIdBox;
-        private System.Windows.Forms.TextBox SellerLastNameBox;
-        private System.Windows.Forms.Panel SellerFirstNameError;
-        private System.Windows.Forms.TextBox SellerFirstNameBox;
-        private System.Windows.Forms.Panel PharmTownError;
-        private System.Windows.Forms.Panel PharmPhoneError;
-        private System.Windows.Forms.Panel PharmIdError;
-        private System.Windows.Forms.Panel PharmLastNameError;
-        private System.Windows.Forms.TextBox PharmPhoneBox;
-        private System.Windows.Forms.TextBox PharmTownBox;
-        private System.Windows.Forms.TextBox PharmIdBox;
-        private System.Windows.Forms.TextBox PharmLastNameBox;
-        private System.Windows.Forms.TextBox MedIdBox;
-        private System.Windows.Forms.TextBox MedNameBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown Quantity;
-        private System.Windows.Forms.Panel MedNameError;
-        private System.Windows.Forms.Panel MedIdError;
-        private System.Windows.Forms.NumericUpDown Total;
-        private System.Windows.Forms.Panel PharmPostalCodeError;
-        private System.Windows.Forms.Panel PharmNumberError;
-        private System.Windows.Forms.Panel PharmStreetError;
-        private System.Windows.Forms.TextBox PharmPostalCodeBox;
-        private System.Windows.Forms.TextBox PharmNumberBox;
-        private System.Windows.Forms.TextBox PharmStreetBox;
+        private System.Windows.Forms.NumericUpDown QuantityBox;
+        private System.Windows.Forms.ComboBox PharmacistCombo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView List;
+        private System.Windows.Forms.ColumnHeader DrugName;
+        private System.Windows.Forms.ColumnHeader Category;
+        private System.Windows.Forms.ColumnHeader DueDate;
+        private System.Windows.Forms.ColumnHeader Type;
+        private System.Windows.Forms.ColumnHeader FinalQuantity;
+        private System.Windows.Forms.ColumnHeader Price;
+        private System.Windows.Forms.ComboBox DrugCombo;
+        private System.Windows.Forms.Label FinalPriceLbl;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox DateBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox PriceBox;
+        private System.Windows.Forms.TextBox ManuBox;
+        private System.Windows.Forms.TextBox CategoryBox;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button RemoveBtn;
     }
 }

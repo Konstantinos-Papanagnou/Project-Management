@@ -57,10 +57,23 @@ namespace PharmacyInformationSystem.UIComponents
             }
             else
             {
-                var View = new MainUserControls.Pharmacist.TablePharmacist((Seller)User);
                 SideMenu.SetSellerView();
-                OperationsPanel.Controls.Add(View);
+                SideMenu.Bar.Master.Click += SellerMasterSlaveClick;
+                SideMenu.Bar.Slave1.Click += SellerMasterSlaveClick;
+                SideMenu.Bar.Slave2.Click += (object sender, EventArgs e) => {
+                    OperationsPanel.Controls.Clear();
+                    OperationsPanel.Controls.Add(new MainUserControls.OrderView.OrderList((Seller)User));
+                    SideMenu.Bar.MarkSelected(sender);
+                };
+                //SideMenu.Bar.Slave3.Click += (object sender, EventArgs e) => { };
+                OperationsPanel.Controls.Add(new MainUserControls.Pharmacist.TablePharmacist((Seller)User));
             }
+        }
+        public void SellerMasterSlaveClick(object sender, EventArgs e)
+        {
+            OperationsPanel.Controls.Clear();
+            SideMenu.Bar.MarkSelected(SideMenu.Bar.Slave1);
+            OperationsPanel.Controls.Add(new MainUserControls.Pharmacist.TablePharmacist((Seller)User));
         }
 
         public void MarkettingTeamMasterSlaveClick(object sender, EventArgs e)

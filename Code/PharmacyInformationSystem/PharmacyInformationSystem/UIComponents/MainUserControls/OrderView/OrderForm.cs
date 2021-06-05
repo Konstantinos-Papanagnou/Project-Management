@@ -14,51 +14,149 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 {
     public partial class OrderForm : Form
     {
-        private Logic.Order Order;
-
-        public OrderForm()
+        bool EditingMode = false;
+        readonly Logic.Seller Seller;
+        readonly List<Logic.Medicine> Drugs;
+        readonly List<Logic.Pharmacist> Pharmacists;
+        private readonly IUpdatable<Logic.Order> form;
+        public Logic.Order Order { get; private set; }
+        public OrderForm(IUpdatable<Logic.Order> form, Logic.Seller Seller)
         {
+            this.form = form;
+            Order = new Logic.Order();
+            this.Seller = Seller;
             InitializeComponent();
+            Pharmacists = Seller.GetPharmacists();
+            foreach(var p in Pharmacists)
+                PharmacistCombo.Items.Add(p.AFM);
+            Drugs = Seller.GetMedicines();
+            foreach (var drug in Drugs)
+                DrugCombo.Items.Add(drug.MedName);
+            Order.OrderID = Seller.GetNewOrderID();
+            OrderIdLbl.Text += Order.OrderID;
+            OrderDateLbl.Text += DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+            Order.OrderDate = DateTime.Now.ToString("dd/MM/yyyy");
+            Order.OrderList = new List<OrderLine>();
+            Order.Seller = Seller;
         }
 
-        private void SellerLbl_Click(object sender, EventArgs e)
+        private void DrugCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (DrugCombo.SelectedIndex == -1) return;
+            CategoryBox.Text = Drugs[DrugCombo.SelectedIndex].MedCategory;
+            ManuBox.Text = Drugs[DrugCombo.SelectedIndex].MedManfactureComp;
+            PriceBox.Text = Drugs[DrugCombo.SelectedIndex].MedSellingValue.ToString();
+            DateBox.Text = Drugs[DrugCombo.SelectedIndex].MedDueDate;
+            QuantityBox.Maximum = Drugs[DrugCombo.SelectedIndex].MedStockCount;
+            FinalPriceLbl.Text = "Τελική Τιμή: " + (Drugs[DrugCombo.SelectedIndex].MedSellingValue * (double)QuantityBox.Value) + " €";
         }
 
-        private void OrderForm_Load(object sender, EventArgs e)
+        private void QuantityBox_ValueChanged(object sender, EventArgs e)
         {
-
+            FinalPriceLbl.Text = "Τελική Τιμή: " + (Drugs[DrugCombo.SelectedIndex].MedSellingValue * (double)QuantityBox.Value) + " €";
         }
 
-        private void onPaint(object sender, PaintEventArgs e)
+        private void PharmacistCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Graphics v = e.Graphics;
-            DrawRoundRect(v, Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            //Without rounded corners
-            //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
-            base.OnPaint(e);
+            Order.Pharmacist = Pharmacists[PharmacistCombo.SelectedIndex];
         }
 
-        public void DrawRoundRect(Graphics g, Pen p, float X, float Y, float width, float height, float radius)
+        private void AddBtn_Click(object sender, EventArgs e)
         {
-            System.Drawing.Drawing2D.GraphicsPath gp = new GraphicsPath();
-            //Upper-right arc:
-            gp.AddArc(X + width - (radius * 2), Y, radius * 2, radius * 2, 270, 90);
-            //Lower-right arc:
-            gp.AddArc(X + width - (radius * 2), Y + height - (radius * 2), radius * 2, radius * 2, 0, 90);
-            //Lower-left arc:
-            gp.AddArc(X, Y + height - (radius * 2), radius * 2, radius * 2, 90, 90);
-            //Upper-left arc:
-            gp.AddArc(X, Y, radius * 2, radius * 2, 180, 90);
-            gp.CloseFigure();
-            g.DrawPath(p, gp);
-            gp.Dispose();
+            if (EditingMode)
+            {
+                AddBtn.Text = "+";
+                EditingMode = false;
+                RemoveBtn.Visible = false;
+            }
+            Order.OrderList.Add(new OrderLine(Order.OrderID, Drugs[DrugCombo.SelectedIndex], (int)QuantityBox.Value, (double)QuantityBox.Value * Drugs[DrugCombo.SelectedIndex].MedSellingValue));
+            AddToList(Order.OrderList.Last());
+            ClearFields();
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void AddToList(OrderLine order)
         {
+            var lvi = new ListViewItem(order.Medicine.MedName);
+            lvi.SubItems.Add(order.Medicine.MedCategory);
+            lvi.SubItems.Add(order.Medicine.MedDueDate);
+            lvi.SubItems.Add(QuantityBox.Value.ToString());
+            lvi.SubItems.Add(order.Medicine.MedSellingValue.ToString());
+            lvi.SubItems.Add(MapValues(order.Medicine.MedType));
+            List.Items.Add(lvi);
+        }
 
+        private string MapValues(char value)
+        {
+            switch (value)
+            {
+                case 'Φ':
+                    return "Φάρμακο";
+                case 'Π':
+                    return "Παραφαρμακευτικό";
+                case 'Κ':
+                    return "Κανονικό";
+                default:
+                    return "Γενόσημο";
+            }
+        }
+
+        private void List_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if (EditingMode) return;
+            EditingMode = true;
+            RemoveBtn.Visible = true;
+            AddBtn.Text = ">";
+            DrugCombo.SelectedItem = Order.OrderList[e.ItemIndex].Medicine.MedName;
+            QuantityBox.Value = decimal.Parse(e.Item.SubItems[3].Text);
+            Order.OrderList.RemoveAt(e.ItemIndex);
+            List.Items.RemoveAt(e.ItemIndex);
+        }
+
+        private void RemoveBtn_Click(object sender, EventArgs e)
+        {
+            if (EditingMode)
+            {
+
+                AddBtn.Text = "+";
+                EditingMode = false;
+                RemoveBtn.Visible = false;
+                ClearFields();
+            }
+        }
+
+        public void ClearFields()
+        {
+            CategoryBox.Text = string.Empty;
+            ManuBox.Text = string.Empty;
+            PriceBox.Text = string.Empty;
+            DateBox.Text = string.Empty;
+            QuantityBox.Value = 0;
+            DrugCombo.SelectedIndex = -1;
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            if(Order.Pharmacist == null)
+            {
+                MessageBox.Show("Πρέπει να επιλέξεις Φαρμακοποιό για να ολοκληρωθεί η παραγγελία!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            double cost = 0;
+            foreach(var o in Order.OrderList)
+            {
+                o.Medicine.MedStockCount -= o.ProductQuantity;
+                Seller.UpdateStock(o.Medicine);
+                cost += o.TotalProductCost;
+            }
+            Order.TotalCost = cost;
+            
+            if (Seller.InsertOrder(Order))
+            {
+                MessageBox.Show("Επιτυχής καταχώρηση παραγγελίας!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                form.RefreshList(Order, Operation.Add);
+                this.Close();
+            }
+            
         }
     }
 }

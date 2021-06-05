@@ -36,5 +36,7 @@ namespace PharmacyInformationSystem.BusinessLogic
             this.OrderDate = OrderDate;
             this.OrderList = OrderList;
         }
+
+        public Order() { }
     }
 }

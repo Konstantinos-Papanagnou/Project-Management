@@ -37,7 +37,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls
 
                 TownBox.Text = phar.PATown;
                 StreetBox.Text = phar.PAStreet;
-                NumberBox.Text = phar.PAStreet;
+                NumberBox.Text = phar.PANumber;
                 PostalCodeBox.Text = phar.PAPostalCode;
             }
         }

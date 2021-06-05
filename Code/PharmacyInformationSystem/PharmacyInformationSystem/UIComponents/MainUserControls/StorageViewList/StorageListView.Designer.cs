@@ -96,7 +96,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // 
             // DueDate
             // 
-            this.DueDate.Text = "Ημερομηνία Λήξη";
+            this.DueDate.Text = "Ημερομηνία Λήξης";
             this.DueDate.Width = 174;
             // 
             // Quantity
@@ -116,7 +116,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewLis
             // 
             // Price
             // 
-            this.Price.Text = "Τιμή Ποριόντος (€)";
+            this.Price.Text = "Τιμή Προϊόντος (€)";
             this.Price.Width = 149;
             // 
             // Quality

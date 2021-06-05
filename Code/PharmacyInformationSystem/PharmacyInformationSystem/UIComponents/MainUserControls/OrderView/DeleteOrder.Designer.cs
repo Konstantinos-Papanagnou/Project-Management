@@ -43,9 +43,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.deleteBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.deleteBtn.Location = new System.Drawing.Point(196, 158);
+            this.deleteBtn.Location = new System.Drawing.Point(261, 194);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(200, 59);
+            this.deleteBtn.Size = new System.Drawing.Size(267, 73);
             this.deleteBtn.TabIndex = 11;
             this.deleteBtn.Text = "ΔΙΑΓΡΑΦΗ";
             this.deleteBtn.UseVisualStyleBackColor = false;
@@ -57,9 +58,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.CancleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancleBtn.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.CancleBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.CancleBtn.Location = new System.Drawing.Point(-2, 158);
+            this.CancleBtn.Location = new System.Drawing.Point(-3, 194);
+            this.CancleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CancleBtn.Name = "CancleBtn";
-            this.CancleBtn.Size = new System.Drawing.Size(192, 59);
+            this.CancleBtn.Size = new System.Drawing.Size(256, 73);
             this.CancleBtn.TabIndex = 10;
             this.CancleBtn.Text = "ΑΚΥΡΟ";
             this.CancleBtn.UseVisualStyleBackColor = false;
@@ -70,9 +72,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(19, 49);
+            this.label2.Location = new System.Drawing.Point(25, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(347, 23);
+            this.label2.Size = new System.Drawing.Size(438, 29);
             this.label2.TabIndex = 9;
             this.label2.Text = "Θέλετε να ακυρώσετε αυτή τη παραγγελία;\r\n";
             // 
@@ -82,23 +85,27 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(16, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 23);
+            this.label1.Size = new System.Drawing.Size(119, 29);
             this.label1.TabIndex = 8;
             this.label1.Text = "ΠΡΟΣΟΧΗ!";
             // 
             // DeleteOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(395, 214);
+            this.ClientSize = new System.Drawing.Size(527, 263);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.CancleBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "DeleteOrder";
             this.Text = "Ακύρωση Παραγγελίας";
             this.ResumeLayout(false);
