@@ -1,1 +1,0 @@
-search_result['420']=["frlrfPharmacyInformationSystemUIComponentsMainScreenClassMarkettingTeamMasterSlaveClickTopic.html","MainScreen.MarkettingTeamMasterSlaveClick Method",""];

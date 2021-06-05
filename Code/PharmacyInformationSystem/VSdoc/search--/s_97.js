@@ -1,1 +1,0 @@
-search_result['97']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassTopic.html","DatabaseHandler Class",""];

@@ -1,1 +1,0 @@
-c['28']=[['29',"Administrator(User) Constructor","frlrfPharmacyInformationSystemBusinessLogicAdministratorClassctorTopic2.html",0],['30',"Administrator(string, string, string, int, string, string, int, List\u003cString\u003e, double) Constructor","frlrfPharmacyInformationSystemBusinessLogicAdministratorClassctorTopic.html",0]];

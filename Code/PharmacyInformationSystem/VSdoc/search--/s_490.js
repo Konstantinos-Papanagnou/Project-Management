@@ -1,1 +1,0 @@
-search_result['490']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsMarketingViewMarketingListClassmarketingNavigator1Topic.html","marketingNavigator1 Field",""];

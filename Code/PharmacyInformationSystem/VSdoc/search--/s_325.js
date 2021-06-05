@@ -1,1 +1,0 @@
-search_result['325']=["frlrfPharmacyInformationSystemPropertiesResourcesClassTopic_events--.html","Resources Events",""];

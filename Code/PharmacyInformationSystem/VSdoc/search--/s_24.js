@@ -1,1 +1,0 @@
-search_result['24']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassctorTopic.html","DatabaseHandler Constructor","Initializes and creates the database if it doesn\u0027t already exist"];

@@ -1,1 +1,0 @@
-search_result['197']=["frlrfPharmacyInformationSystemBusinessLogicSanitizerClassSanitizeInputTopic.html","Sanitizer.SanitizeInput Method","Sanitizes the supplied argument for bad sql characters"];

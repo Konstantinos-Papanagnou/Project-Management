@@ -1,1 +1,0 @@
-search_result['62']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassModifyUserTopic.html","DatabaseHandler.ModifyUser Method","Modifies User\u0027s Data"];

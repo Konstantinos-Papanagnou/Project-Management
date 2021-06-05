@@ -1,1 +1,0 @@
-search_result['319']=["frlrfPharmacyInformationSystemPropertiesResourcesClassicons8_warehouse_24Topic.html","Resources.icons8_warehouse_24 Property","Looks up a localized resource of type System.Drawing.Bitmap."];

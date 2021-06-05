@@ -1,1 +1,0 @@
-search_result['85']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassRetrieveMedicinesTopic.html","DatabaseHandler.RetrieveMedicines Method","Grab specific med information"];

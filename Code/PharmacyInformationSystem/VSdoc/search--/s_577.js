@@ -1,1 +1,0 @@
-search_result['577']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsRegisterViewClassctorTopic.html","RegisterView Constructor","Call this Constructor if you want to insert user information"];

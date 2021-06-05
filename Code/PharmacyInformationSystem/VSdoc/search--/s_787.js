@@ -1,1 +1,0 @@
-search_result['787']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsUserViewListUserListViewItemClassctorTopic.html","UserListViewItem Constructor","Initialize the inteface with personalized settings."];

@@ -1,1 +1,0 @@
-search_result['437']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsMarketingViewDrugGainTableClassDrugNameTopic.html","DrugName Field",""];

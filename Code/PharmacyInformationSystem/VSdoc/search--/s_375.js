@@ -1,1 +1,0 @@
-search_result['375']=["frlrfPharmacyInformationSystemUIComponentsLoginIShowableClassGetScreenBackTopic.html","IShowable.GetScreenBack Method",""];

@@ -1,1 +1,0 @@
-c['663']=[['664',"RefreshList() Method","frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewListStorageListViewClassRefreshListTopic.html",0],['665',"RefreshList(Medicine, Operation) Method","frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewListStorageListViewClassRefreshListTopic2.html",0]];

@@ -1,1 +1,0 @@
-search_result['636']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsSideBarItemClassctorTopic.html","SideBarItem Constructor","Initializes the inteface with the specified input"];

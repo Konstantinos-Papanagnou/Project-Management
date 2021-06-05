@@ -1,1 +1,0 @@
-search_result['13']=["frlrfPharmacyInformationSystemBusinessLogicAdministratorClassTopic.html","Administrator Class",""];

@@ -1,1 +1,0 @@
-search_result['49']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassMedicineCategoryTopic.html","MedicineCategory Field",""];

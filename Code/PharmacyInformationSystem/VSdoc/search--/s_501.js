@@ -1,1 +1,0 @@
-search_result['501']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsMarketingViewMarketingNavigatorClassInitializeComponentTopic.html","MarketingNavigator.InitializeComponent Method","Required method for Designer support - do not modify\r\nthe contents of this method with the code editor."];

@@ -1,1 +1,0 @@
-search_result['177']=["frlrfPharmacyInformationSystemBusinessLogicPharmacistClassPAPostalCodeTopic.html","Pharmacist.PAPostalCode Property",""];

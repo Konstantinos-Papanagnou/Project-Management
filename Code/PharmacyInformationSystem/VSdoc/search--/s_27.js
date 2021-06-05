@@ -1,1 +1,0 @@
-search_result['27']=["frlrfPharmacyInformationSystemBusinessLogicDatabaseHandlerClassDeleteOrderTopic.html","DatabaseHandler.DeleteOrder Method","Deletes or cancels an order"];

@@ -1,1 +1,0 @@
-search_result['623']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsRegisterViewClassTopic.html","RegisterView Class",""];

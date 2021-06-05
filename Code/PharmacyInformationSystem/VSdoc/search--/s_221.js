@@ -1,1 +1,0 @@
-search_result['221']=["frlrfPharmacyInformationSystemBusinessLogicStoreKeeperClassGetMedicinesTopic.html","StoreKeeper.GetMedicines Method","Displays all medicines"];

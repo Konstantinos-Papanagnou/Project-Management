@@ -1,1 +1,0 @@
-search_result['657']=["frlrfPharmacyInformationSystemUIComponentsMainUserControlsStorageViewList.html","PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList Namespace",""];
