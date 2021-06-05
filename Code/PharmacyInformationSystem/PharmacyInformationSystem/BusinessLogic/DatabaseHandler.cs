@@ -667,7 +667,7 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <returns>True if order line was deleted successfully</returns>
         private bool DeleteOrderLine(SQLiteConnection conn, int orderID)
         {
-            SQLiteCommand deleteOrderLine = new SQLiteCommand($"DELETE FROM {OrderLineTableName} WHERE {PharmacistIDOrder} = '{orderID}'", conn);
+            SQLiteCommand deleteOrderLine = new SQLiteCommand($"DELETE FROM {OrderLineTableName} WHERE {OrderIDField} = '{orderID}'", conn);
             return deleteOrderLine.ExecuteNonQuery() > 0;
         }
 
@@ -679,11 +679,20 @@ namespace PharmacyInformationSystem.BusinessLogic
         /// <param name="orderID"></param>
         /// <returns>True if order was deleted successfully</returns>
         
-        private bool DeleteOrder(SQLiteConnection conn, int druggistID, Order order)
+        internal bool DeleteOrder(Order order)
         {
-            DeleteOrderLine(conn, order.OrderID);
-            SQLiteCommand deleteOrder = new SQLiteCommand($"DELETE FROM {OrderTableName} WHERE {PharmacistIDOrder} = '{druggistID}'", conn);
-            return deleteOrder.ExecuteNonQuery() > 0;
+            using (SQLiteConnection conn = new SQLiteConnection(ConnName))
+            {
+                conn.Open();
+                foreach(var o in order.OrderList)
+                {
+                    o.Medicine.MedStockCount += o.ProductQuantity;
+                    UpdateMedicineStock(o.Medicine);
+                }
+                DeleteOrderLine(conn, order.OrderID);
+                SQLiteCommand deleteOrder = new SQLiteCommand($"DELETE FROM {OrderTableName} WHERE {PharmacistIDOrder} = '{order.Pharmacist.PharmacistID}'", conn);
+                return deleteOrder.ExecuteNonQuery() > 0;
+            }
         }
 
         /// <summary>

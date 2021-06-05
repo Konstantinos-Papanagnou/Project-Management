@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,31 +14,49 @@ using iText.Layout.Properties;
 
 namespace PharmacyInformationSystem.BusinessLogic
 {
+    /// <summary>
+    /// Wrapper class to generate invoices and print them
+    /// </summary>
     public class PDFManager
     {
         /// <summary>
+        /// The Order for which to create invoice
+        /// </summary>
+        readonly Order Order;
+        /// <summary>
+        /// The Filename of the invoice
+        /// </summary>
+        readonly string Filename;
+        
+        /// <summary>
+        /// Initializes a PDFManager Object
+        /// </summary>
+        /// <param name="Order">Requires the order to work with</param>
+        public PDFManager(Order Order)
+        {
+            this.Order = Order;
+            this.Filename = GenerateFilename();
+        }
+        /// <summary>
         /// Generate the filename for the pdf
         /// </summary>
-        /// <param name="PharmacistName">The pharmacist's name to use in the filename</param>
-        /// <param name="orderid">The order id to use in the filename</param>
         /// <returns>The generated location of the pdf</returns>
-        private string GenerateFilename(string PharmacistName, int orderid)
+        private string GenerateFilename()
         {
             string Base = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string folderName = "Pharmacy Information System";
             string BaseDir = System.IO.Path.Combine(Base, folderName);
             System.IO.Directory.CreateDirectory(BaseDir);
-            string filename = orderid + "-" + PharmacistName + "_" + DateTime.Now.ToString("yyyy-MM-dd.HH.mm") + ".pdf";
+            string filename = Order.OrderID + "-" + Order.Pharmacist.LastName + "_" + DateTime.Now.ToString("yyyy-MM-dd.HH.mm") + ".pdf";
             return System.IO.Path.Combine(BaseDir, filename);
         }
 
         /// <summary>
         /// Creates the invoice of the specified order
         /// </summary>
-        /// <param name="Order">The order for which to create an invoice</param>
-        public void CreateInvoice(Order Order)
+        public void CreateInvoice()
         {
-            PdfWriter writer = new PdfWriter(GenerateFilename(Order.Pharmacist.LastName, Order.OrderID));
+            PdfWriter writer = new PdfWriter(this.Filename);
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
             PdfFont font = PdfFontFactory.CreateFont("c:/windows/fonts/arial.ttf", PdfEncodings.IDENTITY_H);
@@ -69,6 +88,15 @@ namespace PharmacyInformationSystem.BusinessLogic
 
             document.Close();
            
+        }
+
+        /// <summary>
+        /// Generates and Prints the invoice
+        /// </summary>
+        public void PrintInvoice()
+        {
+            CreateInvoice();
+            Process.Start(this.Filename);
         }
         /// <summary>
         /// Dynamically creates paragraph based on the information of the specific item

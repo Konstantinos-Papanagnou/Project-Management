@@ -40,6 +40,26 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             Order.Seller = Seller;
         }
 
+        public OrderForm(IUpdatable<Logic.Order> form, Logic.Seller Seller, Logic.Order Order)
+        {
+            InitializeComponent();
+
+            Seller.RemoveOrder(Order);
+            this.form = form;
+            this.Order = Order;
+            this.Seller = Seller;
+            Pharmacists = Seller.GetPharmacists();
+            foreach (var p in Pharmacists)
+                PharmacistCombo.Items.Add(p.AFM);
+            Drugs = Seller.GetMedicines();
+            foreach (var drug in Drugs)
+                DrugCombo.Items.Add(drug.MedName);
+            OrderIdLbl.Text += Order.OrderID;
+            OrderDateLbl.Text += Order.OrderDate;
+            foreach (var item in Order.OrderList)
+                AddToList(item, true);
+        }
+
         private void DrugCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (DrugCombo.SelectedIndex == -1) return;
@@ -53,11 +73,13 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 
         private void QuantityBox_ValueChanged(object sender, EventArgs e)
         {
+            if (DrugCombo.SelectedIndex == -1) return;
             FinalPriceLbl.Text = "Τελική Τιμή: " + (Drugs[DrugCombo.SelectedIndex].MedSellingValue * (double)QuantityBox.Value) + " €";
         }
 
         private void PharmacistCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (PharmacistCombo.SelectedIndex == -1) return;
             Order.Pharmacist = Pharmacists[PharmacistCombo.SelectedIndex];
         }
 
@@ -74,12 +96,14 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             ClearFields();
         }
 
-        private void AddToList(OrderLine order)
+        private void AddToList(OrderLine order, bool setup = false)
         {
             var lvi = new ListViewItem(order.Medicine.MedName);
             lvi.SubItems.Add(order.Medicine.MedCategory);
             lvi.SubItems.Add(order.Medicine.MedDueDate);
-            lvi.SubItems.Add(QuantityBox.Value.ToString());
+            if (!setup)
+                lvi.SubItems.Add(QuantityBox.Value.ToString());
+            else lvi.SubItems.Add(order.ProductQuantity.ToString());
             lvi.SubItems.Add(order.Medicine.MedSellingValue.ToString());
             lvi.SubItems.Add(MapValues(order.Medicine.MedType));
             List.Items.Add(lvi);

@@ -29,6 +29,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.List = new System.Windows.Forms.ListView();
             this.OrderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PharmacistName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -36,7 +37,11 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.PharmacistAFM = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OrderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listSelections = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.EditMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.RemoveMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.orderNavigator1 = new PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.OrderNavigator();
+            this.listSelections.SuspendLayout();
             this.SuspendLayout();
             // 
             // List
@@ -51,6 +56,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.PharmacistAFM,
             this.OrderDate,
             this.TotalCost});
+            this.List.ContextMenuStrip = this.listSelections;
             this.List.Dock = System.Windows.Forms.DockStyle.Fill;
             this.List.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.List.ForeColor = System.Drawing.SystemColors.InactiveBorder;
@@ -58,11 +64,13 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.List.HideSelection = false;
             this.List.Location = new System.Drawing.Point(0, 62);
             this.List.Margin = new System.Windows.Forms.Padding(4);
+            this.List.MultiSelect = false;
             this.List.Name = "List";
             this.List.Size = new System.Drawing.Size(1259, 719);
             this.List.TabIndex = 1;
             this.List.UseCompatibleStateImageBehavior = false;
             this.List.View = System.Windows.Forms.View.Details;
+            this.List.DoubleClick += new System.EventHandler(this.List_DoubleClick);
             // 
             // OrderID
             // 
@@ -94,12 +102,41 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.TotalCost.Text = "Τελικό Ποσό";
             this.TotalCost.Width = 112;
             // 
+            // listSelections
+            // 
+            this.listSelections.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.listSelections.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.listSelections.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.EditMenu,
+            this.RemoveMenu});
+            this.listSelections.Name = "listSelections";
+            this.listSelections.Size = new System.Drawing.Size(184, 60);
+            // 
+            // EditMenu
+            // 
+            this.EditMenu.Font = new System.Drawing.Font("Calibri", 11F);
+            this.EditMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_edit_row_24_1_1;
+            this.EditMenu.Name = "EditMenu";
+            this.EditMenu.Size = new System.Drawing.Size(183, 28);
+            this.EditMenu.Text = "Επεξεργασία";
+            this.EditMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.EditMenu.Click += new System.EventHandler(this.EditMenu_Click);
+            // 
+            // RemoveMenu
+            // 
+            this.RemoveMenu.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.RemoveMenu.Image = global::PharmacyInformationSystem.Properties.Resources.icons8_delete_bin_24;
+            this.RemoveMenu.Name = "RemoveMenu";
+            this.RemoveMenu.Size = new System.Drawing.Size(183, 28);
+            this.RemoveMenu.Text = "Διαγραφή";
+            this.RemoveMenu.Click += new System.EventHandler(this.RemoveMenu_Click);
+            // 
             // orderNavigator1
             // 
             this.orderNavigator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.orderNavigator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.orderNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.orderNavigator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderNavigator1.Margin = new System.Windows.Forms.Padding(4);
             this.orderNavigator1.Name = "orderNavigator1";
             this.orderNavigator1.Size = new System.Drawing.Size(1259, 62);
             this.orderNavigator1.TabIndex = 0;
@@ -113,6 +150,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.Controls.Add(this.orderNavigator1);
             this.Name = "OrderList";
             this.Size = new System.Drawing.Size(1259, 781);
+            this.listSelections.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -127,5 +165,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
         private System.Windows.Forms.ColumnHeader PharmacistAFM;
         private System.Windows.Forms.ColumnHeader OrderDate;
         private System.Windows.Forms.ColumnHeader TotalCost;
+        private System.Windows.Forms.ContextMenuStrip listSelections;
+        private System.Windows.Forms.ToolStripMenuItem EditMenu;
+        private System.Windows.Forms.ToolStripMenuItem RemoveMenu;
     }
 }

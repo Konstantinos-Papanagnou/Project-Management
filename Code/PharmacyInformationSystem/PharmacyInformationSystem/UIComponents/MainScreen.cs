@@ -65,7 +65,6 @@ namespace PharmacyInformationSystem.UIComponents
                     OperationsPanel.Controls.Add(new MainUserControls.OrderView.OrderList((Seller)User));
                     SideMenu.Bar.MarkSelected(sender);
                 };
-                //SideMenu.Bar.Slave3.Click += (object sender, EventArgs e) => { };
                 OperationsPanel.Controls.Add(new MainUserControls.Pharmacist.TablePharmacist((Seller)User));
             }
         }

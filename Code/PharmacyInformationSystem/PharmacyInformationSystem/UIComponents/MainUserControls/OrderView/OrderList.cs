@@ -41,6 +41,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 
         public void RefreshList(Logic.Order order, Operation op)
         {
+            Orders.Add(order);
             AddToList(order);
         }
 
@@ -116,6 +117,31 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 
         }
         #endregion
+
+        private void RemoveMenu_Click(object sender, EventArgs e)
+        {
+            DeleteOrder orderDelete = new DeleteOrder();
+            if (orderDelete.ShowDialog() == DialogResult.OK)
+            {
+                Seller.RemoveOrder(Orders[List.SelectedItems[0].Index]);
+                Orders.RemoveAt(List.SelectedItems[0].Index);
+                List.Items.Remove(List.SelectedItems[0]);
+            }
+        }
+
+        private void EditMenu_Click(object sender, EventArgs e)
+        {
+            Logic.Order order = Orders[List.SelectedItems[0].Index];
+            Orders.RemoveAt(List.SelectedItems[0].Index);
+            List.Items.Remove(List.SelectedItems[0]);
+            new OrderForm(this, Seller, order).ShowDialog();
+
+        }
+
+        private void List_DoubleClick(object sender, EventArgs e)
+        {
+            new ViewOrderForm(Orders[List.SelectedItems[0].Index]).ShowDialog();
+        }
     }
 
 

@@ -356,5 +356,9 @@ namespace PharmacyInformationSystem.BusinessLogic
             return Database.UpdateMedicineStock(med);
         }
 
+        public bool RemoveOrder(Order order)
+        {
+            return Database.DeleteOrder(order);
+        }
     }
 }

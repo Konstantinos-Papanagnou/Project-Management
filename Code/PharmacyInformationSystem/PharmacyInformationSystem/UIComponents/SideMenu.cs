@@ -68,7 +68,7 @@ namespace PharmacyInformationSystem.UIComponents
         /// </summary>
         public void SetSellerView()
         {
-            Bar = new MainUserControls.SideBarItem("Πωλητής", "Πελατολόγιο", "Παραγγελίες", "Εκτύπωση Τιμολογίου", "", Properties.Resources.icons8_gear_24);
+            Bar = new MainUserControls.SideBarItem("Πωλητής", "Πελατολόγιο", "Παραγγελίες", "", "", Properties.Resources.icons8_gear_24);
             panelSubMenu.Controls.Add(Bar);
         }
 
