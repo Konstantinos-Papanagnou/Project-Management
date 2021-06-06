@@ -13,7 +13,7 @@
     <add key="VBdocman_customVar2"><![CDATA[]]></add>
     <add key="VBdocman_SupportedXamarinIos"><![CDATA[]]></add>
     <add key="VBdocman_enumSorting"><![CDATA[1]]></add>
-    <add key="VBdocman_comVariable"><![CDATA[-1]]></add>
+    <add key="VBdocman_comVariable"><![CDATA[0]]></add>
     <add key="VBdocman_comStdModule"><![CDATA[-1]]></add>
     <add key="VBdocman_ListNamespacesWithShortNames"><![CDATA[0]]></add>
     <add key="VBdocman_comPublic"><![CDATA[-1]]></add>
