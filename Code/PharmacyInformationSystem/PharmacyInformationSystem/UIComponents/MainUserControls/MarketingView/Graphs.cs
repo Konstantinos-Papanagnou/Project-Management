@@ -38,6 +38,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView
             chart.Legends[0].Alignment = StringAlignment.Center;
             chart.Legends[0].Title = Title;
             chart.Legends[0].BorderColor = Color.Black;
+            chart.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+            chart.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
 
             //Add a new chart-series
             string seriesname = Title;
