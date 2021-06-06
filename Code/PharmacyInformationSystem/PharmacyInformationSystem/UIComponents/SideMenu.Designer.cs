@@ -32,6 +32,7 @@ namespace PharmacyInformationSystem.UIComponents
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SideMenu));
             this.panelLogo = new System.Windows.Forms.Panel();
             this.UserBtn = new System.Windows.Forms.Button();
+            this.SideMenuIcon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -39,11 +40,10 @@ namespace PharmacyInformationSystem.UIComponents
             this.button13 = new System.Windows.Forms.Button();
             this.logOut = new System.Windows.Forms.Button();
             this.panelSubMenu = new System.Windows.Forms.Panel();
-            this.SideMenuIcon = new System.Windows.Forms.PictureBox();
             this.button14 = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SideMenuIcon)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLogo
@@ -52,7 +52,7 @@ namespace PharmacyInformationSystem.UIComponents
             this.panelLogo.Controls.Add(this.SideMenuIcon);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(228, 54);
             this.panelLogo.TabIndex = 0;
@@ -67,12 +67,24 @@ namespace PharmacyInformationSystem.UIComponents
             this.UserBtn.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.UserBtn.ForeColor = System.Drawing.Color.FloralWhite;
             this.UserBtn.Location = new System.Drawing.Point(57, 0);
-            this.UserBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UserBtn.Margin = new System.Windows.Forms.Padding(4);
             this.UserBtn.Name = "UserBtn";
             this.UserBtn.Size = new System.Drawing.Size(172, 54);
             this.UserBtn.TabIndex = 1;
             this.UserBtn.Text = "User: ";
             this.UserBtn.UseVisualStyleBackColor = true;
+            // 
+            // SideMenuIcon
+            // 
+            this.SideMenuIcon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SideMenuIcon.Image = global::PharmacyInformationSystem.Properties.Resources.cross_icon;
+            this.SideMenuIcon.Location = new System.Drawing.Point(0, 0);
+            this.SideMenuIcon.Margin = new System.Windows.Forms.Padding(4);
+            this.SideMenuIcon.Name = "SideMenuIcon";
+            this.SideMenuIcon.Size = new System.Drawing.Size(57, 54);
+            this.SideMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SideMenuIcon.TabIndex = 0;
+            this.SideMenuIcon.TabStop = false;
             // 
             // panel2
             // 
@@ -170,13 +182,12 @@ namespace PharmacyInformationSystem.UIComponents
             this.logOut.ForeColor = System.Drawing.Color.Silver;
             this.logOut.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.logOut.Location = new System.Drawing.Point(0, 582);
-            this.logOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logOut.Margin = new System.Windows.Forms.Padding(4);
             this.logOut.Name = "logOut";
             this.logOut.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.logOut.Size = new System.Drawing.Size(228, 48);
             this.logOut.TabIndex = 1;
             this.logOut.Text = "Έξοδος";
-            this.logOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logOut.UseVisualStyleBackColor = true;
             // 
@@ -188,18 +199,6 @@ namespace PharmacyInformationSystem.UIComponents
             this.panelSubMenu.Name = "panelSubMenu";
             this.panelSubMenu.Size = new System.Drawing.Size(228, 576);
             this.panelSubMenu.TabIndex = 0;
-            // 
-            // SideMenuIcon
-            // 
-            this.SideMenuIcon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SideMenuIcon.Image = global::PharmacyInformationSystem.Properties.Resources.cross_icon;
-            this.SideMenuIcon.Location = new System.Drawing.Point(0, 0);
-            this.SideMenuIcon.Margin = new System.Windows.Forms.Padding(4);
-            this.SideMenuIcon.Name = "SideMenuIcon";
-            this.SideMenuIcon.Size = new System.Drawing.Size(57, 54);
-            this.SideMenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SideMenuIcon.TabIndex = 0;
-            this.SideMenuIcon.TabStop = false;
             // 
             // button14
             // 
@@ -229,12 +228,12 @@ namespace PharmacyInformationSystem.UIComponents
             this.Controls.Add(this.logOut);
             this.Controls.Add(this.panelSubMenu);
             this.Controls.Add(this.panelLogo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SideMenu";
             this.Size = new System.Drawing.Size(228, 630);
             this.panelLogo.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SideMenuIcon)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
