@@ -70,6 +70,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.List.TabIndex = 1;
             this.List.UseCompatibleStateImageBehavior = false;
             this.List.View = System.Windows.Forms.View.Details;
+            this.List.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.List_ColumnClick);
             this.List.DoubleClick += new System.EventHandler(this.List_DoubleClick);
             // 
             // OrderID

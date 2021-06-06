@@ -15,6 +15,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
     public partial class OrderForm : Form
     {
         bool EditingMode = false;
+        bool newOrder = true;
         readonly Logic.Seller Seller;
         readonly List<Logic.Medicine> Drugs;
         readonly List<Logic.Pharmacist> Pharmacists;
@@ -42,8 +43,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 
         public OrderForm(IUpdatable<Logic.Order> form, Logic.Seller Seller, Logic.Order Order)
         {
+            newOrder = false;
             InitializeComponent();
-
+            PharmacistCombo.Enabled = false;
+            
             Seller.RemoveOrder(Order);
             this.form = form;
             this.Order = Order;
@@ -52,6 +55,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             foreach (var p in Pharmacists)
                 PharmacistCombo.Items.Add(p.AFM);
             Drugs = Seller.GetMedicines();
+            PharmacistCombo.SelectedIndex = PharmacistCombo.FindString(Order.Pharmacist.AFM);
             foreach (var drug in Drugs)
                 DrugCombo.Items.Add(drug.MedName);
             OrderIdLbl.Text += Order.OrderID;
@@ -131,6 +135,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             EditingMode = true;
             RemoveBtn.Visible = true;
             AddBtn.Text = ">";
+            PharmacistCombo.SelectedIndex = PharmacistCombo.FindString(Order.Pharmacist.AFM);
             DrugCombo.SelectedItem = Order.OrderList[e.ItemIndex].Medicine.MedName;
             QuantityBox.Value = decimal.Parse(e.Item.SubItems[3].Text);
             Order.OrderList.RemoveAt(e.ItemIndex);
@@ -184,5 +189,26 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             }
             
         }
+
+        private void OrderForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (newOrder) return;
+            double cost = 0;
+            foreach (var o in Order.OrderList)
+            {
+                o.Medicine.MedStockCount -= o.ProductQuantity;
+                Seller.UpdateStock(o.Medicine);
+                cost += o.TotalProductCost;
+            }
+            Order.TotalCost = cost;
+
+            if (Seller.InsertOrder(Order))
+            {
+                //MessageBox.Show("Επιτυχής καταχώρηση παραγγελίας!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                form.RefreshList(Order, Operation.Add);
+                this.Close();
+            }
+        }
+
     }
 }

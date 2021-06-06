@@ -458,6 +458,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Παραγγελία";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OrderForm_FormClosing);
             this.LogoPanel.ResumeLayout(false);
             this.LogoPanel.PerformLayout();
             this.panel3.ResumeLayout(false);

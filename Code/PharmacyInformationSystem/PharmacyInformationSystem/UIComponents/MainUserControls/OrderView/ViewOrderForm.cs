@@ -21,7 +21,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             InitializeComponent();
             OrderIdLbl.Text += Order.OrderID;
             OrderDateLbl.Text += Order.OrderDate;
-            PharmacistAFM.Text += Order.Pharmacist.PharmacistID.ToString();
+            PharmacistAFM.Text += Order.Pharmacist.AFM.ToString();
             foreach (var item in Order.OrderList)
                 AddToList(item, true);
         }

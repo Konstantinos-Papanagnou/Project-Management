@@ -68,11 +68,13 @@ namespace PharmacyInformationSystem.BusinessLogic
             Paragraph GenInfo = new Paragraph(
                 $"Αριθμός Παραγγελίας: {Order.OrderID}\n" +
                 $"Φαρμακοποιός: {Order.Pharmacist.LastName + " " + Order.Pharmacist.FirstName}\n" +
-                $"Διεύθυνση Παράδοσης: {Order.Pharmacist.PATown + " " + Order.Pharmacist.PAStreet + " " + Order.Pharmacist.PANumber}\n" +
+                $"ΑΦΜ Φαρμακοποιού: {Order.Pharmacist.AFM}\n" +
+                $"Τηλέφωνο Φαρμακοποιού: {Order.Pharmacist.Phone}\n" +
+                $"Διεύθυνση Παράδοσης: {Order.Pharmacist.PATown + " , " + Order.Pharmacist.PAStreet + " " + Order.Pharmacist.PANumber}\n" +
                 $"Ταχυδρομικός Κώδικας: {Order.Pharmacist.PAPostalCode}\n" +
-                $"Τηλέφωνο Επικοινωνίας: {Order.Pharmacist.Phone}\n" +
                 $"Ημερομηνία: {Order.OrderDate}\n" +
-                $"Υπεύθυνος Παραγγελίας: {Order.Seller.LastName + " " + Order.Seller.FirstName}\n\n\n\n"
+                $"Υπεύθυνος Παραγγελίας: {Order.Seller.LastName + " " + Order.Seller.FirstName}\n"+
+                $"Τηλέφωνο Πωλητή: {Order.Seller.PhoneNumbers[0]}\n\n\n\n"
                 ).SetFontSize(10);
             document.Add(header);
             document.Add(GenInfo);
