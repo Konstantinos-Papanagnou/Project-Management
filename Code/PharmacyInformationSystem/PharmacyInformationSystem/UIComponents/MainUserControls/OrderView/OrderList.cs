@@ -120,6 +120,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 
         private void RemoveMenu_Click(object sender, EventArgs e)
         {
+            if (List.SelectedItems.Count <= 0) return;
             DeleteOrder orderDelete = new DeleteOrder();
             if (orderDelete.ShowDialog() == DialogResult.OK)
             {
@@ -131,6 +132,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
 
         private void EditMenu_Click(object sender, EventArgs e)
         {
+            if (List.SelectedItems.Count <= 0) return;
             Logic.Order order = Orders[List.SelectedItems[0].Index];
             Orders.RemoveAt(List.SelectedItems[0].Index);
             List.Items.Remove(List.SelectedItems[0]);
