@@ -7,7 +7,7 @@ echo This is the uninstaller. Please run this script as administrator for the un
 echo.
 echo.
 echo Uninstalling Application ...
-cd %programfiles(x86)%\PharmacyInformationSystem
+cd "%programfiles(x86)%\PharmacyInformationSystem"
 
 for /r %%i in (*) do (echo Removing %%i & del "%%i" & echo ... OK)
 rmdir /S /Q "%programfiles(x86)%\PharmacyInformationSystem"
