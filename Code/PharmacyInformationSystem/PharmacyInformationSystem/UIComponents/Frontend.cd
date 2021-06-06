@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PharmacyInformationSystem.UIComponents.MainScreen">
+    <Position X="5.25" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAAAABEACggAACRAACAAAAAAAQAAAAAAQ=</HashCode>
+      <FileName>UIComponents\MainScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.ListNavigator">
+    <Position X="5.25" Y="14" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEGAEABAAAACAAAACAAAAAAAAAAIAAQBgAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\UserViewList\ListNavigator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.SideMenu">
+    <Position X="18.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gCQgAAAAACgAAAABAACAAIICAEgAFAEgAgAAQQAAAAA=</HashCode>
+      <FileName>UIComponents\SideMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.Login.Login" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="12.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAACAIABAAAQCAAAACAAAAAAAEAICAAYBACAA=</HashCode>
+      <FileName>UIComponents\Login\Login.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.RegisterView">
+    <Position X="28.5" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>GDgFEMAAASQCABAACACQCANCIBACaAAESWBAEQACBgA=</HashCode>
+      <FileName>UIComponents\Login\RegisterView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.MedicineViewAdd">
+    <Position X="8" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABIAEhkBAKAABBAABADAAiBCgFQABAAIggAgAgHBCIA=</HashCode>
+      <FileName>UIComponents\MainUserControls\Peripherals\MedicineViewAdd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.MedicineViewDelete">
+    <Position X="8" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACIAQACAAAABAAACAAAAAAAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\Peripherals\MedicineViewDelete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.ViewUserData">
+    <Position X="23" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIEATAABAAAAACAQAACAAACCAAAAAAAAARAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\Peripherals\ViewUserData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.FormPharmacist">
+    <Position X="0.5" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CBkEAgIAACAIABAgMCCAYALCAAAAJAgBgAAKEAHgCCA=</HashCode>
+      <FileName>UIComponents\MainUserControls\PharmacistUIView\FormPharmacist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.UsersList" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAACAACABAAACJAQACAgAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>UIComponents\MainUserControls\UserViewList\UsersList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.SideBarItem">
+    <Position X="23" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACAAQACAAACAAAACAAAAAAAAAAHAEgAAAAA=</HashCode>
+      <FileName>UIComponents\SideBarItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView.CategoryGraphs">
+    <Position X="10.25" Y="11.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAABAAAACAAAACIAABAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\MarketingView\CategoryGraphs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView.GainNavigator">
+    <Position X="8" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAEAAABAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\MarketingView\GainNavigator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView.Graphs">
+    <Position X="10.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAAAAAAACAAAACAAABAAAACAAQAwBAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\MarketingView\Graphs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView.MarketingNavigator">
+    <Position X="12.75" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAIACAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\MarketingView\MarketingNavigator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.MarketingView.MedGraphs">
+    <Position X="0.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAABAAAACAAAACIAABAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\MarketingView\MedGraphs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.DeleteOrder">
+    <Position X="2.75" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACIBAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\OrderView\DeleteOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.OrderForm">
+    <Position X="15" Y="9.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>R1FEABABAWTggjAgQADAAAACQAAAAAAIlQIgAQiACIY=</HashCode>
+      <FileName>UIComponents\MainUserControls\OrderView\OrderForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.OrderList" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="5" Width="2" />
+    <NestedTypes>
+      <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.OrderList.ListViewItemComparer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UIComponents\MainUserControls\OrderView\OrderList.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>KAEAABEIACAAAAADAACBAAAC0gQCCAAAgAAAAAAACQI=</HashCode>
+      <FileName>UIComponents\MainUserControls\OrderView\OrderList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.ListViewExtensions">
+    <Position X="5.25" Y="5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.ListViewExtensions.HDITEM">
+        <Compartments>
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
+        <NestedTypes>
+          <Enum Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.ListViewExtensions.HDITEM.Mask">
+            <TypeIdentifier>
+              <NewMemberFileName>UIComponents\MainUserControls\OrderView\OrderList.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+          <Enum Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.ListViewExtensions.HDITEM.Format">
+            <TypeIdentifier>
+              <NewMemberFileName>UIComponents\MainUserControls\OrderView\OrderList.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>UIComponents\MainUserControls\OrderView\OrderList.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAACAAAiAFA=</HashCode>
+      <FileName>UIComponents\MainUserControls\OrderView\OrderList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.OrderNavigator">
+    <Position X="23" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAABAAAACAAAACAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\OrderView\OrderNavigator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.OrderView.ViewOrderForm">
+    <Position X="18.25" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IhEAABAGASCAACAAAACAAAACQAAACAAABQIgBQgACAI=</HashCode>
+      <FileName>UIComponents\MainUserControls\OrderView\ViewOrderForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist.DeletePharmacist">
+    <Position X="0.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAABAAAACIBAACAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\PharmacistUIView\DeletePharmacist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist.NavigatorPharmacist">
+    <Position X="12.75" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEGAAABAAAACAAAACAAAEAAAAAAAAAADgAAA=</HashCode>
+      <FileName>UIComponents\MainUserControls\PharmacistUIView\NavigatorPharmacist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist.PharmacistListViewItem">
+    <Position X="25.5" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABhAoAAWAAABgAAACAAAACQABABAgAAACJCQAAAAE=</HashCode>
+      <FileName>UIComponents\MainUserControls\PharmacistUIView\PharmacistListViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist.TablePharmacist" BaseTypeListCollapsed="true">
+    <Position X="15" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>ADgAAAgBACIASAABAQCJAEACAgAAAAAAAAAAAAAACAI=</HashCode>
+      <FileName>UIComponents\MainUserControls\PharmacistUIView\TablePharmacist.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.StorageListView" BaseTypeListCollapsed="true">
+    <Position X="25.5" Y="8.25" Width="2.5" />
+    <NestedTypes>
+      <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.StorageListView.ListViewItemComparer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UIComponents\MainUserControls\StorageViewList\StorageListView.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEABQAEAASAAACBEAACBABAC0gACGAAAAAIggIAQCQI=</HashCode>
+      <FileName>UIComponents\MainUserControls\StorageViewList\StorageListView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.ListViewExtensions">
+    <Position X="2.75" Y="0.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.ListViewExtensions.HDITEM">
+        <Compartments>
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
+        <NestedTypes>
+          <Enum Name="PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.ListViewExtensions.HDITEM.Mask">
+            <TypeIdentifier>
+              <NewMemberFileName>UIComponents\MainUserControls\StorageViewList\StorageListView.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+          <Enum Name="PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.ListViewExtensions.HDITEM.Format">
+            <TypeIdentifier>
+              <NewMemberFileName>UIComponents\MainUserControls\StorageViewList\StorageListView.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>UIComponents\MainUserControls\StorageViewList\StorageListView.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAACAAAiAFA=</HashCode>
+      <FileName>UIComponents\MainUserControls\StorageViewList\StorageListView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.StorageViewList.StorageNavigator">
+    <Position X="15" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAABAAAI=</HashCode>
+      <FileName>UIComponents\MainUserControls\StorageViewList\StorageNavigator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.UIComponents.MainUserControls.UserViewList.UserListViewItem">
+    <Position X="20.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABBhAIAAXAAABgAAACBAAACQABABIAAAACACQQAAAE=</HashCode>
+      <FileName>UIComponents\MainUserControls\UserViewList\UserListViewItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PharmacyInformationSystem.UIComponents.IUpdatable&lt;T&gt;">
+    <Position X="12.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIComponents\IUpdatable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PharmacyInformationSystem.UIComponents.Login.IShowable">
+    <Position X="12.75" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIComponents\Login\IShowable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PharmacyInformationSystem.UIComponents.Operation">
+    <Position X="12.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UIComponents\IUpdatable.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

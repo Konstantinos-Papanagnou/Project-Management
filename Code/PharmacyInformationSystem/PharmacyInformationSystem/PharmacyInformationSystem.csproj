@@ -388,6 +388,7 @@
     <EmbeddedResource Include="UIComponents\MainUserControls\Peripherals\ViewUserData.resx">
       <DependentUpon>ViewUserData.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BusinessLogic\Backend.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -398,6 +399,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UIComponents\Frontend.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

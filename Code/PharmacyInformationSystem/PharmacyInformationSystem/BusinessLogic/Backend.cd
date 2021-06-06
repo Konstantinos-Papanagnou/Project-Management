@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PharmacyInformationSystem.BusinessLogic.DatabaseHandler">
+    <Position X="17.25" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>5IAAJUGiBAoWSQAEJwCBViFAgAQhICEFktVHGEgDiQA=</HashCode>
+      <FileName>BusinessLogic\DatabaseHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.Sanitizer">
+    <Position X="15" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QCgAQAABAQAAAIAAAQEAAAAAAQAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>BusinessLogic\LoginFunctionality\UserSanitizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.Order">
+    <Position X="15" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAABAAAAAIAAABAAAAAAAAAAAAAAAAAAAAAAAAGAA=</HashCode>
+      <FileName>BusinessLogic\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.PDFManager">
+    <Position X="12.75" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEEAAAAAAAAAQAAAAAAAAAAAAAEAAAAAAAAIAAAEAAA=</HashCode>
+      <FileName>BusinessLogic\PDFManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.Pharmacist">
+    <Position X="10.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAEAAAAQAAAAAAKAIAAEAAAAAAAAAAAIAAAAQg=</HashCode>
+      <FileName>BusinessLogic\Pharmacist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.Medicine">
+    <Position X="10.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAIIAAwgAAAAABCAAAAAAAAAAQCA=</HashCode>
+      <FileName>BusinessLogic\StoreKeeperFunctionality\Medicine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.User">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAGIAAAAAAAAAAQAAQAAAAAAAAAACAAAAAAAAEAg=</HashCode>
+      <FileName>BusinessLogic\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.Administrator">
+    <Position X="8" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAEAAAgAEAAAAAAEAAAAAAAAAAgAAAAEAAAA=</HashCode>
+      <FileName>BusinessLogic\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.MarketingTeam">
+    <Position X="0.5" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAGBAAAAAAAQAAAAQAAwAAAAEAAgAAAAQABAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.StoreKeeper">
+    <Position X="3" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAEgAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.Seller">
+    <Position X="5.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAQEAAEgAQAAAAAIAAAAAAAAAAAAAAZIAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.LoginFunctionality.AuthenticationFailure">
+    <Position X="12.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\LoginFunctionality\AuthenticationFailure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.LoginFunctionality.AuthenticationHandler">
+    <Position X="12.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAECAAAAEAAAACAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\LoginFunctionality\AuthenticationHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.LoginFunctionality.Hashing">
+    <Position X="8.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>BusinessLogic\LoginFunctionality\Hashing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.OrderLine">
+    <Position X="8.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAABAAAAAAEAACAA=</HashCode>
+      <FileName>BusinessLogic\OrderLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PharmacyInformationSystem.BusinessLogic.SellerFunctionality.SQLConstraintException">
+    <Position X="15" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\SellerFunctionality\SQLConstraintException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
