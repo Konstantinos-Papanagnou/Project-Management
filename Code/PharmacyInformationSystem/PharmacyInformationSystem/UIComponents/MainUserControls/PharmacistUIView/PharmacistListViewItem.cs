@@ -34,7 +34,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
             PhoneNumberLbl.Text = user.Phone;
             AdressLbl.Text = user.PATown + " " + user.PAStreet + " " + user.PANumber;
             if (user.PATown == "" && user.PAStreet == "" && user.PANumber == "")
+            {
+                DeleteBtn.Enabled = false; 
                 SumInfoLbl.Text += " [Αρχείο]";
+            }
             PostalCodeLbl.Text = user.PAPostalCode;
         }
 
