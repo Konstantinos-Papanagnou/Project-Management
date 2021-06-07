@@ -44,12 +44,13 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.deleteBtn.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.deleteBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.deleteBtn.Location = new System.Drawing.Point(261, 194);
-            this.deleteBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(4);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(267, 73);
             this.deleteBtn.TabIndex = 11;
             this.deleteBtn.Text = "ΔΙΑΓΡΑΦΗ";
             this.deleteBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // CancleBtn
             // 
@@ -59,12 +60,13 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.CancleBtn.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.CancleBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.CancleBtn.Location = new System.Drawing.Point(-3, 194);
-            this.CancleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CancleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CancleBtn.Name = "CancleBtn";
             this.CancleBtn.Size = new System.Drawing.Size(256, 73);
             this.CancleBtn.TabIndex = 10;
             this.CancleBtn.Text = "ΑΚΥΡΟ";
             this.CancleBtn.UseVisualStyleBackColor = false;
+            this.CancleBtn.Click += new System.EventHandler(this.CancleBtn_Click);
             // 
             // label2
             // 
@@ -104,7 +106,7 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "DeleteOrder";
             this.Text = "Ακύρωση Παραγγελίας";

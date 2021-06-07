@@ -16,5 +16,17 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
         {
             InitializeComponent();
         }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void CancleBtn_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
     }
 }
