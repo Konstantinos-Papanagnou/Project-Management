@@ -100,6 +100,8 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
                         PharmacistListViewItem item = new PharmacistListViewItem(this, user);
                         Items.Add(item);
                         List.Controls.Add(item);
+                        List.Controls.Remove(Items[index]);
+                        Items.RemoveAt(index);
                     }
                     else { MessageBox.Show("Ωχ, κάτι πήγε στραβά!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
                 } catch (Logic.SellerFunctionality.SQLConstraintException e) { MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
@@ -112,8 +114,6 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
                     return;
                 }
             }
-            List.Controls.Remove(Items[index]);
-            Items.RemoveAt(index);
         }
     }
 }

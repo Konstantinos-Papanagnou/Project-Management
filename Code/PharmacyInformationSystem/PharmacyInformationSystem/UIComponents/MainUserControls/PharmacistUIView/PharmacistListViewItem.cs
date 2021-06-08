@@ -73,6 +73,14 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.Pharmacist
             if(new DeletePharmacist().ShowDialog() == DialogResult.OK)
             {
                 UpdatableForm.RefreshList(User, Operation.Remove);
+                AdressLbl.Text = "";
+                User.PATown = "";
+                User.PAStreet = "";
+                User.PANumber = "";
+                User.PAPostalCode = "";
+                PostalCodeLbl.Text = "";
+                DeleteBtn.Enabled = false;
+                SumInfoLbl.Text += " [Αρχείο]";
             }
         }
     }
