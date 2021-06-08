@@ -194,6 +194,10 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
         {
             if (newOrder) return;
             double cost = 0;
+            if (EditingMode)
+            {
+                Order.OrderList.Add(new OrderLine(Order.OrderID, Drugs[DrugCombo.SelectedIndex], (int)QuantityBox.Value, (double)QuantityBox.Value * Drugs[DrugCombo.SelectedIndex].MedSellingValue));
+            }
             foreach (var o in Order.OrderList)
             {
                 o.Medicine.MedStockCount -= o.ProductQuantity;
@@ -201,12 +205,12 @@ namespace PharmacyInformationSystem.UIComponents.MainUserControls.OrderView
                 cost += o.TotalProductCost;
             }
             Order.TotalCost = cost;
-
+            
             if (Seller.InsertOrder(Order))
             {
                 //MessageBox.Show("Επιτυχής καταχώρηση παραγγελίας!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 form.RefreshList(Order, Operation.Add);
-                this.Close();
+               
             }
         }
 
